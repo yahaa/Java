@@ -1,4 +1,4 @@
-package p1;
+
 import java.util.*;
 public class Hous implements Cloneable,Comparable<Hous>{      //两个接口
 	private int id;

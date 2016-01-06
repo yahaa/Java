@@ -1,4 +1,3 @@
-package p1;
 
 public class InvalidRadiusException extends Exception {
 	private double radius;

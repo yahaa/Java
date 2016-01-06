@@ -1,4 +1,4 @@
-package p1;
+
 import java.util.*;
 import java.io.*;
 public class ReadFileFromURL {

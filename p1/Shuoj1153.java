@@ -1,4 +1,4 @@
-package p1;
+
 import java.util.*;
 public class Shuoj1153 {
 	public static void main(String[]args){

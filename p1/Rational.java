@@ -1,4 +1,4 @@
-package p1;
+
 import java.util.*;
 public class Rational extends Number implements Comparable<Rational> {
 private long numerator=0;       //·Ö×Ó

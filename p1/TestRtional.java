@@ -1,4 +1,4 @@
-package p1;
+
 
 public class TestRtional {
 public static void main(String[] args){

@@ -1,4 +1,3 @@
-package p1;
 
 public class TestCricleWithExcetion {
 public static void main(String[]args){
