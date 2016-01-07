@@ -27,7 +27,7 @@ public class CFB {
 				}
 			}
 			
-			
+			System.out.println(11111);
 		System.out.println(ans);
 	}
 
