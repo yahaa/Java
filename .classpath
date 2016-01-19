@@ -2,6 +2,7 @@
 <classpath>
 	<classpathentry kind="src" path="JavaFX"/>
 	<classpathentry kind="src" path="p1"/>
+	<classpathentry kind="src" path="ACTypes"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
