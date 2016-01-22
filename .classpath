@@ -10,6 +10,8 @@
 	<classpathentry kind="src" path="MathProblem"/>
 	<classpathentry kind="src" path="p1"/>
 	<classpathentry kind="src" path="SHUWater"/>
+	<classpathentry kind="src" path="SHU"/>
+	<classpathentry kind="src" path="HDU"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
