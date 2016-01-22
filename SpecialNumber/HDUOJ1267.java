@@ -12,7 +12,7 @@ public class HDUOJ1267 {
 			}
 		}
 
-		while(input.hasNext()){
+		while(input.hasNext()){     //卡特兰数矩阵图形     然后直接输出 对应矩阵的坐标位置 数即可
 			int m=input.nextInt();
 			int n=input.nextInt();
 			System.out.println(ans[m][n]);

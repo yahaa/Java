@@ -29,10 +29,10 @@ public class HDUOJ1131 {
 					je[k]=sum;
 				}
 				
-				while(input.hasNext()){
+				while(input.hasNext()){    //求解过程即是  先是不考虑节点不同的情况   即对应卡特兰数   然后  考虑   节点不一样  把节点全排
 					int n=input.nextInt();
 					if(n==0)break;
-					System.out.println(a[n].multiply(je[n]));
+					System.out.println(a[n].multiply(je[n]));   //通过分步计数原理乘一下就得出答案
 				}
 	}
 }

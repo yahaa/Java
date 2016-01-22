@@ -17,7 +17,7 @@ public class HDUOJ1034 {
             i=i.add(t1);
             j++;
         }
-        while(input.hasNext()){
+        while(input.hasNext()){     //简单的卡特兰数   ，直接输出即可
             int n=input.nextInt();
             if(n==-1)break;
             System.out.println(a[n]);
