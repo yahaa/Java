@@ -1,6 +1,5 @@
 
 import java.util.*;
-import java.io.*;
 public class WebCrawler {
 	public static void main(String []args){
 		java.util.Scanner input=new Scanner(System.in);

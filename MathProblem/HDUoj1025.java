@@ -1,6 +1,6 @@
 import java.util.*;
 public class HDUoj1025 {
-	public static void main(String[]args){
+	public static void main(String[]args){        //³ÔÌÇ¹û
 		Scanner input=new Scanner(System.in);
 		int t=input.nextInt();
 		while(t-->0){

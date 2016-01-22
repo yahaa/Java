@@ -1,5 +1,5 @@
 import java.util.*;
-public class CFC {
+public class CFC1_17 {
 	public static void main(String[]args){
 		Scanner input=new Scanner(System.in);
 		int rows,clos;

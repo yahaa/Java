@@ -1,5 +1,5 @@
 import java.util.*;
-public class CFB {
+public class CFB1_17 {
 	public static void main(String []args){
 		Scanner input=new Scanner(System.in);
 		while(input.hasNext()){

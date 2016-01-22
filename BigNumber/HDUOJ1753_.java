@@ -1,6 +1,6 @@
 import java.util.*;
 import java.math.*;
-public class HDUOJ1753 {
+public class HDUOJ1753_ {
 	public static void main(String[]args){
 		Scanner input=new Scanner (System.in);
 		while(input.hasNext()){

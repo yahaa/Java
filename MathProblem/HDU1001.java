@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.*;            //µÈ²îÊıÁĞ  
 
 public class HDU1001 {
 	public static void main(String[]args){

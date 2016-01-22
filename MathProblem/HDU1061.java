@@ -1,6 +1,6 @@
 import java.util.*;
 public class HDU1061 {
-	public static void main(String[]args){
+	public static void main(String[]args){        //数学问题   求 a^a 最后一位数
 		Scanner input=new Scanner(System.in);
 		int tt=input.nextInt();
 		while(tt-->0){

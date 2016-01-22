@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="JavaFX"/>
+	<classpathentry kind="src" path="RandomProblem"/>
+	<classpathentry kind="src" path="SpecialNumber"/>
+	<classpathentry kind="src" path="BigNumber"/>
+	<classpathentry kind="src" path="CFCode"/>
+	<classpathentry kind="src" path="greedy"/>
+	<classpathentry kind="src" path="HDUWater"/>
+	<classpathentry kind="src" path="MathProblem"/>
 	<classpathentry kind="src" path="p1"/>
-	<classpathentry kind="src" path="ACTypes"/>
+	<classpathentry kind="src" path="SHUWater"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

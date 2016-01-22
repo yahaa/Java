@@ -1,5 +1,4 @@
 
-import java.util.*;
 public class Rational extends Number implements Comparable<Rational> {
 private long numerator=0;       //·Ö×Ó
 private long denominator=1;     //·ÖÄ¸
@@ -51,32 +50,39 @@ public Rational divide(Rational o){
 	return new Rational(x,y);
 }
 
+@Override
 public String toString(){
 	if(denominator==1)return numerator+"";
 	else return numerator+"/"+denominator;
 }
 
+@Override
 public boolean equals(Object other){
 	if((this.subtract((Rational)(other))).getNumerator()==0)return true;
 	else return false;
 }
 
+@Override
 public int intValue(){
 	return (int)doubleValue();
 }
 
+@Override
 public double doubleValue(){
 	return (double)numerator/denominator;
 }
 
+@Override
 public long longValue(){
 	return (long)doubleValue();
 }
 
+@Override
 public float floatValue(){
 	return (float)doubleValue();
 }
 
+@Override
 public int compareTo(Rational o){
 	if(this.subtract(o).getNumerator()>0)return 1;
 	else if(this.subtract(o).getNumerator()<0)return -1;

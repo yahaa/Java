@@ -1,6 +1,6 @@
 import java.util.*;
-public class HDUoj1108 {
-	public static void main(String[]args){
+public class HDUoj1108 {            
+	public static void main(String[]args){        //≈∑º∏¿Ôµ√  GCD
 		Scanner input=new Scanner(System.in);
 		while(input.hasNext()){
 			int a=input.nextInt();

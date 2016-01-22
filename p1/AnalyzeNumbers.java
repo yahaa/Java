@@ -24,7 +24,7 @@ public class AnalyzeNumbers {
 		
 		double []ttt=new double[100];
 		for(int i=0;i<100;i++){
-			ttt[i]=(double)(Math.random()*100);
+			ttt[i]=Math.random()*100;
 		}
 		Arrays.sort(ttt);  
 		System.out.println("cout the number of ttt ");

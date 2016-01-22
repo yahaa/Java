@@ -23,11 +23,13 @@ public class Hous implements Cloneable,Comparable<Hous>{      //两个接口
 		return whenBuilt;
 	}
 
+	@Override
 	public Object clone()throws CloneNotSupportedException{
 
 		return super.clone();
 	}
 	
+	@Override
 	public int compareTo(Hous o){
 		if(area>o.area)return 1;
 		else if(area<o.area)return -1;

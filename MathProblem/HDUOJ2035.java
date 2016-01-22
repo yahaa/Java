@@ -1,6 +1,6 @@
 import java.util.Scanner;
 public class HDUOJ2035 {
-	public static void main(String[]args){
+	public static void main(String[]args){       //求最后三位数   的   b  次方
 		Scanner input=new Scanner(System.in);
 		
 		while(input.hasNext()){
@@ -12,7 +12,7 @@ public class HDUOJ2035 {
 		}
 	}
 	
-	public static int modexp(int a,int b){
+	public static int modexp(int a,int b){               //快速幂
 		int ans=1;
 		int temp=a;
 		while(b>0){
