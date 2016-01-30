@@ -13,6 +13,7 @@
 	<classpathentry kind="src" path="SHU"/>
 	<classpathentry excluding="HDUOJ1161.java" kind="src" path="HDU"/>
 	<classpathentry kind="src" path="JavaUpGrade"/>
+	<classpathentry kind="src" path="recursion"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
