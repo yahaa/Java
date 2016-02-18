@@ -14,6 +14,7 @@
 	<classpathentry excluding="HDUOJ1161.java" kind="src" path="HDU"/>
 	<classpathentry kind="src" path="JavaUpGrade"/>
 	<classpathentry kind="src" path="recursion"/>
+	<classpathentry kind="src" path="Crawlers"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
