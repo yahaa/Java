@@ -1,0 +1,3075 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dropEffect="none" class="no-js no-auth topic-pages">
+<head>
+<meta charset="utf-8" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="renderer" content="webkit" />
+
+<title>Spring - 话题精华 - 知乎</title>
+
+<meta name="apple-itunes-app" content="app-id=432274380" />
+
+
+<meta name="description" content="Java新手如何学习Spring、Struts、Hibernate三大框架？1428个最新问答，点击查看更多>>" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta http-equiv="mobile-agent" content="format=html5;url=https://www.zhihu.com/topic/19599516/top-answers">
+<meta id="znonce" name="znonce" content="97d106007eda4592a14ee5938955d266">
+
+
+<link rel="apple-touch-icon" href="https://static.zhihu.com/static/revved/img/ios/touch-icon-152.f361b474.png" sizes="152x152">
+<link rel="apple-touch-icon" href="https://static.zhihu.com/static/revved/img/ios/touch-icon-120.346e7055.png" sizes="120x120">
+<link rel="apple-touch-icon" href="https://static.zhihu.com/static/revved/img/ios/touch-icon-76.3101f5fe.png" sizes="76x76">
+<link rel="apple-touch-icon" href="https://static.zhihu.com/static/revved/img/ios/touch-icon-60.a6575a64.png" sizes="60x60">
+
+
+<link rel="shortcut icon" href="https://static.zhihu.com/static/favicon.ico" type="image/x-icon">
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://static.zhihu.com/static/search.xml" title="知乎" />
+<link rel="stylesheet" href="https://static.zhihu.com/static/revved/-/css/z.07b5669b.css">
+
+
+
+<meta name="google-site-verification" content="FTeR0c8arOPKh8c5DYh_9uu98_zJbaWw53J-Sch9MTg" />
+<meta property="qc:admins" content="14414345146201056375" />
+
+
+
+<!--[if lt IE 9]>
+<script src="https://static.zhihu.com/static/components/respond/dest/respond.min.js"></script>
+<link href="https://static.zhihu.com/static/components/respond/cross-domain/respond-proxy.html" id="respond-proxy" rel="respond-proxy" />
+<link href="/static/components/respond/cross-domain/respond.proxy.gif" id="respond-redirect" rel="respond-redirect" />
+<script src="/static/components/respond/cross-domain/respond.proxy.js"></script>
+<![endif]-->
+<script src="https://static.zhihu.com/static/revved/-/js/instant.4b42dd60.js"></script>
+
+<link rel="canonical" href="https://www.zhihu.com/topic/19599516" />
+
+</head>
+
+<body class="zhi ">
+
+
+
+<div role="navigation" class="zu-top">
+<div class="zg-wrap modal-shifting clearfix" id="zh-top-inner">
+<a href="/" class="zu-top-link-logo" id="zh-top-link-logo" data-za-c="view_home" data-za-a="visit_home" data-za-l="top_navigation_zhihu_logo">知乎</a>
+
+
+
+<ul class="topnav-noauth clearfix">
+<li>
+<a href="javascript:;" class="js-signup-noauth"><i class="zg-icon zg-icon-dd-home"></i>注册知乎</a>
+</li>
+<li>
+<a href="javascript:;" class="js-signin-noauth">登录</a>
+</li>
+</ul>
+
+
+
+<button class="zu-top-add-question" id="zu-top-add-question">提问</button>
+
+
+<div role="search" id="zh-top-search" class="zu-top-search">
+<form method="GET" action="/search" id="zh-top-search-form" class="zu-top-search-form">
+
+
+
+<input type="hidden" name="type" value="question">
+<label for="q" class="hide-text">知乎搜索</label><input type="text" class="zu-top-search-input" id="q" name="q" autocomplete="off" value="" placeholder="搜索问题、话题或人">
+<button type="submit" class="zu-top-search-button"><span class="hide-text">搜索</span><span class="sprite-global-icon-magnifier-dark"></span></button>
+</form>
+</div>
+
+
+
+<div id="zg-top-nav" class="zu-top-nav">
+<ul class="zu-top-nav-ul zg-clear">
+
+<li class="zu-top-nav-li " id="zh-top-nav-home">
+<a class="zu-top-nav-link" href="/" id="zh-top-link-home" data-za-c="view_home" data-za-a="visit_home" data-za-l="top_navigation_home">首页</a>
+</li>
+<li class="top-nav-topic-selector zu-top-nav-li current" id="zh-top-nav-topic">
+<a class="zu-top-nav-link" href="/topic" id="top-nav-dd-topic">话题</a>
+
+</li>
+<li class="zu-top-nav-li " id="zh-top-nav-explore">
+<a class="zu-top-nav-link" href="/explore">发现</a>
+</li>
+
+
+</ul>
+<div class="zu-top-nav-live zu-noti7-popup zg-r5px no-hovercard" id="zh-top-nav-live-new" role="popup" tabindex="0">
+<div class="zu-top-nav-live-inner zg-r5px">
+<div class="zu-top-live-icon">&nbsp;</div>
+<div class="zu-home-noti-inner" id="zh-top-nav-live-new-inner">
+<div class="zm-noti7-popup-tab-container clearfix" tabindex="0">
+<button class="zm-noti7-popup-tab-item message">
+<span class="icon">消息</span>
+</button>
+<button class="zm-noti7-popup-tab-item user">
+<span class="icon">用户</span>
+</button>
+<button class="zm-noti7-popup-tab-item thanks">
+<span class="icon">赞同和感谢</span>
+</button>
+</div>
+</div>
+<div class="zm-noti7-frame-border top"></div>
+<div class="zm-noti7-frame">
+<div class="zm-noti7-content">
+<div class="zm-noti7-content-inner">
+<div class="zm-noti7-content-body">
+<div class="zm-noti7-popup-loading">
+<span class="noti-spinner-loading"></span>
+</div>
+</div>
+</div>
+</div>
+<div class="zm-noti7-content" style="display:none;">
+<div class="zm-noti7-content-inner">
+<div class="zm-noti7-content-body">
+<div class="zm-noti7-popup-loading">
+<span class="noti-spinner-loading"></span>
+</div>
+</div>
+</div>
+</div>
+<div class="zm-noti7-content" style="display:none;">
+<div class="zm-noti7-content-inner">
+<div class="zm-noti7-content-body">
+<div class="zm-noti7-popup-loading">
+<span class="noti-spinner-loading"></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="zm-noti7-frame-border bottom"></div>
+<div class="zm-noti7-popup-footer">
+<a href="/notifications" class="zm-noti7-popup-footer-all zg-right">查看全部 &raquo;</a>
+<a href="/settings/notification" class="zm-noti7-popup-footer-set" title="通知设置" ><i class="zg-icon zg-icon-settings"></i></a>
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<div class="zu-global-notify" id="zh-global-message" style="display:none">
+<div class="zg-wrap">
+<div class="zu-global-nitify-inner">
+<a class="zu-global-notify-close" href="javascript:;" title="关闭" name="close">x</a>
+<span class="zu-global-notify-icon"></span>
+<span class="zu-global-notify-msg"></span>
+</div>
+</div>
+</div>
+
+
+
+
+<div class="zg-wrap zu-main clearfix "  role="main">
+<div class="zu-main-content">
+<div class="zu-main-content-inner">
+
+
+<div itemscope itemtype="https://schema.org/CreativeWork/Topic">
+<div class="topic-avatar" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+<div>
+<a class="zm-entry-head-avatar-link" href="/topic/19599516" id="zh-avartar-edit-form">
+<img alt="Spring" src="https://pic1.zhimg.com/e4e40c84c_m.jpg" class="zm-avatar-editor-preview"></a>
+<meta itemprop="image" content="https://pic1.zhimg.com/e4e40c84c_l.jpg" />
+</div>
+
+</div>
+<div class="topic-info">
+<div class="topic-name" id="zh-topic-title">
+<h1 class="zm-editable-content" data-disabled="1">Spring</h1>
+
+<div class="zm-editable-editor-wrap" style="display:none">
+<input type="text" class="zm-editable-editor-input zg-form-text-input" style="width:150px" />
+<span class="zm-command">
+<a href="javascript:;" name="save" class="zg-btn-blue" style="margin:0 15px;">完成</a>
+<a href="javascript:;" name="cancel" class="zm-command-cancel">取消</a>
+</span>
+</div>
+</div>
+
+
+<div class="zm-topic-topbar">
+<div class="zm-topic-topbar-nav">
+
+
+<ul class="zm-topic-topbar-nav-list clearfix">
+
+
+
+<li class="zm-topic-topbar-nav-list-item">
+<a class="zg-link-litblue-normal" href="/topic/19599516/hot">动态</a>
+</li>
+
+
+
+<li class="zm-topic-topbar-nav-list-item current">
+<span>精华</span>
+</li>
+
+
+
+<li class="zm-topic-topbar-nav-list-item">
+<a class="zg-link-litblue-normal" href="/topic/19599516/questions">全部问题</a>
+</li>
+
+
+</ul>
+
+</div>
+</div>
+</div>
+<div class="zm-topic-list-container" itemprop="hasPart" itemscope itemtype="http://schema.org/ItemList/QuestionList">
+<div class="zu-top-feed-list" id="zh-topic-top-page-list">
+<meta itemprop="questionCount" content="392" />
+<meta itemprop="topAnswerCount" content="45" />
+<div class="feed-item feed-item-hook folding" itemprop="question" itemscope itemtype="http://schema.org/Question" data-score='1'>
+<meta itemprop="answer-id" content="16357943" />
+<meta itemprop="answerCount" content="34" />
+<meta itemprop="isTopQuestion" content="false" />
+<div class="feed-main">
+
+<div class="content">
+<h2><a class="question_link" target="_blank" href="/question/21142149">Java新手如何学习Spring、Struts、Hibernate三大框架？</a></h2>
+<div class="entry-body "
+data-aid="16357943"
+data-atoken="52383396"
+data-collapsed="False"
+data-created="1435038327"
+data-deleted="0"
+data-isowner="0"
+data-helpful="1"
+data-score="0"
+data-copyable="1"
+>
+
+<div class="zm-item-vote">
+<a class="zm-item-vote-count js-expand js-vote-count" href="javascript:;" data-votecount="193">193</a>
+</div>
+<div class="zm-votebar">
+<button class="up ">
+<i class="icon vote-arrow"></i>
+<span class="count">193</span>
+<span class="label sr-only">赞同</span>
+</button>
+<button class="down ">
+<i class="icon vote-arrow"></i>
+<span class="label sr-only">反对</span>
+</button>
+</div>
+
+<div class="zm-item-answer-detail">
+
+<div class="zm-item-answer-author-info">
+
+<span class="name">知乎用户</span><span title="秋水时至" class="bio">，秋水时至</span>
+</div>
+
+<div class="zm-item-vote-info " data-votecount="193">
+
+<span class="voters">
+<span class="user-block"><a data-tip="p$t$roke-44" href="https://www.zhihu.com/people/roke-44" class="zg-link" title="roke">roke</a>、</span><span class="user-block">知乎用户、</span><span class="user-block"><a data-tip="p$t$wang-zhu-79-47" href="https://www.zhihu.com/people/wang-zhu-79-47" class="zg-link" title="Nas王">Nas王</a></span>
+</span>
+
+
+<a href="javascript:;" class="more"> 等人赞同</a>
+
+
+</div>
+<div class="zm-item-rich-text js-collapse-body" data-resourceid="637552" data-action="/answer/content" data-author-name="Vincent Lee" data-entry-url="/question/21142149/answer/52383396">
+
+<textarea class="content hidden">
+想说说自己Spring的学习路程，课余自学Spring将近一年了，还是不得其道。去年暑假学习了一下JSP，并没有深入理解，所以导致学习Spring时对着书本写一些demo，感觉自己理解了，其实并不知道内部时什么原理，出了问题不停的百度，一个小问题好几天解决不了。&lt;br&gt;   学习一种框架最先需要知道的是为什么需要使用这个框架，任何一个框架的发明都是为了解决编程中的一些痛点，打开任何一本hibernate或者其他框架的入门书，第一章都是介绍框架的理念和优势。如果需要理解这些理念和优势，那么你需要知道不使用这个框架之前是怎么处理的，才能知道框架做了一些什么事情。&lt;br&gt;   针对Spring的学习，第一步就是理解IoC和AOP；这是基础；然后学习SpringMVC,其实还是Java EE开发，如果要理解这个框架，就要知道没有这个框架之前，使用的是什么技术。&lt;br&gt;&lt;blockquote&gt;很多新的技术只不过是引入了新的编程元素对原来技术进行了封装。&lt;br&gt;&lt;/blockquote&gt;   Web开发，首先需要理解的是 HTTP协议，这部分一定要深入理解。理解http请求，其实就是要知道下面这张图的含义。&lt;br&gt;&lt;img src=&quot;https://pic1.zhimg.com/bfb576a894f3702b39a0bc3588b72ab0_b.jpg&quot; data-rawwidth=&quot;800&quot; data-rawheight=&quot;228&quot; class=&quot;origin_image zh-lightbox-thumb&quot; width=&quot;800&quot; data-original=&quot;https://pic1.zhimg.com/bfb576a894f3702b39a0bc3588b72ab0_r.jpg&quot;&gt;&lt;br&gt;还要知道服务器发送给浏览器的响应是没有没有JS，CSS和图片等外部资源的，浏览器在解析响应时才会再次请求这些资源，&lt;b&gt;这里会出现一些静态资源请求不到的问题，SpringMVC是怎么配置的？&lt;/b&gt;&lt;br&gt;   接下来，学习Servlet和JSP。这个步骤不是可以跳过的，现在流行的框架Spring MVC和Struts2其实都是基于Servlet的，只有深入理解了Servlet才能理解后面的新技术。&lt;br&gt;下面几个知识点可以检测你是否理解了Servlet：&lt;br&gt;1、什么是ServletContext，和tomcat等web容器的关系时什么？&lt;a href=&quot;//link.zhihu.com/?target=http%3A//www.ibm.com/developerworks/cn/java/j-lo-servlet/&quot; class=&quot; wrap external&quot; target=&quot;_blank&quot; rel=&quot;nofollow noreferrer&quot;&gt;Servlet 工作原理解析&lt;i class=&quot;icon-external&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;br&gt;简单的说，我们在浏览器点击链接和按钮产生的消息不是发送给Servlet的，而是发送给web容器的(在JSP出现之前，web容器也叫Servlet容器)，web容器接收消息后不知道怎么处理，转交给我们编写的Servlet处理，那么web容器怎么和Servlet交流呢？于是就出现了Servlet接口，&lt;b&gt;接口是定义一种规范的良好表达形式。&lt;/b&gt; 只要我们编写的Java类符合Servlet规范，那么就能被Web容器识别并被容器管理。&lt;br&gt;2、什么是Session？Session在实际工程中的应用场景。以及@SessionAttribute注解的局限性。&lt;br&gt;3、&lt;b&gt;JSP是面向服务器的&lt;/b&gt;，它并不知道浏览器是什么鬼，是我们在写JSP时预设客户端是浏览器，&lt;b&gt;JSP就是一个Servlet。JSP的常用对象和指令。&lt;/b&gt;&lt;br&gt;4、JSP的中文编码乱码有几种情况？各自的解决方法？提示： JSP文件的编码，浏览器的解析编码，GET请求的编码，POST的编码。&lt;br&gt;5、Servlet是一种接口规范，其中请求和响应是Servlet容器通过向方法的参数赋值HttpServletRequest或者HttpServletResponse传递的。在Struts1里面，将doGet()方法里的响应移到返回值里。在Struts2里则:&lt;br&gt;&lt;blockquote&gt;&lt;ul&gt;&lt;li&gt;在Controller中彻底杜绝引入HttpServletRequest或者HttpServletResponse这样的原生Servlet对象。&lt;/li&gt;&lt;li&gt;同时将请求参数和响应数据都从响应方法中剥离到了Controller中的属性变量。&lt;/li&gt;&lt;/ul&gt;&lt;/blockquote&gt;这是一个很大的技术改造，也造成了Struts2的盛行。Spring MVC走的是中间路线，Spring的2.0.8之前的版本甚至直接使用Servlet的doGet的。Spring MVC现在开始流行主要还是因为Schema xml的精简和基于注解的配置。所以这里出现了新的知识点：Schema Based XML的相关知识和Java5引入的注解原理。&lt;br&gt;参考文献：&lt;br&gt;&lt;a href=&quot;//link.zhihu.com/?target=http%3A//www.iteye.com/blogs/subjects/springmvc-explore&quot; class=&quot; wrap external&quot; target=&quot;_blank&quot; rel=&quot;nofollow noreferrer&quot;&gt;博客专栏 - SpringMVC深度探险&lt;i class=&quot;icon-external&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;br&gt;强烈推荐看两遍。&lt;br&gt;还有关于Spring 容器和MVC容器的关系，这里有一篇很好的介绍：&lt;br&gt;&lt;a href=&quot;//link.zhihu.com/?target=http%3A//blog.arganzheng.me/posts/spring-and-web-mvc-integration-web-application-context.html&quot; class=&quot; wrap external&quot; target=&quot;_blank&quot; rel=&quot;nofollow noreferrer&quot;&gt;Spring与web MVC的整合——Spring的应用上下文管理&lt;i class=&quot;icon-external&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;br&gt;书籍：推荐许令波的书《深入分析Java Web技术内幕(修订版)》和计文柯的《深入理解spring技术内幕》，特别是第二本，对spring的分析很是彻底。&lt;br&gt;&lt;br&gt;&lt;br&gt;        查看源码是比较快的学习方法，在一个项目里直接利用debug的方式追踪变量查看源码，而不是去阅读源码。&lt;br&gt;如何使用eclipse的debug：&lt;a href=&quot;//link.zhihu.com/?target=http%3A//blog.csdn.net/jackpk/article/details/7655777&quot; class=&quot; wrap external&quot; target=&quot;_blank&quot; rel=&quot;nofollow noreferrer&quot;&gt;★ Eclipse Debug 界面应用详解——Eclipse Debug不为人知的秘密&lt;i class=&quot;icon-external&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;br&gt;简单说下步骤：新建一个maven web项目，将需要的依赖都添加到pom中去，在pom文件夹中打开终端，运行&quot;mvn dependency:sources&quot;就可以下载所有pom中依赖的源码。如果是eclipse，选中项目，右键 run as 选择 maven build... ，在goal中填入“dependency:sources”，没有mvn。接着简单写一个mvc项目。假设有一个如下的handler method：我们在方法的第一行打一个断点，进行调试 。&lt;br&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot;&gt;        &lt;span class=&quot;nd&quot;&gt;@RequestMapping&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ModelAndView&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;indexHandler&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(){&lt;/span&gt;
+		
+		&lt;span class=&quot;n&quot;&gt;ModelAndView&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mv&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ModelAndView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;success&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;mv&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;addObject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;key&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;hello,hsiung!&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;mv&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;addObject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;time&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+		
+		&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mv&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;一步一步往下看，可以在outline的窗口清楚地看到ModelAndView的属性和方法，可以看到ModelAndView有两个属性很重要，一个是view:Object;一个是model：ModelMap，接着可以看到上面方法的第二行调用的是如下代码：&lt;br&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot;&gt;public ModelAndView addObject(String attributeName, Object attributeValue) {
+		getModelMap().addAttribute(attributeName, attributeValue);
+		return this;
+	}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;所以model中实际使用的是ModelMap这个类，那这个类的结构是什么呢？按住Ctrl再单击ModelMap，就可以看到其实就是一个LinkedHashMap&amp;lt;String, Object&amp;gt;。&lt;br&gt;                                                                                                                                     2015.6.22&lt;br&gt;&lt;br&gt;---------------------没想到有人看，修改了了一下错别字和细节 2015.6.23-----------------&lt;br&gt;&lt;br&gt;关于demo，其实spring project提供了一些很好的MVC demo，&lt;br&gt;&lt;a href=&quot;//link.zhihu.com/?target=http%3A//github.com/spring-projects/spring-mvc-showcase&quot; class=&quot; wrap external&quot; target=&quot;_blank&quot; rel=&quot;nofollow noreferrer&quot;&gt;spring-projects/spring-mvc-showcase · GitHub&lt;i class=&quot;icon-external&quot;&gt;&lt;/i&gt;&lt;/a&gt;，&lt;br&gt;&lt;a href=&quot;//link.zhihu.com/?target=https%3A//github.com/spring-projects/spring-petclinic&quot; class=&quot; wrap external&quot; target=&quot;_blank&quot; rel=&quot;nofollow noreferrer&quot;&gt;spring-projects/spring-petclinic · GitHub&lt;i class=&quot;icon-external&quot;&gt;&lt;/i&gt;&lt;/a&gt;。&lt;br&gt;下载源码，到pom目录下打开终端 运行： mvn eclipse:eclipse ,构建成功后直接导入eclipse就可以运行查看效果了。注意，mvn 命令经常一次不能成功，主要是有些maven插件下载失败以及国内网络的问题，手动删除下载失败的依赖，然后命令多运行几次就可以成功了。也可以使用开源中国的maven源。
+
+
+<span class="answer-date-link-wrap">
+<a class="answer-date-link last_updated meta-item" data-tip="s$t$发布于 2015-06-23" target="_blank" href="/question/21142149/answer/52383396">编辑于 2015-12-18</a>
+</span>
+
+</textarea>
+
+
+<div class="zh-summary summary clearfix">
+<img src="https://pic1.zhimg.com/bfb576a894f3702b39a0bc3588b72ab0_200x112.jpg" data-rawwidth="800" data-rawheight="228" class="origin_image inline-img zh-lightbox-thumb" data-original="https://pic1.zhimg.com/bfb576a894f3702b39a0bc3588b72ab0_r.jpg">
+想说说自己Spring的学习路程，课余自学Spring将近一年了，还是不得其道。去年暑假学习了一下JSP，并没有深入理解，所以导致学习Spring时对着书本写一些demo，感觉自己理解了，其实并不知道内部时什么原理，出了问题不停的百度，一个小问题好几天解决不了。 …
+
+<a href="/question/21142149/answer/52383396" class="toggle-expand">显示全部</a>
+
+</div>
+
+
+</div>
+</div>
+</div>
+<div class="zm-item-meta feed-meta">
+<div class="zm-item-meta zm-item-comment-el answer-actions clearfix">
+<div class="zm-meta-panel">
+
+<a data-follow="q:link" class="follow-link zg-follow meta-item" href="javascript:;" id="sfb-637552"><i class="z-icon-follow"></i>关注问题</a>
+
+<a href="#" name="addcomment" class=" meta-item toggle-comment">
+<i class="z-icon-comment"></i>12 条评论</a>
+
+
+<a href="#" class="meta-item zu-autohide" name="thanks" data-thanked="false"><i class="z-icon-thank"></i>感谢</a>
+
+
+
+<a href="#" class="meta-item zu-autohide" name="share">
+<i class="z-icon-share"></i>分享</a>
+<a href="#" class="meta-item zu-autohide" name="favo">
+<i class="z-icon-collect"></i>收藏</a>
+
+
+
+
+<span class="zg-bull zu-autohide">&bull;</span>
+
+<a href="#" name="nohelp" class="meta-item zu-autohide">没有帮助</a>
+
+<span class="zg-bull zu-autohide">&bull;</span>
+<a href="#" name="report" class="meta-item zu-autohide">举报</a>
+
+
+
+<span class="zg-bull">&bull;</span>
+
+<a href="/terms#sec-licence-1" target="_blank" class="meta-item copyright"> 作者保留权利 </a>
+
+
+<button class="meta-item item-collapse js-collapse">
+<i class="z-icon-fold"></i>收起
+</button>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="feed-item feed-item-hook folding" itemprop="question" itemscope itemtype="http://schema.org/Question" data-score='2'>
+<meta itemprop="answer-id" content="4962540" />
+<meta itemprop="answerCount" content="13" />
+<meta itemprop="isTopQuestion" content="false" />
+<div class="feed-main">
+
+<div class="content">
+<h2><a class="question_link" target="_blank" href="/question/23277575">Spring IoC有什么好处呢？</a></h2>
+<div class="entry-body "
+data-aid="4962540"
+data-atoken="24259844"
+data-collapsed="False"
+data-created="1396976890"
+data-deleted="0"
+data-isowner="0"
+data-helpful="1"
+data-score="0"
+data-copyable="1"
+>
+
+<div class="zm-item-vote">
+<a class="zm-item-vote-count js-expand js-vote-count" href="javascript:;" data-votecount="184">184</a>
+</div>
+<div class="zm-votebar">
+<button class="up ">
+<i class="icon vote-arrow"></i>
+<span class="count">184</span>
+<span class="label sr-only">赞同</span>
+</button>
+<button class="down ">
+<i class="icon vote-arrow"></i>
+<span class="label sr-only">反对</span>
+</button>
+</div>
+
+<div class="zm-item-answer-detail">
+
+<div class="zm-item-answer-author-info">
+
+<span class="name">知乎用户</span><span title="天生蛋疼菊紧" class="bio">，天生蛋疼菊紧</span>
+</div>
+
+<div class="zm-item-vote-info " data-votecount="184">
+
+<span class="voters">
+<span class="user-block"><a data-tip="p$t$vincent-hsing" href="https://www.zhihu.com/people/vincent-hsing" class="zg-link" title="Vincent Hsing">Vincent Hsing</a>、</span><span class="user-block">知乎用户、</span><span class="user-block"><a data-tip="p$t$shang-yang-yang-50" href="https://www.zhihu.com/people/shang-yang-yang-50" class="zg-link" title="尚羊羊">尚羊羊</a></span>
+</span>
+
+
+<a href="javascript:;" class="more"> 等人赞同</a>
+
+
+</div>
+<div class="zm-item-rich-text js-collapse-body" data-resourceid="1492304" data-action="/answer/content" data-author-name="OneNoodle" data-entry-url="/question/23277575/answer/24259844">
+
+<textarea class="content hidden">
+私以为以上各位都没有对spring ioc的精髓讲解到位。大多都在很模糊的说是什么，抽象化的表述或者含糊其辞的说概念。&lt;br&gt;&lt;br&gt;ioc的思想最核心的地方在于，资源不由使用资源的双方管理，而由不使用资源的第三方管理，这可以带来很多好处。第一，资源集中管理，实现资源的可配置和易管理。第二，降低了使用资源双方的依赖程度，也就是我们说的耦合度。&lt;br&gt;&lt;br&gt;也就是说，甲方要达成某种目的不需要直接依赖乙方，它只需要达到的目的告诉第三方机构就可以了，比如甲方需要一双袜子，而乙方它卖一双袜子，它要把袜子卖出去，并不需要自己去直接找到一个卖家来完成袜子的卖出。它也只需要找第三方，告诉别人我要卖一双袜子。这下好了，甲乙双方进行交易活动，都不需要自己直接去找卖家，相当于程序内部开放接口，卖家由第三方作为参数传入。甲乙互相不依赖，而且只有在进行交易活动的时候，甲才和乙产生联系。反之亦然。这样做什么好处么呢，甲乙可以在对方不真实存在的情况下独立存在，而且保证不交易时候无联系，想交易的时候可以很容易的产生联系。甲乙交易活动不需要双方见面，避免了双方的互不信任造成交易失败的问题。因为交易由第三方来负责联系，而且甲乙都认为第三方可靠。那么交易就能很可靠很灵活的产生和进行了。&lt;br&gt;&lt;br&gt;这就是ioc的核心思想。生活中这种例子比比皆是，支付宝在整个淘宝体系里就是庞大的ioc容器，交易双方之外的第三方，提供可靠性可依赖可灵活变更交易方的资源管理中心。另外人事代理也是，雇佣机构和个人之外的第三方。嗯，就这样，希望对题主有帮助。&lt;br&gt;&lt;br&gt;==========================update===========================&lt;br&gt;在以上的描述中，诞生了两个专业词汇，依赖注入和控制反转&lt;br&gt;所谓的依赖注入，则是，甲方开放接口，在它需要的时候，能够讲乙方传递进来(注入)&lt;br&gt;所谓的控制反转，甲乙双方不相互依赖，交易活动的进行不依赖于甲乙任何一方，整个活动的进行由第三方负责管理。&lt;br&gt;&lt;br&gt;这就是spring IOC的思想所在，不要只谈DI IOC这些概念。&lt;br&gt;&lt;br&gt;人之所恶在好为人师,不实知，谨慎言。
+
+
+<span class="answer-date-link-wrap">
+<a class="answer-date-link last_updated meta-item" data-tip="s$t$发布于 2014-04-09" target="_blank" href="/question/23277575/answer/24259844">编辑于 2014-04-09</a>
+</span>
+
+</textarea>
+
+
+<div class="zh-summary summary clearfix">
+
+私以为以上各位都没有对spring ioc的精髓讲解到位。大多都在很模糊的说是什么，抽象化的表述或者含糊其辞的说概念。ioc的思想最核心的地方在于，资源不由使用资源的双方管理，而由不使用资源的第三方管理，这可以带来很多好处。第一，资源集中管理，实现资…
+
+<a href="/question/23277575/answer/24259844" class="toggle-expand">显示全部</a>
+
+</div>
+
+
+</div>
+</div>
+</div>
+<div class="zm-item-meta feed-meta">
+<div class="zm-item-meta zm-item-comment-el answer-actions clearfix">
+<div class="zm-meta-panel">
+
+<a data-follow="q:link" class="follow-link zg-follow meta-item" href="javascript:;" id="sfb-1492304"><i class="z-icon-follow"></i>关注问题</a>
+
+<a href="#" name="addcomment" class=" meta-item toggle-comment">
+<i class="z-icon-comment"></i>14 条评论</a>
+
+
+<a href="#" class="meta-item zu-autohide" name="thanks" data-thanked="false"><i class="z-icon-thank"></i>感谢</a>
+
+
+
+<a href="#" class="meta-item zu-autohide" name="share">
+<i class="z-icon-share"></i>分享</a>
+<a href="#" class="meta-item zu-autohide" name="favo">
+<i class="z-icon-collect"></i>收藏</a>
+
+
+
+
+<span class="zg-bull zu-autohide">&bull;</span>
+
+<a href="#" name="nohelp" class="meta-item zu-autohide">没有帮助</a>
+
+<span class="zg-bull zu-autohide">&bull;</span>
+<a href="#" name="report" class="meta-item zu-autohide">举报</a>
+
+
+
+<span class="zg-bull">&bull;</span>
+
+<a href="/terms#sec-licence-1" target="_blank" class="meta-item copyright"> 作者保留权利 </a>
+
+
+<button class="meta-item item-collapse js-collapse">
+<i class="z-icon-fold"></i>收起
+</button>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="feed-item feed-item-hook folding" itemprop="question" itemscope itemtype="http://schema.org/Question" data-score='3'>
+<meta itemprop="answer-id" content="4898906" />
+<meta itemprop="answerCount" content="34" />
+<meta itemprop="isTopQuestion" content="false" />
+<div class="feed-main">
+
+<div class="content">
+<h2><a class="question_link" target="_blank" href="/question/21142149">Java新手如何学习Spring、Struts、Hibernate三大框架？</a></h2>
+<div class="entry-body "
+data-aid="4898906"
+data-atoken="24120371"
+data-collapsed="False"
+data-created="1396627305"
+data-deleted="0"
+data-isowner="0"
+data-helpful="1"
+data-score="0"
+data-copyable="1"
+>
+
+<div class="zm-item-vote">
+<a class="zm-item-vote-count js-expand js-vote-count" href="javascript:;" data-votecount="124">124</a>
+</div>
+<div class="zm-votebar">
+<button class="up ">
+<i class="icon vote-arrow"></i>
+<span class="count">124</span>
+<span class="label sr-only">赞同</span>
+</button>
+<button class="down ">
+<i class="icon vote-arrow"></i>
+<span class="label sr-only">反对</span>
+</button>
+</div>
+
+<div class="zm-item-answer-detail">
+
+<div class="zm-item-answer-author-info">
+
+<a class="author-link" data-tip="p$t$strong-liu" href="/people/strong-liu">Strong Liu</a><span title="Hibernate Committer" class="bio">，Hibernate Committer</span>
+</div>
+
+<div class="zm-item-vote-info " data-votecount="124">
+
+<span class="voters">
+<span class="user-block"><a data-tip="p$t$ll-yu-63" href="https://www.zhihu.com/people/ll-yu-63" class="zg-link" title="ll yu">ll yu</a>、</span><span class="user-block"><a data-tip="p$t$frankfan" href="https://www.zhihu.com/people/frankfan" class="zg-link" title="FrankFan">FrankFan</a>、</span><span class="user-block"><a data-tip="p$t$chiwai-poon-01" href="https://www.zhihu.com/people/chiwai-poon-01" class="zg-link" title="chiwai poon">chiwai poon</a></span>
+</span>
+
+
+<a href="javascript:;" class="more"> 等人赞同</a>
+
+
+</div>
+<div class="zm-item-rich-text js-collapse-body" data-resourceid="637552" data-action="/answer/content" data-author-name="Strong Liu" data-entry-url="/question/21142149/answer/24120371">
+
+<textarea class="content hidden">
+好吧, 我是开发Hibernate的 (见 &lt;a href=&quot;//link.zhihu.com/?target=https%3A//github.com/stliu&quot; class=&quot; wrap external&quot; target=&quot;_blank&quot; rel=&quot;nofollow noreferrer&quot;&gt;stliu (Strong Liu) 路 GitHub&lt;i class=&quot;icon-external&quot;&gt;&lt;/i&gt;&lt;/a&gt; ) , 现在的4.x的版本里面大部分代码是我写的, 现在我也在带着个团队在开发一个基于JAVA EE 7 的项目, 团队里面的人基本上对java都不是很了解, 可以说刚刚入门, 所以应该说比较符合题主的情况吧....&lt;br&gt;&lt;br&gt;我带团队的方法基本上是让他们自己去看文档, 自己去网上找资料, 来实现功能, 然后对这他们的代码问为什么, 为什么这个配置要这样写, 为什么这个ManyToOne要设置成lazy的, 如果不设置成这样会怎样, 不知道? okay, 那就改成eager的跑一边, 看看log&lt;br&gt;&lt;br&gt;其实, 学习什么都是一样的, 先入门, 会做了, 然后搞懂为什么要这么做, 最忌讳的是, 遇到个问题, 在网上搜索搜索, 别人说把这个设置改成A, 你改成了A, 咦, 确实好使了, 然后就这样过去了, 以后遇到啥问题都改成A&lt;br&gt;&lt;br&gt;还是要搞懂, 你实现一个方法的时候, 是希望执行一个多表级联查询, 还是单表查询, 还是执行一个批处理, 然后再用工具去实现你的想法&lt;br&gt;&lt;br&gt;具体到hibernate的入门, 我觉得, 首先还是先要学会数据库, jdbc, 设计模式, 这些都是基础, 并不是说有了hibernate就不需要了解这些了, 相反, 只有知道了只写, 才能够使用起hibernate来得心应手&lt;br&gt;&lt;br&gt;从小的项目开始, 一点点的了解为什么一个框架会这样设计, 在什么情况下使用这个功能, 在什么情况下不应该使用这个功能&lt;br&gt;&lt;br&gt;路漫漫啊.... :)&lt;br&gt;&lt;br&gt;--------------------------------------------------------&lt;br&gt;&lt;br&gt;最后, 推荐 &lt;a href=&quot;//link.zhihu.com/?target=http%3A//book.douban.com/subject/1854431/&quot; class=&quot; wrap external&quot; target=&quot;_blank&quot; rel=&quot;nofollow noreferrer&quot;&gt;Java Persistence with Hibernate (豆瓣)&lt;i class=&quot;icon-external&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+
+
+<span class="answer-date-link-wrap">
+<a class="answer-date-link meta-item" target="_blank" href="/question/21142149/answer/24120371">发布于 2014-04-05</a>
+</span>
+
+</textarea>
+
+
+<div class="zh-summary summary clearfix">
+
+好吧, 我是开发Hibernate的 (见 <a href="//link.zhihu.com/?target=https%3A//github.com/stliu" class=" wrap external" target="_blank" rel="nofollow noreferrer">stliu (Strong Liu) 路 GitHub<i class="icon-external"></i></a> ) , 现在的4.x的版本里面大部分代码是我写的, 现在我也在带着个团队在开发一个基于JAVA EE 7 的项目, 团队里面的人基本上对java都不是很了解, 可以说刚刚入门, 所以应该说比较符合题主的情况吧…
+
+<a href="/question/21142149/answer/24120371" class="toggle-expand">显示全部</a>
+
+</div>
+
+
+</div>
+</div>
+</div>
+<div class="zm-item-meta feed-meta">
+<div class="zm-item-meta zm-item-comment-el answer-actions clearfix">
+<div class="zm-meta-panel">
+
+<a data-follow="q:link" class="follow-link zg-follow meta-item" href="javascript:;" id="sfb-637552"><i class="z-icon-follow"></i>关注问题</a>
+
+<a href="#" name="addcomment" class=" meta-item toggle-comment">
+<i class="z-icon-comment"></i>18 条评论</a>
+
+
+<a href="#" class="meta-item zu-autohide" name="thanks" data-thanked="false"><i class="z-icon-thank"></i>感谢</a>
+
+
+
+<a href="#" class="meta-item zu-autohide" name="share">
+<i class="z-icon-share"></i>分享</a>
+<a href="#" class="meta-item zu-autohide" name="favo">
+<i class="z-icon-collect"></i>收藏</a>
+
+
+
+
+<span class="zg-bull zu-autohide">&bull;</span>
+
+<a href="#" name="nohelp" class="meta-item zu-autohide">没有帮助</a>
+
+<span class="zg-bull zu-autohide">&bull;</span>
+<a href="#" name="report" class="meta-item zu-autohide">举报</a>
+
+
+
+<span class="zg-bull">&bull;</span>
+
+<a href="/terms#sec-licence-1" target="_blank" class="meta-item copyright"> 作者保留权利 </a>
+
+
+<button class="meta-item item-collapse js-collapse">
+<i class="z-icon-fold"></i>收起
+</button>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="feed-item feed-item-hook folding" itemprop="question" itemscope itemtype="http://schema.org/Question" data-score='4'>
+<meta itemprop="answer-id" content="12695640" />
+<meta itemprop="answerCount" content="13" />
+<meta itemprop="isTopQuestion" content="false" />
+<div class="feed-main">
+
+<div class="content">
+<h2><a class="question_link" target="_blank" href="/question/22021742">初学Spring有没有适合的书？</a></h2>
+<div class="entry-body "
+data-aid="12695640"
+data-atoken="43253452"
+data-collapsed="False"
+data-created="1427548096"
+data-deleted="0"
+data-isowner="0"
+data-helpful="1"
+data-score="0"
+data-copyable="1"
+>
+
+<div class="zm-item-vote">
+<a class="zm-item-vote-count js-expand js-vote-count" href="javascript:;" data-votecount="117">117</a>
+</div>
+<div class="zm-votebar">
+<button class="up ">
+<i class="icon vote-arrow"></i>
+<span class="count">117</span>
+<span class="label sr-only">赞同</span>
+</button>
+<button class="down ">
+<i class="icon vote-arrow"></i>
+<span class="label sr-only">反对</span>
+</button>
+</div>
+
+<div class="zm-item-answer-detail">
+
+<div class="zm-item-answer-author-info">
+
+<a class="author-link" data-tip="p$t$liuyiyou" href="/people/liuyiyou">刘易友</a><span title="软件工程师" class="bio">，软件工程师</span>
+</div>
+
+<div class="zm-item-vote-info " data-votecount="117">
+
+<span class="voters">
+<span class="user-block"><a data-tip="p$t$xiao-huo-99-33" href="https://www.zhihu.com/people/xiao-huo-99-33" class="zg-link" title="小伙">小伙</a>、</span><span class="user-block"><a data-tip="p$t$sky-15" href="https://www.zhihu.com/people/sky-15" class="zg-link" title="sky">sky</a>、</span><span class="user-block"><a data-tip="p$t$banjvduo" href="https://www.zhihu.com/people/banjvduo" class="zg-link" title="半句多">半句多</a></span>
+</span>
+
+
+<a href="javascript:;" class="more"> 等人赞同</a>
+
+
+</div>
+<div class="zm-item-rich-text js-collapse-body" data-resourceid="989609" data-action="/answer/content" data-author-name="刘易友" data-entry-url="/question/22021742/answer/43253452">
+
+<textarea class="content hidden">
+我是来反对那些说直接看开发文档或者看源码的，他们可能没有注意楼主是初学者。&lt;br&gt;&lt;br&gt;楼主是初学，而如果连Spring都是初学，那么可以肯定楼主之前没有阅读java框架源码的习惯。&lt;br&gt;没有阅读过源码，知道整体流程么?知道依赖注入的概念么？知道aop么？知道其中用到了哪些设计模式么？&lt;br&gt;&lt;br&gt;再说了，如果一上手就是源码？难道你没有注意到Spring的类有多少个吗？各个模块之间的组织模式么？所以我想说那些说看源码的人，完全是不负责任的。如果楼主能看懂源码就不会问这样的问题。&lt;br&gt;&lt;br&gt;至于官方文档，我也不建议，因为Spring出来这么久了，不说4，3.x在我印象中已经有快600页了。而且官方文档是不会给你一个完整的demo的。所以你可能看完了，也写不了什么代码。&lt;br&gt;所以我觉得楼主应该看一下基础的&lt;br&gt;&lt;br&gt;个人推荐：&lt;br&gt;Spring 3.x企业开发实战：   非常基础，但是对知识点都有涉及。作者个人博客：&lt;a href=&quot;//link.zhihu.com/?target=http%3A//stamen.iteye.com/&quot; class=&quot; wrap external&quot; target=&quot;_blank&quot; rel=&quot;nofollow noreferrer&quot;&gt;stamen的程序员之路&lt;i class=&quot;icon-external&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;br&gt;&lt;br&gt;张开涛的Spring系列：&lt;a href=&quot;//link.zhihu.com/?target=http%3A//jinnianshilongnian.iteye.com/blog/1482071&quot; class=&quot; wrap external&quot; target=&quot;_blank&quot; rel=&quot;nofollow noreferrer&quot;&gt;跟我学spring3 目录贴及电子书下载&lt;i class=&quot;icon-external&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;a href=&quot;//link.zhihu.com/?target=http%3A//jinnianshilongnian.iteye.com/blog/1752171&quot; class=&quot; wrap external&quot; target=&quot;_blank&quot; rel=&quot;nofollow noreferrer&quot;&gt;跟我学SpringMVC目录汇总贴、PDF下载、源码下载&lt;i class=&quot;icon-external&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;br&gt;&lt;br&gt;修改于2015-04-09&lt;br&gt;我记得我刚开始学Spring的时候是看马士兵的Spring视频，但是那个时候对ioc、aop等不了解，听上去很简单，但是具体有什么好处并不是十分了解，所以虽然看完了视频，也跟着写完了里面的代码，但是一段时间过后，要让我写一个Spring程序，依旧写不出来&lt;br&gt;&lt;br&gt;工作之后，因为公司也使用了Spring，所以为了工作，你不得不自己学，上班的时候好好的看已经写好的代码，不懂的就去网上查，下班后就自己搭建Spring的项目，这种状况持续了两个月，不知道搭建了多少次环境后，终于达到了一看控制台就基本上明白是哪里出错了。&lt;br&gt;&lt;br&gt;之后，一个小功能需要我独立完成，我就把SpringMVC直接引入，不会的依旧去网上查，一段时间后终于开始慢慢熟悉了。这个时候也对Spring慢慢的熟悉起来了。&lt;br&gt;&lt;br&gt;所以，项目驱动是最好的老师&lt;br&gt;&lt;br&gt;比如你要学Spring，首先其他的不说，先来一个用户的增删改查，做完后，什么数据绑定、数据验证、拦截器、mvc、jdbcTemplate、、、、都自然而然的熟悉起来了。&lt;br&gt;&lt;br&gt;到了这个时候，就开始慢慢的深入了，比如SpringMVC的流程、bean实例化步骤以及生命周期等等。&lt;br&gt;&lt;br&gt;等你拿着Spring官方文档的目录，能把上面的东西说出来的时候，基本上就算熟悉了Spring了，所谓熟悉就是出了问题基本上能通过看控制台或者找资料能解决。&lt;br&gt;&lt;br&gt;再进一步，你就开始需要学习设计模式之类的，什么工厂模式、模板模式、适配器模式等。&lt;br&gt;&lt;br&gt;等熟悉了设计模式了，开始学gradle之类的构建技术（Spring就是用他来进行构建的），学得一般般之后，就可以开始熟悉Spring源码了。 &lt;br&gt;&lt;br&gt;不过Spring源码很大，而且很多功能基本上只是为了保持向上兼容，所以要完全熟悉是需要大量的时间的。 &lt;br&gt;&lt;br&gt;真到了那一步，基本上，任何一个框架拿过来，就可以真正拿着官方文档就可以开始做项目了。
+
+
+<span class="answer-date-link-wrap">
+<a class="answer-date-link last_updated meta-item" data-tip="s$t$发布于 2015-03-28" target="_blank" href="/question/22021742/answer/43253452">编辑于 2015-06-09</a>
+</span>
+
+</textarea>
+
+
+<div class="zh-summary summary clearfix">
+
+我是来反对那些说直接看开发文档或者看源码的，他们可能没有注意楼主是初学者。楼主是初学，而如果连Spring都是初学，那么可以肯定楼主之前没有阅读java框架源码的习惯。没有阅读过源码，知道整体流程么?知道依赖注入的概念么？知道aop么？知道其中用到了哪…
+
+<a href="/question/22021742/answer/43253452" class="toggle-expand">显示全部</a>
+
+</div>
+
+
+</div>
+</div>
+</div>
+<div class="zm-item-meta feed-meta">
+<div class="zm-item-meta zm-item-comment-el answer-actions clearfix">
+<div class="zm-meta-panel">
+
+<a data-follow="q:link" class="follow-link zg-follow meta-item" href="javascript:;" id="sfb-989609"><i class="z-icon-follow"></i>关注问题</a>
+
+<a href="#" name="addcomment" class=" meta-item toggle-comment">
+<i class="z-icon-comment"></i>14 条评论</a>
+
+
+<a href="#" class="meta-item zu-autohide" name="thanks" data-thanked="false"><i class="z-icon-thank"></i>感谢</a>
+
+
+
+<a href="#" class="meta-item zu-autohide" name="share">
+<i class="z-icon-share"></i>分享</a>
+<a href="#" class="meta-item zu-autohide" name="favo">
+<i class="z-icon-collect"></i>收藏</a>
+
+
+
+
+<span class="zg-bull zu-autohide">&bull;</span>
+
+<a href="#" name="nohelp" class="meta-item zu-autohide">没有帮助</a>
+
+<span class="zg-bull zu-autohide">&bull;</span>
+<a href="#" name="report" class="meta-item zu-autohide">举报</a>
+
+
+
+<span class="zg-bull">&bull;</span>
+
+<a href="/terms#sec-licence-1" target="_blank" class="meta-item copyright"> 作者保留权利 </a>
+
+
+<button class="meta-item item-collapse js-collapse">
+<i class="z-icon-fold"></i>收起
+</button>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="feed-item feed-item-hook folding" itemprop="question" itemscope itemtype="http://schema.org/Question" data-score='5'>
+<meta itemprop="answer-id" content="8170283" />
+<meta itemprop="answerCount" content="10" />
+<meta itemprop="isTopQuestion" content="false" />
+<div class="feed-main">
+
+<div class="content">
+<h2><a class="question_link" target="_blank" href="/question/25255223">spring有什么缺点吗？</a></h2>
+<div class="entry-body "
+data-aid="8170283"
+data-atoken="31961636"
+data-collapsed="False"
+data-created="1413448558"
+data-deleted="0"
+data-isowner="0"
+data-helpful="1"
+data-score="0"
+data-copyable="1"
+>
+
+<div class="zm-item-vote">
+<a class="zm-item-vote-count js-expand js-vote-count" href="javascript:;" data-votecount="106">106</a>
+</div>
+<div class="zm-votebar">
+<button class="up ">
+<i class="icon vote-arrow"></i>
+<span class="count">106</span>
+<span class="label sr-only">赞同</span>
+</button>
+<button class="down ">
+<i class="icon vote-arrow"></i>
+<span class="label sr-only">反对</span>
+</button>
+</div>
+
+<div class="zm-item-answer-detail">
+
+<div class="zm-item-answer-author-info">
+
+<a class="author-link" data-tip="p$t$night-silent" href="/people/night-silent">Night Silent</a>
+</div>
+
+<div class="zm-item-vote-info " data-votecount="106">
+
+<span class="voters">
+<span class="user-block"><a data-tip="p$t$vincent-hsing" href="https://www.zhihu.com/people/vincent-hsing" class="zg-link" title="Vincent Hsing">Vincent Hsing</a>、</span><span class="user-block"><a data-tip="p$t$he-ren-qing-57" href="https://www.zhihu.com/people/he-ren-qing-57" class="zg-link" title="贺人庆">贺人庆</a>、</span><span class="user-block"><a data-tip="p$t$lu-tian-cheng-11" href="https://www.zhihu.com/people/lu-tian-cheng-11" class="zg-link" title="吕天成">吕天成</a></span>
+</span>
+
+
+<a href="javascript:;" class="more"> 等人赞同</a>
+
+
+</div>
+<div class="zm-item-rich-text js-collapse-body" data-resourceid="2284654" data-action="/answer/content" data-author-name="Night Silent" data-entry-url="/question/25255223/answer/31961636">
+
+<textarea class="content hidden">
+缺点当然有，现在 Spring 越来越大，都开始使用 Gradle 构建了，支持的东西越来越多，这就导致大多数程序员对 Spring 的体系及结构都一知半解，网上乱七八糟的文章来回粘来粘去，搞得小码农都分不清楚到底哪种使用方式是对的，这归根到底就是因为&lt;br&gt;1. 对 Spring 的版本变更不清楚&lt;br&gt;2. 对 Spring 和 J2EE 规范的关系不清楚&lt;br&gt;3. 对 Spring 那堆配置和注解背后的原理不清楚&lt;br&gt;&lt;br&gt;你可能知道 DI 是个什么概念，但你可能不知道 DI 的正确使用方式：&lt;br&gt;1. 你也许不知道 Spring 有自己的测试体系，我们可以直接使用&lt;br&gt;2. Spring 的事务管理优越在哪里，和 Hibernate 自己的事务管理有啥区别，怎么配置才对。&lt;br&gt;3. Spring 为啥提倡非侵入式（non-invasive）设计，又是从哪个版本开始这么干的，起因是什么&lt;br&gt;4. Spring 那些注解的使用原理和适用场景是什么，哪些是Spring 自己的注解，哪些是 J2EE DI 的标准注解，使用哪个好，为什么好。&lt;br&gt;...........&lt;br&gt;&lt;br&gt;上述的一切，当你把 Spring 官方提供的 Spring Reference 看的差不多了，也就明白了，大概 500 多页吧。&lt;br&gt;&lt;br&gt;Spring 越来越大，衍生出其他的分支项目，虽然臃肿，但如果你知道如何筛选自己想要的功能，就不会臃肿，反而会很简洁，例如：&lt;br&gt;1. 你想实现 Rest 服务，那么 Spring MVC 就预置了这个功能，你没必要再去使用 CXF / Restlet 之类的 Rest 框架，还得忙着想怎么和 Spring 整合，这样，Struts 就出局了，Rest 框架也省了。&lt;br&gt;2. 你想实现权限功能，那么 Spring Security 可以替你搞定，你没必要使用 Apache Shiro 来做，也没必要苦逼地自己设计，而且人家还原生支持 OAuth 和 SAML&lt;br&gt;3. 你不想苦逼地写 DAO, 那么 Spring Data 可以替你做，这些 boilerplate code 全部替你实现了，而且对 JPA 或 NO-SQL 的支持也是相当方便。&lt;br&gt;4. 你想根据自己的需求生成代码，而不是苦逼地自己来写，可以试试 Spring Boot&lt;br&gt;...........&lt;br&gt;&lt;br&gt;其他的，还有很多很多，你只需要记住，是不是臃肿，很大程度上是由你的认知和使用能力决定的，不是框架本身，具体如何学习这个优秀的框架，建议：&lt;br&gt;1. 视频教程点到为止，不可全信&lt;br&gt;2. 网上文章看看即可，别拷过来自己完事&lt;br&gt;3. 有问题，先去查看 Spring Reference, 多看原理。&lt;br&gt;&lt;br&gt;&lt;b&gt;P.S&lt;/b&gt;&lt;br&gt;感谢知友提醒，修正答案&lt;br&gt;&lt;ol&gt;&lt;li&gt;Spring Roo 和 Spring Boot 都是 Spring 组件，没有演变关系&lt;/li&gt;&lt;li&gt;推荐使用 Spring Boot，选择 Spring Roo 还是 Spring Boot，引用一段话如下：&lt;/li&gt;&lt;/ol&gt;&lt;a class=&quot; wrap external&quot; href=&quot;//link.zhihu.com/?target=http%3A//www.coderanch.com/t/641269/Spring/Spring-Boot-Spring-Roo-Spring&quot; target=&quot;_blank&quot; rel=&quot;nofollow noreferrer&quot;&gt;Spring Boot, Spring Roo, Spring Framework (Spring forum at JavaRanch)&lt;i class=&quot;icon-external&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot;&gt;First, whether you use Spring Boot or Spring Roo, the reality is you're using 
+Spring. So to answer your question of whether you'd be able to use other
+ Spring Framework components...yes, absolutely. Again, Spring Boot *is* 
+Spring. Spring Roo *is* Spring. They're just different approaches to 
+simplifying Spring development.
+
+Now, choosing between Spring Boot and Spring Roo. I was once a fan of Spring 
+Roo, but Spring Boot outshines it in so many ways. Spring Roo was big on code
+ generation and used aspects to perform some of its magic. It also forced you
+ into a design model that you may or may not feel comfortable with. Spring 
+Boot, on the other hand, uses no code generation and does not force any 
+particular design choice. It is primarily autoconfiguration saving you from 
+having to write a lot of common configuration yourself
+
+In short...Go with Spring Boot. You won't regret it. 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;如果你在自学 Java，可以参考我回答过的这篇帖子：&lt;br&gt;&lt;a class=&quot;internal&quot; href=&quot;http://www.zhihu.com/question/21427478/answer/18227060&quot;&gt;会计转行从事IT，如何在一年时间内全职学习？ - Night Silent 的回答&lt;/a&gt;
+
+
+<span class="answer-date-link-wrap">
+<a class="answer-date-link last_updated meta-item" data-tip="s$t$发布于 2014-10-16" target="_blank" href="/question/25255223/answer/31961636">编辑于 2015-08-30</a>
+</span>
+
+</textarea>
+
+
+<div class="zh-summary summary clearfix">
+
+缺点当然有，现在 Spring 越来越大，都开始使用 Gradle 构建了，支持的东西越来越多，这就导致大多数程序员对 Spring 的体系及结构都一知半解，网上乱七八糟的文章来回粘来粘去，搞得小码农都分不清楚到底哪种使用方式是对的，这归根到底就是因为1. 对 Spri…
+
+<a href="/question/25255223/answer/31961636" class="toggle-expand">显示全部</a>
+
+</div>
+
+
+</div>
+</div>
+</div>
+<div class="zm-item-meta feed-meta">
+<div class="zm-item-meta zm-item-comment-el answer-actions clearfix">
+<div class="zm-meta-panel">
+
+<a data-follow="q:link" class="follow-link zg-follow meta-item" href="javascript:;" id="sfb-2284654"><i class="z-icon-follow"></i>关注问题</a>
+
+<a href="#" name="addcomment" class=" meta-item toggle-comment">
+<i class="z-icon-comment"></i>16 条评论</a>
+
+
+<a href="#" class="meta-item zu-autohide" name="thanks" data-thanked="false"><i class="z-icon-thank"></i>感谢</a>
+
+
+
+<a href="#" class="meta-item zu-autohide" name="share">
+<i class="z-icon-share"></i>分享</a>
+<a href="#" class="meta-item zu-autohide" name="favo">
+<i class="z-icon-collect"></i>收藏</a>
+
+
+
+
+<span class="zg-bull zu-autohide">&bull;</span>
+
+<a href="#" name="nohelp" class="meta-item zu-autohide">没有帮助</a>
+
+<span class="zg-bull zu-autohide">&bull;</span>
+<a href="#" name="report" class="meta-item zu-autohide">举报</a>
+
+
+
+<span class="zg-bull">&bull;</span>
+
+<a href="/terms#sec-licence-1" target="_blank" class="meta-item copyright"> 作者保留权利 </a>
+
+
+<button class="meta-item item-collapse js-collapse">
+<i class="z-icon-fold"></i>收起
+</button>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="feed-item feed-item-hook folding" itemprop="question" itemscope itemtype="http://schema.org/Question" data-score='6'>
+<meta itemprop="answer-id" content="705705" />
+<meta itemprop="answerCount" content="10" />
+<meta itemprop="isTopQuestion" content="false" />
+<div class="feed-main">
+
+<div class="content">
+<h2><a class="question_link" target="_blank" href="/question/20097229">作为一个外行，怎么理解以下这段关于 Java 类系统架构师的职位要求的描述？</a></h2>
+<div class="entry-body "
+data-aid="705705"
+data-atoken="13964219"
+data-collapsed="False"
+data-created="1330683865"
+data-deleted="0"
+data-isowner="0"
+data-helpful="1"
+data-score="0"
+data-copyable="1"
+>
+
+<div class="zm-item-vote">
+<a class="zm-item-vote-count js-expand js-vote-count" href="javascript:;" data-votecount="91">91</a>
+</div>
+<div class="zm-votebar">
+<button class="up ">
+<i class="icon vote-arrow"></i>
+<span class="count">91</span>
+<span class="label sr-only">赞同</span>
+</button>
+<button class="down ">
+<i class="icon vote-arrow"></i>
+<span class="label sr-only">反对</span>
+</button>
+</div>
+
+<div class="zm-item-answer-detail">
+
+<div class="zm-item-answer-author-info">
+
+<a class="author-link" data-tip="p$t$tedeyang" href="/people/tedeyang">宝术</a><span title="伪装自己还写代码的程序员" class="bio">，伪装自己还写代码的程序员</span>
+</div>
+
+<div class="zm-item-vote-info " data-votecount="91">
+
+<span class="voters">
+<span class="user-block"><a data-tip="p$t$kejun-xiao" href="https://www.zhihu.com/people/kejun-xiao" class="zg-link" title="梵高斯基">梵高斯基</a>、</span><span class="user-block"><a data-tip="p$t$freeman-73" href="https://www.zhihu.com/people/freeman-73" class="zg-link" title="你说啥">你说啥</a>、</span><span class="user-block">知乎用户</span>
+</span>
+
+
+<a href="javascript:;" class="more"> 等人赞同</a>
+
+
+</div>
+<div class="zm-item-rich-text js-collapse-body" data-resourceid="218901" data-action="/answer/content" data-author-name="宝术" data-entry-url="/question/20097229/answer/13964219">
+
+<textarea class="content hidden">
+他们要找的不是真正的技术高手，而是一个比较偏重金融领域的3到4年经验的高级程序员，冠名为“架构师”。估计薪资大约在15k左右。公司大概没有专职的DBA，说明团队规模不大，也没有很长的技术积累和高要求的数据安全性。&lt;br&gt;没有专职的前端工程师，意味着他们在开发一个界面很丑的企业级产品，否则不可能有Ext字眼的出现。&lt;br&gt;招聘者自己的技术不是很强，停留在一知半解的地步，“OOP的设计理念“这样的词汇更像是个推销员的口吻，更专业一点应该提到设计模式。”AOP“这玩意主要应用在Spring的声明式事务中，属于常见的面试题，说明他们的技术其实很简单，SSH那一套够用了，但业务模式高度依赖数据库和事务处理——典型的企业级或金融业开发模式。国内从2006年起有了把AOP和OOP相提并论的观点，持续到大约08年，招聘者应该深受这段时间舆论的影响。&lt;br&gt;岗位要求的1,2,3点内容互相覆盖，夹杂不清，招聘者要么是漫不经心，要么是思维混乱。&lt;br&gt;&lt;br&gt;混合使用ibatis和hibernate说明他们的系统可能还得分前台和后台，前台用ibatis+jquery，后台用hibernate+ext。&lt;br&gt;&lt;br&gt;总体来说，不是一份理想的架构师工作。
+
+
+<span class="answer-date-link-wrap">
+<a class="answer-date-link meta-item" target="_blank" href="/question/20097229/answer/13964219">发布于 2012-03-02</a>
+</span>
+
+</textarea>
+
+
+<div class="zh-summary summary clearfix">
+
+他们要找的不是真正的技术高手，而是一个比较偏重金融领域的3到4年经验的高级程序员，冠名为“架构师”。估计薪资大约在15k左右。公司大概没有专职的DBA，说明团队规模不大，也没有很长的技术积累和高要求的数据安全性。没有专职的前端工程师，意味着他们在…
+
+<a href="/question/20097229/answer/13964219" class="toggle-expand">显示全部</a>
+
+</div>
+
+
+</div>
+</div>
+</div>
+<div class="zm-item-meta feed-meta">
+<div class="zm-item-meta zm-item-comment-el answer-actions clearfix">
+<div class="zm-meta-panel">
+
+<a data-follow="q:link" class="follow-link zg-follow meta-item" href="javascript:;" id="sfb-218901"><i class="z-icon-follow"></i>关注问题</a>
+
+<a href="#" name="addcomment" class=" meta-item toggle-comment">
+<i class="z-icon-comment"></i>11 条评论</a>
+
+
+<a href="#" class="meta-item zu-autohide" name="thanks" data-thanked="false"><i class="z-icon-thank"></i>感谢</a>
+
+
+
+<a href="#" class="meta-item zu-autohide" name="share">
+<i class="z-icon-share"></i>分享</a>
+<a href="#" class="meta-item zu-autohide" name="favo">
+<i class="z-icon-collect"></i>收藏</a>
+
+
+
+
+<span class="zg-bull zu-autohide">&bull;</span>
+
+<a href="#" name="nohelp" class="meta-item zu-autohide">没有帮助</a>
+
+<span class="zg-bull zu-autohide">&bull;</span>
+<a href="#" name="report" class="meta-item zu-autohide">举报</a>
+
+
+
+<span class="zg-bull">&bull;</span>
+
+<a href="/terms#sec-licence-1" target="_blank" class="meta-item copyright"> 作者保留权利 </a>
+
+
+<button class="meta-item item-collapse js-collapse">
+<i class="z-icon-fold"></i>收起
+</button>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="feed-item feed-item-hook folding" itemprop="question" itemscope itemtype="http://schema.org/Question" data-score='7'>
+<meta itemprop="answer-id" content="14759803" />
+<meta itemprop="answerCount" content="3" />
+<meta itemprop="isTopQuestion" content="false" />
+<div class="feed-main">
+
+<div class="content">
+<h2><a class="question_link" target="_blank" href="/question/30525693">谈谈对ssh三大框架的理解？</a></h2>
+<div class="entry-body "
+data-aid="14759803"
+data-atoken="48403983"
+data-collapsed="False"
+data-created="1432106040"
+data-deleted="0"
+data-isowner="0"
+data-helpful="1"
+data-score="0"
+data-copyable="1"
+>
+
+<div class="zm-item-vote">
+<a class="zm-item-vote-count js-expand js-vote-count" href="javascript:;" data-votecount="67">67</a>
+</div>
+<div class="zm-votebar">
+<button class="up ">
+<i class="icon vote-arrow"></i>
+<span class="count">67</span>
+<span class="label sr-only">赞同</span>
+</button>
+<button class="down ">
+<i class="icon vote-arrow"></i>
+<span class="label sr-only">反对</span>
+</button>
+</div>
+
+<div class="zm-item-answer-detail">
+
+<div class="zm-item-answer-author-info">
+
+<a class="author-link" data-tip="p$t$david.dai" href="/people/david.dai">戴威</a><span title="前端顾问" class="bio">，前端顾问</span>
+</div>
+
+<div class="zm-item-vote-info " data-votecount="67">
+
+<span class="voters">
+<span class="user-block"><a data-tip="p$t$xiao-huo-99-33" href="https://www.zhihu.com/people/xiao-huo-99-33" class="zg-link" title="小伙">小伙</a>、</span><span class="user-block"><a data-tip="p$t$lu-tian-cheng-11" href="https://www.zhihu.com/people/lu-tian-cheng-11" class="zg-link" title="吕天成">吕天成</a>、</span><span class="user-block"><a data-tip="p$t$sky-15" href="https://www.zhihu.com/people/sky-15" class="zg-link" title="sky">sky</a></span>
+</span>
+
+
+<a href="javascript:;" class="more"> 等人赞同</a>
+
+
+</div>
+<div class="zm-item-rich-text js-collapse-body" data-resourceid="4392708" data-action="/answer/content" data-author-name="戴威" data-entry-url="/question/30525693/answer/48403983">
+
+<textarea class="content hidden">
+SSH框架一般指的是Struts、Spring、Hibernate，后来Struts2代替了Struts。最近5年，Struts2已经被Spring MVC代替，而Hibernate基本也被iBatis/MyBatis代替。&lt;br&gt;&lt;br&gt;所以你真正需要了解的是Spring，Spring你需要了解两个概念AOP和IOC，更进一步就是Spring的核心技术“动态代理”。&lt;br&gt;&lt;br&gt;持久层框架看看Hibernate/iBatis/MyBatis，研究一下Spring的数据库事务管理，各个持久层框架式如何实现ORM的，了解至少一种缓存框架，知道什么是数据库连接池。和数据库的交互最核心的不是ORM，而是掌握和数据库相关的能力，比如数据库编程、SQL优化、对范式的理解。&lt;br&gt;&lt;br&gt;MVC框架Struts2和Spring MVC，你需要知道他们在web.xml文件里配置了一些什么，Struts2/Spring MVC接到前台请求之后经过哪些步骤之后转到Action/Controller，return之后Struts2/Spring MVC又作了些什么。还有就是Filter、Listener和Struts2/Spring MVC的拦截器各有什么特点，适合处理什么样的问题。
+
+
+<span class="answer-date-link-wrap">
+<a class="answer-date-link last_updated meta-item" data-tip="s$t$发布于 2015-05-20" target="_blank" href="/question/30525693/answer/48403983">编辑于 2015-05-20</a>
+</span>
+
+</textarea>
+
+
+<div class="zh-summary summary clearfix">
+
+SSH框架一般指的是Struts、Spring、Hibernate，后来Struts2代替了Struts。最近5年，Struts2已经被Spring MVC代替，而Hibernate基本也被iBatis/MyBatis代替。所以你真正需要了解的是Spring，Spring你需要了解两个概念AOP和IOC，更进一步就是Spring的核心技术…
+
+<a href="/question/30525693/answer/48403983" class="toggle-expand">显示全部</a>
+
+</div>
+
+
+</div>
+</div>
+</div>
+<div class="zm-item-meta feed-meta">
+<div class="zm-item-meta zm-item-comment-el answer-actions clearfix">
+<div class="zm-meta-panel">
+
+<a data-follow="q:link" class="follow-link zg-follow meta-item" href="javascript:;" id="sfb-4392708"><i class="z-icon-follow"></i>关注问题</a>
+
+<a href="#" name="addcomment" class=" meta-item toggle-comment">
+<i class="z-icon-comment"></i>6 条评论</a>
+
+
+<a href="#" class="meta-item zu-autohide" name="thanks" data-thanked="false"><i class="z-icon-thank"></i>感谢</a>
+
+
+
+<a href="#" class="meta-item zu-autohide" name="share">
+<i class="z-icon-share"></i>分享</a>
+<a href="#" class="meta-item zu-autohide" name="favo">
+<i class="z-icon-collect"></i>收藏</a>
+
+
+
+
+<span class="zg-bull zu-autohide">&bull;</span>
+
+<a href="#" name="nohelp" class="meta-item zu-autohide">没有帮助</a>
+
+<span class="zg-bull zu-autohide">&bull;</span>
+<a href="#" name="report" class="meta-item zu-autohide">举报</a>
+
+
+
+<span class="zg-bull">&bull;</span>
+
+<a href="/terms#sec-licence-1" target="_blank" class="meta-item copyright"> 作者保留权利 </a>
+
+
+<button class="meta-item item-collapse js-collapse">
+<i class="z-icon-fold"></i>收起
+</button>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="feed-item feed-item-hook folding" itemprop="question" itemscope itemtype="http://schema.org/Question" data-score='8'>
+<meta itemprop="answer-id" content="23768657" />
+<meta itemprop="answerCount" content="6" />
+<meta itemprop="isTopQuestion" content="false" />
+<div class="feed-main">
+
+<div class="content">
+<h2><a class="question_link" target="_blank" href="/question/24845214">谁看过李守宏的 spring mvc教学视频？不觉得想死吗？</a></h2>
+<div class="entry-body "
+data-aid="23768657"
+data-atoken="70869854"
+data-collapsed="False"
+data-created="1446690103"
+data-deleted="0"
+data-isowner="0"
+data-helpful="1"
+data-score="0"
+data-copyable="1"
+>
+
+<div class="zm-item-vote">
+<a class="zm-item-vote-count js-expand js-vote-count" href="javascript:;" data-votecount="51">51</a>
+</div>
+<div class="zm-votebar">
+<button class="up ">
+<i class="icon vote-arrow"></i>
+<span class="count">51</span>
+<span class="label sr-only">赞同</span>
+</button>
+<button class="down ">
+<i class="icon vote-arrow"></i>
+<span class="label sr-only">反对</span>
+</button>
+</div>
+
+<div class="zm-item-answer-detail">
+
+<div class="zm-item-answer-author-info">
+
+<a class="author-link" data-tip="p$t$lishouhong" href="/people/lishouhong">李守宏</a>
+</div>
+
+<div class="zm-item-vote-info " data-votecount="51">
+
+<span class="voters">
+<span class="user-block"><a data-tip="p$t$shi-jian-85-7" href="https://www.zhihu.com/people/shi-jian-85-7" class="zg-link" title="时间">时间</a>、</span><span class="user-block"><a data-tip="p$t$he-zu-dao-11" href="https://www.zhihu.com/people/he-zu-dao-11" class="zg-link" title="红红火火恍恍惚惚">红红火火恍恍惚惚</a>、</span><span class="user-block">知乎用户</span>
+</span>
+
+
+<a href="javascript:;" class="more"> 等人赞同</a>
+
+
+</div>
+<div class="zm-item-rich-text js-collapse-body" data-resourceid="2120086" data-action="/answer/content" data-author-name="李守宏" data-entry-url="/question/24845214/answer/70869854">
+
+<textarea class="content hidden">
+我是李守宏，这是当时学的时候录制的视频 ，当时就是觉得springMVC的资料太少了 尤其是中文资料 自己就想帮助像我这样的初学者入门， 所以质量上肯定不太好， 这一晃四年多过去了， 我自己也学会了很多 ，打算重新录制， 希望能更多的帮助大家 ，&lt;br&gt;最后给您带来的不便实在是不好意思了 。
+
+
+<span class="answer-date-link-wrap">
+<a class="answer-date-link meta-item" target="_blank" href="/question/24845214/answer/70869854">发布于 2015-11-05</a>
+</span>
+
+</textarea>
+
+
+<div class="zh-summary summary clearfix">
+
+我是李守宏，这是当时学的时候录制的视频 ，当时就是觉得springMVC的资料太少了 尤其是中文资料 自己就想帮助像我这样的初学者入门， 所以质量上肯定不太好， 这一晃四年多过去了， 我自己也学会了很多 ，打算重新录制， 希望能更多的帮助大家 ，最后给您带…
+
+<a href="/question/24845214/answer/70869854" class="toggle-expand">显示全部</a>
+
+</div>
+
+
+</div>
+</div>
+</div>
+<div class="zm-item-meta feed-meta">
+<div class="zm-item-meta zm-item-comment-el answer-actions clearfix">
+<div class="zm-meta-panel">
+
+<a data-follow="q:link" class="follow-link zg-follow meta-item" href="javascript:;" id="sfb-2120086"><i class="z-icon-follow"></i>关注问题</a>
+
+<a href="#" name="addcomment" class=" meta-item toggle-comment">
+<i class="z-icon-comment"></i>18 条评论</a>
+
+
+<a href="#" class="meta-item zu-autohide" name="thanks" data-thanked="false"><i class="z-icon-thank"></i>感谢</a>
+
+
+
+<a href="#" class="meta-item zu-autohide" name="share">
+<i class="z-icon-share"></i>分享</a>
+<a href="#" class="meta-item zu-autohide" name="favo">
+<i class="z-icon-collect"></i>收藏</a>
+
+
+
+
+<span class="zg-bull zu-autohide">&bull;</span>
+
+<a href="#" name="nohelp" class="meta-item zu-autohide">没有帮助</a>
+
+<span class="zg-bull zu-autohide">&bull;</span>
+<a href="#" name="report" class="meta-item zu-autohide">举报</a>
+
+
+
+<span class="zg-bull">&bull;</span>
+
+<a href="/terms#sec-licence-1" target="_blank" class="meta-item copyright"> 作者保留权利 </a>
+
+
+<button class="meta-item item-collapse js-collapse">
+<i class="z-icon-fold"></i>收起
+</button>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="feed-item feed-item-hook folding" itemprop="question" itemscope itemtype="http://schema.org/Question" data-score='9'>
+<meta itemprop="answer-id" content="20032229" />
+<meta itemprop="answerCount" content="10" />
+<meta itemprop="isTopQuestion" content="false" />
+<div class="feed-main">
+
+<div class="content">
+<h2><a class="question_link" target="_blank" href="/question/35122053">一般的java项目后台都有什么技术，比如Spring MVC，shiro 还有什么技术？</a></h2>
+<div class="entry-body "
+data-aid="20032229"
+data-atoken="61549007"
+data-collapsed="False"
+data-created="1440941528"
+data-deleted="0"
+data-isowner="0"
+data-helpful="1"
+data-score="0"
+data-copyable="1"
+>
+
+<div class="zm-item-vote">
+<a class="zm-item-vote-count js-expand js-vote-count" href="javascript:;" data-votecount="42">42</a>
+</div>
+<div class="zm-votebar">
+<button class="up ">
+<i class="icon vote-arrow"></i>
+<span class="count">42</span>
+<span class="label sr-only">赞同</span>
+</button>
+<button class="down ">
+<i class="icon vote-arrow"></i>
+<span class="label sr-only">反对</span>
+</button>
+</div>
+
+<div class="zm-item-answer-detail">
+
+<div class="zm-item-answer-author-info">
+
+<a class="author-link" data-tip="p$t$www.zuidaima.com" href="/people/www.zuidaima.com">javaniu</a>
+</div>
+
+<div class="zm-item-vote-info " data-votecount="42">
+
+<span class="voters">
+<span class="user-block"><a data-tip="p$t$ling-feng-yue-99" href="https://www.zhihu.com/people/ling-feng-yue-99" class="zg-link" title="泠风月">泠风月</a>、</span><span class="user-block"><a data-tip="p$t$wei-tian-one" href="https://www.zhihu.com/people/wei-tian-one" class="zg-link" title="真咸">真咸</a>、</span><span class="user-block"><a data-tip="p$t$gun-yan-hao-gun" href="https://www.zhihu.com/people/gun-yan-hao-gun" class="zg-link" title="丨延浩丨">丨延浩丨</a></span>
+</span>
+
+
+<a href="javascript:;" class="more"> 等人赞同</a>
+
+
+</div>
+<div class="zm-item-rich-text js-collapse-body" data-resourceid="6255500" data-action="/answer/content" data-author-name="javaniu" data-entry-url="/question/35122053/answer/61549007">
+
+<textarea class="content hidden">
+我感觉你要的答案是java web开发后台框架有那些吧？&lt;br&gt;&lt;p&gt;对于java web开发框架，主要有：&lt;/p&gt;&lt;p&gt;&lt;b&gt;1.S2SH(struts2+spring+hibernate)&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;//link.zhihu.com/?target=http%3A//www.zuidaima.com/share/2177101238471680.htm&quot; class=&quot; wrap external&quot; target=&quot;_blank&quot; rel=&quot;nofollow noreferrer&quot;&gt;基于Struts2+Spring3+Hibernate4开发java Web企业应用开源框架s2jh源码分享&lt;i class=&quot;icon-external&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;//link.zhihu.com/?target=http%3A//www.zuidaima.com/share/2168677709335552.htm&quot; class=&quot; wrap external&quot; target=&quot;_blank&quot; rel=&quot;nofollow noreferrer&quot;&gt;spring+hibernate+struts2开发OA企业办公管理系统源码分享&lt;i class=&quot;icon-external&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;//link.zhihu.com/?target=http%3A//www.zuidaima.com/share/1550463494638592.htm&quot; class=&quot; wrap external&quot; target=&quot;_blank&quot; rel=&quot;nofollow noreferrer&quot;&gt;Struts2+Hibernate3+Spring三大框架技术实现MySQL数据分页&lt;i class=&quot;icon-external&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;//link.zhihu.com/?target=http%3A//www.zuidaima.com/share/1550463430888448.htm&quot; class=&quot; wrap external&quot; target=&quot;_blank&quot; rel=&quot;nofollow noreferrer&quot;&gt;Spring+struts2+hibernate+easyui基础权限管理框架&lt;i class=&quot;icon-external&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;//link.zhihu.com/?target=http%3A//www.zuidaima.com/share/2030578238245888.htm&quot; class=&quot; wrap external&quot; target=&quot;_blank&quot; rel=&quot;nofollow noreferrer&quot;&gt;Spring+Struts2+Hibernate三大框架开发企业人力资源管理系统源代码下载&lt;i class=&quot;icon-external&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;//link.zhihu.com/?target=http%3A//www.zuidaima.com/share/1840816984820736.htm&quot; class=&quot; wrap external&quot; target=&quot;_blank&quot; rel=&quot;nofollow noreferrer&quot;&gt;Spring mvc+struts2+Hibernate整合实例代码(注解详解)&lt;i class=&quot;icon-external&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;2.S2SM(struts2+spring+mybatis)&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;//link.zhihu.com/?target=http%3A//www.zuidaima.com/share/2141064953596928.htm&quot; class=&quot; wrap external&quot; target=&quot;_blank&quot; rel=&quot;nofollow noreferrer&quot;&gt;Spring+Struts2+mybatis手动配置三大框架整合源代码下载&lt;i class=&quot;icon-external&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;//link.zhihu.com/?target=http%3A//www.zuidaima.com/share/1550463447796736.htm&quot; class=&quot; wrap external&quot; target=&quot;_blank&quot; rel=&quot;nofollow noreferrer&quot;&gt;Struts2+mybatis开发音乐分享系统&lt;i class=&quot;icon-external&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;3.SSH(spring mvc+spring+hibernate或struts+spring+hibernate)&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;//link.zhihu.com/?target=http%3A//www.zuidaima.com/share/2287970382777344.htm&quot; class=&quot; wrap external&quot; target=&quot;_blank&quot; rel=&quot;nofollow noreferrer&quot;&gt;Spring MVC+Spring+Hibrenarte实现的简单的CRUD项目实例&lt;i class=&quot;icon-external&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;//link.zhihu.com/?target=http%3A//www.zuidaima.com/share/2170238887660544.htm&quot; class=&quot; wrap external&quot; target=&quot;_blank&quot; rel=&quot;nofollow noreferrer&quot;&gt;springMVC注解与hibernate完美结合完成基本的增删改查demo源码下载&lt;i class=&quot;icon-external&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;//link.zhihu.com/?target=http%3A//www.zuidaima.com/share/2139376672148480.htm&quot; class=&quot; wrap external&quot; target=&quot;_blank&quot; rel=&quot;nofollow noreferrer&quot;&gt;springmvc+hibernate+spring+easyui开发bsalse进销存后台管理系统源代码下载&lt;i class=&quot;icon-external&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;//link.zhihu.com/?target=http%3A//www.zuidaima.com/share/2051547504970752.htm&quot; class=&quot; wrap external&quot; target=&quot;_blank&quot; rel=&quot;nofollow noreferrer&quot;&gt;spring 3.0+spring MVC+Hibernate框架搭建教程(附：springMVC文件上传功能)&lt;i class=&quot;icon-external&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;//link.zhihu.com/?target=http%3A//www.zuidaima.com/share/2014401579273216.htm&quot; class=&quot; wrap external&quot; target=&quot;_blank&quot; rel=&quot;nofollow noreferrer&quot;&gt;spring+struts2+Hibernate三大框架开发某制药厂管理系统源代码下载&lt;i class=&quot;icon-external&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;//link.zhihu.com/?target=http%3A//www.zuidaima.com/share/1840816984820736.htm&quot; class=&quot; wrap external&quot; target=&quot;_blank&quot; rel=&quot;nofollow noreferrer&quot;&gt;Spring mvc+struts2+Hibernate整合实例代码(注解详解)&lt;i class=&quot;icon-external&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;4.SSM(spring mvc+spring+mybatis)&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;//link.zhihu.com/?target=http%3A//www.zuidaima.com/share/1774043357989888.htm&quot; class=&quot; wrap external&quot; target=&quot;_blank&quot; rel=&quot;nofollow noreferrer&quot;&gt;SpringMVC+Mybatis整合实现简单权限控制系统代码&lt;i class=&quot;icon-external&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;5.JSJ(javabean+servlet+jsp)&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;//link.zhihu.com/?target=http%3A//www.zuidaima.com/share/2251648892881920.htm&quot; class=&quot; wrap external&quot; target=&quot;_blank&quot; rel=&quot;nofollow noreferrer&quot;&gt;jsp+servlet+javabean编写的一个java开源免费简易电子商城系统源码，适合初学者&lt;i class=&quot;icon-external&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;//link.zhihu.com/?target=http%3A//www.zuidaima.com/share/2016365453298688.htm&quot; class=&quot; wrap external&quot; target=&quot;_blank&quot; rel=&quot;nofollow noreferrer&quot;&gt;JSP Servlet开发博客天空源代码下载&lt;i class=&quot;icon-external&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;//link.zhihu.com/?target=http%3A//www.zuidaima.com/share/2005009709976576.htm&quot; class=&quot; wrap external&quot; target=&quot;_blank&quot; rel=&quot;nofollow noreferrer&quot;&gt;JSP+servlet开发在线投票统计管理系统源代码下载&lt;i class=&quot;icon-external&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;原文:&lt;a href=&quot;//link.zhihu.com/?target=http%3A//www.zuidaima.com/question/1918447271250944.htm&quot; class=&quot; wrap external&quot; target=&quot;_blank&quot; rel=&quot;nofollow noreferrer&quot;&gt;java做网站开发使用什么框架&lt;i class=&quot;icon-external&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/p&gt;
+
+
+<span class="answer-date-link-wrap">
+<a class="answer-date-link last_updated meta-item" data-tip="s$t$发布于 2015-08-30" target="_blank" href="/question/35122053/answer/61549007">编辑于 2015-08-30</a>
+</span>
+
+</textarea>
+
+
+<div class="zh-summary summary clearfix">
+
+我感觉你要的答案是java web开发后台框架有那些吧？对于java web开发框架，主要有：<b>1.S2SH(struts2+spring+hibernate)</b><a href="//link.zhihu.com/?target=http%3A//www.zuidaima.com/share/2177101238471680.htm" class=" wrap external" target="_blank" rel="nofollow noreferrer">基于Struts2+Spring3+Hibernate4开发java Web企业应用开源框架s2jh源码分享<i class="icon-external"></i></a><a href="//link.zhihu.com/?target=http%3A//www.zuidaima.com/share/2168677709335552.htm" class=" wrap external" target="_blank" rel="nofollow noreferrer">spring+hibernate+struts2开发OA企业办公管理系统源码分享<i class="icon-external"></i></a><a href="//link.zhihu.com/?target=http%3A//www.zuidaima.com/share/1550463494638592.htm" class=" wrap external" target="_blank" rel="nofollow noreferrer">Stru…<i class="icon-external"></i></a>
+
+<a href="/question/35122053/answer/61549007" class="toggle-expand">显示全部</a>
+
+</div>
+
+
+</div>
+</div>
+</div>
+<div class="zm-item-meta feed-meta">
+<div class="zm-item-meta zm-item-comment-el answer-actions clearfix">
+<div class="zm-meta-panel">
+
+<a data-follow="q:link" class="follow-link zg-follow meta-item" href="javascript:;" id="sfb-6255500"><i class="z-icon-follow"></i>关注问题</a>
+
+<a href="#" name="addcomment" class=" meta-item toggle-comment">
+<i class="z-icon-comment"></i>5 条评论</a>
+
+
+<a href="#" class="meta-item zu-autohide" name="thanks" data-thanked="false"><i class="z-icon-thank"></i>感谢</a>
+
+
+
+<a href="#" class="meta-item zu-autohide" name="share">
+<i class="z-icon-share"></i>分享</a>
+<a href="#" class="meta-item zu-autohide" name="favo">
+<i class="z-icon-collect"></i>收藏</a>
+
+
+
+
+<span class="zg-bull zu-autohide">&bull;</span>
+
+<a href="#" name="nohelp" class="meta-item zu-autohide">没有帮助</a>
+
+<span class="zg-bull zu-autohide">&bull;</span>
+<a href="#" name="report" class="meta-item zu-autohide">举报</a>
+
+
+
+<span class="zg-bull">&bull;</span>
+
+<a href="/terms#sec-licence-1" target="_blank" class="meta-item copyright"> 作者保留权利 </a>
+
+
+<button class="meta-item item-collapse js-collapse">
+<i class="z-icon-fold"></i>收起
+</button>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="feed-item feed-item-hook folding combine first-combine" itemprop="question" itemscope itemtype="http://schema.org/Question" data-score='10'>
+<meta itemprop="answer-id" content="3203860" />
+<meta itemprop="answerCount" content="16" />
+<meta itemprop="isTopQuestion" content="false" />
+<div class="feed-main">
+
+<div class="content">
+<h2><a class="question_link" target="_blank" href="/question/22014461">Spring mvc和SSH如何取舍？</a></h2>
+<div class="entry-body "
+data-aid="3203860"
+data-atoken="20047638"
+data-collapsed="False"
+data-created="1384320650"
+data-deleted="0"
+data-isowner="0"
+data-helpful="1"
+data-score="0"
+data-copyable="1"
+>
+
+<div class="zm-item-vote">
+<a class="zm-item-vote-count js-expand js-vote-count" href="javascript:;" data-votecount="37">37</a>
+</div>
+<div class="zm-votebar">
+<button class="up ">
+<i class="icon vote-arrow"></i>
+<span class="count">37</span>
+<span class="label sr-only">赞同</span>
+</button>
+<button class="down ">
+<i class="icon vote-arrow"></i>
+<span class="label sr-only">反对</span>
+</button>
+</div>
+
+<div class="zm-item-answer-detail">
+
+<div class="zm-item-answer-author-info">
+
+<a class="author-link" data-tip="p$t$xishuixixia" href="/people/xishuixixia">郭蕾</a><span title="我有一颗百度的心" class="bio">，我有一颗百度的心</span>
+</div>
+
+<div class="zm-item-vote-info " data-votecount="37">
+
+<span class="voters">
+<span class="user-block"><a data-tip="p$t$lostnodejs" href="https://www.zhihu.com/people/lostnodejs" class="zg-link" title="LostNodejs">LostNodejs</a>、</span><span class="user-block"><a data-tip="p$t$xiao-huo-99-33" href="https://www.zhihu.com/people/xiao-huo-99-33" class="zg-link" title="小伙">小伙</a>、</span><span class="user-block">知乎用户</span>
+</span>
+
+
+<a href="javascript:;" class="more"> 等人赞同</a>
+
+
+</div>
+<div class="zm-item-rich-text js-collapse-body" data-resourceid="986727" data-action="/answer/content" data-author-name="郭蕾" data-entry-url="/question/22014461/answer/20047638">
+
+<textarea class="content hidden">
+首先顶下楼上的，技术只是工具，无所谓什么。其次，工具有好坏之分，按照楼主的思路，我认为楼主其实是想问在struts2与spring mvc框架之间如何取舍，他们都是表现层层面的东西，我从几个方面来比较这两个框架：&lt;br&gt;1.易用性&lt;br&gt;Spring MVC上手简单，并且可以与Spring无缝结合，毕竟都是一个公司的产品，学习起来也比较简单，比如从前端给对象填充值，他的处理就比Struts2简单多了，再比如对Restful风格的URL的支持，这些Spring MVC都比Struts2做的好N倍。&lt;br&gt;2.安全性&lt;br&gt;说到安全性，我也不想多提Struts2了，我在一家游戏公司工作，之前公司的老项目是用的Struts2，他今年出了不少漏洞，并且是致命性漏洞，每出一次漏洞，我需要加班一次，好吧，我想说我加了4次班了，最可恶的是Struts2有漏洞后，还把攻击方法放到网上。Spring MVC到目前为止还没有发现比较严重的漏洞。&lt;br&gt;3.可扩展性&lt;br&gt;Spring MVC依靠Spring这颗大树，Spring的实力我想大家不用怀疑吧，包括版本的更新、迭代这些都是经过历史见证的。&lt;br&gt;&lt;br&gt;所以，我还是推荐楼主Spring MVC。
+
+
+<span class="answer-date-link-wrap">
+<a class="answer-date-link meta-item" target="_blank" href="/question/22014461/answer/20047638">发布于 2013-11-13</a>
+</span>
+
+</textarea>
+
+
+<div class="zh-summary summary clearfix">
+
+首先顶下楼上的，技术只是工具，无所谓什么。其次，工具有好坏之分，按照楼主的思路，我认为楼主其实是想问在struts2与spring mvc框架之间如何取舍，他们都是表现层层面的东西，我从几个方面来比较这两个框架：1.易用性Spring MVC上手简单，并且可以与Sprin…
+
+<a href="/question/22014461/answer/20047638" class="toggle-expand">显示全部</a>
+
+</div>
+
+
+</div>
+</div>
+</div>
+<div class="zm-item-meta feed-meta">
+<div class="zm-item-meta zm-item-comment-el answer-actions clearfix">
+<div class="zm-meta-panel">
+
+<a data-follow="q:link" class="follow-link zg-follow meta-item" href="javascript:;" id="sfb-986727"><i class="z-icon-follow"></i>关注问题</a>
+
+<a href="#" name="addcomment" class=" meta-item toggle-comment">
+<i class="z-icon-comment"></i>1 条评论</a>
+
+
+<a href="#" class="meta-item zu-autohide" name="thanks" data-thanked="false"><i class="z-icon-thank"></i>感谢</a>
+
+
+
+<a href="#" class="meta-item zu-autohide" name="share">
+<i class="z-icon-share"></i>分享</a>
+<a href="#" class="meta-item zu-autohide" name="favo">
+<i class="z-icon-collect"></i>收藏</a>
+
+
+
+
+<span class="zg-bull zu-autohide">&bull;</span>
+
+<a href="#" name="nohelp" class="meta-item zu-autohide">没有帮助</a>
+
+<span class="zg-bull zu-autohide">&bull;</span>
+<a href="#" name="report" class="meta-item zu-autohide">举报</a>
+
+
+
+<span class="zg-bull">&bull;</span>
+
+<a href="/terms#sec-licence-1" target="_blank" class="meta-item copyright"> 作者保留权利 </a>
+
+
+<button class="meta-item item-collapse js-collapse">
+<i class="z-icon-fold"></i>收起
+</button>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="feed-item feed-item-hook folding combine" itemprop="question" itemscope itemtype="http://schema.org/Question" data-score='11'>
+<meta itemprop="answer-id" content="4466454" />
+<meta itemprop="answerCount" content="16" />
+<meta itemprop="isTopQuestion" content="false" />
+<div class="feed-main">
+
+<div class="content">
+<h2><a class="question_link" target="_blank" href="/question/22014461">Spring mvc和SSH如何取舍？</a></h2>
+<div class="entry-body "
+data-aid="4466454"
+data-atoken="23125867"
+data-collapsed="False"
+data-created="1394002968"
+data-deleted="0"
+data-isowner="0"
+data-helpful="1"
+data-score="0"
+data-copyable="1"
+>
+
+<div class="zm-item-vote">
+<a class="zm-item-vote-count js-expand js-vote-count" href="javascript:;" data-votecount="32">32</a>
+</div>
+<div class="zm-votebar">
+<button class="up ">
+<i class="icon vote-arrow"></i>
+<span class="count">32</span>
+<span class="label sr-only">赞同</span>
+</button>
+<button class="down ">
+<i class="icon vote-arrow"></i>
+<span class="label sr-only">反对</span>
+</button>
+</div>
+
+<div class="zm-item-answer-detail">
+
+<div class="zm-item-answer-author-info">
+
+<a class="author-link" data-tip="p$t$zuidaima.com" href="/people/zuidaima.com">javaniu</a><span title="zuidaima.com" class="bio">，<a href="//link.zhihu.com/?target=http%3A//zuidaima.com" class=" external" target="_blank" rel="nofollow noreferrer"><span class="invisible">http://</span><span class="visible">zuidaima.com</span><span class="invisible"></span><i class="icon-external"></i></a></span>
+</div>
+
+<div class="zm-item-vote-info " data-votecount="32">
+
+<span class="voters">
+<span class="user-block"><a data-tip="p$t$wang-bin-26-89-69" href="https://www.zhihu.com/people/wang-bin-26-89-69" class="zg-link" title="王斌">王斌</a>、</span><span class="user-block">知乎用户、</span><span class="user-block"><a data-tip="p$t$li-hong-zhang-42" href="https://www.zhihu.com/people/li-hong-zhang-42" class="zg-link" title="李鸿章">李鸿章</a></span>
+</span>
+
+
+<a href="javascript:;" class="more"> 等人赞同</a>
+
+
+</div>
+<div class="zm-item-rich-text js-collapse-body" data-resourceid="986727" data-action="/answer/content" data-author-name="javaniu" data-entry-url="/question/22014461/answer/23125867">
+
+<textarea class="content hidden">
+springmvc和struts是一个层次的概念，均属java web mvc框架，只是ssh中第2个s的技术。&lt;br&gt;springmvc开发比较轻，性能也不错，在我的开发的web项目中，均使用springmvc作为web mvc框架，用的久了就知道比struts2有多轻便了。&lt;br&gt;可以参考下我分享的代码:&lt;br&gt;&lt;a href=&quot;//link.zhihu.com/?target=http%3A//www.zuidaima.com/share/1550463719148544.htm&quot; class=&quot; wrap external&quot; target=&quot;_blank&quot; rel=&quot;nofollow noreferrer&quot;&gt;bootstrap+jquery+mustache+springmvc+idworker整合demo代码&lt;i class=&quot;icon-external&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;//link.zhihu.com/?target=http%3A//www.zuidaima.com/share/1606851189656576.htm&quot; class=&quot; wrap external&quot; target=&quot;_blank&quot; rel=&quot;nofollow noreferrer&quot;&gt;年末最代码部分源码大出血分享-freemarker,bootstrap,springdata jpa分页代码&lt;i class=&quot;icon-external&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+
+
+<span class="answer-date-link-wrap">
+<a class="answer-date-link meta-item" target="_blank" href="/question/22014461/answer/23125867">发布于 2014-03-05</a>
+</span>
+
+</textarea>
+
+
+<div class="zh-summary summary clearfix">
+
+springmvc和struts是一个层次的概念，均属java web mvc框架，只是ssh中第2个s的技术。springmvc开发比较轻，性能也不错，在我的开发的web项目中，均使用springmvc作为web mvc框架，用的久了就知道比struts2有多轻便了。可以参考下我分享的代码:<a href="//link.zhihu.com/?target=http%3A//www.zuidaima.com/share/1550463719148544.htm" class=" wrap external" target="_blank" rel="nofollow noreferrer">bootstrap+jq…<i class="icon-external"></i></a>
+
+<a href="/question/22014461/answer/23125867" class="toggle-expand">显示全部</a>
+
+</div>
+
+
+</div>
+</div>
+</div>
+<div class="zm-item-meta feed-meta">
+<div class="zm-item-meta zm-item-comment-el answer-actions clearfix">
+<div class="zm-meta-panel">
+
+<a data-follow="q:link" class="follow-link zg-follow meta-item" href="javascript:;" id="sfb-986727"><i class="z-icon-follow"></i>关注问题</a>
+
+<a href="#" name="addcomment" class=" meta-item toggle-comment">
+<i class="z-icon-comment"></i>添加评论</a>
+
+
+<a href="#" class="meta-item zu-autohide" name="thanks" data-thanked="false"><i class="z-icon-thank"></i>感谢</a>
+
+
+
+<a href="#" class="meta-item zu-autohide" name="share">
+<i class="z-icon-share"></i>分享</a>
+<a href="#" class="meta-item zu-autohide" name="favo">
+<i class="z-icon-collect"></i>收藏</a>
+
+
+
+
+<span class="zg-bull zu-autohide">&bull;</span>
+
+<a href="#" name="nohelp" class="meta-item zu-autohide">没有帮助</a>
+
+<span class="zg-bull zu-autohide">&bull;</span>
+<a href="#" name="report" class="meta-item zu-autohide">举报</a>
+
+
+
+<span class="zg-bull">&bull;</span>
+
+<a href="/terms#sec-licence-1" target="_blank" class="meta-item copyright"> 作者保留权利 </a>
+
+
+<button class="meta-item item-collapse js-collapse">
+<i class="z-icon-fold"></i>收起
+</button>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="feed-item feed-item-hook folding" itemprop="question" itemscope itemtype="http://schema.org/Question" data-score='12'>
+<meta itemprop="answer-id" content="712692" />
+<meta itemprop="answerCount" content="10" />
+<meta itemprop="isTopQuestion" content="false" />
+<div class="feed-main">
+
+<div class="content">
+<h2><a class="question_link" target="_blank" href="/question/20097229">作为一个外行，怎么理解以下这段关于 Java 类系统架构师的职位要求的描述？</a></h2>
+<div class="entry-body "
+data-aid="712692"
+data-atoken="13981631"
+data-collapsed="False"
+data-created="1330938608"
+data-deleted="0"
+data-isowner="0"
+data-helpful="1"
+data-score="0"
+data-copyable="1"
+>
+
+<div class="zm-item-vote">
+<a class="zm-item-vote-count js-expand js-vote-count" href="javascript:;" data-votecount="31">31</a>
+</div>
+<div class="zm-votebar">
+<button class="up ">
+<i class="icon vote-arrow"></i>
+<span class="count">31</span>
+<span class="label sr-only">赞同</span>
+</button>
+<button class="down ">
+<i class="icon vote-arrow"></i>
+<span class="label sr-only">反对</span>
+</button>
+</div>
+
+<div class="zm-item-answer-detail">
+
+<div class="zm-item-answer-author-info">
+
+<a class="author-link" data-tip="p$t$yang-xiao-liang-20" href="/people/yang-xiao-liang-20">杨晓亮</a><span title="大部分时间带项目，偶尔写点代码，但坚持认为自己是工程师。" class="bio">，大部分时间带项目，偶尔写点代码，但坚持…</span>
+</div>
+
+<div class="zm-item-vote-info " data-votecount="31">
+
+<span class="voters">
+<span class="user-block"><a data-tip="p$t$zhudejun92" href="https://www.zhihu.com/people/zhudejun92" class="zg-link" title="朱德军">朱德军</a>、</span><span class="user-block"><a data-tip="p$t$huang-bu-24" href="https://www.zhihu.com/people/huang-bu-24" class="zg-link" title="恍惚">恍惚</a>、</span><span class="user-block"><a data-tip="p$t$wang-hao-huan-93" href="https://www.zhihu.com/people/wang-hao-huan-93" class="zg-link" title="王青山">王青山</a></span>
+</span>
+
+
+<a href="javascript:;" class="more"> 等人赞同</a>
+
+
+</div>
+<div class="zm-item-rich-text js-collapse-body" data-resourceid="218901" data-action="/answer/content" data-author-name="杨晓亮" data-entry-url="/question/20097229/answer/13981631">
+
+<textarea class="content hidden">
+看完招聘需求后，明白了一个道理。程序员经常copy别人的代码，HR经常copy别人的招聘需求。
+
+
+<span class="answer-date-link-wrap">
+<a class="answer-date-link meta-item" target="_blank" href="/question/20097229/answer/13981631">发布于 2012-03-05</a>
+</span>
+
+</textarea>
+
+
+<div class="zh-summary summary clearfix">
+
+看完招聘需求后，明白了一个道理。程序员经常copy别人的代码，HR经常copy别人的招聘需求。
+
+</div>
+
+
+</div>
+</div>
+</div>
+<div class="zm-item-meta feed-meta">
+<div class="zm-item-meta zm-item-comment-el answer-actions clearfix">
+<div class="zm-meta-panel">
+
+<a data-follow="q:link" class="follow-link zg-follow meta-item" href="javascript:;" id="sfb-218901"><i class="z-icon-follow"></i>关注问题</a>
+
+<a href="#" name="addcomment" class=" meta-item toggle-comment">
+<i class="z-icon-comment"></i>2 条评论</a>
+
+
+<a href="#" class="meta-item zu-autohide" name="thanks" data-thanked="false"><i class="z-icon-thank"></i>感谢</a>
+
+
+
+<a href="#" class="meta-item zu-autohide" name="share">
+<i class="z-icon-share"></i>分享</a>
+<a href="#" class="meta-item zu-autohide" name="favo">
+<i class="z-icon-collect"></i>收藏</a>
+
+
+
+
+<span class="zg-bull zu-autohide">&bull;</span>
+
+<a href="#" name="nohelp" class="meta-item zu-autohide">没有帮助</a>
+
+<span class="zg-bull zu-autohide">&bull;</span>
+<a href="#" name="report" class="meta-item zu-autohide">举报</a>
+
+
+
+<span class="zg-bull">&bull;</span>
+
+<a href="/terms#sec-licence-1" target="_blank" class="meta-item copyright"> 作者保留权利 </a>
+
+
+<button class="meta-item item-collapse js-collapse">
+<i class="z-icon-fold"></i>收起
+</button>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="feed-item feed-item-hook folding" itemprop="question" itemscope itemtype="http://schema.org/Question" data-score='13'>
+<meta itemprop="answer-id" content="22725168" />
+<meta itemprop="answerCount" content="13" />
+<meta itemprop="isTopQuestion" content="false" />
+<div class="feed-main">
+
+<div class="content">
+<h2><a class="question_link" target="_blank" href="/question/36617655">Java新框架中大量使用了反射对执行效率影响很大吗？</a></h2>
+<div class="entry-body "
+data-aid="22725168"
+data-atoken="68265706"
+data-collapsed="False"
+data-created="1445151992"
+data-deleted="0"
+data-isowner="0"
+data-helpful="1"
+data-score="0"
+data-copyable="1"
+>
+
+<div class="zm-item-vote">
+<a class="zm-item-vote-count js-expand js-vote-count" href="javascript:;" data-votecount="29">29</a>
+</div>
+<div class="zm-votebar">
+<button class="up ">
+<i class="icon vote-arrow"></i>
+<span class="count">29</span>
+<span class="label sr-only">赞同</span>
+</button>
+<button class="down ">
+<i class="icon vote-arrow"></i>
+<span class="label sr-only">反对</span>
+</button>
+</div>
+
+<div class="zm-item-answer-detail">
+
+<div class="zm-item-answer-author-info">
+
+<a class="author-link" data-tip="p$t$wang-chao-hangzhou" href="/people/wang-chao-hangzhou">Watcher 杭州</a><span title="我只是来知乎点『赞』的，碰到坏回答点赞曝光之" class="bio">，我只是来知乎点『赞』的，碰到坏回答点赞…</span>
+</div>
+
+<div class="zm-item-vote-info " data-votecount="29">
+
+<span class="voters">
+<span class="user-block"><a data-tip="p$t$isnow1112" href="https://www.zhihu.com/people/isnow1112" class="zg-link" title="愤怒的大师兄">愤怒的大师兄</a>、</span><span class="user-block"><a data-tip="p$t$jywangkeep" href="https://www.zhihu.com/people/jywangkeep" class="zg-link" title="王三">王三</a>、</span><span class="user-block"><a data-tip="p$t$jiangfeng16" href="https://www.zhihu.com/people/jiangfeng16" class="zg-link" title="江枫">江枫</a></span>
+</span>
+
+
+<a href="javascript:;" class="more"> 等人赞同</a>
+
+
+</div>
+<div class="zm-item-rich-text js-collapse-body" data-resourceid="6854220" data-action="/answer/content" data-author-name="Watcher 杭州" data-entry-url="/question/36617655/answer/68265706">
+
+<textarea class="content hidden">
+其实Web开发中大部分时候我们碰到“卡”，网站相应慢时，不是语言效率问题，而是数据库处理不过来了，所以语言效率的损失不值一提，君不见那么多用PHP做电商的也没有抱怨过语言效率低过，就算是比PHP还慢的Python也照样有人用来写网站。&lt;br&gt;&lt;br&gt;Java牺牲执行效率提高程序员开发效率很正常。
+
+
+<span class="answer-date-link-wrap">
+<a class="answer-date-link last_updated meta-item" data-tip="s$t$发布于 2015-10-18" target="_blank" href="/question/36617655/answer/68265706">编辑于 2015-10-18</a>
+</span>
+
+</textarea>
+
+
+<div class="zh-summary summary clearfix">
+
+其实Web开发中大部分时候我们碰到“卡”，网站相应慢时，不是语言效率问题，而是数据库处理不过来了，所以语言效率的损失不值一提，君不见那么多用PHP做电商的也没有抱怨过语言效率低过，就算是比PHP还慢的Python也照样有人用来写网站。Java牺牲执行效率提…
+
+<a href="/question/36617655/answer/68265706" class="toggle-expand">显示全部</a>
+
+</div>
+
+
+</div>
+</div>
+</div>
+<div class="zm-item-meta feed-meta">
+<div class="zm-item-meta zm-item-comment-el answer-actions clearfix">
+<div class="zm-meta-panel">
+
+<a data-follow="q:link" class="follow-link zg-follow meta-item" href="javascript:;" id="sfb-6854220"><i class="z-icon-follow"></i>关注问题</a>
+
+<a href="#" name="addcomment" class=" meta-item toggle-comment">
+<i class="z-icon-comment"></i>2 条评论</a>
+
+
+<a href="#" class="meta-item zu-autohide" name="thanks" data-thanked="false"><i class="z-icon-thank"></i>感谢</a>
+
+
+
+<a href="#" class="meta-item zu-autohide" name="share">
+<i class="z-icon-share"></i>分享</a>
+<a href="#" class="meta-item zu-autohide" name="favo">
+<i class="z-icon-collect"></i>收藏</a>
+
+
+
+
+<span class="zg-bull zu-autohide">&bull;</span>
+
+<a href="#" name="nohelp" class="meta-item zu-autohide">没有帮助</a>
+
+<span class="zg-bull zu-autohide">&bull;</span>
+<a href="#" name="report" class="meta-item zu-autohide">举报</a>
+
+
+
+<span class="zg-bull">&bull;</span>
+
+<a href="/terms#sec-licence-1" target="_blank" class="meta-item copyright"> 作者保留权利 </a>
+
+
+<button class="meta-item item-collapse js-collapse">
+<i class="z-icon-fold"></i>收起
+</button>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="feed-item feed-item-hook folding" itemprop="question" itemscope itemtype="http://schema.org/Question" data-score='14'>
+<meta itemprop="answer-id" content="654959" />
+<meta itemprop="answerCount" content="8" />
+<meta itemprop="isTopQuestion" content="false" />
+<div class="feed-main">
+
+<div class="content">
+<h2><a class="question_link" target="_blank" href="/question/20057737">REST 和 SSH (Structs, Spring, Hibernate) 是什么关系？</a></h2>
+<div class="entry-body "
+data-aid="654959"
+data-atoken="13837261"
+data-collapsed="False"
+data-created="1328891461"
+data-deleted="0"
+data-isowner="0"
+data-helpful="1"
+data-score="0"
+data-copyable="1"
+>
+
+<div class="zm-item-vote">
+<a class="zm-item-vote-count js-expand js-vote-count" href="javascript:;" data-votecount="28">28</a>
+</div>
+<div class="zm-votebar">
+<button class="up ">
+<i class="icon vote-arrow"></i>
+<span class="count">28</span>
+<span class="label sr-only">赞同</span>
+</button>
+<button class="down ">
+<i class="icon vote-arrow"></i>
+<span class="label sr-only">反对</span>
+</button>
+</div>
+
+<div class="zm-item-answer-detail">
+
+<div class="zm-item-answer-author-info">
+
+<a class="author-link" data-tip="p$t$qinjie" href="/people/qinjie">秦杰</a><span title="广告业的程序员" class="bio">，广告业的程序员</span>
+</div>
+
+<div class="zm-item-vote-info " data-votecount="28">
+
+<span class="voters">
+<span class="user-block"><a data-tip="p$t$dian-jiang-chun-47" href="https://www.zhihu.com/people/dian-jiang-chun-47" class="zg-link" title="点绛唇">点绛唇</a>、</span><span class="user-block"><a data-tip="p$t$mokonn-tou" href="https://www.zhihu.com/people/mokonn-tou" class="zg-link" title="mokonn Tou">mokonn Tou</a>、</span><span class="user-block"><a data-tip="p$t$plzdonoevil" href="https://www.zhihu.com/people/plzdonoevil" class="zg-link" title="王晓龙">王晓龙</a></span>
+</span>
+
+
+<a href="javascript:;" class="more"> 等人赞同</a>
+
+
+</div>
+<div class="zm-item-rich-text js-collapse-body" data-resourceid="203136" data-action="/answer/content" data-author-name="秦杰" data-entry-url="/question/20057737/answer/13837261">
+
+<textarea class="content hidden">
+上面两位朋友已经简单说了REST和ssh的区别，我给你一点关于&quot;公司让我修改他们基于 REST 开发的一个项目，加一下功能，我应该从何下手？&quot;的建议吧。&lt;br&gt;&lt;br&gt;REST是基于HTTP的处理web项目前后台交互的架构（你可以读读英文维基或者中文百度百科的定义）。它给后台的每个service（或者叫resource，简单说就是后台的一个java类，一个方法）都定义了一个独一无二的url。&lt;br&gt;&lt;br&gt;你既然是修改项目，那想必架构已经开发好并且可以用了。你可以用chrome浏览器访问这个项目，打开浏览器上的developer tools--&amp;gt;Network观察你每点一个按钮或者一个link，前台向后台发送了什么request，method类型是什么（GET, POST, DELETE等）。点开一个request，看看Header里面的&quot;Request URL&quot;，&quot;Content-Type&quot;，“Request Payload”分别是什么，看看Response里面的payload是什么。这样你就有了一个基本的了解，比如传输的数据类型用的是xml还是json，url是怎么组成的等等，再根据url的组成去找后台对应的java类以及方法。另外要认真研究后台的这些resource是如何注册到其对应的url的，因为你如果增加新功能的时候涉及到增加新的资源类，显然要知道怎么注册。
+
+
+<span class="answer-date-link-wrap">
+<a class="answer-date-link meta-item" target="_blank" href="/question/20057737/answer/13837261">发布于 2012-02-11</a>
+</span>
+
+</textarea>
+
+
+<div class="zh-summary summary clearfix">
+
+上面两位朋友已经简单说了REST和ssh的区别，我给你一点关于"公司让我修改他们基于 REST 开发的一个项目，加一下功能，我应该从何下手？"的建议吧。REST是基于HTTP的处理web项目前后台交互的架构（你可以读读英文维基或者中文百度百科的定义）。它给后台的每…
+
+<a href="/question/20057737/answer/13837261" class="toggle-expand">显示全部</a>
+
+</div>
+
+
+</div>
+</div>
+</div>
+<div class="zm-item-meta feed-meta">
+<div class="zm-item-meta zm-item-comment-el answer-actions clearfix">
+<div class="zm-meta-panel">
+
+<a data-follow="q:link" class="follow-link zg-follow meta-item" href="javascript:;" id="sfb-203136"><i class="z-icon-follow"></i>关注问题</a>
+
+<a href="#" name="addcomment" class=" meta-item toggle-comment">
+<i class="z-icon-comment"></i>2 条评论</a>
+
+
+<a href="#" class="meta-item zu-autohide" name="thanks" data-thanked="false"><i class="z-icon-thank"></i>感谢</a>
+
+
+
+<a href="#" class="meta-item zu-autohide" name="share">
+<i class="z-icon-share"></i>分享</a>
+<a href="#" class="meta-item zu-autohide" name="favo">
+<i class="z-icon-collect"></i>收藏</a>
+
+
+
+
+<span class="zg-bull zu-autohide">&bull;</span>
+
+<a href="#" name="nohelp" class="meta-item zu-autohide">没有帮助</a>
+
+<span class="zg-bull zu-autohide">&bull;</span>
+<a href="#" name="report" class="meta-item zu-autohide">举报</a>
+
+
+
+<span class="zg-bull">&bull;</span>
+
+<a href="/terms#sec-licence-1" target="_blank" class="meta-item copyright"> 作者保留权利 </a>
+
+
+<button class="meta-item item-collapse js-collapse">
+<i class="z-icon-fold"></i>收起
+</button>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="feed-item feed-item-hook folding" itemprop="question" itemscope itemtype="http://schema.org/Question" data-score='15'>
+<meta itemprop="answer-id" content="9877210" />
+<meta itemprop="answerCount" content="13" />
+<meta itemprop="isTopQuestion" content="false" />
+<div class="feed-main">
+
+<div class="content">
+<h2><a class="question_link" target="_blank" href="/question/26620224">学javaee的三大框架,求推荐本有关三大框架底层的书?</a></h2>
+<div class="entry-body "
+data-aid="9877210"
+data-atoken="36218658"
+data-collapsed="False"
+data-created="1420030494"
+data-deleted="0"
+data-isowner="0"
+data-helpful="1"
+data-score="0"
+data-copyable="1"
+>
+
+<div class="zm-item-vote">
+<a class="zm-item-vote-count js-expand js-vote-count" href="javascript:;" data-votecount="22">22</a>
+</div>
+<div class="zm-votebar">
+<button class="up ">
+<i class="icon vote-arrow"></i>
+<span class="count">22</span>
+<span class="label sr-only">赞同</span>
+</button>
+<button class="down ">
+<i class="icon vote-arrow"></i>
+<span class="label sr-only">反对</span>
+</button>
+</div>
+
+<div class="zm-item-answer-detail">
+
+<div class="zm-item-answer-author-info">
+
+<a class="author-link" data-tip="p$t$x_surfer" href="/people/x_surfer">贺显伟</a><span title="不愿游走在边缘" class="bio">，不愿游走在边缘</span>
+</div>
+
+<div class="zm-item-vote-info " data-votecount="22">
+
+<span class="voters">
+<span class="user-block"><a data-tip="p$t$sky-15" href="https://www.zhihu.com/people/sky-15" class="zg-link" title="sky">sky</a>、</span><span class="user-block">知乎用户、</span><span class="user-block"><a data-tip="p$t$nuo-lan-51-68" href="https://www.zhihu.com/people/nuo-lan-51-68" class="zg-link" title="诺兰">诺兰</a></span>
+</span>
+
+
+<a href="javascript:;" class="more"> 等人赞同</a>
+
+
+</div>
+<div class="zm-item-rich-text js-collapse-body" data-resourceid="2831104" data-action="/answer/content" data-author-name="贺显伟" data-entry-url="/question/26620224/answer/36218658">
+
+<textarea class="content hidden">
+应楼上那位推荐李钢的渣书的人挑战，那我就大概推荐几本，一路学来，&lt;br&gt;Spring 揭秘，国人良心之作，鼎力推荐，&lt;br&gt;spring in action 适合入门，英语好点可以看原版， in action 之类的书都不错。&lt;br&gt;hibernate  &lt;a class=&quot; wrap external&quot; href=&quot;//link.zhihu.com/?target=http%3A//www.amazon.cn/%25E7%25B2%25BE%25E9%2580%259AHibernate-Java%25E5%25AF%25B9%25E8%25B1%25A1%25E6%258C%2581%25E4%25B9%2585%25E5%258C%2596%25E6%258A%2580%25E6%259C%25AF%25E8%25AF%25A6%25E8%25A7%25A3-%25E5%25AD%2599%25E5%258D%25AB%25E7%2590%25B4/dp/B0033PSPDS/ref%3Dsr_1_1%3Fie%3DUTF8%26qid%3D1420030392%26sr%3D8-1%26keywords%3Dhibernate&quot; target=&quot;_blank&quot; rel=&quot;nofollow noreferrer&quot;&gt;精通Hibernate:Java对象持久化技术详解&lt;i class=&quot;icon-external&quot;&gt;&lt;/i&gt;&lt;/a&gt; ，hibernate的中文书中最好的，没有之一，&lt;br&gt;&lt;br&gt;Struts 2 Web开发学习实录 不错， 就这样
+
+
+<span class="answer-date-link-wrap">
+<a class="answer-date-link meta-item" target="_blank" href="/question/26620224/answer/36218658">发布于 2014-12-31</a>
+</span>
+
+</textarea>
+
+
+<div class="zh-summary summary clearfix">
+
+应楼上那位推荐李钢的渣书的人挑战，那我就大概推荐几本，一路学来，Spring 揭秘，国人良心之作，鼎力推荐，spring in action 适合入门，英语好点可以看原版， in action 之类的书都不错。hibernate <a class=" wrap external" href="//link.zhihu.com/?target=http%3A//www.amazon.cn/%25E7%25B2%25BE%25E9%2580%259AHibernate-Java%25E5%25AF%25B9%25E8%25B1%25A1%25E6%258C%2581%25E4%25B9%2585%25E5%258C%2596%25E6%258A%2580%25E6%259C%25AF%25E8%25AF%25A6%25E8%25A7%25A3-%25E5%25AD%2599%25E5%258D%25AB%25E7%2590%25B4/dp/B0033PSPDS/ref%3Dsr_1_1%3Fie%3DUTF8%26qid%3D1420030392%26sr%3D8-1%26keywords%3Dhibernate" target="_blank" rel="nofollow noreferrer">精通Hibernate:Java对象持久化技术详解<i class="icon-external"></i></a> ，hibernate的中…
+
+<a href="/question/26620224/answer/36218658" class="toggle-expand">显示全部</a>
+
+</div>
+
+
+</div>
+</div>
+</div>
+<div class="zm-item-meta feed-meta">
+<div class="zm-item-meta zm-item-comment-el answer-actions clearfix">
+<div class="zm-meta-panel">
+
+<a data-follow="q:link" class="follow-link zg-follow meta-item" href="javascript:;" id="sfb-2831104"><i class="z-icon-follow"></i>关注问题</a>
+
+<a href="#" name="addcomment" class=" meta-item toggle-comment">
+<i class="z-icon-comment"></i>3 条评论</a>
+
+
+<a href="#" class="meta-item zu-autohide" name="thanks" data-thanked="false"><i class="z-icon-thank"></i>感谢</a>
+
+
+
+<a href="#" class="meta-item zu-autohide" name="share">
+<i class="z-icon-share"></i>分享</a>
+<a href="#" class="meta-item zu-autohide" name="favo">
+<i class="z-icon-collect"></i>收藏</a>
+
+
+
+
+<span class="zg-bull zu-autohide">&bull;</span>
+
+<a href="#" name="nohelp" class="meta-item zu-autohide">没有帮助</a>
+
+<span class="zg-bull zu-autohide">&bull;</span>
+<a href="#" name="report" class="meta-item zu-autohide">举报</a>
+
+
+
+<span class="zg-bull">&bull;</span>
+
+<a href="/terms#sec-licence-1" target="_blank" class="meta-item copyright"> 作者保留权利 </a>
+
+
+<button class="meta-item item-collapse js-collapse">
+<i class="z-icon-fold"></i>收起
+</button>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="feed-item feed-item-hook folding" itemprop="question" itemscope itemtype="http://schema.org/Question" data-score='16'>
+<meta itemprop="answer-id" content="21938021" />
+<meta itemprop="answerCount" content="35" />
+<meta itemprop="isTopQuestion" content="false" />
+<div class="feed-main">
+
+<div class="content">
+<h2><a class="question_link" target="_blank" href="/question/36021012">java web 中dao 层和service层都使用接口，是否是为使用接口而使用接口？</a></h2>
+<div class="entry-body "
+data-aid="21938021"
+data-atoken="66301564"
+data-collapsed="False"
+data-created="1443967667"
+data-deleted="0"
+data-isowner="0"
+data-helpful="1"
+data-score="0"
+data-copyable="1"
+>
+
+<div class="zm-item-vote">
+<a class="zm-item-vote-count js-expand js-vote-count" href="javascript:;" data-votecount="21">21</a>
+</div>
+<div class="zm-votebar">
+<button class="up ">
+<i class="icon vote-arrow"></i>
+<span class="count">21</span>
+<span class="label sr-only">赞同</span>
+</button>
+<button class="down ">
+<i class="icon vote-arrow"></i>
+<span class="label sr-only">反对</span>
+</button>
+</div>
+
+<div class="zm-item-answer-detail">
+
+<div class="zm-item-answer-author-info">
+
+<a class="author-link" data-tip="p$t$nonesuccess" href="/people/nonesuccess">nonesuccess</a><span title="不向往自由的自由职业者" class="bio">，不向往自由的自由职业者</span>
+</div>
+
+<div class="zm-item-vote-info " data-votecount="21">
+
+<span class="voters">
+<span class="user-block">知乎用户、</span><span class="user-block">知乎用户、</span><span class="user-block">知乎用户</span>
+</span>
+
+
+<a href="javascript:;" class="more"> 等人赞同</a>
+
+
+</div>
+<div class="zm-item-rich-text js-collapse-body" data-resourceid="6615346" data-action="/answer/content" data-author-name="nonesuccess" data-entry-url="/question/36021012/answer/66301564">
+
+<textarea class="content hidden">
+谢邀&lt;br&gt;&lt;br&gt;使用接口是为了调用与实现解耦，带来的好处是可以各干各的了，带来的坏处是从一个概念变成了两个概念，增加了系统的复杂度。衡量一下在具体场景中是弊大于利还是利大于弊，就可以做选择了。当然，在大部分场景下，还要考虑一个因素，就是你会不会写接口。没有良好接口设计能力的人，写出来的接口抽象不合理，等于没写，什么好处都得不到，只有坏处，这种情况下干脆别写。那怎么衡量你会不会写接口呢，我的经验是，至少见过一次写了接口后得到明确好处的例子。&lt;br&gt;&lt;br&gt;什么情况下需要各干各的？&lt;br&gt;&lt;br&gt;最简单的场景，写接口的是你，写实现的是你小弟。当然大多数类似情况没必要真的建一个interface然后再让人家去implements，把函数的第一行写好，注释写好，代码提交上，里面的内容让小弟去填就行了。&lt;br&gt;&lt;br&gt;另一种情况，调用代码先于实现代码编写。比如你开发的是struts这种东西，那你指定得搞个Action接口。&lt;br&gt;&lt;br&gt;再一种情况，多种业务的模式类似。此时这个接口类实际上相当于某一层的抽象。定义出一个层后，有多种实现，然后通过向调用端注入不同的实现类，实现不同的逻辑。如果这种注入不能在编译期完成的话，也就需要用接口抽象一下。&lt;br&gt;&lt;br&gt;上面这几种情况写得有点绕，没办法，太难表述了并且好多事我自己也没想明白……&lt;br&gt;&lt;br&gt;说到题目中的场景。&lt;br&gt;&lt;br&gt;先说dao，这玩意儿是做数据库读写的。对应一下上面那几种情况：你作为项目架构师想写两行代码就让苦逼小弟加班干活然则自己去泡妹子的话，可能需要写个interface里面几个抽象的insert、delete之类的函数；项目在快速原型阶段如果客户满意就掏钱买oracle如果客户不满意就得免费MySQL的话，你可能需要定义个dao接口然后先用内存数据库写点能让原型跑起来的实现，等一切有定论了再说；每个类都有一个dao，每个dao都有crud基本方法的话你可能需要定义一个通用Dao接口然后搞点代码技巧不用一个个的去写体力代码从此登上人生巅峰。所以dao接口还是有用的。&lt;br&gt;&lt;br&gt;再说service，这玩意儿更得具体问题具体分析。不去抠理论的话，什么是service，我的理解就是一段段实现了某个逻辑的代码的组合。所以service是个比dao更抽象的概念，严格来讲dao就是一种service。只不过在java web开发中，dao是个人人都得写的东西，所以都拿出来单说了。因此，后面说的service跟dao没有本质分别。&lt;br&gt;&lt;br&gt;还是上面说的那几种情况：&lt;br&gt;&lt;br&gt;先从工序上说，你在写上一层的时候，会用到下一层提供的逻辑，具体表现形式就是各种各样的service类和里面的方法。上一层开搞的时候，一定会知道的一个事是下一层会干什么事，比如“将传入编号对应的人员信息设置为离职”，但下一层的代码不一定已经一行一行写出来了。所以这会儿需要有个接口，让写上层代码的人先能把代码写下去。有各种理由可以支持这种工序的合理性，比如一般来说，上一层的一行代码会对应下一层的好多行代码，那先让写上层代码的人写一遍，解决高端层面的bug，会提高很多效率。&lt;br&gt;&lt;br&gt;再从抽象角度说，不同业务模块之间的共用，不一定是共用某段代码，也可能是共用某段逻辑框架，这时候就需要抽象一个接口层出来，再通过不同的注入逻辑实现。比如模块1是登记学生信息，模块2是新闻发布，看上去风马牛不相及。但分析下来如果两个模块都有共同点，顺序都是1、验证是否有权限 2、验证输入参数是否合法 3、将输入参数转化为业务数据 4、数据库存取 5、写log，那就可以写一个service接口，里面有上述5个函数，再分别写两个service实现。具体执行的时候，通过各种注入方法，直接new也好，用spring注入也好，实现不同的效果。&lt;br&gt;&lt;br&gt;当然上面说的这种情况很少有人这么干，因为已经普遍到这个程度，再精化精化就是struts了，java web的各种mvc框架都提供机制给你干这个事。但是每个项目或产品，都应该可以用类似的思路抽象出一些东西，如果抽象合理，会很大程度的提高项目架构的合理性。&lt;br&gt;&lt;br&gt;这些要是能搞定，那什么写个接口然后实现个mock用于测试这种事，信手拈来。&lt;br&gt;&lt;br&gt;想说的差不多都说了，发现写乱了……凑合看吧，我没什么理论基础，都是做各种小项目的野路子。&lt;br&gt;&lt;br&gt;====强行装逼分割线===&lt;br&gt;&lt;br&gt;1、项目架构师要不断找出各种层面的重复，然后消灭之。&lt;br&gt;&lt;br&gt;2、《梦断代码》中写道，很多人把软件工程的各个要素视为开关，于是总想着是开还是关，但其实这些要素都是旋钮，你需要仔细的调整每个旋钮的位置，才能写出合格的软件作品。&lt;br&gt;&lt;br&gt;3、软件工程的精髓就在两个字：&lt;b&gt;折衷&lt;/b&gt;。
+
+
+<span class="answer-date-link-wrap">
+<a class="answer-date-link meta-item" target="_blank" href="/question/36021012/answer/66301564">发布于 2015-10-04</a>
+</span>
+
+</textarea>
+
+
+<div class="zh-summary summary clearfix">
+
+谢邀使用接口是为了调用与实现解耦，带来的好处是可以各干各的了，带来的坏处是从一个概念变成了两个概念，增加了系统的复杂度。衡量一下在具体场景中是弊大于利还是利大于弊，就可以做选择了。当然，在大部分场景下，还要考虑一个因素，就是你会不会写接口…
+
+<a href="/question/36021012/answer/66301564" class="toggle-expand">显示全部</a>
+
+</div>
+
+
+</div>
+</div>
+</div>
+<div class="zm-item-meta feed-meta">
+<div class="zm-item-meta zm-item-comment-el answer-actions clearfix">
+<div class="zm-meta-panel">
+
+<a data-follow="q:link" class="follow-link zg-follow meta-item" href="javascript:;" id="sfb-6615346"><i class="z-icon-follow"></i>关注问题</a>
+
+<a href="#" name="addcomment" class=" meta-item toggle-comment">
+<i class="z-icon-comment"></i>2 条评论</a>
+
+
+<a href="#" class="meta-item zu-autohide" name="thanks" data-thanked="false"><i class="z-icon-thank"></i>感谢</a>
+
+
+
+<a href="#" class="meta-item zu-autohide" name="share">
+<i class="z-icon-share"></i>分享</a>
+<a href="#" class="meta-item zu-autohide" name="favo">
+<i class="z-icon-collect"></i>收藏</a>
+
+
+
+
+<span class="zg-bull zu-autohide">&bull;</span>
+
+<a href="#" name="nohelp" class="meta-item zu-autohide">没有帮助</a>
+
+<span class="zg-bull zu-autohide">&bull;</span>
+<a href="#" name="report" class="meta-item zu-autohide">举报</a>
+
+
+
+<span class="zg-bull">&bull;</span>
+
+<a href="/terms#sec-licence-1" target="_blank" class="meta-item copyright"> 作者保留权利 </a>
+
+
+<button class="meta-item item-collapse js-collapse">
+<i class="z-icon-fold"></i>收起
+</button>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="feed-item feed-item-hook folding" itemprop="question" itemscope itemtype="http://schema.org/Question" data-score='17'>
+<meta itemprop="answer-id" content="21771878" />
+<meta itemprop="answerCount" content="16" />
+<meta itemprop="isTopQuestion" content="false" />
+<div class="feed-main">
+
+<div class="content">
+<h2><a class="question_link" target="_blank" href="/question/36032573">为什么springMVC和Mybatis逐渐流行起来了?</a></h2>
+<div class="entry-body "
+data-aid="21771878"
+data-atoken="65887525"
+data-collapsed="False"
+data-created="1443668800"
+data-deleted="0"
+data-isowner="0"
+data-helpful="1"
+data-score="0"
+data-copyable="1"
+>
+
+<div class="zm-item-vote">
+<a class="zm-item-vote-count js-expand js-vote-count" href="javascript:;" data-votecount="18">18</a>
+</div>
+<div class="zm-votebar">
+<button class="up ">
+<i class="icon vote-arrow"></i>
+<span class="count">18</span>
+<span class="label sr-only">赞同</span>
+</button>
+<button class="down ">
+<i class="icon vote-arrow"></i>
+<span class="label sr-only">反对</span>
+</button>
+</div>
+
+<div class="zm-item-answer-detail">
+
+<div class="zm-item-answer-author-info">
+
+<span class="name">知乎用户</span>
+</div>
+
+<div class="zm-item-vote-info " data-votecount="18">
+
+<span class="voters">
+<span class="user-block">知乎用户、</span><span class="user-block">知乎用户、</span><span class="user-block"><a data-tip="p$t$fan-jie-qi" href="https://www.zhihu.com/people/fan-jie-qi" class="zg-link" title="范捷琦">范捷琦</a></span>
+</span>
+
+
+<a href="javascript:;" class="more"> 等人赞同</a>
+
+
+</div>
+<div class="zm-item-rich-text js-collapse-body" data-resourceid="6619938" data-action="/answer/content" data-author-name="Intopass" data-entry-url="/question/36032573/answer/65887525">
+
+<textarea class="content hidden">
+Struts2 官方对于安全问题的处理让人担忧，竟然会直接演示攻击方法，多少个站长彻夜将自己的网站升级，如果不想再经历一次的话，似乎 springmvc 是个不错的选择。&lt;br&gt;然而 Hibernate 我估计是很多掌握不了其内部的逻辑，瞬时态，持久态，托管态，延时加载，事务边界，在加上对于SQL调优的不利因素，所以也渐渐的不流行了。
+
+
+<span class="answer-date-link-wrap">
+<a class="answer-date-link last_updated meta-item" data-tip="s$t$发布于 2015-10-01" target="_blank" href="/question/36032573/answer/65887525">编辑于 2015-10-01</a>
+</span>
+
+</textarea>
+
+
+<div class="zh-summary summary clearfix">
+
+Struts2 官方对于安全问题的处理让人担忧，竟然会直接演示攻击方法，多少个站长彻夜将自己的网站升级，如果不想再经历一次的话，似乎 springmvc 是个不错的选择。然而 Hibernate 我估计是很多掌握不了其内部的逻辑，瞬时态，持久态，托管态，延时加载，事务…
+
+<a href="/question/36032573/answer/65887525" class="toggle-expand">显示全部</a>
+
+</div>
+
+
+</div>
+</div>
+</div>
+<div class="zm-item-meta feed-meta">
+<div class="zm-item-meta zm-item-comment-el answer-actions clearfix">
+<div class="zm-meta-panel">
+
+<a data-follow="q:link" class="follow-link zg-follow meta-item" href="javascript:;" id="sfb-6619938"><i class="z-icon-follow"></i>关注问题</a>
+
+<a href="#" name="addcomment" class=" meta-item toggle-comment">
+<i class="z-icon-comment"></i>4 条评论</a>
+
+
+<a href="#" class="meta-item zu-autohide" name="thanks" data-thanked="false"><i class="z-icon-thank"></i>感谢</a>
+
+
+
+<a href="#" class="meta-item zu-autohide" name="share">
+<i class="z-icon-share"></i>分享</a>
+<a href="#" class="meta-item zu-autohide" name="favo">
+<i class="z-icon-collect"></i>收藏</a>
+
+
+
+
+<span class="zg-bull zu-autohide">&bull;</span>
+
+<a href="#" name="nohelp" class="meta-item zu-autohide">没有帮助</a>
+
+<span class="zg-bull zu-autohide">&bull;</span>
+<a href="#" name="report" class="meta-item zu-autohide">举报</a>
+
+
+
+<span class="zg-bull">&bull;</span>
+
+<a href="/terms#sec-licence-1" target="_blank" class="meta-item copyright"> 作者保留权利 </a>
+
+
+<button class="meta-item item-collapse js-collapse">
+<i class="z-icon-fold"></i>收起
+</button>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="feed-item feed-item-hook folding" itemprop="question" itemscope itemtype="http://schema.org/Question" data-score='18'>
+<meta itemprop="answer-id" content="25785020" />
+<meta itemprop="answerCount" content="7" />
+<meta itemprop="isTopQuestion" content="false" />
+<div class="feed-main">
+
+<div class="content">
+<h2><a class="question_link" target="_blank" href="/question/34967690">java本身就可以通过接口、构造等实现依赖注入，那为什么Spring的依赖注入还会大行其道呢？</a></h2>
+<div class="entry-body "
+data-aid="25785020"
+data-atoken="75902073"
+data-collapsed="False"
+data-created="1449601242"
+data-deleted="0"
+data-isowner="0"
+data-helpful="1"
+data-score="0"
+data-copyable="1"
+>
+
+<div class="zm-item-vote">
+<a class="zm-item-vote-count js-expand js-vote-count" href="javascript:;" data-votecount="18">18</a>
+</div>
+<div class="zm-votebar">
+<button class="up ">
+<i class="icon vote-arrow"></i>
+<span class="count">18</span>
+<span class="label sr-only">赞同</span>
+</button>
+<button class="down ">
+<i class="icon vote-arrow"></i>
+<span class="label sr-only">反对</span>
+</button>
+</div>
+
+<div class="zm-item-answer-detail">
+
+<div class="zm-item-answer-author-info">
+
+<a class="author-link" data-tip="p$t$atry" href="/people/atry">杨博</a><span title="Thoughtworks咨询师" class="bio">，Thoughtworks咨询师</span>
+</div>
+
+<div class="zm-item-vote-info " data-votecount="18">
+
+<span class="voters">
+<span class="user-block"><a data-tip="p$t$world-hello-76-67" href="https://www.zhihu.com/people/world-hello-76-67" class="zg-link" title="world hello">world hello</a>、</span><span class="user-block"><a data-tip="p$t$wang-ke-yi-92" href="https://www.zhihu.com/people/wang-ke-yi-92" class="zg-link" title="王克毅">王克毅</a>、</span><span class="user-block"><a data-tip="p$t$line-87" href="https://www.zhihu.com/people/line-87" class="zg-link" title="赵辉-LINE">赵辉-LINE</a></span>
+</span>
+
+
+<a href="javascript:;" class="more"> 等人赞同</a>
+
+
+</div>
+<div class="zm-item-rich-text js-collapse-body" data-resourceid="6193685" data-action="/answer/content" data-author-name="杨博" data-entry-url="/question/34967690/answer/75902073">
+
+<textarea class="content hidden">
+先说答案：之所以 Spring 大行其道是因为 Java 程序员基本上品位都很差。&lt;br&gt;&lt;br&gt;直接用参数传递依赖比 Spring 简单直接得多。&lt;br&gt;&lt;br&gt;咱们 Scala 程序员的平均品位明显高于 Java 程序员，比如 Scala 的作者在&lt;a href=&quot;//link.zhihu.com/?target=http%3A//www.infoq.com/cn/articles/Scala-Design&quot; class=&quot; wrap external&quot; target=&quot;_blank&quot; rel=&quot;nofollow noreferrer&quot;&gt;Scala的设计目标——Martin Odersky访谈（二）&lt;i class=&quot;icon-external&quot;&gt;&lt;/i&gt;&lt;/a&gt;中就提到：&lt;br&gt;&lt;blockquote&gt;没过多久，我们发现它达成了一条基本原则：让每个特质可以声明，自己需要哪些成员从其他特质混入。这正是现在Spring等工具试图解决的问题，即所谓的依赖注入。但依赖注入只支持注入字段（也许还能注入方法），而我们还可以支持注入类型。而且，Scala能够静态注入，而不需要在运行时注入。再者，Scala还能为注入的内部类型保证类型安全。因此，在某种意义上，我们能做的事情要比目前Spring等工具所做的更进一步。&lt;br&gt;&lt;/blockquote&gt;&lt;br&gt;再举个例子，Scala 社区有个 Web 框架叫 Play。以前由于受到 Spring 的不良影响，依赖注入设计得跟屎一样。到了 Play 2.4 ，他们终于痛定思痛，鼓励程序员用  &lt;a data-hash=&quot;baa1741ebdf5bbe4c4a65a05d013a1c2&quot; href=&quot;//www.zhihu.com/people/baa1741ebdf5bbe4c4a65a05d013a1c2&quot; class=&quot;member_mention&quot; data-editable=&quot;true&quot; data-title=&quot;@Kim Leo&quot; data-tip=&quot;p$b$baa1741ebdf5bbe4c4a65a05d013a1c2&quot;&gt;@Kim Leo&lt;/a&gt; 提到的第一种方式手动初始化各种组件，虽然 Play 官方把这叫做“&lt;a href=&quot;//link.zhihu.com/?target=https%3A//www.playframework.com/documentation/2.4.x/ScalaCompileTimeDependencyInjection&quot; class=&quot; wrap external&quot; target=&quot;_blank&quot; rel=&quot;nofollow noreferrer&quot;&gt;编译期依赖注入&lt;i class=&quot;icon-external&quot;&gt;&lt;/i&gt;&lt;/a&gt;”，但其实就是咱们喜闻乐见的硬编码。&lt;br&gt;&lt;br&gt;* * * * * * * * * * * * * * * * * *&lt;br&gt;&lt;br&gt;&lt;a data-hash=&quot;8635a46c137bb5f6c4b729025a07e3d5&quot; href=&quot;//www.zhihu.com/people/8635a46c137bb5f6c4b729025a07e3d5&quot; class=&quot;member_mention&quot; data-editable=&quot;true&quot; data-title=&quot;@Intopass&quot; data-tip=&quot;p$b$8635a46c137bb5f6c4b729025a07e3d5&quot;&gt;@Intopass&lt;/a&gt; 提到了声明式编程。声明式编程就是好，这倒没错。然而，用了 JSON 、 XML 和注解就真的是声明式编程了吗？&lt;br&gt;&lt;br&gt;错！我们学过会计就知道“实质重于形式”原则。到底是声明式编程还是命令式编程取决于你“实质上”用哪种“风格”描述逻辑，而不在于你“形式上”用了哪种“文件格式”描述逻辑。&lt;br&gt;&lt;br&gt;举个例子，亚马逊的 CloudFormation 用JSON格式描述部署流程。结果就导致类似这样的酸爽代码&lt;br&gt;&lt;blockquote&gt;&quot;DoScaleUp&quot;:   { &quot;Fn::And&quot;: [ { &quot;Fn::Not&quot;: [ { &quot;Condition&quot;: &quot;IsDormant&quot; } ] } , { &quot;Condition&quot;: &quot;IsStaging&quot; } ] }&lt;/blockquote&gt;那么我们就会发现，虽然 CloudFormation 的格式是 JSON ，但你写的配置却是不择不扣的命令式编程风格。结果就老费劲了，写出来的 JSON 跟天书差不多。&lt;br&gt;&lt;br&gt;回到 Play 2.4 &lt;a href=&quot;//link.zhihu.com/?target=https%3A//www.playframework.com/documentation/2.4.x/ScalaCompileTimeDependencyInjection&quot; class=&quot; wrap external&quot; target=&quot;_blank&quot; rel=&quot;nofollow noreferrer&quot;&gt;编译期依赖注入&lt;i class=&quot;icon-external&quot;&gt;&lt;/i&gt;&lt;/a&gt; 的例子。虽然它要你用 Scala 硬编码初始化依赖，没用 XML 和注解，但你看看代码可以发现，硬编码的代码清清楚楚描述了要创建哪些组件，每个组件的参数有哪些，而这些传参的代码就是真真切切声明了依赖关系。所以实质上就是声明式编程。而 Scala 代码本身就是一种配置。&lt;br&gt;&lt;br&gt;反过来，我司某客户用了很多年 Spring ，搞出庞大的遗留代码，Spring 的 XML 异常复杂，通过组合不同的组件，描述很多复杂行为。这种写法与 CloudFormation 的 JSON 散发出相似的臭味。&lt;br&gt;&lt;br&gt;直到最近几年和我司合作，该客户才开始逐渐重构代码换掉 Spring 。现在我司西安很多团队每天日常工作就是吃饭睡觉骂 Spring 。大伙每天都盼着能彻底把 Spring 相关代码删光的那一天早点来临。
+
+
+<span class="answer-date-link-wrap">
+<a class="answer-date-link last_updated meta-item" data-tip="s$t$发布于 2015-12-09" target="_blank" href="/question/34967690/answer/75902073">编辑于 2015-12-09</a>
+</span>
+
+</textarea>
+
+
+<div class="zh-summary summary clearfix">
+
+先说答案：之所以 Spring 大行其道是因为 Java 程序员基本上品位都很差。直接用参数传递依赖比 Spring 简单直接得多。咱们 Scala 程序员的平均品位明显高于 Java 程序员，比如 Scala 的作者在<a href="//link.zhihu.com/?target=http%3A//www.infoq.com/cn/articles/Scala-Design" class=" wrap external" target="_blank" rel="nofollow noreferrer">Scala的设计目标——Martin Odersky访谈（二）<i class="icon-external"></i></a>中就提到：没过多…
+
+<a href="/question/34967690/answer/75902073" class="toggle-expand">显示全部</a>
+
+</div>
+
+
+</div>
+</div>
+</div>
+<div class="zm-item-meta feed-meta">
+<div class="zm-item-meta zm-item-comment-el answer-actions clearfix">
+<div class="zm-meta-panel">
+
+<a data-follow="q:link" class="follow-link zg-follow meta-item" href="javascript:;" id="sfb-6193685"><i class="z-icon-follow"></i>关注问题</a>
+
+<a href="#" name="addcomment" class=" meta-item toggle-comment">
+<i class="z-icon-comment"></i>10 条评论</a>
+
+
+<a href="#" class="meta-item zu-autohide" name="thanks" data-thanked="false"><i class="z-icon-thank"></i>感谢</a>
+
+
+
+<a href="#" class="meta-item zu-autohide" name="share">
+<i class="z-icon-share"></i>分享</a>
+<a href="#" class="meta-item zu-autohide" name="favo">
+<i class="z-icon-collect"></i>收藏</a>
+
+
+
+
+<span class="zg-bull zu-autohide">&bull;</span>
+
+<a href="#" name="nohelp" class="meta-item zu-autohide">没有帮助</a>
+
+<span class="zg-bull zu-autohide">&bull;</span>
+<a href="#" name="report" class="meta-item zu-autohide">举报</a>
+
+
+
+<span class="zg-bull">&bull;</span>
+
+<a href="/terms#sec-licence-1" target="_blank" class="meta-item copyright"> 作者保留权利 </a>
+
+
+<button class="meta-item item-collapse js-collapse">
+<i class="z-icon-fold"></i>收起
+</button>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="feed-item feed-item-hook folding" itemprop="question" itemscope itemtype="http://schema.org/Question" data-score='19'>
+<meta itemprop="answer-id" content="8683204" />
+<meta itemprop="answerCount" content="6" />
+<meta itemprop="isTopQuestion" content="false" />
+<div class="feed-main">
+
+<div class="content">
+<h2><a class="question_link" target="_blank" href="/question/24845214">谁看过李守宏的 spring mvc教学视频？不觉得想死吗？</a></h2>
+<div class="entry-body "
+data-aid="8683204"
+data-atoken="33240564"
+data-collapsed="False"
+data-created="1415682616"
+data-deleted="0"
+data-isowner="0"
+data-helpful="1"
+data-score="0"
+data-copyable="1"
+>
+
+<div class="zm-item-vote">
+<a class="zm-item-vote-count js-expand js-vote-count" href="javascript:;" data-votecount="16">16</a>
+</div>
+<div class="zm-votebar">
+<button class="up ">
+<i class="icon vote-arrow"></i>
+<span class="count">16</span>
+<span class="label sr-only">赞同</span>
+</button>
+<button class="down ">
+<i class="icon vote-arrow"></i>
+<span class="label sr-only">反对</span>
+</button>
+</div>
+
+<div class="zm-item-answer-detail">
+
+<div class="zm-item-answer-author-info">
+
+<a class="author-link" data-tip="p$t$xu-yi-65" href="/people/xu-yi-65">徐义</a><span title="软件工程师" class="bio">，软件工程师</span>
+</div>
+
+<div class="zm-item-vote-info " data-votecount="16">
+
+<span class="voters">
+<span class="user-block"><a data-tip="p$t$e-ven" href="https://www.zhihu.com/people/e-ven" class="zg-link" title="E ven">E ven</a>、</span><span class="user-block">知乎用户、</span><span class="user-block"><a data-tip="p$t$feng-xiao-zhou" href="https://www.zhihu.com/people/feng-xiao-zhou" class="zg-link" title="猫叔">猫叔</a></span>
+</span>
+
+
+<a href="javascript:;" class="more"> 等人赞同</a>
+
+
+</div>
+<div class="zm-item-rich-text js-collapse-body" data-resourceid="2120086" data-action="/answer/content" data-author-name="徐义" data-entry-url="/question/24845214/answer/33240564">
+
+<textarea class="content hidden">
+首先我想问你，你是付费看人家的视频吗？如果人家只是共享出来，让那些想学习的人入门更简单而已，而你却只知道在互联网资源上一味索取，看了人家共享的资源之后却在说人家垃圾之类的话，其实我也是一个IT从业者，我当初看过马士兵、韩顺平老师的视频，对于他们分享出自己的视频我非常的感谢，他们的视频让我入门java更容易。所以别这么的自私，如果你是付费消费的话，那你确实可以去说他。
+
+
+<span class="answer-date-link-wrap">
+<a class="answer-date-link meta-item" target="_blank" href="/question/24845214/answer/33240564">发布于 2014-11-11</a>
+</span>
+
+</textarea>
+
+
+<div class="zh-summary summary clearfix">
+
+首先我想问你，你是付费看人家的视频吗？如果人家只是共享出来，让那些想学习的人入门更简单而已，而你却只知道在互联网资源上一味索取，看了人家共享的资源之后却在说人家垃圾之类的话，其实我也是一个IT从业者，我当初看过马士兵、韩顺平老师的视频，对于…
+
+<a href="/question/24845214/answer/33240564" class="toggle-expand">显示全部</a>
+
+</div>
+
+
+</div>
+</div>
+</div>
+<div class="zm-item-meta feed-meta">
+<div class="zm-item-meta zm-item-comment-el answer-actions clearfix">
+<div class="zm-meta-panel">
+
+<a data-follow="q:link" class="follow-link zg-follow meta-item" href="javascript:;" id="sfb-2120086"><i class="z-icon-follow"></i>关注问题</a>
+
+<a href="#" name="addcomment" class=" meta-item toggle-comment">
+<i class="z-icon-comment"></i>1 条评论</a>
+
+
+<a href="#" class="meta-item zu-autohide" name="thanks" data-thanked="false"><i class="z-icon-thank"></i>感谢</a>
+
+
+
+<a href="#" class="meta-item zu-autohide" name="share">
+<i class="z-icon-share"></i>分享</a>
+<a href="#" class="meta-item zu-autohide" name="favo">
+<i class="z-icon-collect"></i>收藏</a>
+
+
+
+
+<span class="zg-bull zu-autohide">&bull;</span>
+
+<a href="#" name="nohelp" class="meta-item zu-autohide">没有帮助</a>
+
+<span class="zg-bull zu-autohide">&bull;</span>
+<a href="#" name="report" class="meta-item zu-autohide">举报</a>
+
+
+
+<span class="zg-bull">&bull;</span>
+
+<a href="/terms#sec-licence-1" target="_blank" class="meta-item copyright"> 作者保留权利 </a>
+
+
+<button class="meta-item item-collapse js-collapse">
+<i class="z-icon-fold"></i>收起
+</button>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="feed-item feed-item-hook folding" itemprop="question" itemscope itemtype="http://schema.org/Question" data-score='20'>
+<meta itemprop="answer-id" content="27798855" />
+<meta itemprop="answerCount" content="1" />
+<meta itemprop="isTopQuestion" content="false" />
+<div class="feed-main">
+
+<div class="content">
+<h2><a class="question_link" target="_blank" href="/question/39356740">@Autowired和@Resource的区别是什么？</a></h2>
+<div class="entry-body "
+data-aid="27798855"
+data-atoken="80926247"
+data-collapsed="False"
+data-created="1452436619"
+data-deleted="0"
+data-isowner="0"
+data-helpful="1"
+data-score="0"
+data-copyable="1"
+>
+
+<div class="zm-item-vote">
+<a class="zm-item-vote-count js-expand js-vote-count" href="javascript:;" data-votecount="15">15</a>
+</div>
+<div class="zm-votebar">
+<button class="up ">
+<i class="icon vote-arrow"></i>
+<span class="count">15</span>
+<span class="label sr-only">赞同</span>
+</button>
+<button class="down ">
+<i class="icon vote-arrow"></i>
+<span class="label sr-only">反对</span>
+</button>
+</div>
+
+<div class="zm-item-answer-detail">
+
+<div class="zm-item-answer-author-info">
+
+<a class="author-link" data-tip="p$t$wuxinliulei" href="/people/wuxinliulei">wuxinliulei</a>
+</div>
+
+<div class="zm-item-vote-info " data-votecount="15">
+
+<span class="voters">
+<span class="user-block">知乎用户、</span><span class="user-block"><a data-tip="p$t$bie-kan-zhe-shi-yao" href="https://www.zhihu.com/people/bie-kan-zhe-shi-yao" class="zg-link" title="别看这是妖">别看这是妖</a>、</span><span class="user-block"><a data-tip="p$t$isnow1112" href="https://www.zhihu.com/people/isnow1112" class="zg-link" title="愤怒的大师兄">愤怒的大师兄</a></span>
+</span>
+
+
+<a href="javascript:;" class="more"> 等人赞同</a>
+
+
+</div>
+<div class="zm-item-rich-text js-collapse-body" data-resourceid="7949788" data-action="/answer/content" data-author-name="wuxinliulei" data-entry-url="/question/39356740/answer/80926247">
+
+<textarea class="content hidden">
+&lt;p&gt;自问自答一下&lt;/p&gt;@Autowired 与@Resource：&lt;br&gt;&lt;b&gt;1、@Autowired与@Resource都可以用来装配bean. 都可以写在字段上,或写在setter方法上。&lt;/b&gt;&lt;br&gt;&lt;br&gt;2、@Autowired默认&lt;b&gt;按类型装配&lt;/b&gt;（这个注解是属业spring的），默认情况下必须要求依赖对象必须存在，如果要允许null值，可以设置它的required属性为false，如：&lt;br&gt;@Autowired(required=false) ，如果我们想使用名称装配可以结合@Qualifier注解进行使用，如下：&lt;br&gt;Java代码&lt;br&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot;&gt;@Autowired() @Qualifier(&quot;baseDao&quot;)    
+private BaseDao baseDao;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;3、@Resource &lt;b&gt;是JDK1.6支持的注解&lt;/b&gt;，&lt;b&gt;默认按照名称进行装配&lt;/b&gt;，名称可以通过name属性进行指定，如果没有指定name属性，当注解写在字段上时，默认取字段名，按照名称查找，如果注解写在setter方法上默认取属性名进行装配。当找不到与名称匹配的bean时才按照类型进行装配。但是需要注意的是，如果name属性一旦指定，就只会按照名称进行装配。&lt;br&gt;&lt;img src=&quot;https://pic4.zhimg.com/1d434624eb4918db0814529bbcfbc6b7_b.png&quot; data-rawwidth=&quot;201&quot; data-rawheight=&quot;392&quot; class=&quot;content_image&quot; width=&quot;201&quot;&gt;&lt;br&gt;只不过注解处理器我们使用的是Spring提供的，是一样的，无所谓解耦不解耦的说法，两个在便利程度上是等同的。&lt;br&gt;&lt;br&gt;Java代码&lt;br&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot;&gt;@Resource(name=&quot;baseDao&quot;)    
+private BaseDao baseDao; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;他们的主要区别就是@Autowired是默认按照类型装配的 @Resource默认是按照名称装配的&lt;br&gt;&lt;b&gt;byName &lt;/b&gt;通过参数名 自动装配，如果一个bean的name 和另外一个bean的 property 相同，就自动装配。&lt;br&gt;&lt;b&gt;byType &lt;/b&gt;通过参数的数据类型自动自动装配，如果一个bean的数据类型和另外一个bean的property属性的数据类型兼容，就自动装配&lt;br&gt;-----------------------------------------------------------------------------------------------------------------------------------------&lt;br&gt;我们可以通过 @Autowired 或 @Resource 在 Bean 类中使用自动注入功能，但是 Bean 还是在 XML 文件中通过 &amp;lt;bean&amp;gt; 进行定义 —— 也就是说，在 XML 配置文件中定义 Bean，通过@Autowired 或 @Resource 为 Bean 的成员变量、方法入参或构造函数入参提供自动注入的功能。&lt;br&gt;比如下面的beans.xml&lt;br&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot;&gt;package com.wuxinliulei;
+
+public class Boss {
+    private Car car;
+    private Office office;
+
+    // 省略 get/setter
+
+    @Override
+    public String toString() {
+        return &quot;car:&quot; + car + &quot;\n&quot; + &quot;office:&quot; + office;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&amp;gt;
+&amp;lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
+    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+     xmlns:context=&quot;http://www.springframework.org/schema/context&quot;
+     xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans 
+ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+ http://www.springframework.org/schema/context 
+ http://www.springframework.org/schema/context/spring-context-2.5.xsd&quot;&amp;gt;
+ 
+    &amp;lt;context:annotation-config/&amp;gt; 
+
+    &amp;lt;bean id=&quot;boss&quot; class=&quot;com.wuxinliulei.Boss&quot;/&amp;gt;
+    &amp;lt;bean id=&quot;office&quot; class=&quot;com.wuxinliulei.Office&quot;&amp;gt;
+        &amp;lt;property name=&quot;officeNo&quot; value=&quot;001&quot;/&amp;gt;
+    &amp;lt;/bean&amp;gt;
+    &amp;lt;bean id=&quot;car&quot; class=&quot;com.wuxinliulei.Car&quot; scope=&quot;singleton&quot;&amp;gt;
+        &amp;lt;property name=&quot;brand&quot; value=&quot; 红旗 CA72&quot;/&amp;gt;
+        &amp;lt;property name=&quot;price&quot; value=&quot;2000&quot;/&amp;gt;
+    &amp;lt;/bean&amp;gt;
+&amp;lt;/beans&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;定义了三个bean对象，但是没有了我们书序的ref指向的内容&lt;br&gt;比如&lt;br&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&amp;gt;
+&amp;lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
+	xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+	xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans 
+ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd&quot;&amp;gt;
+    &amp;lt;bean id=&quot;boss&quot; class=&quot;com.wuxinliulei.Boss&quot;&amp;gt;
+        &amp;lt;property name=&quot;car&quot; ref=&quot;car&quot;/&amp;gt;
+        &amp;lt;property name=&quot;office&quot; ref=&quot;office&quot; /&amp;gt;
+    &amp;lt;/bean&amp;gt;
+    &amp;lt;bean id=&quot;office&quot; class=&quot;com.wuxinliulei.Office&quot;&amp;gt;
+        &amp;lt;property name=&quot;officeNo&quot; value=&quot;002&quot;/&amp;gt;
+    &amp;lt;/bean&amp;gt;
+    &amp;lt;bean id=&quot;car&quot; class=&quot;com.wuxinliulei.Car&quot; scope=&quot;singleton&quot;&amp;gt;
+        &amp;lt;property name=&quot;brand&quot; value=&quot; 红旗 CA72&quot;/&amp;gt;
+        &amp;lt;property name=&quot;price&quot; value=&quot;2000&quot;/&amp;gt;
+    &amp;lt;/bean&amp;gt;
+&amp;lt;/beans&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;-------------------------------------------------------------------------------------------------------&lt;br&gt;&lt;p&gt;spring2.5提供了基于注解（Annotation-based）的配置，我们可以通过注解的方式来完成注入依赖。在Java代码中可以使用 @Resource或者@Autowired注解方式来经行注入。虽然@Resource和@Autowired都可以来完成注入依赖，但它们之间是有区 别的。首先来看一下：&lt;/p&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot;&gt;a.@Resource默认是按照名称来装配注入的，只有当找不到与名称匹配的bean才会按照类型来装配注入；
+b.@Autowired默认是按照类型装配注入的，如果想按照名称来转配注入，则需要结合@Qualifier一起使用；
+c.@Resource注解是由JDK提供，而@Autowired是由Spring提供
+ 
+@Resource的方式；
+d. @Resource和@Autowired都可以书写标注在字段或者该字段的setter方法之上
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;&lt;p&gt;2、使用注解的方式，我们需要修改spring配置文件的头信息，修改部分红色标注，如下&lt;/p&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&amp;gt;
+&amp;lt;beans http://www.springframework.org/schema/beans&quot;
+xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+xmlns:context=&quot;Index of /schema/context&quot;
+       xsi:schemaLocation=&quot;Index of /schema/beans 
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+Index of /schema/context
+http://www.springframework.org/schema/context/spring-context-2.5.xsd&quot;&amp;gt;
+               
+&amp;lt;context:annotation-config/&amp;gt;
+     
+&amp;lt;/beans&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;PS： &lt;br&gt;&lt;/p&gt;&lt;p&gt;----------------------PS开始-------------------------------&lt;/p&gt;&lt;p&gt;在基于主机方式配置Spring的配置文件中，你可能会见到&lt;/p&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;context:annotation-config/&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这样一条配置，他的作用是式地向 Spring 容器注册&lt;/p&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot;&gt;AutowiredAnnotationBeanPostProcessor
+CommonAnnotationBeanPostProcessor
+PersistenceAnnotationBeanPostProcessor
+RequiredAnnotationBeanPostProcessor
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt; 这 4 个BeanPostProcessor。&lt;/p&gt;&lt;p&gt;注册这4个BeanPostProcessor的作用，就是为了你的系统能够识别相应的注解。&lt;/p&gt;&lt;p&gt;例如：&lt;/p&gt;&lt;p&gt;如果你想使用@Autowired注解，那么就必须事先在 Spring 容器中声明 AutowiredAnnotationBeanPostProcessor Bean。传统声明方式如下&lt;/p&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;bean class=&quot;org.springframework.beans.factory.annotation. AutowiredAnnotationBeanPostProcessor &quot;/&amp;gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如果想使用@ Resource 、@ PostConstruct、@ PreDestroy等注解就必须声明CommonAnnotationBeanPostProcessor&lt;/p&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;bean class=&quot;org.springframework.beans.factory.annotation. CommonAnnotationBeanPostProcessor&quot;/&amp;gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如果想使用@PersistenceContext注解，就必须声明PersistenceAnnotationBeanPostProcessor的Bean。&lt;/p&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;bean class=&quot;org.springframework.beans.factory.annotation.PersistenceAnnotationBeanPostProcessor&quot;/&amp;gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如果想使用 @Required的注解，就必须声明RequiredAnnotationBeanPostProcessor的Bean。&lt;/p&gt;&lt;p&gt;同样，传统的声明方式如下：&lt;/p&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;bean class=&quot;org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor&quot;/&amp;gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;&lt;p&gt;一般来说，这些注解我们还是比较常用，&lt;b&gt;尤其是&lt;/b&gt;&lt;b&gt;Antowired&lt;/b&gt;&lt;b&gt;的注解&lt;/b&gt;，在自动注入的时候更是经常使用，所以如果总是需要按照传统的方式一条一条配置显得有些繁琐和没有必要，&lt;b&gt;于是spring给我们提供&amp;lt;context:annotation-config/&amp;gt;的简化配置方式，自动帮你完成声明。&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;不过，呵呵，我们使用注解一般都会配置扫描包路径选项&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;&amp;lt;context:component-scan base-package=”XX.XX”/&amp;gt; &lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;    该配置项其实也包含了自动注入上述processor的功能，因此当使用 &amp;lt;context:component-scan/&amp;gt; 后，就可以将 &amp;lt;context:annotation-config/&amp;gt; 移除了。&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;比如：&lt;/b&gt;&lt;/p&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;context:component-scan base-package=&quot;carPoolingController, carPoolingService, carPoolingDao&quot; /&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;就把controller包下 service包下 dao包下的注解全部扫描了&lt;/b&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;----------------------------------------------PS结束------------------------------&lt;/p&gt;&lt;p&gt;3、修改以上配置文件的头信息后，我们就可以在Java代码通过注解方式来注入bean，看下面代码&lt;/p&gt;&lt;p&gt;（1）@Resource&lt;/p&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot;&gt;public class StudentService3 implements IStudentService {
+    //@Resource(name=&quot;studentDao&quot;)放在此处也是可行的
+    private IStudentDao studentDao;
+
+    private String id;
+
+
+    public void setId(String id) {
+    this.id = id;
+    }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt; @Resource(name=&quot;studentDao&quot;) // 通过此注解完成从spring配置文件中查找名称为studentDao的bean来装配字段studentDao，如果spring配置文件中不存在 studentDao名称的bean则转向按照bean类型经行查找&lt;br&gt;&lt;/p&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot;&gt;public void setStudentDao(IStudentDao studentDao) {
+        this.studentDao = studentDao;
+}
+public void saveStudent() {
+        studentDao.saveStudent();
+        System.out.print(&quot;,ID 为：&quot;+id);
+}
+}
+ 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;配置文件添加如下信息&lt;/p&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;bean id=&quot;studentDao&quot; class=&quot;com.wch.dao.impl.StudentDao&quot;&amp;gt;
+&amp;lt;/bean&amp;gt;
+
+&amp;lt;bean id=&quot;studentService3&quot; class=&quot;com.wch.service.impl.StudentService3&quot;&amp;gt;&amp;lt;/bean&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;&lt;p&gt;(2)@Autowired&lt;/p&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot;&gt;public class StudentService3 implements IStudentService {
+  //@Autowired放在此处也是可行的
+  private IStudentDao studentDao;
+
+  private String id;
+  
+  public void setId(String id) {
+       this.id = id;
+   }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt; @Autowired&lt;/p&gt;//通过此注解完成从spring配置文件中 查找满足studentDao类型的bean&lt;br&gt;//@Qualifier(&quot;studentDao&quot;)则按照名称经行来查找转配的&lt;br&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot;&gt; public void setStudentDao(IStudentDao studentDao) {
+       this.studentDao = studentDao;
+  }
+
+
+  public void saveStudent() {
+       studentDao.saveStudent();
+       System.out.print(&quot;,ID 为：&quot;+id);
+  }
+}
+ 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;配置文件添加如下信息&lt;/p&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;bean id=&quot;studentDao&quot; class=&quot;com.wch.dao.impl.StudentDao&quot;&amp;gt;&amp;lt;/bean&amp;gt;
+&amp;lt;bean id=&quot;studentService3&quot; class=&quot;com.wch.service.impl.StudentService3&quot; /&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;&lt;p&gt;在java代码中可以使用@Autowire或者@Resource注解方式进行装配，这两个注解的区别是：&lt;br&gt;@Autowire 默认按照类型装配，默认情况下它要求依赖对象必须存在如果允许为null，可以设置它required属性为false，如果我们想使用按照名称装配，可 以结合@Qualifier注解一起使用;&lt;/p&gt;&lt;p&gt;&lt;br&gt;@Resource默认按照名称装配，当找不到与名称匹配的bean才会按照类型装配，可以通过name属性指定，如果没有指定name属 性，当注解标注在字段上，即默认取字段的名称作为bean名称寻找依赖对象，当注解标注在属性的setter方法上，即默认取属性名作为bean名称寻找 依赖对象.&lt;/p&gt;&lt;p&gt;注意：如果没有指定name属性，并且按照默认的名称仍然找不到依赖的对象时候，会回退到按照类型装配，但一旦指定了name属性，就只能按照名称 装配了.&lt;/p&gt;&lt;br&gt;&lt;p&gt;--------------------------&lt;/p&gt;&lt;p&gt;当我们在xml里面为类配置注入对象时，会发现xml文件会越来越臃肿，维护起来很麻烦。这时候我们可以使用注解这种机制来为类配置注入对象。&lt;/p&gt;&lt;p&gt;&lt;b&gt; java为我们提供了 javax.annotation.Resource这个注解。&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt; spring框架提供了org.springframework.beans.factory.annotation.Autowired。&lt;/b&gt;&lt;/p&gt;&lt;p&gt;一般情况下我们使用 javax.annotation.Resource这个注解，因为这样我们就能实现和spring框架的解藕（不能认同，因为注解处理器还是Spring提供的）。&lt;br&gt;&lt;/p&gt;&lt;p&gt;@Resource可以作用于字段和函数上。当作用于字段上的时候，如果我们只是简单的这样写   &lt;/p&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot;&gt;@Resource
+PersonDao  p;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt; 这时候spring注入p的过程是 1：先查找xml中是否有id为p的元素&lt;/p&gt;&lt;p&gt;                                          2：如果没有找到，则看是否有name属性（@Resource  name=“”），有则查找name&lt;/p&gt;&lt;p&gt;                                          3:否则查找PersonDao类型的元素&lt;/p&gt;&lt;p&gt;@Resource可作用于set函数上。&lt;/p&gt;&lt;p&gt; 例如：&lt;/p&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot;&gt;@Resource
+public void setP(PersonDao p) {
+  this.p = p;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;@Autowired注解是根据类型进行查找，比如PersonDao p，他会去xml文件里查找类型为PersonDao的元素&lt;/p&gt;
+
+
+<span class="answer-date-link-wrap">
+<a class="answer-date-link last_updated meta-item" data-tip="s$t$发布于 2016-01-10" target="_blank" href="/question/39356740/answer/80926247">编辑于 2016-01-12</a>
+</span>
+
+</textarea>
+
+
+<div class="zh-summary summary clearfix">
+<img src="https://pic4.zhimg.com/1d434624eb4918db0814529bbcfbc6b7_200x112.png" data-rawwidth="201" data-rawheight="392" class="origin_image inline-img zh-lightbox-thumb" data-original="https://pic4.zhimg.com/1d434624eb4918db0814529bbcfbc6b7_r.png">
+自问自答一下@Autowired 与@Resource：<b>1、@Autowired与@Resource都可以用来装配bean. 都可以写在字段上,或写在setter方法上。</b>2、@Autowired默认<b>按类型装配</b>（这个注解是属业spring的），默认情况下必须要求依赖对象必须存在，如果要允许null值，可以设置它的…
+
+<a href="/question/39356740/answer/80926247" class="toggle-expand">显示全部</a>
+
+</div>
+
+
+</div>
+</div>
+</div>
+<div class="zm-item-meta feed-meta">
+<div class="zm-item-meta zm-item-comment-el answer-actions clearfix">
+<div class="zm-meta-panel">
+
+<a data-follow="q:link" class="follow-link zg-follow meta-item" href="javascript:;" id="sfb-7949788"><i class="z-icon-follow"></i>关注问题</a>
+
+<a href="#" name="addcomment" class=" meta-item toggle-comment">
+<i class="z-icon-comment"></i>6 条评论</a>
+
+
+<a href="#" class="meta-item zu-autohide" name="thanks" data-thanked="false"><i class="z-icon-thank"></i>感谢</a>
+
+
+
+<a href="#" class="meta-item zu-autohide" name="share">
+<i class="z-icon-share"></i>分享</a>
+<a href="#" class="meta-item zu-autohide" name="favo">
+<i class="z-icon-collect"></i>收藏</a>
+
+
+
+
+<span class="zg-bull zu-autohide">&bull;</span>
+
+<a href="#" name="nohelp" class="meta-item zu-autohide">没有帮助</a>
+
+<span class="zg-bull zu-autohide">&bull;</span>
+<a href="#" name="report" class="meta-item zu-autohide">举报</a>
+
+
+
+<span class="zg-bull">&bull;</span>
+
+<a href="/terms#sec-licence-1" target="_blank" class="meta-item copyright"> 作者保留权利 </a>
+
+
+<button class="meta-item item-collapse js-collapse">
+<i class="z-icon-fold"></i>收起
+</button>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="zm-invite-pager">
+
+<span class="zg-gray-normal">上一页</span>
+
+
+
+
+
+
+
+
+<span class="zg-gray-normal">1</span>
+
+
+
+<span><a href="?page=2">2</a></span>
+
+
+
+<span><a href="?page=3">3</a></span>
+
+
+
+
+
+
+<span><a href="?page=2">下一页</a></span>
+
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+
+<div class="zu-main-sidebar">
+
+<div class="zm-side-section">
+<div class="zm-side-section-inner">
+<div class="well login-reg-box">
+<span>知乎是一个真实的问答社区，在这里分享知识、经验和见解，发现更大的世界。<br>
+<a id="js-reg-with-mail-in-top" href="#">使用手机或邮箱注册</a>
+<!-- <span>·</span><a id="js-reg-with-qq-in-top" href="#">使用 QQ 登录</a> -->
+</span>
+<div class="clearfix">
+<a id="js-reg-with-wechat-in-top" href="#" class="zg-btn-green"><span class="z-ico-wechat-right-panel"></span>使用微信登录</a>
+<a id="js-reg-with-sina-in-top" href="#" class="zg-btn-red"><span class="icon-big-white-sina"></span>使用微博登录</a>
+<a id="js-reg-with-qq-in-top" href="#" class="zg-btn-blue"><span class="icon-big-white-qq"></span>使用 QQ 登录</a>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<div class="zm-side-section">
+<div class="zm-side-section-inner">
+<div class="topic-header-side zm-entry-head-wrap">
+
+<div class="clearfix"><div id="zh-topic-side-head">
+<a href="javascript:;" id="tf-16465" name="focus" class="zg-btn-green topic-follow-button zu-entry-focus-button">关注</a>
+<div class="zm-topic-side-followers-info">
+
+<strong>2870</strong> 人关注了该话题
+
+</div>
+</div></div>
+
+</div>
+</div>
+</div>
+
+
+<div class="shameimaru-placeholder" data-loc="topic_up" data-params='{&quot;topic_token&quot;: &quot;19599516&quot;}'></div>
+
+<div class="zm-side-section" id="zh-topic-side-parents-list">
+<div class="zm-side-section-inner parent-topic">
+<h3 class="zm-topic-side-organize-title">父话题
+</h3>
+<div class="clearfix">
+
+<a class="zm-item-tag"
+href="/topic/19620553"
+data-tip="t$b$19620553" data-token="19620553" data-topicid="23521">
+Java EE
+</a>
+
+</div>
+</div>
+</div>
+
+
+
+
+
+<div class="zm-side-section">
+<div class="zm-side-section-inner">
+<h3>话题动态</h3>
+<ul class="zh-question-related-questions" itemprop="relatedQuestion" itemscope itemtype="http://schema.org/ItemList">
+
+<li itemprop="itemListElement" itemscope itemtype="http://schema.org/Question"><a class="question_link" href="/question/40340092">为什么不用xmlbeanfactory了？</a> <span class="num">0 个回答</span><meta itemprop="followerCount" content="1" /></li>
+
+<li itemprop="itemListElement" itemscope itemtype="http://schema.org/Question"><a class="question_link" href="/question/37671456">IDEA Community Edition可以开发JavaWeb吗？</a> <span class="num">7 个回答</span><meta itemprop="followerCount" content="8" /></li>
+
+<li itemprop="itemListElement" itemscope itemtype="http://schema.org/Question"><a class="question_link" href="/question/22014461">Spring mvc和SSH如何取舍？</a> <span class="num">16 个回答</span><meta itemprop="followerCount" content="313" /></li>
+
+<li itemprop="itemListElement" itemscope itemtype="http://schema.org/Question"><a class="question_link" href="/question/40361780">springsession如何对spring的WebSocketSession进行分布式配置？</a> <span class="num">0 个回答</span><meta itemprop="followerCount" content="1" /></li>
+
+<li itemprop="itemListElement" itemscope itemtype="http://schema.org/Question"><a class="question_link" href="/question/25255223">spring有什么缺点吗？</a> <span class="num">10 个回答</span><meta itemprop="followerCount" content="218" /></li>
+
+<li itemprop="itemListElement" itemscope itemtype="http://schema.org/Question"><a class="question_link" href="/question/40501973">比较有营养的j2ee论坛，贴吧或者学习资料？</a> <span class="num">0 个回答</span><meta itemprop="followerCount" content="1" /></li>
+
+<li itemprop="itemListElement" itemscope itemtype="http://schema.org/Question"><a class="question_link" href="/question/36021012">java web 中dao 层和service层都使用接口，是否是为使用接口而使用接口？</a> <span class="num">35 个回答</span><meta itemprop="followerCount" content="138" /></li>
+
+<li itemprop="itemListElement" itemscope itemtype="http://schema.org/Question"><a class="question_link" href="/question/29507223">能否推荐Github上好的Java代码项目和简单的Spring-Web代码项目？</a> <span class="num">3 个回答</span><meta itemprop="followerCount" content="61" /></li>
+
+<li itemprop="itemListElement" itemscope itemtype="http://schema.org/Question"><a class="question_link" href="/question/40540256">MongoTemplate().aggregate()做聚合查询返回结果不对?</a> <span class="num">1 个回答</span><meta itemprop="followerCount" content="1" /></li>
+
+<li itemprop="itemListElement" itemscope itemtype="http://schema.org/Question"><a class="question_link" href="/question/39814046">面试官会问关于spring的哪些问题？</a> <span class="num">5 个回答</span><meta itemprop="followerCount" content="110" /></li>
+
+</ul>
+</div>
+</div>
+
+<div class="shameimaru-placeholder" data-loc="topic_down" data-params='{&quot;topic_token&quot;: &quot;19599516&quot;}'></div>
+
+</div>
+
+
+</div>
+
+
+<div id="zh-footer" class="zh-footer">
+<div class="content zg-wrap clearfix">
+<ul>
+
+<li><a href="https://liukanshan.zhihu.com" target="_blank">刘看山</a></li>
+
+<li><a href="/app" target="_blank">移动应用</a></li>
+<li><a href="/careers">加入知乎</a></li>
+<li><a href="/terms" target="_blank">知乎协议</a></li>
+<li><a href="mailto:bd@zhihu.com">商务合作</a></li>
+
+</ul>
+
+<span class="copy">&copy; 2016 知乎</span>
+
+</div>
+</div>
+
+<script type="text/json" class="json-inline" data-name="guiders2">{}</script>
+<script type="text/json" class="json-inline" data-name="current_user">["","","","-1","",0,0]</script>
+<script type="text/json" class="json-inline" data-name="user_status">[null,null]</script>
+<script type="text/json" class="json-inline" data-name="env">["zhihu.com","comet.zhihu.com",false,null]</script>
+<script type="text/json" class="json-inline" data-name="permissions">[]</script>
+
+
+<script type="text/json" class="json-inline" data-name="ga_vars">{"user_created":0,"now":1455877148000,"abtest_mask":"------------------------------","user_attr":[0,0,0,"-","-"],"user_hash":0}</script>
+
+<script type="text/json" class="json-inline" data-name="ra-urls">{"CommentApp":"https:\/\/static.zhihu.com\/static\/revved\/-\/apps\/CommentApp.fb23fa39.js"}</script>
+
+<script type="text/json" class="json-inline" data-name="current_topic">[["Spring","19599516","https:\/\/pic1.zhimg.com\/e4e40c84c_s.jpg",16465],[["Java EE","19620553","https:\/\/pic1.zhimg.com\/e43ed97a274f9f1b4746ae6fae26ce74_s.png"]],0,0,"",0]</script>
+
+<script src="https://static.zhihu.com/static/revved/-/js/vendor.ff76fbae.js"></script>
+<script src="https://static.zhihu.com/static/revved/-/js/closure/common.7a263ff5.js"></script>
+
+
+<script src="https://static.zhihu.com/static/revved/-/js/closure/richtexteditor.4a7a6520.js" async></script>
+<script src="https://static.zhihu.com/static/revved/-/js/closure/page-main.8ff6a179.js"></script>
+<meta name="entry" content="ZH.entryT" data-module-id="page-main">
+
+<script type="text/zscript" znonce="97d106007eda4592a14ee5938955d266"></script>
+
+<input type="hidden" name="_xsrf" value="358df78b7ab175692540e55dd7cea1ae"/>
+</body>
+</html>

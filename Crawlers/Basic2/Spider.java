@@ -36,7 +36,7 @@ public class Spider {
 	}
 	
 	//获取问题的列表
-	static ArrayList<Zhihu>getZhihu(String content){
+	public static ArrayList<Zhihu>getZhihu(String content){
 		ArrayList<Zhihu>result=new ArrayList<Zhihu>();
 		
 		Pattern urlPattern=Pattern.compile("<h2>.+?question_link.+?href=\"(.+?)\".+?</h2>");

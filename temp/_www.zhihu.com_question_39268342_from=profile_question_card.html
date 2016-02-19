@@ -1,0 +1,2690 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dropEffect="none" class="no-js no-auth ">
+<head>
+<meta charset="utf-8" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="renderer" content="webkit" />
+
+<title>
+
+
+如何评价熔断机制在实施仅四天后就宣布暂停？ - A股 - 知乎
+
+
+</title>
+
+<meta name="apple-itunes-app" content="app-id=432274380, app-argument=zhihu://questions/39268342">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta http-equiv="mobile-agent" content="format=html5;url=https://www.zhihu.com/question/39268342">
+<meta id="znonce" name="znonce" content="1c21573e56194385b16bc4c0fa10c2f7">
+
+
+<link rel="apple-touch-icon" href="https://static.zhihu.com/static/revved/img/ios/touch-icon-152.f361b474.png" sizes="152x152">
+<link rel="apple-touch-icon" href="https://static.zhihu.com/static/revved/img/ios/touch-icon-120.346e7055.png" sizes="120x120">
+<link rel="apple-touch-icon" href="https://static.zhihu.com/static/revved/img/ios/touch-icon-76.3101f5fe.png" sizes="76x76">
+<link rel="apple-touch-icon" href="https://static.zhihu.com/static/revved/img/ios/touch-icon-60.a6575a64.png" sizes="60x60">
+
+
+<link rel="shortcut icon" href="https://static.zhihu.com/static/favicon.ico" type="image/x-icon">
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://static.zhihu.com/static/search.xml" title="知乎" />
+<link rel="stylesheet" href="https://static.zhihu.com/static/revved/-/css/z.295beca3.css">
+
+
+
+<meta name="google-site-verification" content="FTeR0c8arOPKh8c5DYh_9uu98_zJbaWw53J-Sch9MTg" />
+<meta property="qc:admins" content="14414345146201056375" />
+
+
+
+<!--[if lt IE 9]>
+<script src="https://static.zhihu.com/static/components/respond/dest/respond.min.js"></script>
+<link href="https://static.zhihu.com/static/components/respond/cross-domain/respond-proxy.html" id="respond-proxy" rel="respond-proxy" />
+<link href="/static/components/respond/cross-domain/respond.proxy.gif" id="respond-redirect" rel="respond-redirect" />
+<script src="/static/components/respond/cross-domain/respond.proxy.js"></script>
+<![endif]-->
+<script src="https://static.zhihu.com/static/revved/-/js/instant.4b42dd60.js"></script>
+
+
+
+
+</head>
+
+<body class="zhi ">
+
+
+
+<div role="navigation" class="zu-top">
+<div class="zg-wrap modal-shifting clearfix" id="zh-top-inner">
+<a href="/" class="zu-top-link-logo" id="zh-top-link-logo" data-za-c="view_home" data-za-a="visit_home" data-za-l="top_navigation_zhihu_logo">知乎</a>
+
+
+
+<ul class="topnav-noauth clearfix">
+<li>
+<a href="javascript:;" class="js-signup-noauth"><i class="zg-icon zg-icon-dd-home"></i>注册知乎</a>
+</li>
+<li>
+<a href="javascript:;" class="js-signin-noauth">登录</a>
+</li>
+</ul>
+
+
+
+<button class="zu-top-add-question" id="zu-top-add-question">提问</button>
+
+
+<div role="search" id="zh-top-search" class="zu-top-search">
+<form method="GET" action="/search" id="zh-top-search-form" class="zu-top-search-form">
+
+
+
+<input type="hidden" name="type" value="question">
+<label for="q" class="hide-text">知乎搜索</label><input type="text" class="zu-top-search-input" id="q" name="q" autocomplete="off" value="" placeholder="搜索问题、话题或人">
+<button type="submit" class="zu-top-search-button"><span class="hide-text">搜索</span><span class="sprite-global-icon-magnifier-dark"></span></button>
+</form>
+</div>
+
+
+
+<div id="zg-top-nav" class="zu-top-nav">
+<ul class="zu-top-nav-ul zg-clear">
+
+<li class="zu-top-nav-li " id="zh-top-nav-home">
+<a class="zu-top-nav-link" href="/" id="zh-top-link-home" data-za-c="view_home" data-za-a="visit_home" data-za-l="top_navigation_home">首页</a>
+</li>
+<li class="top-nav-topic-selector zu-top-nav-li " id="zh-top-nav-topic">
+<a class="zu-top-nav-link" href="/topic" id="top-nav-dd-topic">话题</a>
+
+</li>
+<li class="zu-top-nav-li " id="zh-top-nav-explore">
+<a class="zu-top-nav-link" href="/explore">发现</a>
+</li>
+
+
+</ul>
+<div class="zu-top-nav-live zu-noti7-popup zg-r5px no-hovercard" id="zh-top-nav-live-new" role="popup" tabindex="0">
+<div class="zu-top-nav-live-inner zg-r5px">
+<div class="zu-top-live-icon">&nbsp;</div>
+<div class="zu-home-noti-inner" id="zh-top-nav-live-new-inner">
+<div class="zm-noti7-popup-tab-container clearfix" tabindex="0">
+<button class="zm-noti7-popup-tab-item message">
+<span class="icon">消息</span>
+</button>
+<button class="zm-noti7-popup-tab-item user">
+<span class="icon">用户</span>
+</button>
+<button class="zm-noti7-popup-tab-item thanks">
+<span class="icon">赞同和感谢</span>
+</button>
+</div>
+</div>
+<div class="zm-noti7-frame-border top"></div>
+<div class="zm-noti7-frame">
+<div class="zm-noti7-content">
+<div class="zm-noti7-content-inner">
+<div class="zm-noti7-content-body">
+<div class="zm-noti7-popup-loading">
+<span class="noti-spinner-loading"></span>
+</div>
+</div>
+</div>
+</div>
+<div class="zm-noti7-content" style="display:none;">
+<div class="zm-noti7-content-inner">
+<div class="zm-noti7-content-body">
+<div class="zm-noti7-popup-loading">
+<span class="noti-spinner-loading"></span>
+</div>
+</div>
+</div>
+</div>
+<div class="zm-noti7-content" style="display:none;">
+<div class="zm-noti7-content-inner">
+<div class="zm-noti7-content-body">
+<div class="zm-noti7-popup-loading">
+<span class="noti-spinner-loading"></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="zm-noti7-frame-border bottom"></div>
+<div class="zm-noti7-popup-footer">
+<a href="/notifications" class="zm-noti7-popup-footer-all zg-right">查看全部 &raquo;</a>
+<a href="/settings/notification" class="zm-noti7-popup-footer-set" title="通知设置" ><i class="zg-icon zg-icon-settings"></i></a>
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<div class="zu-global-notify" id="zh-global-message" style="display:none">
+<div class="zg-wrap">
+<div class="zu-global-nitify-inner">
+<a class="zu-global-notify-close" href="javascript:;" title="关闭" name="close">x</a>
+<span class="zu-global-notify-icon"></span>
+<span class="zu-global-notify-msg"></span>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+<div class="zu-global-notify zu-global-notify-info" id="zh-question-redirect-info" style="display:none"></div>
+
+
+<div class="zu-global-notify zu-global-notify-info" id="zh-question-notification-summary" style="display:none;">
+<div class="zg-wrap">
+<div class="zu-global-nitify-inner">
+<span class="zu-global-notify-icon"></span>
+<ul class="zu-question-notify-wrap">
+</ul>
+</div>
+</div>
+</div>
+<div class="zg-wrap zu-main clearfix with-indention-votebar" itemscope itemtype="http://schema.org/Question" id="zh-single-question-page" data-urltoken="39268342" role="main">
+<div class="zu-main-content">
+<div class="zu-main-content-inner">
+
+
+<meta itemprop="isTopQuestion" content="false" />
+<meta itemprop="visitsCount" content="40115" />
+
+
+<div class="zm-tag-editor zg-section">
+<div class="zm-tag-editor-labels zg-clear">
+
+<a class="zm-item-tag"
+href="/topic/19570359"
+data-tip="t$b$19570359" data-token="19570359" data-topicid="6723">
+A股
+</a>
+
+<a class="zm-item-tag"
+href="/topic/19629905"
+data-tip="t$b$19629905" data-token="19629905" data-topicid="26633">
+沪深股市
+</a>
+
+<a class="zm-item-tag"
+href="/topic/19750603"
+data-tip="t$b$19750603" data-token="19750603" data-topicid="66936">
+证券市场
+</a>
+
+<a class="zm-item-tag"
+href="/topic/20024362"
+data-tip="t$b$20024362" data-token="20024362" data-topicid="160197">
+熔断机制
+</a>
+
+</div>
+</div>
+<div id="zh-question-title" data-editable="true">
+
+<h2 class="zm-item-title zm-editable-content">
+
+如何评价熔断机制在实施仅四天后就宣布暂停？
+
+</h2>
+</div>
+<div id="zh-question-detail" class="zm-item-rich-text" data-resourceid="7914520" data-action="/question/detail">
+
+<div class="zm-editable-content">为维护市场平稳运行，经中国证监会批准，沪深证券交易所决定自2016年1月8日起暂停实施《上海证券交易所交易规则》第四章第五节规定的“指数熔断”机制。</div>
+
+
+</div>
+<div class="zm-item-meta zm-item-comment-el clearfix" id="zh-question-meta-wrap">
+<div class="zm-meta-panel">
+
+<a href="#" name="addcomment" class="toggle-comment meta-item">
+<i class="z-icon-comment"></i>5 条评论
+</a>
+<a href="#" name="share" class="share meta-item">
+<i class="z-icon-share"></i>分享
+</a>
+
+</div>
+<div class="panel-container">
+
+</div>
+</div>
+
+<div class="zh-answers-title clearfix">
+
+<div id="zh-answers-filter" class="answers-sorter">
+
+<span class="lbl">按投票排序</span>
+<a class="lbl" href="/question/39268342?sort=created">按时间排序</a>
+
+<i class="zg-icon zg-icon-double-arrow"></i>
+</div>
+
+<h3 data-num="202" id="zh-question-answer-num">202 个回答</h3>
+</div>
+<div class="zh-question-answer-summary-wrap zm-item-rich-text" id="zh-question-answer-summary-wrap" style="display:none;">
+<h3>
+<a href="http://www.zhihu.com/question/20014415" target="_blank" class="zg-right zg-link-litblue" style="font-weight:normal">什么是答案总结？</a>
+答案总结</h3>
+<div id="zh-question-answer-summary" class="zg-section"
+data-resourceid="7914520" data-action="/question/summary">
+
+<div class="zm-editable-content"></div>
+
+</div>
+</div>
+
+<div id="zh-question-answer-wrap" data-pagesize="20" class="zh-question-answer-wrapper" data-widget="navigable" data-navigable-options="{&quot;items&quot;: &quot;&gt;.zm-item-answer&quot;}" data-init="{&quot;params&quot;: {&quot;url_token&quot;: 39268342, &quot;pagesize&quot;: 20, &quot;offset&quot;: 0}, &quot;nodename&quot;: &quot;QuestionAnswerListV2&quot;}">
+
+
+<div tabindex="-1" class="zm-item-answer  zm-item-expanded"
+
+itemprop="topAnswer"
+
+itemscope itemtype="http://schema.org/Answer"
+data-aid="27621037"
+data-atoken="80482321"
+data-collapsed="0"
+data-created="1452179799"
+data-deleted="0"
+data-helpful="1"
+data-isowner="0"
+data-copyable="1"
+
+
+>
+<a class="zg-anchor-hidden" name="answer-27621037"></a>
+
+
+<div class="zm-votebar">
+<button class="up ">
+<i class="icon vote-arrow"></i>
+<span class="count">4481</span>
+<span class="label sr-only">赞同</span>
+</button>
+<button class="down ">
+<i class="icon vote-arrow"></i>
+<span class="label sr-only">反对</span>
+</button>
+</div>
+
+
+<div class="answer-head">
+<div class="zm-item-answer-author-info">
+
+<a class="zm-item-link-avatar avatar-link" href="/people/vantssei" data-tip="p$t$vantssei">
+<img src="https://pic2.zhimg.com/bb3c3e6c5_s.jpg" class="zm-list-avatar avatar">
+</a>
+
+<a class="author-link" data-tip="p$t$vantssei" href="/people/vantssei">范杞思</a><span title="不见莼鲈心不死。" class="bio">，不见莼鲈心不死。</span>
+</div>
+<div class="zm-item-vote-info " data-votecount="4481">
+
+<span class="voters">
+<span class="user-block"><a data-tip="p$t$yi-tian-chi-50" href="https://www.zhihu.com/people/yi-tian-chi-50" class="zg-link" title="依田恥">依田恥</a>、</span><span class="user-block"><a data-tip="p$t$luo-bei-bei-29" href="https://www.zhihu.com/people/luo-bei-bei-29" class="zg-link" title="洛北北">洛北北</a>、</span><span class="user-block"><a data-tip="p$t$nb007" href="https://www.zhihu.com/people/nb007" class="zg-link" title="陈某某">陈某某</a></span>
+</span>
+
+
+<a href="javascript:;" class="more"> 等人赞同</a>
+
+
+</div>
+</div>
+<div class="zm-item-rich-text js-collapse-body" data-resourceid="7914520" data-action="/answer/content" data-author-name="范杞思" data-entry-url="/question/39268342/answer/80482321">
+
+
+<div class="zh-summary summary clearfix" style="display:none;">
+
+继上海一男子造谣自己因造谣而被拘留15日而被拘留15日；美术馆反法西斯胜利70周年画展因庆祝反法西斯胜利70周年活动而暂停；俄罗斯一票否决了乌克兰提出的取消俄罗斯一票否决权的安理会提案；之后......中国股市为预防恶化而紧急停止的熔断机制为预防恶化而…
+
+<a href="/question/39268342/answer/80482321" class="toggle-expand">显示全部</a>
+
+</div>
+
+
+<div class="zm-editable-content clearfix">
+继<br><blockquote>上海一男子造谣自己因造谣而被拘留15日而被拘留15日；<br>美术馆反法西斯胜利70周年画展因庆祝反法西斯胜利70周年活动而暂停；</blockquote><blockquote>俄罗斯一票否决了乌克兰提出的取消俄罗斯一票否决权的安理会提案；</blockquote>之后......<br><br>中国股市为预防恶化而紧急停止的熔断机制为预防恶化而紧急停止。<br><br>…………………………………………更新…………………………………………<br>前三句是网络段子，真假未知，请大家不要当真。<br>…………………………………………更新…………………………………………<br>第四句是我胡言乱语，也请不要当真，要命……
+
+</div>
+
+</div>
+<a class="zg-anchor-hidden ac" name="27621037-comment"></a>
+<div class="zm-item-meta zm-item-comment-el answer-actions clearfix">
+<div class="zm-meta-panel">
+
+<span class="answer-date-link-wrap">
+<a class="answer-date-link last_updated meta-item" data-tip="s$t$发布于 2016-01-07" target="_blank" href="/question/39268342/answer/80482321">编辑于 2016-01-08</a>
+</span>
+
+<a href="#" name="addcomment" class=" meta-item toggle-comment">
+<i class="z-icon-comment"></i>190 条评论</a>
+
+
+<a href="#" class="meta-item zu-autohide" name="thanks" data-thanked="false"><i class="z-icon-thank"></i>感谢</a>
+
+
+
+<a href="#" class="meta-item zu-autohide" name="share">
+<i class="z-icon-share"></i>分享</a>
+<a href="#" class="meta-item zu-autohide" name="favo">
+<i class="z-icon-collect"></i>收藏</a>
+
+
+
+
+<span class="zg-bull zu-autohide">&bull;</span>
+
+<a href="#" name="nohelp" class="meta-item zu-autohide">没有帮助</a>
+
+<span class="zg-bull zu-autohide">&bull;</span>
+<a href="#" name="report" class="meta-item zu-autohide">举报</a>
+
+
+
+<span class="zg-bull">&bull;</span>
+
+<a href="/terms#sec-licence-1" target="_blank" class="meta-item copyright"> 作者保留权利 </a>
+
+
+
+</div>
+</div>
+</div>
+
+<div tabindex="-1" class="zm-item-answer  zm-item-expanded"
+
+itemscope itemtype="http://schema.org/Answer"
+data-aid="27647827"
+data-atoken="80548976"
+data-collapsed="0"
+data-created="1452227789"
+data-deleted="0"
+data-helpful="1"
+data-isowner="0"
+data-copyable="1"
+
+
+>
+<a class="zg-anchor-hidden" name="answer-27647827"></a>
+
+
+<div class="zm-votebar">
+<button class="up ">
+<i class="icon vote-arrow"></i>
+<span class="count">324</span>
+<span class="label sr-only">赞同</span>
+</button>
+<button class="down ">
+<i class="icon vote-arrow"></i>
+<span class="label sr-only">反对</span>
+</button>
+</div>
+
+
+<div class="answer-head">
+<div class="zm-item-answer-author-info">
+
+<a class="zm-item-link-avatar avatar-link" href="/people/lizijiancfa" data-tip="p$t$lizijiancfa">
+<img src="https://pic3.zhimg.com/55c4ae7e76360240c9a5287b73f55102_s.jpg" class="zm-list-avatar avatar">
+</a>
+
+<a class="author-link" data-tip="p$t$lizijiancfa" href="/people/lizijiancfa">李子健</a><span title="Focus on the macro economy" class="bio">，Focus on the macro economy</span>
+</div>
+<div class="zm-item-vote-info " data-votecount="324">
+
+<span class="voters">
+<span class="user-block"><a data-tip="p$t$li-wen-tao-16" href="https://www.zhihu.com/people/li-wen-tao-16" class="zg-link" title="李文涛">李文涛</a>、</span><span class="user-block"><a data-tip="p$t$yuehaotian" href="https://www.zhihu.com/people/yuehaotian" class="zg-link" title="嶽昊">嶽昊</a>、</span><span class="user-block"><a data-tip="p$t$Idiotnick" href="https://www.zhihu.com/people/Idiotnick" class="zg-link" title="Nick Idiot">Nick Idiot</a></span>
+</span>
+
+
+<a href="javascript:;" class="more"> 等人赞同</a>
+
+
+</div>
+</div>
+<div class="zm-item-rich-text js-collapse-body" data-resourceid="7914520" data-action="/answer/content" data-author-name="李子健" data-entry-url="/question/39268342/answer/80548976">
+
+
+<div class="zh-summary summary clearfix" style="display:none;">
+<img src="https://pic4.zhimg.com/58efa40513ee9fb1a3cce547f31864bf_200x112.jpg" data-rawwidth="1016" data-rawheight="720" class="origin_image inline-img zh-lightbox-thumb" data-original="https://pic4.zhimg.com/58efa40513ee9fb1a3cce547f31864bf_r.jpg">
+<b>深交所研究所去年给会里写的关于熔断的报告（如图）。明确提出：7%熔断离5%太近，容易引发磁吸效应；同时7%档熔断时间太长，会影响市场连续性和流动性。证监会没采纳。</b><b>9月8日开始就熔断征求意见，张育军9月17日被查，11月4日姚刚被查，12月4日颁布熔断制度…</b>
+
+<a href="/question/39268342/answer/80548976" class="toggle-expand">显示全部</a>
+
+</div>
+
+
+<div class="zm-editable-content clearfix">
+<b>深交所研究所去年给会里写的关于熔断的报告（如图）。明确提出：7%熔断离5%太近，容易引发磁吸效应；同时7%档熔断时间太长，会影响市场连续性和流动性。证监会没采纳。</b><br><br><noscript><img src="https://pic4.zhimg.com/58efa40513ee9fb1a3cce547f31864bf_b.jpg" data-rawwidth="1016" data-rawheight="720" class="origin_image zh-lightbox-thumb" width="1016" data-original="https://pic4.zhimg.com/58efa40513ee9fb1a3cce547f31864bf_r.jpg"></noscript><img src="//zhstatic.zhihu.com/assets/zhihu/ztext/whitedot.jpg" data-rawwidth="1016" data-rawheight="720" class="origin_image zh-lightbox-thumb lazy" width="1016" data-original="https://pic4.zhimg.com/58efa40513ee9fb1a3cce547f31864bf_r.jpg" data-actualsrc="https://pic4.zhimg.com/58efa40513ee9fb1a3cce547f31864bf_b.jpg"><br><br><b>9月8日开始就熔断征求意见，张育军9月17日被查，11月4日姚刚被查，12月4日颁布熔断制度。你说这最终定稿是谁拍板的呢？呵呵。两个最有发言权的技术官僚被发现是坏人，清除出去了。沪深两个交易所都说了，这事不能这么搞，结果还是搞了。</b>
+
+</div>
+
+</div>
+<a class="zg-anchor-hidden ac" name="27647827-comment"></a>
+<div class="zm-item-meta zm-item-comment-el answer-actions clearfix">
+<div class="zm-meta-panel">
+
+<span class="answer-date-link-wrap">
+<a class="answer-date-link last_updated meta-item" data-tip="s$t$发布于 2016-01-08" target="_blank" href="/question/39268342/answer/80548976">编辑于 2016-01-08</a>
+</span>
+
+<a href="#" name="addcomment" class=" meta-item toggle-comment">
+<i class="z-icon-comment"></i>48 条评论</a>
+
+
+<a href="#" class="meta-item zu-autohide" name="thanks" data-thanked="false"><i class="z-icon-thank"></i>感谢</a>
+
+
+
+<a href="#" class="meta-item zu-autohide" name="share">
+<i class="z-icon-share"></i>分享</a>
+<a href="#" class="meta-item zu-autohide" name="favo">
+<i class="z-icon-collect"></i>收藏</a>
+
+
+
+
+<span class="zg-bull zu-autohide">&bull;</span>
+
+<a href="#" name="nohelp" class="meta-item zu-autohide">没有帮助</a>
+
+<span class="zg-bull zu-autohide">&bull;</span>
+<a href="#" name="report" class="meta-item zu-autohide">举报</a>
+
+
+
+<span class="zg-bull">&bull;</span>
+
+<a href="/terms#sec-licence-1" target="_blank" class="meta-item copyright"> 作者保留权利 </a>
+
+
+
+</div>
+</div>
+</div>
+
+<div tabindex="-1" class="zm-item-answer  zm-item-expanded"
+
+itemscope itemtype="http://schema.org/Answer"
+data-aid="27621972"
+data-atoken="80484635"
+data-collapsed="0"
+data-created="1452180608"
+data-deleted="0"
+data-helpful="1"
+data-isowner="0"
+data-copyable="1"
+
+
+>
+<a class="zg-anchor-hidden" name="answer-27621972"></a>
+
+
+<div class="zm-votebar">
+<button class="up ">
+<i class="icon vote-arrow"></i>
+<span class="count">365</span>
+<span class="label sr-only">赞同</span>
+</button>
+<button class="down ">
+<i class="icon vote-arrow"></i>
+<span class="label sr-only">反对</span>
+</button>
+</div>
+
+
+<div class="answer-head">
+<div class="zm-item-answer-author-info">
+
+<a class="zm-item-link-avatar avatar-link" href="/people/sean-64-30" data-tip="p$t$sean-64-30">
+<img src="https://pic1.zhimg.com/2b6b9ff31e21db2ddde1156ad5d31c98_s.jpg" class="zm-list-avatar avatar">
+</a>
+
+<a class="author-link" data-tip="p$t$sean-64-30" href="/people/sean-64-30">Sean</a><span title="Permanently Head Damaged" class="bio">，Permanently Head Damaged</span>
+</div>
+<div class="zm-item-vote-info " data-votecount="365">
+
+<span class="voters">
+<span class="user-block"><a data-tip="p$t$tian-chuan-jun-xiong" href="https://www.zhihu.com/people/tian-chuan-jun-xiong" class="zg-link" title="田川俊雄">田川俊雄</a>、</span><span class="user-block"><a data-tip="p$t$bie-shua-wo" href="https://www.zhihu.com/people/bie-shua-wo" class="zg-link" title="别刷我">别刷我</a>、</span><span class="user-block"><a data-tip="p$t$gong-chang-31-14" href="https://www.zhihu.com/people/gong-chang-31-14" class="zg-link" title="会生气的树">会生气的树</a></span>
+</span>
+
+
+<a href="javascript:;" class="more"> 等人赞同</a>
+
+
+</div>
+</div>
+<div class="zm-item-rich-text js-collapse-body" data-resourceid="7914520" data-action="/answer/content" data-author-name="Sean" data-entry-url="/question/39268342/answer/80484635">
+
+
+<div class="zh-summary summary clearfix" style="display:none;">
+
+怎么说呢，这又是一次成功的/大规模的/全球范围罕见的/参与度极高的社会学实验为广大社会学/公共政策/经济/金融界PhD的研究提供了极好的研究素材。为啥是“又”？独生子女政策还尸骨未寒呢。。
+
+</div>
+
+
+<div class="zm-editable-content clearfix">
+怎么说呢，这又是一次成功的/大规模的/全球范围罕见的/参与度极高的<br><br>社会学实验<br><br>为广大社会学/公共政策/经济/金融界PhD的研究提供了极好的研究素材。<br><br>为啥是“又”？独生子女政策还尸骨未寒呢。。
+
+</div>
+
+</div>
+<a class="zg-anchor-hidden ac" name="27621972-comment"></a>
+<div class="zm-item-meta zm-item-comment-el answer-actions clearfix">
+<div class="zm-meta-panel">
+
+<span class="answer-date-link-wrap">
+<a class="answer-date-link meta-item" target="_blank" href="/question/39268342/answer/80484635">发布于 2016-01-07</a>
+</span>
+
+<a href="#" name="addcomment" class=" meta-item toggle-comment">
+<i class="z-icon-comment"></i>31 条评论</a>
+
+
+<a href="#" class="meta-item zu-autohide" name="thanks" data-thanked="false"><i class="z-icon-thank"></i>感谢</a>
+
+
+
+<a href="#" class="meta-item zu-autohide" name="share">
+<i class="z-icon-share"></i>分享</a>
+<a href="#" class="meta-item zu-autohide" name="favo">
+<i class="z-icon-collect"></i>收藏</a>
+
+
+
+
+<span class="zg-bull zu-autohide">&bull;</span>
+
+<a href="#" name="nohelp" class="meta-item zu-autohide">没有帮助</a>
+
+<span class="zg-bull zu-autohide">&bull;</span>
+<a href="#" name="report" class="meta-item zu-autohide">举报</a>
+
+
+
+<span class="zg-bull">&bull;</span>
+
+<a href="/terms#sec-licence-1" target="_blank" class="meta-item copyright"> 作者保留权利 </a>
+
+
+
+</div>
+</div>
+</div>
+
+<div tabindex="-1" class="zm-item-answer  zm-item-expanded"
+
+itemscope itemtype="http://schema.org/Answer"
+data-aid="27634880"
+data-atoken="80516938"
+data-collapsed="0"
+data-created="1452214601"
+data-deleted="0"
+data-helpful="1"
+data-isowner="0"
+data-copyable="1"
+
+
+>
+<a class="zg-anchor-hidden" name="answer-27634880"></a>
+
+
+<div class="zm-votebar">
+<button class="up ">
+<i class="icon vote-arrow"></i>
+<span class="count">36</span>
+<span class="label sr-only">赞同</span>
+</button>
+<button class="down ">
+<i class="icon vote-arrow"></i>
+<span class="label sr-only">反对</span>
+</button>
+</div>
+
+
+<div class="answer-head">
+<div class="zm-item-answer-author-info">
+
+<a class="zm-item-link-avatar avatar-link" href="/people/zou-johnny" data-tip="p$t$zou-johnny">
+<img src="https://pic2.zhimg.com/ba7cb20f5_s.jpg" class="zm-list-avatar avatar">
+</a>
+
+<a class="author-link" data-tip="p$t$zou-johnny" href="/people/zou-johnny">zou johnny</a><span title="cnspoon.com 财经媒体" class="bio">，<a href="//link.zhihu.com/?target=http%3A//cnspoon.com" class=" external" target="_blank" rel="nofollow noreferrer"><span class="invisible">http://</span><span class="visible">cnspoon.com</span><span class="invisible"></span><i class="icon-external"></i></a> 财经媒体</span>
+</div>
+<div class="zm-item-vote-info " data-votecount="36">
+
+<span class="voters">
+<span class="user-block">知乎用户、</span><span class="user-block"><a data-tip="p$t$zhang-yuan-yuan-81-36" href="https://www.zhihu.com/people/zhang-yuan-yuan-81-36" class="zg-link" title="张源元">张源元</a>、</span><span class="user-block"><a data-tip="p$t$li-heng-jie-56" href="https://www.zhihu.com/people/li-heng-jie-56" class="zg-link" title="李衡杰">李衡杰</a></span>
+</span>
+
+
+<a href="javascript:;" class="more"> 等人赞同</a>
+
+
+</div>
+</div>
+<div class="zm-item-rich-text js-collapse-body" data-resourceid="7914520" data-action="/answer/content" data-author-name="zou johnny" data-entry-url="/question/39268342/answer/80516938">
+
+
+<div class="zh-summary summary clearfix" style="display:none;">
+
+央行最近在人民币中间价上放水。最近有盛传中国要合并一行三会。熔断机制是去年股灾后就定下来的，刚实行就被弄了两次。央行还说人民币双向浮动有利于人民币国际化。。。我不是阴谋论者，但是这个逻辑关系和画面太美，我不敢看。
+
+</div>
+
+
+<div class="zm-editable-content clearfix">
+央行最近在人民币中间价上放水。<br>最近有盛传中国要合并一行三会。<br>熔断机制是去年股灾后就定下来的，刚实行就被弄了两次。<br>央行还说人民币双向浮动有利于人民币国际化。。。<br><br>我不是阴谋论者，但是这个逻辑关系和画面太美，我不敢看。
+
+</div>
+
+</div>
+<a class="zg-anchor-hidden ac" name="27634880-comment"></a>
+<div class="zm-item-meta zm-item-comment-el answer-actions clearfix">
+<div class="zm-meta-panel">
+
+<span class="answer-date-link-wrap">
+<a class="answer-date-link meta-item" target="_blank" href="/question/39268342/answer/80516938">发布于 2016-01-08</a>
+</span>
+
+<a href="#" name="addcomment" class=" meta-item toggle-comment">
+<i class="z-icon-comment"></i>55 条评论</a>
+
+
+<a href="#" class="meta-item zu-autohide" name="thanks" data-thanked="false"><i class="z-icon-thank"></i>感谢</a>
+
+
+
+<a href="#" class="meta-item zu-autohide" name="share">
+<i class="z-icon-share"></i>分享</a>
+<a href="#" class="meta-item zu-autohide" name="favo">
+<i class="z-icon-collect"></i>收藏</a>
+
+
+
+
+<span class="zg-bull zu-autohide">&bull;</span>
+
+<a href="#" name="nohelp" class="meta-item zu-autohide">没有帮助</a>
+
+<span class="zg-bull zu-autohide">&bull;</span>
+<a href="#" name="report" class="meta-item zu-autohide">举报</a>
+
+
+
+<span class="zg-bull">&bull;</span>
+
+<a href="/terms#sec-licence-1" target="_blank" class="meta-item copyright"> 作者保留权利 </a>
+
+
+
+</div>
+</div>
+</div>
+
+<div tabindex="-1" class="zm-item-answer  zm-item-expanded"
+
+itemscope itemtype="http://schema.org/Answer"
+data-aid="27620257"
+data-atoken="80480405"
+data-collapsed="0"
+data-created="1452179165"
+data-deleted="0"
+data-helpful="1"
+data-isowner="0"
+data-copyable="1"
+
+
+>
+<a class="zg-anchor-hidden" name="answer-27620257"></a>
+
+
+<div class="zm-votebar">
+<button class="up ">
+<i class="icon vote-arrow"></i>
+<span class="count">240</span>
+<span class="label sr-only">赞同</span>
+</button>
+<button class="down ">
+<i class="icon vote-arrow"></i>
+<span class="label sr-only">反对</span>
+</button>
+</div>
+
+
+<div class="answer-head">
+<div class="zm-item-answer-author-info">
+
+<a class="zm-item-link-avatar avatar-link"  href="javascript:void(0);" >
+<img src="https://pic1.zhimg.com/da8e974dc_s.jpg" class="zm-list-avatar avatar">
+</a>
+
+<span class="name">知乎用户</span><span title="我是天涯客" class="bio">，我是天涯客</span>
+</div>
+<div class="zm-item-vote-info " data-votecount="240">
+
+<span class="voters">
+<span class="user-block"><a data-tip="p$t$tian-long-85-42" href="https://www.zhihu.com/people/tian-long-85-42" class="zg-link" title="天龙">天龙</a>、</span><span class="user-block"><a data-tip="p$t$thwmk" href="https://www.zhihu.com/people/thwmk" class="zg-link" title="萌困困">萌困困</a>、</span><span class="user-block"><a data-tip="p$t$xu-jie-7-12" href="https://www.zhihu.com/people/xu-jie-7-12" class="zg-link" title="徐阶">徐阶</a></span>
+</span>
+
+
+<a href="javascript:;" class="more"> 等人赞同</a>
+
+
+</div>
+</div>
+<div class="zm-item-rich-text js-collapse-body" data-resourceid="7914520" data-action="/answer/content" data-author-name="howsun" data-entry-url="/question/39268342/answer/80480405">
+
+
+<div class="zh-summary summary clearfix" style="display:none;">
+
+区区2%的成本能砸出7%的利润出来，比股指期货做空还能赚。1月7日，开盘后半个小时，每5分钟200亿的砸盘单子，15分钟后5%熔断，10点整继续开盘，恐慌盘毫无悬念的一秒内砸到第二个熔断，全天休市。空头花2%的成本，无风险得到了7%的利润，加上港股和期货的跟…
+
+<a href="/question/39268342/answer/80480405" class="toggle-expand">显示全部</a>
+
+</div>
+
+
+<div class="zm-editable-content clearfix">
+区区2%的成本能砸出7%的利润出来，比股指期货做空还能赚。<br><br>1月7日，开盘后半个小时，每5分钟200亿的砸盘单子，15分钟后5%熔断，10点整继续开盘，恐慌盘毫无悬念的一秒内砸到第二个熔断，全天休市。空头花2%的成本，无风险得到了7%的利润，加上港股和期货的跟进做空，利润可想而知。 <br><br>一个13万亿市值的全球最大股市，被799亿如此之小的资金轻而易举就砸到了不能交易，这是人类有史以来最大的笑话，如果这不是漏洞，那么请问什么才是漏洞? <br><br>看见中国资本管理层官员的专业和经验实在让人汗颜。
+
+</div>
+
+</div>
+<a class="zg-anchor-hidden ac" name="27620257-comment"></a>
+<div class="zm-item-meta zm-item-comment-el answer-actions clearfix">
+<div class="zm-meta-panel">
+
+<span class="answer-date-link-wrap">
+<a class="answer-date-link meta-item" target="_blank" href="/question/39268342/answer/80480405">发布于 2016-01-07</a>
+</span>
+
+<a href="#" name="addcomment" class=" meta-item toggle-comment">
+<i class="z-icon-comment"></i>37 条评论</a>
+
+
+<a href="#" class="meta-item zu-autohide" name="thanks" data-thanked="false"><i class="z-icon-thank"></i>感谢</a>
+
+
+
+<a href="#" class="meta-item zu-autohide" name="share">
+<i class="z-icon-share"></i>分享</a>
+<a href="#" class="meta-item zu-autohide" name="favo">
+<i class="z-icon-collect"></i>收藏</a>
+
+
+
+
+<span class="zg-bull zu-autohide">&bull;</span>
+
+<a href="#" name="nohelp" class="meta-item zu-autohide">没有帮助</a>
+
+<span class="zg-bull zu-autohide">&bull;</span>
+<a href="#" name="report" class="meta-item zu-autohide">举报</a>
+
+
+
+<span class="zg-bull">&bull;</span>
+
+<a href="/terms#sec-licence-1" target="_blank" class="meta-item copyright"> 作者保留权利 </a>
+
+
+
+</div>
+</div>
+</div>
+
+<div tabindex="-1" class="zm-item-answer  zm-item-expanded"
+
+itemscope itemtype="http://schema.org/Answer"
+data-aid="27632134"
+data-atoken="80510037"
+data-collapsed="0"
+data-created="1452206088"
+data-deleted="0"
+data-helpful="1"
+data-isowner="0"
+data-copyable="0"
+
+
+>
+<a class="zg-anchor-hidden" name="answer-27632134"></a>
+
+
+<div class="zm-votebar">
+<button class="up ">
+<i class="icon vote-arrow"></i>
+<span class="count">54</span>
+<span class="label sr-only">赞同</span>
+</button>
+<button class="down ">
+<i class="icon vote-arrow"></i>
+<span class="label sr-only">反对</span>
+</button>
+</div>
+
+
+<div class="answer-head">
+<div class="zm-item-answer-author-info">
+<span class="name">匿名用户</span>
+</div>
+<div class="zm-item-vote-info " data-votecount="54">
+
+<span class="voters">
+<span class="user-block"><a data-tip="p$t$jun-wang-86-98" href="https://www.zhihu.com/people/jun-wang-86-98" class="zg-link" title="JUN WANG">JUN WANG</a>、</span><span class="user-block"><a data-tip="p$t$xie-liu-feng" href="https://www.zhihu.com/people/xie-liu-feng" class="zg-link" title="叶流枫">叶流枫</a>、</span><span class="user-block"><a data-tip="p$t$b-c-d-48-64" href="https://www.zhihu.com/people/b-c-d-48-64" class="zg-link" title="迦蓝迦若">迦蓝迦若</a></span>
+</span>
+
+
+<a href="javascript:;" class="more"> 等人赞同</a>
+
+
+</div>
+</div>
+<div class="zm-item-rich-text js-collapse-body" data-resourceid="7914520" data-action="/answer/content" data-author-name="匿名用户" data-entry-url="/question/39268342/answer/80510037">
+
+
+<div class="zh-summary summary clearfix" style="display:none;">
+
+熔断是罪魁吗？我不这么认为，这次崩盘不过是去年的延续罢了。我认为A股需要的是一套完善的做空机制。为什么A股需要做空机制。首先股票市场的目的是什么，买卖交易都是零和操作，所以股票市场从来就不是一个让所有参与者都发财的地方。再说金融的目的是什么…
+
+<a href="/question/39268342/answer/80510037" class="toggle-expand">显示全部</a>
+
+</div>
+
+
+<div class="zm-editable-content clearfix">
+<p>熔断是罪魁吗？我不这么认为，这次崩盘不过是去年的延续罢了。我认为A股需要的是一套完善的做空机制。<br></p><br><p>为什么A股需要做空机制。</p><p>首先股票市场的目的是什么，买卖交易都是零和操作，所以股票市场从来就不是一个让所有参与者都发财的地方。再说金融的目的是什么，金融的目的是让资金流动起来去帮助实体经济创造价值。所以这里要首先说清楚，股票市场本来的目的就不是让所有人都赚钱，而是让聪明人拿到聪明钱。</p><p>然后说说A股市场在游戏规则方面有哪些特点。从历史图形上看，A股喜欢单边上扬，然后陡峭崩塌，之后用若干年恢复元气，简称“尖顶圆底”。反观美股历史图形，往往是正好相反的“圆顶尖底”。</p><p>上图：上证指数07~09</p><p>SP500 06~09</p><p>显然，对于广大不懂止损没有纪律的股民来说，尖顶的崩塌无疑是一种灾难，这里我想直接跳到结论：我认为A股缺乏做空机制是一种bug的存在，没有做空机制的市场比有做空机制的市场更危险而不是更安全。</p><br><p>不幸的是我尝试对多位A股股民提出这个观点，得到的都是极度负面的反馈，譬如：</p><p>“机构某天对某个股票做空我们的投资不是全被抢了？”</p><p>“无良媒体和做空机构合作怎么办？”</p><p>“股票被恶意做空天天跌停怎么办？”</p><p>“A股上市公司问题很多，如果有做空这个市场没法投资了。”</p><br><p>根据我对美股市场的观察，上述这些结论或者夸大了事实，或者是一种讳疾忌医。回顾一下之前说的，“金融的目的是让资金流动起来去帮助实体经济创造价值。”烂苹果是不会创造出真正的价值的，在我看来做空机制的作用就是<strong>在股民大量吃进烂苹果之前提前把地雷引爆</strong>。不幸的是在国内媒体上我们听了太多关于浑水、香橼这些做空机构的“恶名”，而没有看到他们的另一面。至于恶意做空、诽谤做空，我相信好东西总是有人信的，我记得13年的时候高盛分析师Patrick Archambault就多次发布做空报告做空TSLA，之后TSLA股价该翻倍还是翻倍，该X4还是X4。所以真正的好公司是不怕做空的，而恶意做空行为，也几乎一定会付出代价。</p><br><p>那么没有做空的市场问题在哪儿？</p><p>无论A股市场还是美股市场，我相信散户中的80%都是投机者，他们不会在投资前对公司做深入的基本面分析，人云亦云是大多数，于是在一个整体期望上涨的市场中，烂苹果可以很舒服的获得大量的青睐而没有一丝担心，当问题初现的时候，公司管理层会比散户早早发觉危险，所以这不是一场公平的游戏。还有更贪心的玩家，即便发现了问题——反正也没有人做空——买几个股评专家吹捧一番，庞氏骗局还不容易！散户们回想一下，假设你发觉（感觉）投资的公司有问题，随即抛售，但是之后该公司股价又继续上扬20%甚至50%你会是什么感受？我相信后悔踏空和信念动摇会让很多人再次买入哪怕他们觉得有问题的公司。</p><br><p>​</p>
+
+</div>
+
+</div>
+<a class="zg-anchor-hidden ac" name="27632134-comment"></a>
+<div class="zm-item-meta zm-item-comment-el answer-actions clearfix">
+<div class="zm-meta-panel">
+
+<span class="answer-date-link-wrap">
+<a class="answer-date-link meta-item" target="_blank" href="/question/39268342/answer/80510037">发布于 2016-01-08</a>
+</span>
+
+<a href="#" name="addcomment" class=" meta-item toggle-comment">
+<i class="z-icon-comment"></i>12 条评论</a>
+
+
+<a href="#" class="meta-item zu-autohide" name="thanks" data-thanked="false"><i class="z-icon-thank"></i>感谢</a>
+
+
+
+<a href="#" class="meta-item zu-autohide" name="share">
+<i class="z-icon-share"></i>分享</a>
+<a href="#" class="meta-item zu-autohide" name="favo">
+<i class="z-icon-collect"></i>收藏</a>
+
+
+
+
+<span class="zg-bull zu-autohide">&bull;</span>
+
+<a href="#" name="nohelp" class="meta-item zu-autohide">没有帮助</a>
+
+<span class="zg-bull zu-autohide">&bull;</span>
+<a href="#" name="report" class="meta-item zu-autohide">举报</a>
+
+
+
+<span class="zg-bull">&bull;</span>
+
+<a href="/terms#sec-licence-6" target="_blank" class="meta-item copyright" data-author-avatar="https://pic2.zhimg.com/aadd7b895_m.jpg"> 禁止转载 </a>
+
+
+
+</div>
+</div>
+</div>
+
+<div tabindex="-1" class="zm-item-answer  zm-item-expanded"
+
+itemscope itemtype="http://schema.org/Answer"
+data-aid="27676919"
+data-atoken="80621585"
+data-collapsed="0"
+data-created="1452258433"
+data-deleted="0"
+data-helpful="1"
+data-isowner="0"
+data-copyable="1"
+
+
+>
+<a class="zg-anchor-hidden" name="answer-27676919"></a>
+
+
+<div class="zm-votebar">
+<button class="up ">
+<i class="icon vote-arrow"></i>
+<span class="count">42</span>
+<span class="label sr-only">赞同</span>
+</button>
+<button class="down ">
+<i class="icon vote-arrow"></i>
+<span class="label sr-only">反对</span>
+</button>
+</div>
+
+
+<div class="answer-head">
+<div class="zm-item-answer-author-info">
+
+<a class="zm-item-link-avatar avatar-link" href="/people/hong-guan-jing-ji-suan-ming-shi" data-tip="p$t$hong-guan-jing-ji-suan-ming-shi">
+<img src="https://pic4.zhimg.com/dfb9f83dce1cd61cf127d2d81a8a40cb_s.png" class="zm-list-avatar avatar">
+</a>
+
+<a class="author-link" data-tip="p$t$hong-guan-jing-ji-suan-ming-shi" href="/people/hong-guan-jing-ji-suan-ming-shi">宏观经济算命椰</a><span title="量化缠论ing" class="bio">，量化缠论ing</span>
+</div>
+<div class="zm-item-vote-info " data-votecount="42">
+
+<span class="voters">
+<span class="user-block"><a data-tip="p$t$xu-jie-7-12" href="https://www.zhihu.com/people/xu-jie-7-12" class="zg-link" title="徐阶">徐阶</a>、</span><span class="user-block"><a data-tip="p$t$san-kuai-chen-pi" href="https://www.zhihu.com/people/san-kuai-chen-pi" class="zg-link" title="三块陈皮">三块陈皮</a>、</span><span class="user-block"><a data-tip="p$t$stupidsilly1" href="https://www.zhihu.com/people/stupidsilly1" class="zg-link" title="stupidsilly1">stupidsilly1</a></span>
+</span>
+
+
+<a href="javascript:;" class="more"> 等人赞同</a>
+
+
+</div>
+</div>
+<div class="zm-item-rich-text js-collapse-body" data-resourceid="7914520" data-action="/answer/content" data-author-name="宏观经济算命椰" data-entry-url="/question/39268342/answer/80621585">
+
+
+<div class="zh-summary summary clearfix" style="display:none;">
+<img data-rawheight="515" data-rawwidth="720" src="https://pic4.zhimg.com/11e7c39b9faf4cb0980c0150eb4ef903_200x112.png" class="origin_image inline-img zh-lightbox-thumb" data-original="https://pic4.zhimg.com/11e7c39b9faf4cb0980c0150eb4ef903_r.png">
+我的专栏链接：<a href="http://zhuanlan.zhihu.com/hgjjsms/20482503" class="internal"><span class="invisible">http://</span><span class="visible">zhuanlan.zhihu.com/hgjj</span><span class="invisible">sms/20482503</span><span class="ellipsis"></span></a>这个文章其实没有多少干货，其实背后的逻辑，大家也都谈了很多。写文章的时间比写代码还长。主要是占卜师对问我，隔壁老王的梗是什么，我一时心血来潮，就写了一篇东西。这是一个陷入中年危机的男人。他在青年的时期就已…
+
+<a href="/question/39268342/answer/80621585" class="toggle-expand">显示全部</a>
+
+</div>
+
+
+<div class="zm-editable-content clearfix">
+我的专栏<br>链接：<a href="http://zhuanlan.zhihu.com/hgjjsms/20482503" class="internal"><span class="invisible">http://</span><span class="visible">zhuanlan.zhihu.com/hgjj</span><span class="invisible">sms/20482503</span><span class="ellipsis"></span></a><br><br>这个文章其实没有多少干货，其实背后的逻辑，大家也都谈了很多。写文章的时间比写代码还长。主要是占卜师对问我，隔壁老王的梗是什么，我一时心血来潮，就写了一篇东西。<br><br><p>这是一个陷入中年危机的男人。</p><p>他在青年的时期就已经家喻户晓。幸福的一家三口。可爱的儿子，贤惠的妻子。被做成典型，全国播放，观众朋友们看他们吃，看他们喝，看他们玩。<br></p><p>有人甚至扒出来了，小头爸爸还挺有钱，住着带游泳池的别墅，衣食住行，哪样不是领先于时代，妥妥的金领。</p><p><a class=" wrap external" href="//link.zhihu.com/?target=http%3A//tieba.baidu.com/p/3627468460" target="_blank" rel="nofollow noreferrer">【03-10 东拉西扯】大头儿子家到底多有钱？<i class="icon-external"></i></a></p><p>也许他曾经是桥梁设计师，或者建筑设计师，但他在本行业有了成就以后，到了券商，做了资深的研究员。</p><p> 你不是人生赢家，谁是人生赢家？ <br></p><p>直到有一天，哦不，2016年1月4日下午一点半。老大说，可以不用工作了。熔断了。</p><p>他兴高采烈的回去，给老婆一个惊喜。</p><p>但开门的却是隔壁老王。老婆尴尬的说，老王来借一个辣椒面。做午饭。</p><p>他看了看手表。下午两点。<br></p><p>全国人民都知道，他怎么会不知道？你们太小看他了。</p><p>但他默默的没说什么。人到中年，很多事情都看开了，难得糊涂。就一次吧，下次眼不见就好。 </p><br><p>于是，三天后：</p><br><noscript><img data-rawheight="515" data-rawwidth="720" src="https://pic4.zhimg.com/11e7c39b9faf4cb0980c0150eb4ef903_b.png" class="origin_image zh-lightbox-thumb" width="720" data-original="https://pic4.zhimg.com/11e7c39b9faf4cb0980c0150eb4ef903_r.png"></noscript><img data-rawheight="515" data-rawwidth="720" src="//zhstatic.zhihu.com/assets/zhihu/ztext/whitedot.jpg" class="origin_image zh-lightbox-thumb lazy" width="720" data-original="https://pic4.zhimg.com/11e7c39b9faf4cb0980c0150eb4ef903_r.png" data-actualsrc="https://pic4.zhimg.com/11e7c39b9faf4cb0980c0150eb4ef903_b.png"><br><p>（图借用<a data-title="@晴小懒" data-editable="true" class="member_mention" href="//www.zhihu.com/people/b15f34184a591ba8ec52dd6b8b474b8b" data-hash="b15f34184a591ba8ec52dd6b8b474b8b" data-tip="p$b$b15f34184a591ba8ec52dd6b8b474b8b">@晴小懒</a>    侵删）</p><p>熔断的时间更巧，早上十点之前结束战斗。回家的时候，刚好避开了早高峰。</p><p>老婆容光焕发的开门。他很欣慰。<br></p><p>然后<br></p><p>老王从卧室里走了出来……</p><p>…………</p><br><p> 于是这个中年的男人，默默的点了一支烟，拉开电脑，做了如下工作：</p><p>按照道理，如果沪深300触及到了7%，才会当天停牌，</p><p>但是呢，由于A股的趋同性，那么只要涨跌到了5%的这个幅度，你会舍得卖/敢买么？ 显然不会。于是大盘只要触及第一次熔断，由于熔断时间只有15分钟，根本不够让人静下心消除恐慌情绪，而第二次的7%的熔断，与第一次熔断仅仅差了2个点，反而会发生踩踏效应。</p><p>2016年的第一次熔断也验证了这个事实。本来熔断前大盘还能挣扎一下，第一次熔断后直接GG。</p><p>为什么？因为股灾记忆犹新啊，大家都想到这个道理了，都想抢先一步跑啊！ 跑的人多了，没人接盘，谁都跑不掉了</p><p>而三个交易日后的熔断，更把这个逻辑加强了：如果5%的熔断意味着必然触发7%的熔断，那么就提早跑吧，于是在跌3%的时候，大家就开始恐慌性的抢跑。 并且大家都不敢买了。于是大盘就华丽丽的奔着5%的熔断而去。</p><p>这就是磁石效应的一部分原因吧。</p><p>那么，我们就看看大盘在历史，到底有多少次能触发这个3% 5% 7%。</p><p>首先将历史上的当日最高值和最低值都画出来，然后用3%的分界线将他们隔开，看看效果：</p><br><noscript><img data-rawheight="450" data-rawwidth="831" src="https://pic2.zhimg.com/8ad3a6e1cff103fab7bedb4c78845ec9_b.png" class="origin_image zh-lightbox-thumb" width="831" data-original="https://pic2.zhimg.com/8ad3a6e1cff103fab7bedb4c78845ec9_r.png"></noscript><img data-rawheight="450" data-rawwidth="831" src="//zhstatic.zhihu.com/assets/zhihu/ztext/whitedot.jpg" class="origin_image zh-lightbox-thumb lazy" width="831" data-original="https://pic2.zhimg.com/8ad3a6e1cff103fab7bedb4c78845ec9_r.png" data-actualsrc="https://pic2.zhimg.com/8ad3a6e1cff103fab7bedb4c78845ec9_b.png"><br><p>可以看到，特别极端的情况,超过7%的，不是很多，但是架不住上面提到的磁石效应啊。 如果只分析超过5%的情况，那么数量就多一些了，如果是超过3%的情况，数量多了一大截。</p><p>上面的图貌似有点不直观，那么我们做一个统计图好了，看看他们的分布：</p><br><br><noscript><img data-rawheight="482" data-rawwidth="845" src="https://pic2.zhimg.com/7d9d1bd497b059e5094cb52c317d6401_b.png" class="origin_image zh-lightbox-thumb" width="845" data-original="https://pic2.zhimg.com/7d9d1bd497b059e5094cb52c317d6401_r.png"></noscript><img data-rawheight="482" data-rawwidth="845" src="//zhstatic.zhihu.com/assets/zhihu/ztext/whitedot.jpg" class="origin_image zh-lightbox-thumb lazy" width="845" data-original="https://pic2.zhimg.com/7d9d1bd497b059e5094cb52c317d6401_r.png" data-actualsrc="https://pic2.zhimg.com/7d9d1bd497b059e5094cb52c317d6401_b.png"><noscript><img data-rawheight="482" data-rawwidth="845" src="https://pic2.zhimg.com/08c9ce0d9ab3443b104e3c017e764715_b.png" class="origin_image zh-lightbox-thumb" width="845" data-original="https://pic2.zhimg.com/08c9ce0d9ab3443b104e3c017e764715_r.png"></noscript><img data-rawheight="482" data-rawwidth="845" src="//zhstatic.zhihu.com/assets/zhihu/ztext/whitedot.jpg" class="origin_image zh-lightbox-thumb lazy" width="845" data-original="https://pic2.zhimg.com/08c9ce0d9ab3443b104e3c017e764715_r.png" data-actualsrc="https://pic2.zhimg.com/08c9ce0d9ab3443b104e3c017e764715_b.png"><br>结论维持原判，如果仅仅是7%的交易日，倒是不多，但是如果按照前面的逻辑，如果考虑3%的交易日，那么数量就不可小觑了。我们把这些极值点放到走势图中，看看大概在那些时候会发生。<br><noscript><img data-rawheight="500" data-rawwidth="938" src="https://pic2.zhimg.com/4c3f2cd673077710b6b3bb6b83a22291_b.png" class="origin_image zh-lightbox-thumb" width="938" data-original="https://pic2.zhimg.com/4c3f2cd673077710b6b3bb6b83a22291_r.png"></noscript><img data-rawheight="500" data-rawwidth="938" src="//zhstatic.zhihu.com/assets/zhihu/ztext/whitedot.jpg" class="origin_image zh-lightbox-thumb lazy" width="938" data-original="https://pic2.zhimg.com/4c3f2cd673077710b6b3bb6b83a22291_r.png" data-actualsrc="https://pic2.zhimg.com/4c3f2cd673077710b6b3bb6b83a22291_b.png"><br><p>可以看到，基本上下跌7%的都是在大熊市的进程中发生的（自05年至今，历史上总共有23次向下超过7%，本轮股灾占了8次）概率大概在千分之8 左右，也就是大约125个交易日会触发一次。虽然有点频繁，但是还能忍。</p><p>但是如果我们放到看看5%的情况呢？</p><br><noscript><img data-rawheight="500" data-rawwidth="938" src="https://pic2.zhimg.com/4c3f2cd673077710b6b3bb6b83a22291_b.png" class="origin_image zh-lightbox-thumb" width="938" data-original="https://pic2.zhimg.com/4c3f2cd673077710b6b3bb6b83a22291_r.png"></noscript><img data-rawheight="500" data-rawwidth="938" src="//zhstatic.zhihu.com/assets/zhihu/ztext/whitedot.jpg" class="origin_image zh-lightbox-thumb lazy" width="938" data-original="https://pic2.zhimg.com/4c3f2cd673077710b6b3bb6b83a22291_r.png" data-actualsrc="https://pic2.zhimg.com/4c3f2cd673077710b6b3bb6b83a22291_b.png"><br><br><br><p>一下次数就多了有木有！从历史上来看，自05年以后，向下的熔断总共被触发了70次，占比2.6左右！基本上每40个交易日就会触发一下，额外暂停，让大家冷静一下。但大家是绝对不会冷静的！因为以前没有熔断，触发了5%，大盘该怎么走还是怎么走。但是在熔断的情况下，只要到了5%，就是几乎100%的概率奔向7%了。</p><p>再看3%</p><br><noscript><img data-rawheight="500" data-rawwidth="938" src="https://pic3.zhimg.com/714b00f9aa6be47a9a1e26df63d9c6ba_b.png" class="origin_image zh-lightbox-thumb" width="938" data-original="https://pic3.zhimg.com/714b00f9aa6be47a9a1e26df63d9c6ba_r.png"></noscript><img data-rawheight="500" data-rawwidth="938" src="//zhstatic.zhihu.com/assets/zhihu/ztext/whitedot.jpg" class="origin_image zh-lightbox-thumb lazy" width="938" data-original="https://pic3.zhimg.com/714b00f9aa6be47a9a1e26df63d9c6ba_r.png" data-actualsrc="https://pic3.zhimg.com/714b00f9aa6be47a9a1e26df63d9c6ba_b.png"><br><br><p>如果考察3%的触发，简直已经让密集恐惧症害怕了。在历史上，总共向下达到3%的心理临界点有230次，占比8.8%！ 也就是说，差不多每过11个交易日，大家就得提心吊胆一把，生怕股价直奔5%而去。就算其中有50%的概率踩踏发生。那么也差不多一个月，就有一次向下的熔断被触发。<br><br>原来老王，就是大姨妈，幸好，每个月就来那么一天。<br></p><p>最后总结了一下，自2005年以来，开盘日期总共2611天，其中触发7%的熔断有34次，5%的有104次，3%的有411次。
+也就意味着15%的交易日中，人们就会提心吊胆（哦，不，也不一定是提心吊胆，说不定是涨了3%呢）熔断是否发生，而假设其中50% 
+的可能性，确实发生了熔断，也就意味着约7.8%的交易日中，会发生熔断。也就意味着每12.7个交易日，小头爸爸就得回家面对<b>老王</b>一次</p><br><p>为什么捏？我们可以推测，证监会指定政策的时候，由于在股灾中，主要考虑的是希望大盘不要大跌，而A股大跌超过7%的时候，其实大多数都是发生在历史性大跌的进程中的，如果不是在大跌的进程中，其实平时触发熔断的机会并不多。从这个角度出发，7%的熔断是合理的</p><p>。</p><p>但市场从来不是静态的。未来也从来不是过去的简单重复。</p><br><p><b>证监会只做的，从量化的角度看，其实就是过度拟合。</b></p><br><p>这个故事告诉了我们，如果一味的从历史数据出发，不配合分析市场的逻辑，会造成怎样的偏差。</p><p>辛亏证监会昨天发布了公告，自己打自己的脸，撤销了熔断。否则再来一次，绝对就是股灾3.0。看到底下骂声一片，幸灾乐祸，但我却有了一点欣慰，知错就改，相比死扛到底，也算是一种进步。</p><br><p>我们还有很长的道路要走，包括投资者，包括监管层。</p><br>以此文纪念一下，小头爸爸的，看着儿子长的越来越像邻居的，如此的一种操蛋人生。<br><noscript><img data-rawheight="255" data-rawwidth="435" src="https://pic2.zhimg.com/ac8de006c06d03bc76dba83036d4f8a5_b.jpg" class="origin_image zh-lightbox-thumb" width="435" data-original="https://pic2.zhimg.com/ac8de006c06d03bc76dba83036d4f8a5_r.jpg"></noscript><img data-rawheight="255" data-rawwidth="435" src="//zhstatic.zhihu.com/assets/zhihu/ztext/whitedot.jpg" class="origin_image zh-lightbox-thumb lazy" width="435" data-original="https://pic2.zhimg.com/ac8de006c06d03bc76dba83036d4f8a5_r.jpg" data-actualsrc="https://pic2.zhimg.com/ac8de006c06d03bc76dba83036d4f8a5_b.jpg"><br><br><br><br><p> 想看统计和画图的源码的戳这里：</p><p><a href="//link.zhihu.com/?target=https%3A//www.joinquant.com/post/432" class=" wrap external" target="_blank" rel="nofollow noreferrer">统计了一下熔断的历史数据，我对小头爸爸报以深刻的同情<i class="icon-external"></i></a></p>
+
+</div>
+
+</div>
+<a class="zg-anchor-hidden ac" name="27676919-comment"></a>
+<div class="zm-item-meta zm-item-comment-el answer-actions clearfix">
+<div class="zm-meta-panel">
+
+<span class="answer-date-link-wrap">
+<a class="answer-date-link last_updated meta-item" data-tip="s$t$发布于 2016-01-08" target="_blank" href="/question/39268342/answer/80621585">编辑于 2016-01-09</a>
+</span>
+
+<a href="#" name="addcomment" class=" meta-item toggle-comment">
+<i class="z-icon-comment"></i>11 条评论</a>
+
+
+<a href="#" class="meta-item zu-autohide" name="thanks" data-thanked="false"><i class="z-icon-thank"></i>感谢</a>
+
+
+
+<a href="#" class="meta-item zu-autohide" name="share">
+<i class="z-icon-share"></i>分享</a>
+<a href="#" class="meta-item zu-autohide" name="favo">
+<i class="z-icon-collect"></i>收藏</a>
+
+
+
+
+<span class="zg-bull zu-autohide">&bull;</span>
+
+<a href="#" name="nohelp" class="meta-item zu-autohide">没有帮助</a>
+
+<span class="zg-bull zu-autohide">&bull;</span>
+<a href="#" name="report" class="meta-item zu-autohide">举报</a>
+
+
+
+<span class="zg-bull">&bull;</span>
+
+<a href="/terms#sec-licence-1" target="_blank" class="meta-item copyright"> 作者保留权利 </a>
+
+
+
+</div>
+</div>
+</div>
+
+<div tabindex="-1" class="zm-item-answer  zm-item-expanded"
+
+itemscope itemtype="http://schema.org/Answer"
+data-aid="27634029"
+data-atoken="80514808"
+data-collapsed="0"
+data-created="1452213222"
+data-deleted="0"
+data-helpful="1"
+data-isowner="0"
+data-copyable="0"
+
+
+>
+<a class="zg-anchor-hidden" name="answer-27634029"></a>
+
+
+<div class="zm-votebar">
+<button class="up ">
+<i class="icon vote-arrow"></i>
+<span class="count">96</span>
+<span class="label sr-only">赞同</span>
+</button>
+<button class="down ">
+<i class="icon vote-arrow"></i>
+<span class="label sr-only">反对</span>
+</button>
+</div>
+
+
+<div class="answer-head">
+<div class="zm-item-answer-author-info">
+
+<a class="zm-item-link-avatar avatar-link" href="/people/jude-80" data-tip="p$t$jude-80">
+<img src="https://pic2.zhimg.com/370d1dc11_s.jpg" class="zm-list-avatar avatar">
+</a>
+
+<a class="author-link" data-tip="p$t$jude-80" href="/people/jude-80">Jude</a><span title="大闲者" class="bio">，大闲者</span>
+</div>
+<div class="zm-item-vote-info " data-votecount="96">
+
+<span class="voters">
+<span class="user-block"><a data-tip="p$t$liuzi-cheng" href="https://www.zhihu.com/people/liuzi-cheng" class="zg-link" title="liu子成">liu子成</a>、</span><span class="user-block">知乎用户、</span><span class="user-block"><a data-tip="p$t$wang-zheng-74-17" href="https://www.zhihu.com/people/wang-zheng-74-17" class="zg-link" title="王征">王征</a></span>
+</span>
+
+
+<a href="javascript:;" class="more"> 等人赞同</a>
+
+
+</div>
+</div>
+<div class="zm-item-rich-text js-collapse-body" data-resourceid="7914520" data-action="/answer/content" data-author-name="Jude" data-entry-url="/question/39268342/answer/80514808">
+
+
+<div class="zh-summary summary clearfix" style="display:none;">
+
+不删档公测结束，请诸位玩家等待正式上线。
+
+</div>
+
+
+<div class="zm-editable-content clearfix">
+不删档公测结束，请诸位玩家等待正式上线。
+
+</div>
+
+</div>
+<a class="zg-anchor-hidden ac" name="27634029-comment"></a>
+<div class="zm-item-meta zm-item-comment-el answer-actions clearfix">
+<div class="zm-meta-panel">
+
+<span class="answer-date-link-wrap">
+<a class="answer-date-link meta-item" target="_blank" href="/question/39268342/answer/80514808">发布于 2016-01-08</a>
+</span>
+
+<a href="#" name="addcomment" class=" meta-item toggle-comment">
+<i class="z-icon-comment"></i>6 条评论</a>
+
+
+<a href="#" class="meta-item zu-autohide" name="thanks" data-thanked="false"><i class="z-icon-thank"></i>感谢</a>
+
+
+
+<a href="#" class="meta-item zu-autohide" name="share">
+<i class="z-icon-share"></i>分享</a>
+<a href="#" class="meta-item zu-autohide" name="favo">
+<i class="z-icon-collect"></i>收藏</a>
+
+
+
+
+<span class="zg-bull zu-autohide">&bull;</span>
+
+<a href="#" name="nohelp" class="meta-item zu-autohide">没有帮助</a>
+
+<span class="zg-bull zu-autohide">&bull;</span>
+<a href="#" name="report" class="meta-item zu-autohide">举报</a>
+
+
+
+<span class="zg-bull">&bull;</span>
+
+<a href="/terms#sec-licence-6" target="_blank" class="meta-item copyright" data-author-avatar="https://pic2.zhimg.com/370d1dc11_m.jpg"> 禁止转载 </a>
+
+
+
+</div>
+</div>
+</div>
+
+<div tabindex="-1" class="zm-item-answer  zm-item-expanded"
+
+itemscope itemtype="http://schema.org/Answer"
+data-aid="27620586"
+data-atoken="80481208"
+data-collapsed="0"
+data-created="1452179419"
+data-deleted="0"
+data-helpful="1"
+data-isowner="0"
+data-copyable="1"
+
+
+>
+<a class="zg-anchor-hidden" name="answer-27620586"></a>
+
+
+<div class="zm-votebar">
+<button class="up ">
+<i class="icon vote-arrow"></i>
+<span class="count">50</span>
+<span class="label sr-only">赞同</span>
+</button>
+<button class="down ">
+<i class="icon vote-arrow"></i>
+<span class="label sr-only">反对</span>
+</button>
+</div>
+
+
+<div class="answer-head">
+<div class="zm-item-answer-author-info">
+
+<a class="zm-item-link-avatar avatar-link" href="/people/t-c-18" data-tip="p$t$t-c-18">
+<img src="https://pic1.zhimg.com/c855f9199072b59a81a061b714b2c0c0_s.jpg" class="zm-list-avatar avatar">
+</a>
+
+<a class="author-link" data-tip="p$t$t-c-18" href="/people/t-c-18">大爷不怕小八卦</a><span title="可惜那赵子龙他老卖年糕" class="bio">，可惜那赵子龙他老卖年糕</span>
+</div>
+<div class="zm-item-vote-info " data-votecount="50">
+
+<span class="voters">
+<span class="user-block"><a data-tip="p$t$xian-xian-90" href="https://www.zhihu.com/people/xian-xian-90" class="zg-link" title="懒扎衣">懒扎衣</a>、</span><span class="user-block"><a data-tip="p$t$yier-40-59" href="https://www.zhihu.com/people/yier-40-59" class="zg-link" title="一二">一二</a>、</span><span class="user-block"><a data-tip="p$t$ze-xin-58" href="https://www.zhihu.com/people/ze-xin-58" class="zg-link" title="泽欣">泽欣</a></span>
+</span>
+
+
+<a href="javascript:;" class="more"> 等人赞同</a>
+
+
+</div>
+</div>
+<div class="zm-item-rich-text js-collapse-body" data-resourceid="7914520" data-action="/answer/content" data-author-name="大爷不怕小八卦" data-entry-url="/question/39268342/answer/80481208">
+
+
+<div class="zh-summary summary clearfix" style="display:none;">
+
+老王：确定吗？明天真的可以去？
+
+</div>
+
+
+<div class="zm-editable-content clearfix">
+老王：确定吗？明天真的可以去？
+
+</div>
+
+</div>
+<a class="zg-anchor-hidden ac" name="27620586-comment"></a>
+<div class="zm-item-meta zm-item-comment-el answer-actions clearfix">
+<div class="zm-meta-panel">
+
+<span class="answer-date-link-wrap">
+<a class="answer-date-link meta-item" target="_blank" href="/question/39268342/answer/80481208">发布于 2016-01-07</a>
+</span>
+
+<a href="#" name="addcomment" class=" meta-item toggle-comment">
+<i class="z-icon-comment"></i>4 条评论</a>
+
+
+<a href="#" class="meta-item zu-autohide" name="thanks" data-thanked="false"><i class="z-icon-thank"></i>感谢</a>
+
+
+
+<a href="#" class="meta-item zu-autohide" name="share">
+<i class="z-icon-share"></i>分享</a>
+<a href="#" class="meta-item zu-autohide" name="favo">
+<i class="z-icon-collect"></i>收藏</a>
+
+
+
+
+<span class="zg-bull zu-autohide">&bull;</span>
+
+<a href="#" name="nohelp" class="meta-item zu-autohide">没有帮助</a>
+
+<span class="zg-bull zu-autohide">&bull;</span>
+<a href="#" name="report" class="meta-item zu-autohide">举报</a>
+
+
+
+<span class="zg-bull">&bull;</span>
+
+<a href="/terms#sec-licence-1" target="_blank" class="meta-item copyright"> 作者保留权利 </a>
+
+
+
+</div>
+</div>
+</div>
+
+<div tabindex="-1" class="zm-item-answer  zm-item-expanded"
+
+itemscope itemtype="http://schema.org/Answer"
+data-aid="27630018"
+data-atoken="80504773"
+data-collapsed="0"
+data-created="1452191735"
+data-deleted="0"
+data-helpful="1"
+data-isowner="0"
+data-copyable="1"
+
+
+>
+<a class="zg-anchor-hidden" name="answer-27630018"></a>
+
+
+<div class="zm-votebar">
+<button class="up ">
+<i class="icon vote-arrow"></i>
+<span class="count">21</span>
+<span class="label sr-only">赞同</span>
+</button>
+<button class="down ">
+<i class="icon vote-arrow"></i>
+<span class="label sr-only">反对</span>
+</button>
+</div>
+
+
+<div class="answer-head">
+<div class="zm-item-answer-author-info">
+
+<a class="zm-item-link-avatar avatar-link" href="/people/zhang-xu-81-39" data-tip="p$t$zhang-xu-81-39">
+<img src="https://pic3.zhimg.com/f21f91201396f907bc52319207387e22_s.jpg" class="zm-list-avatar avatar">
+</a>
+
+<a class="author-link" data-tip="p$t$zhang-xu-81-39" href="/people/zhang-xu-81-39">手谈有乐</a><span title="将进酒，杯莫停" class="bio">，将进酒，杯莫停</span>
+</div>
+<div class="zm-item-vote-info " data-votecount="21">
+
+<span class="voters">
+<span class="user-block"><a data-tip="p$t$zhu-yan-hao-90" href="https://www.zhihu.com/people/zhu-yan-hao-90" class="zg-link" title="朱广浩">朱广浩</a>、</span><span class="user-block"><a data-tip="p$t$vi-vi-15" href="https://www.zhihu.com/people/vi-vi-15" class="zg-link" title="vi vi">vi vi</a>、</span><span class="user-block"><a data-tip="p$t$amanda-31-25" href="https://www.zhihu.com/people/amanda-31-25" class="zg-link" title="AmanDa">AmanDa</a></span>
+</span>
+
+
+<a href="javascript:;" class="more"> 等人赞同</a>
+
+
+</div>
+</div>
+<div class="zm-item-rich-text js-collapse-body" data-resourceid="7914520" data-action="/answer/content" data-author-name="手谈有乐" data-entry-url="/question/39268342/answer/80504773">
+
+
+<div class="zh-summary summary clearfix" style="display:none;">
+
+这个天下大的很，我们都是井底之蛙，只不过井口不一样罢了
+
+</div>
+
+
+<div class="zm-editable-content clearfix">
+这个天下大的很，我们都是井底之蛙，只不过井口不一样罢了
+
+</div>
+
+</div>
+<a class="zg-anchor-hidden ac" name="27630018-comment"></a>
+<div class="zm-item-meta zm-item-comment-el answer-actions clearfix">
+<div class="zm-meta-panel">
+
+<span class="answer-date-link-wrap">
+<a class="answer-date-link meta-item" target="_blank" href="/question/39268342/answer/80504773">发布于 2016-01-08</a>
+</span>
+
+<a href="#" name="addcomment" class=" meta-item toggle-comment">
+<i class="z-icon-comment"></i>4 条评论</a>
+
+
+<a href="#" class="meta-item zu-autohide" name="thanks" data-thanked="false"><i class="z-icon-thank"></i>感谢</a>
+
+
+
+<a href="#" class="meta-item zu-autohide" name="share">
+<i class="z-icon-share"></i>分享</a>
+<a href="#" class="meta-item zu-autohide" name="favo">
+<i class="z-icon-collect"></i>收藏</a>
+
+
+
+
+<span class="zg-bull zu-autohide">&bull;</span>
+
+<a href="#" name="nohelp" class="meta-item zu-autohide">没有帮助</a>
+
+<span class="zg-bull zu-autohide">&bull;</span>
+<a href="#" name="report" class="meta-item zu-autohide">举报</a>
+
+
+
+<span class="zg-bull">&bull;</span>
+
+<a href="/terms#sec-licence-1" target="_blank" class="meta-item copyright"> 作者保留权利 </a>
+
+
+
+</div>
+</div>
+</div>
+
+<div tabindex="-1" class="zm-item-answer  zm-item-expanded"
+
+itemscope itemtype="http://schema.org/Answer"
+data-aid="27623251"
+data-atoken="80487839"
+data-collapsed="0"
+data-created="1452181796"
+data-deleted="0"
+data-helpful="1"
+data-isowner="0"
+data-copyable="1"
+
+
+>
+<a class="zg-anchor-hidden" name="answer-27623251"></a>
+
+
+<div class="zm-votebar">
+<button class="up ">
+<i class="icon vote-arrow"></i>
+<span class="count">138</span>
+<span class="label sr-only">赞同</span>
+</button>
+<button class="down ">
+<i class="icon vote-arrow"></i>
+<span class="label sr-only">反对</span>
+</button>
+</div>
+
+
+<div class="answer-head">
+<div class="zm-item-answer-author-info">
+
+<a class="zm-item-link-avatar avatar-link" href="/people/wang-yue-72-73" data-tip="p$t$wang-yue-72-73">
+<img src="https://pic2.zhimg.com/665d5730f23e4fbb5a518ff3c3736c71_s.jpg" class="zm-list-avatar avatar">
+</a>
+
+<a class="author-link" data-tip="p$t$wang-yue-72-73" href="/people/wang-yue-72-73">逼神</a><span title="装逼的时候我给自己打满分。" class="bio">，装逼的时候我给自己打满分。</span>
+</div>
+<div class="zm-item-vote-info " data-votecount="138">
+
+<span class="voters">
+<span class="user-block"><a data-tip="p$t$pig-pig-13" href="https://www.zhihu.com/people/pig-pig-13" class="zg-link" title="Lokiiiiii">Lokiiiiii</a>、</span><span class="user-block"><a data-tip="p$t$a-yun-88" href="https://www.zhihu.com/people/a-yun-88" class="zg-link" title="FundingFuture">FundingFuture</a>、</span><span class="user-block"><a data-tip="p$t$bee-jeff" href="https://www.zhihu.com/people/bee-jeff" class="zg-link" title="bee jeff">bee jeff</a></span>
+</span>
+
+
+<a href="javascript:;" class="more"> 等人赞同</a>
+
+
+</div>
+</div>
+<div class="zm-item-rich-text js-collapse-body" data-resourceid="7914520" data-action="/answer/content" data-author-name="逼神" data-entry-url="/question/39268342/answer/80487839">
+
+
+<div class="zh-summary summary clearfix" style="display:none;">
+<img src="https://pic3.zhimg.com/ed5c5008b4490da5092314efd5bfdd4e_200x112.png" data-rawheight="549" data-rawwidth="675" class="origin_image inline-img zh-lightbox-thumb" data-original="https://pic3.zhimg.com/ed5c5008b4490da5092314efd5bfdd4e_r.png">
+<b>不是暴跌的因，却背了暴跌的锅。</b>市场会暴跌，从供求的角度说，就是供远过于求，抛售远多于接盘。多数人觉得现在A股太贵了。那么A股真的贵吗？真贵！看一下A股的市盈率中值吧，差不多是第二名三弟的三倍。你知道市盈率的单位是什么吗？不是嘴炮股评家说的“…
+
+<a href="/question/39268342/answer/80487839" class="toggle-expand">显示全部</a>
+
+</div>
+
+
+<div class="zm-editable-content clearfix">
+<b>不是暴跌的因，却背了暴跌的锅。</b><br><br>市场会暴跌，从供求的角度说，就是供远过于求，抛售远多于接盘。多数人觉得现在A股太贵了。<br>那么A股真的贵吗？真贵！看一下A股的市盈率中值吧，差不多是第二名三弟的三倍。<br>你知道市盈率的单位是什么吗？不是嘴炮股评家说的“倍”，记好了，是<b>“年”</b>。<br>市盈率 = 每股价格 / 每股盈利 <br>每股价格的单位是“元”，每年每股盈利的单位是“元/年”，除一下可得市盈率单位为“年”。<br>现在A股的市盈率中值是60年，怎么理解呢？<br><b>你可以理解为：当公司盈利能力不变时，你一直持有股票，需要60年才能赚到投资成本。</b><br>银行5年期定期存款率2.75%，也只要存个25年就翻倍。<br><noscript><img src="https://pic3.zhimg.com/ed5c5008b4490da5092314efd5bfdd4e_b.png" data-rawheight="549" data-rawwidth="675" class="origin_image zh-lightbox-thumb" width="675" data-original="https://pic3.zhimg.com/ed5c5008b4490da5092314efd5bfdd4e_r.png"></noscript><img src="//zhstatic.zhihu.com/assets/zhihu/ztext/whitedot.jpg" data-rawheight="549" data-rawwidth="675" class="origin_image zh-lightbox-thumb lazy" width="675" data-original="https://pic3.zhimg.com/ed5c5008b4490da5092314efd5bfdd4e_r.png" data-actualsrc="https://pic3.zhimg.com/ed5c5008b4490da5092314efd5bfdd4e_b.png"><noscript><img src="https://pic2.zhimg.com/f6972deb26495a902e6a557bc1a3690d_b.png" data-rawwidth="599" data-rawheight="361" class="origin_image zh-lightbox-thumb" width="599" data-original="https://pic2.zhimg.com/f6972deb26495a902e6a557bc1a3690d_r.png">纵观上证历史市盈率，你认为这一次会不会有所不同？(不敢保证数据准确性，但意思到了。)</noscript><img src="//zhstatic.zhihu.com/assets/zhihu/ztext/whitedot.jpg" data-rawwidth="599" data-rawheight="361" class="origin_image zh-lightbox-thumb lazy" width="599" data-original="https://pic2.zhimg.com/f6972deb26495a902e6a557bc1a3690d_r.png" data-actualsrc="https://pic2.zhimg.com/f6972deb26495a902e6a557bc1a3690d_b.png">纵观上证历史市盈率，你认为这一次会不会有所不同？(不敢保证数据准确性，但意思到了。)<br><br>十二月外储大降1079亿美元，汇率暴跌，资本外流。PMI创17月新低，经济增长放缓，企业盈利能力下降。基本面无好转迹象，现在流动性也开始退潮了，先知先觉的人知道这击鼓传花的游戏已然玩不下去，起身离场。<br>熔断机制说：“怪我咯？”
+
+</div>
+
+</div>
+<a class="zg-anchor-hidden ac" name="27623251-comment"></a>
+<div class="zm-item-meta zm-item-comment-el answer-actions clearfix">
+<div class="zm-meta-panel">
+
+<span class="answer-date-link-wrap">
+<a class="answer-date-link last_updated meta-item" data-tip="s$t$发布于 2016-01-07" target="_blank" href="/question/39268342/answer/80487839">编辑于 2016-02-03</a>
+</span>
+
+<a href="#" name="addcomment" class=" meta-item toggle-comment">
+<i class="z-icon-comment"></i>50 条评论</a>
+
+
+<a href="#" class="meta-item zu-autohide" name="thanks" data-thanked="false"><i class="z-icon-thank"></i>感谢</a>
+
+
+
+<a href="#" class="meta-item zu-autohide" name="share">
+<i class="z-icon-share"></i>分享</a>
+<a href="#" class="meta-item zu-autohide" name="favo">
+<i class="z-icon-collect"></i>收藏</a>
+
+
+
+
+<span class="zg-bull zu-autohide">&bull;</span>
+
+<a href="#" name="nohelp" class="meta-item zu-autohide">没有帮助</a>
+
+<span class="zg-bull zu-autohide">&bull;</span>
+<a href="#" name="report" class="meta-item zu-autohide">举报</a>
+
+
+
+<span class="zg-bull">&bull;</span>
+
+<a href="/terms#sec-licence-1" target="_blank" class="meta-item copyright"> 作者保留权利 </a>
+
+
+
+</div>
+</div>
+</div>
+
+<div tabindex="-1" class="zm-item-answer  zm-item-expanded"
+
+itemscope itemtype="http://schema.org/Answer"
+data-aid="27620348"
+data-atoken="80480622"
+data-collapsed="0"
+data-created="1452179239"
+data-deleted="0"
+data-helpful="1"
+data-isowner="0"
+data-copyable="1"
+
+
+>
+<a class="zg-anchor-hidden" name="answer-27620348"></a>
+
+
+<div class="zm-votebar">
+<button class="up ">
+<i class="icon vote-arrow"></i>
+<span class="count">12</span>
+<span class="label sr-only">赞同</span>
+</button>
+<button class="down ">
+<i class="icon vote-arrow"></i>
+<span class="label sr-only">反对</span>
+</button>
+</div>
+
+
+<div class="answer-head">
+<div class="zm-item-answer-author-info">
+
+<a class="zm-item-link-avatar avatar-link" href="/people/bei-zhong-se-ying" data-tip="p$t$bei-zhong-se-ying">
+<img src="https://pic4.zhimg.com/a03984a17_s.jpg" class="zm-list-avatar avatar">
+</a>
+
+<a class="author-link" data-tip="p$t$bei-zhong-se-ying" href="/people/bei-zhong-se-ying">杯中色影</a><span title="还是低调点。" class="bio">，还是低调点。</span>
+</div>
+<div class="zm-item-vote-info " data-votecount="12">
+
+<span class="voters">
+<span class="user-block"><a data-tip="p$t$mo-de-50" href="https://www.zhihu.com/people/mo-de-50" class="zg-link" title="mo de">mo de</a>、</span><span class="user-block"><a data-tip="p$t$wu-qiao-85" href="https://www.zhihu.com/people/wu-qiao-85" class="zg-link" title="吴乔">吴乔</a>、</span><span class="user-block"><a data-tip="p$t$deng-chu-jie" href="https://www.zhihu.com/people/deng-chu-jie" class="zg-link" title="邓础劼">邓础劼</a></span>
+</span>
+
+
+<a href="javascript:;" class="more"> 等人赞同</a>
+
+
+</div>
+</div>
+<div class="zm-item-rich-text js-collapse-body" data-resourceid="7914520" data-action="/answer/content" data-author-name="杯中色影" data-entry-url="/question/39268342/answer/80480622">
+
+
+<div class="zh-summary summary clearfix" style="display:none;">
+
+再不取消，肖主席乌纱帽不保。==============================================靠！据说真的自动离职了。我真的不知道内幕。。。
+
+</div>
+
+
+<div class="zm-editable-content clearfix">
+再不取消，肖主席乌纱帽不保。<br>==============================================<br>靠！据说真的自动离职了。我真的不知道内幕。。。
+
+</div>
+
+</div>
+<a class="zg-anchor-hidden ac" name="27620348-comment"></a>
+<div class="zm-item-meta zm-item-comment-el answer-actions clearfix">
+<div class="zm-meta-panel">
+
+<span class="answer-date-link-wrap">
+<a class="answer-date-link last_updated meta-item" data-tip="s$t$发布于 2016-01-07" target="_blank" href="/question/39268342/answer/80480622">编辑于 2016-01-07</a>
+</span>
+
+<a href="#" name="addcomment" class=" meta-item toggle-comment">
+<i class="z-icon-comment"></i>15 条评论</a>
+
+
+<a href="#" class="meta-item zu-autohide" name="thanks" data-thanked="false"><i class="z-icon-thank"></i>感谢</a>
+
+
+
+<a href="#" class="meta-item zu-autohide" name="share">
+<i class="z-icon-share"></i>分享</a>
+<a href="#" class="meta-item zu-autohide" name="favo">
+<i class="z-icon-collect"></i>收藏</a>
+
+
+
+
+<span class="zg-bull zu-autohide">&bull;</span>
+
+<a href="#" name="nohelp" class="meta-item zu-autohide">没有帮助</a>
+
+<span class="zg-bull zu-autohide">&bull;</span>
+<a href="#" name="report" class="meta-item zu-autohide">举报</a>
+
+
+
+<span class="zg-bull">&bull;</span>
+
+<a href="/terms#sec-licence-1" target="_blank" class="meta-item copyright"> 作者保留权利 </a>
+
+
+
+</div>
+</div>
+</div>
+
+<div tabindex="-1" class="zm-item-answer  zm-item-expanded"
+
+itemscope itemtype="http://schema.org/Answer"
+data-aid="27626918"
+data-atoken="80496989"
+data-collapsed="0"
+data-created="1452185632"
+data-deleted="0"
+data-helpful="1"
+data-isowner="0"
+data-copyable="1"
+
+
+>
+<a class="zg-anchor-hidden" name="answer-27626918"></a>
+
+
+<div class="zm-votebar">
+<button class="up ">
+<i class="icon vote-arrow"></i>
+<span class="count">9</span>
+<span class="label sr-only">赞同</span>
+</button>
+<button class="down ">
+<i class="icon vote-arrow"></i>
+<span class="label sr-only">反对</span>
+</button>
+</div>
+
+
+<div class="answer-head">
+<div class="zm-item-answer-author-info">
+
+<a class="zm-item-link-avatar avatar-link" href="/people/acrob-acrob" data-tip="p$t$acrob-acrob">
+<img src="https://pic1.zhimg.com/da8e974dc_s.jpg" class="zm-list-avatar avatar">
+</a>
+
+<a class="author-link" data-tip="p$t$acrob-acrob" href="/people/acrob-acrob">acrob acrob</a>
+</div>
+<div class="zm-item-vote-info " data-votecount="9">
+
+<span class="voters">
+<span class="user-block"><a data-tip="p$t$chen-hao-82-13" href="https://www.zhihu.com/people/chen-hao-82-13" class="zg-link" title="陈好">陈好</a>、</span><span class="user-block"><a data-tip="p$t$qing-tai-67" href="https://www.zhihu.com/people/qing-tai-67" class="zg-link" title="青苔">青苔</a>、</span><span class="user-block"><a data-tip="p$t$yu-chen-10-71" href="https://www.zhihu.com/people/yu-chen-10-71" class="zg-link" title="宇辰">宇辰</a></span>
+</span>
+
+
+<a href="javascript:;" class="more"> 等人赞同</a>
+
+
+</div>
+</div>
+<div class="zm-item-rich-text js-collapse-body" data-resourceid="7914520" data-action="/answer/content" data-author-name="acrob acrob" data-entry-url="/question/39268342/answer/80496989">
+
+
+<div class="zh-summary summary clearfix" style="display:none;">
+
+终于暂停了。 晚间宣布的。在这个时间点，知错能改善莫大焉 。中午挤了点时间，用手机发了一个长文，随手写的也不是很规范，除了四个问号，没有标点符号，难为各位看官了。下班回来复盘，内心决定隐隐不妙，具体我不多说了。只是，如果，明天是7月6号的翻版…
+
+<a href="/question/39268342/answer/80496989" class="toggle-expand">显示全部</a>
+
+</div>
+
+
+<div class="zm-editable-content clearfix">
+终于暂停了。 晚间宣布的。在这个时间点，知错能改善莫大焉 。中午挤了点时间，用手机发了一个长文，随手写的也不是很规范，除了四个问号，没有标点符号，难为各位看官了。<br>下班回来复盘，内心决定隐隐不妙，具体我不多说了。只是，如果，明天是7月6号的翻版怎么办，还真不能排除这个可能性。因为这次熔断事件也是事出有因，有人有备而来的，高开低走的可能性并没有排除，毕竟大盘两个多月没动凡事谨慎为妙，如果不幸真是这样，后面还能出什么利好我真不知道，除了周一熔断后我的帖子说到的<br><a href="http://www.zhihu.com/question/39138235/answer/79902630" class="internal"><span class="invisible">http://www.</span><span class="visible">zhihu.com/question/3913</span><span class="invisible">8235/answer/79902630</span><span class="ellipsis"></span></a><br><br>里面说到的那个谁的消息了。<br>出了暂停熔断后的消息有：<br>a50涨了400点，约4个点上来，但尚未止跌。<br>原油在今日熔断后大跌5个半点到宣布暂停熔断后拉红，但就在我编辑这段文字期间20分钟从正0.7个点下跌1.4个点。<br><br>如果你在今天最艰难的时候，没有放弃暂停熔断的希望。<br>那么面对明天意料中的高开，也会抱有低走的警觉。
+
+</div>
+
+</div>
+<a class="zg-anchor-hidden ac" name="27626918-comment"></a>
+<div class="zm-item-meta zm-item-comment-el answer-actions clearfix">
+<div class="zm-meta-panel">
+
+<span class="answer-date-link-wrap">
+<a class="answer-date-link meta-item" target="_blank" href="/question/39268342/answer/80496989">发布于 2016-01-08</a>
+</span>
+
+<a href="#" name="addcomment" class=" meta-item toggle-comment">
+<i class="z-icon-comment"></i>6 条评论</a>
+
+
+<a href="#" class="meta-item zu-autohide" name="thanks" data-thanked="false"><i class="z-icon-thank"></i>感谢</a>
+
+
+
+<a href="#" class="meta-item zu-autohide" name="share">
+<i class="z-icon-share"></i>分享</a>
+<a href="#" class="meta-item zu-autohide" name="favo">
+<i class="z-icon-collect"></i>收藏</a>
+
+
+
+
+<span class="zg-bull zu-autohide">&bull;</span>
+
+<a href="#" name="nohelp" class="meta-item zu-autohide">没有帮助</a>
+
+<span class="zg-bull zu-autohide">&bull;</span>
+<a href="#" name="report" class="meta-item zu-autohide">举报</a>
+
+
+
+<span class="zg-bull">&bull;</span>
+
+<a href="/terms#sec-licence-1" target="_blank" class="meta-item copyright"> 作者保留权利 </a>
+
+
+
+</div>
+</div>
+</div>
+
+<div tabindex="-1" class="zm-item-answer  zm-item-expanded"
+
+itemscope itemtype="http://schema.org/Answer"
+data-aid="27647684"
+data-atoken="80548618"
+data-collapsed="0"
+data-created="1452227627"
+data-deleted="0"
+data-helpful="1"
+data-isowner="0"
+data-copyable="1"
+
+
+>
+<a class="zg-anchor-hidden" name="answer-27647684"></a>
+
+
+<div class="zm-votebar">
+<button class="up ">
+<i class="icon vote-arrow"></i>
+<span class="count">13</span>
+<span class="label sr-only">赞同</span>
+</button>
+<button class="down ">
+<i class="icon vote-arrow"></i>
+<span class="label sr-only">反对</span>
+</button>
+</div>
+
+
+<div class="answer-head">
+<div class="zm-item-answer-author-info">
+
+<a class="zm-item-link-avatar avatar-link" href="/people/mb-ma" data-tip="p$t$mb-ma">
+<img src="https://pic3.zhimg.com/23b3f03dec795d0c73bd90472188424e_s.jpg" class="zm-list-avatar avatar">
+</a>
+
+<a class="author-link" data-tip="p$t$mb-ma" href="/people/mb-ma">MB MA</a><span title="如此简单一个人" class="bio">，如此简单一个人</span>
+</div>
+<div class="zm-item-vote-info " data-votecount="13">
+
+<span class="voters">
+<span class="user-block">知乎用户、</span><span class="user-block"><a data-tip="p$t$an-zhen-35" href="https://www.zhihu.com/people/an-zhen-35" class="zg-link" title="安镇">安镇</a>、</span><span class="user-block"><a data-tip="p$t$mo-de-50" href="https://www.zhihu.com/people/mo-de-50" class="zg-link" title="mo de">mo de</a></span>
+</span>
+
+
+<a href="javascript:;" class="more"> 等人赞同</a>
+
+
+</div>
+</div>
+<div class="zm-item-rich-text js-collapse-body" data-resourceid="7914520" data-action="/answer/content" data-author-name="MB MA" data-entry-url="/question/39268342/answer/80548618">
+
+
+<div class="zh-summary summary clearfix" style="display:none;">
+<img data-rawwidth="4032" data-rawheight="3024" src="https://pic3.zhimg.com/5c735ab379eea5ccb3bbe62b66abe3ea_200x112.jpeg" class="origin_image inline-img zh-lightbox-thumb" data-original="https://pic3.zhimg.com/5c735ab379eea5ccb3bbe62b66abe3ea_r.jpeg">
+随手算了下熔断概率，的确挺高了。。咕咕咕。。。
+
+<a href="/question/39268342/answer/80548618" class="toggle-expand">显示全部</a>
+
+</div>
+
+
+<div class="zm-editable-content clearfix">
+随手算了下熔断概率，的确挺高了。。咕咕咕。。。<br><br><noscript><img data-rawwidth="4032" data-rawheight="3024" src="https://pic3.zhimg.com/5c735ab379eea5ccb3bbe62b66abe3ea_b.jpeg" class="origin_image zh-lightbox-thumb" width="4032" data-original="https://pic3.zhimg.com/5c735ab379eea5ccb3bbe62b66abe3ea_r.jpeg"></noscript><img data-rawwidth="4032" data-rawheight="3024" src="//zhstatic.zhihu.com/assets/zhihu/ztext/whitedot.jpg" class="origin_image zh-lightbox-thumb lazy" width="4032" data-original="https://pic3.zhimg.com/5c735ab379eea5ccb3bbe62b66abe3ea_r.jpeg" data-actualsrc="https://pic3.zhimg.com/5c735ab379eea5ccb3bbe62b66abe3ea_b.jpeg">
+
+</div>
+
+</div>
+<a class="zg-anchor-hidden ac" name="27647684-comment"></a>
+<div class="zm-item-meta zm-item-comment-el answer-actions clearfix">
+<div class="zm-meta-panel">
+
+<span class="answer-date-link-wrap">
+<a class="answer-date-link meta-item" target="_blank" href="/question/39268342/answer/80548618">发布于 2016-01-08</a>
+</span>
+
+<a href="#" name="addcomment" class=" meta-item toggle-comment">
+<i class="z-icon-comment"></i>12 条评论</a>
+
+
+<a href="#" class="meta-item zu-autohide" name="thanks" data-thanked="false"><i class="z-icon-thank"></i>感谢</a>
+
+
+
+<a href="#" class="meta-item zu-autohide" name="share">
+<i class="z-icon-share"></i>分享</a>
+<a href="#" class="meta-item zu-autohide" name="favo">
+<i class="z-icon-collect"></i>收藏</a>
+
+
+
+
+<span class="zg-bull zu-autohide">&bull;</span>
+
+<a href="#" name="nohelp" class="meta-item zu-autohide">没有帮助</a>
+
+<span class="zg-bull zu-autohide">&bull;</span>
+<a href="#" name="report" class="meta-item zu-autohide">举报</a>
+
+
+
+<span class="zg-bull">&bull;</span>
+
+<a href="/terms#sec-licence-1" target="_blank" class="meta-item copyright"> 作者保留权利 </a>
+
+
+
+</div>
+</div>
+</div>
+
+<div tabindex="-1" class="zm-item-answer  zm-item-expanded"
+
+itemscope itemtype="http://schema.org/Answer"
+data-aid="27641740"
+data-atoken="80533789"
+data-collapsed="0"
+data-created="1452221888"
+data-deleted="0"
+data-helpful="1"
+data-isowner="0"
+data-copyable="1"
+
+
+>
+<a class="zg-anchor-hidden" name="answer-27641740"></a>
+
+
+<div class="zm-votebar">
+<button class="up ">
+<i class="icon vote-arrow"></i>
+<span class="count">18</span>
+<span class="label sr-only">赞同</span>
+</button>
+<button class="down ">
+<i class="icon vote-arrow"></i>
+<span class="label sr-only">反对</span>
+</button>
+</div>
+
+
+<div class="answer-head">
+<div class="zm-item-answer-author-info">
+
+<a class="zm-item-link-avatar avatar-link" href="/people/yu-yi-34" data-tip="p$t$yu-yi-34">
+<img src="https://pic1.zhimg.com/5da654765f52df66f7d03e5fd5a657a0_s.png" class="zm-list-avatar avatar">
+</a>
+
+<a class="author-link" data-tip="p$t$yu-yi-34" href="/people/yu-yi-34">余一</a><span title="好好学习，天天向上" class="bio">，好好学习，天天向上</span>
+</div>
+<div class="zm-item-vote-info " data-votecount="18">
+
+<span class="voters">
+<span class="user-block">知乎用户、</span><span class="user-block">知乎用户、</span><span class="user-block"><a data-tip="p$t$lucidor" href="https://www.zhihu.com/people/lucidor" class="zg-link" title="丢丢">丢丢</a></span>
+</span>
+
+
+<a href="javascript:;" class="more"> 等人赞同</a>
+
+
+</div>
+</div>
+<div class="zm-item-rich-text js-collapse-body" data-resourceid="7914520" data-action="/answer/content" data-author-name="余一" data-entry-url="/question/39268342/answer/80533789">
+
+
+<div class="zh-summary summary clearfix" style="display:none;">
+
+改革开放的总设计师邓小平同志对股市有个精辟的论述：“证券、股市，这些东西究竟好不好，有没有危险，是不是资本主义的东西，社会主义能不能用？允许看，但要坚决地试。看对了，搞一两年对了，放开；错了，纠正，关了就是了。关，也可以快关，也可以慢关，…
+
+<a href="/question/39268342/answer/80533789" class="toggle-expand">显示全部</a>
+
+</div>
+
+
+<div class="zm-editable-content clearfix">
+改革开放的总设计师邓小平同志对股市有个精辟的论述：“证券、股市，这些东西究竟好不好，有没有危险，是不是资本主义的东西，社会主义能不能用？允许看，但要坚决地试。看对了，搞一两年对了，放开；错了，纠正，关了就是了。关，也可以快关，也可以慢关，也可以留一点尾巴。怕什么，坚持这种态度就不要紧，就不会犯大错误。”
+
+</div>
+
+</div>
+<a class="zg-anchor-hidden ac" name="27641740-comment"></a>
+<div class="zm-item-meta zm-item-comment-el answer-actions clearfix">
+<div class="zm-meta-panel">
+
+<span class="answer-date-link-wrap">
+<a class="answer-date-link meta-item" target="_blank" href="/question/39268342/answer/80533789">发布于 2016-01-08</a>
+</span>
+
+<a href="#" name="addcomment" class=" meta-item toggle-comment">
+<i class="z-icon-comment"></i>4 条评论</a>
+
+
+<a href="#" class="meta-item zu-autohide" name="thanks" data-thanked="false"><i class="z-icon-thank"></i>感谢</a>
+
+
+
+<a href="#" class="meta-item zu-autohide" name="share">
+<i class="z-icon-share"></i>分享</a>
+<a href="#" class="meta-item zu-autohide" name="favo">
+<i class="z-icon-collect"></i>收藏</a>
+
+
+
+
+<span class="zg-bull zu-autohide">&bull;</span>
+
+<a href="#" name="nohelp" class="meta-item zu-autohide">没有帮助</a>
+
+<span class="zg-bull zu-autohide">&bull;</span>
+<a href="#" name="report" class="meta-item zu-autohide">举报</a>
+
+
+
+<span class="zg-bull">&bull;</span>
+
+<a href="/terms#sec-licence-1" target="_blank" class="meta-item copyright"> 作者保留权利 </a>
+
+
+
+</div>
+</div>
+</div>
+
+<div tabindex="-1" class="zm-item-answer  zm-item-expanded"
+
+itemscope itemtype="http://schema.org/Answer"
+data-aid="27647469"
+data-atoken="80548058"
+data-collapsed="0"
+data-created="1452227388"
+data-deleted="0"
+data-helpful="1"
+data-isowner="0"
+data-copyable="1"
+
+
+>
+<a class="zg-anchor-hidden" name="answer-27647469"></a>
+
+
+<div class="zm-votebar">
+<button class="up ">
+<i class="icon vote-arrow"></i>
+<span class="count">2</span>
+<span class="label sr-only">赞同</span>
+</button>
+<button class="down ">
+<i class="icon vote-arrow"></i>
+<span class="label sr-only">反对</span>
+</button>
+</div>
+
+
+<div class="answer-head">
+<div class="zm-item-answer-author-info">
+
+<a class="zm-item-link-avatar avatar-link" href="/people/tan-xiao-long-79" data-tip="p$t$tan-xiao-long-79">
+<img src="https://pic2.zhimg.com/f10dcc76e0685cb98afb03ee7a43e2c5_s.png" class="zm-list-avatar avatar">
+</a>
+
+<a class="author-link" data-tip="p$t$tan-xiao-long-79" href="/people/tan-xiao-long-79">谭小龙</a>
+</div>
+<div class="zm-item-vote-info " data-votecount="2">
+
+<span class="voters">
+<span class="user-block"><a data-tip="p$t$mo-de-50" href="https://www.zhihu.com/people/mo-de-50" class="zg-link" title="mo de">mo de</a>、</span><span class="user-block"><a data-tip="p$t$bao-yong-kun" href="https://www.zhihu.com/people/bao-yong-kun" class="zg-link" title="cowander">cowander</a></span>
+</span>
+
+
+<span>赞同</span>
+
+
+</div>
+</div>
+<div class="zm-item-rich-text js-collapse-body" data-resourceid="7914520" data-action="/answer/content" data-author-name="谭小龙" data-entry-url="/question/39268342/answer/80548058">
+
+
+<div class="zh-summary summary clearfix" style="display:none;">
+
+霜停雪犹在!~
+
+</div>
+
+
+<div class="zm-editable-content clearfix">
+霜停雪犹在!~
+
+</div>
+
+</div>
+<a class="zg-anchor-hidden ac" name="27647469-comment"></a>
+<div class="zm-item-meta zm-item-comment-el answer-actions clearfix">
+<div class="zm-meta-panel">
+
+<span class="answer-date-link-wrap">
+<a class="answer-date-link meta-item" target="_blank" href="/question/39268342/answer/80548058">发布于 2016-01-08</a>
+</span>
+
+<a href="#" name="addcomment" class=" meta-item toggle-comment">
+<i class="z-icon-comment"></i>添加评论</a>
+
+
+<a href="#" class="meta-item zu-autohide" name="thanks" data-thanked="false"><i class="z-icon-thank"></i>感谢</a>
+
+
+
+<a href="#" class="meta-item zu-autohide" name="share">
+<i class="z-icon-share"></i>分享</a>
+<a href="#" class="meta-item zu-autohide" name="favo">
+<i class="z-icon-collect"></i>收藏</a>
+
+
+
+
+<span class="zg-bull zu-autohide">&bull;</span>
+
+<a href="#" name="nohelp" class="meta-item zu-autohide">没有帮助</a>
+
+<span class="zg-bull zu-autohide">&bull;</span>
+<a href="#" name="report" class="meta-item zu-autohide">举报</a>
+
+
+
+<span class="zg-bull">&bull;</span>
+
+<a href="/terms#sec-licence-1" target="_blank" class="meta-item copyright"> 作者保留权利 </a>
+
+
+
+</div>
+</div>
+</div>
+
+<div tabindex="-1" class="zm-item-answer  zm-item-expanded"
+
+itemscope itemtype="http://schema.org/Answer"
+data-aid="29138921"
+data-atoken="84269831"
+data-collapsed="0"
+data-created="1454249116"
+data-deleted="0"
+data-helpful="1"
+data-isowner="0"
+data-copyable="1"
+
+
+>
+<a class="zg-anchor-hidden" name="answer-29138921"></a>
+
+
+<div class="zm-votebar">
+<button class="up ">
+<i class="icon vote-arrow"></i>
+<span class="count">0</span>
+<span class="label sr-only">赞同</span>
+</button>
+<button class="down ">
+<i class="icon vote-arrow"></i>
+<span class="label sr-only">反对</span>
+</button>
+</div>
+
+
+<div class="answer-head">
+<div class="zm-item-answer-author-info">
+
+<a class="zm-item-link-avatar avatar-link"  href="javascript:void(0);" >
+<img src="https://pic1.zhimg.com/da8e974dc_s.jpg" class="zm-list-avatar avatar">
+</a>
+
+<span class="name">知乎用户</span>
+</div>
+<div class="zm-item-vote-info empty" data-votecount="0">
+
+
+
+</div>
+</div>
+<div class="zm-item-rich-text js-collapse-body" data-resourceid="7914520" data-action="/answer/content" data-author-name="Tooolder" data-entry-url="/question/39268342/answer/84269831">
+
+
+<div class="zh-summary summary clearfix" style="display:none;">
+
+只说明了一个简单朴素却被某些人长期有意无意忽略的事实：党并不是无所不能的
+
+</div>
+
+
+<div class="zm-editable-content clearfix">
+只说明了一个简单朴素却被某些人长期有意无意忽略的事实：<br><br>党并不是无所不能的
+
+</div>
+
+</div>
+<a class="zg-anchor-hidden ac" name="29138921-comment"></a>
+<div class="zm-item-meta zm-item-comment-el answer-actions clearfix">
+<div class="zm-meta-panel">
+
+<span class="answer-date-link-wrap">
+<a class="answer-date-link meta-item" target="_blank" href="/question/39268342/answer/84269831">发布于 2016-01-31</a>
+</span>
+
+<a href="#" name="addcomment" class=" meta-item toggle-comment">
+<i class="z-icon-comment"></i>添加评论</a>
+
+
+<a href="#" class="meta-item zu-autohide" name="thanks" data-thanked="false"><i class="z-icon-thank"></i>感谢</a>
+
+
+
+<a href="#" class="meta-item zu-autohide" name="share">
+<i class="z-icon-share"></i>分享</a>
+<a href="#" class="meta-item zu-autohide" name="favo">
+<i class="z-icon-collect"></i>收藏</a>
+
+
+
+
+<span class="zg-bull zu-autohide">&bull;</span>
+
+<a href="#" name="nohelp" class="meta-item zu-autohide">没有帮助</a>
+
+<span class="zg-bull zu-autohide">&bull;</span>
+<a href="#" name="report" class="meta-item zu-autohide">举报</a>
+
+
+
+<span class="zg-bull">&bull;</span>
+
+<a href="/terms#sec-licence-1" target="_blank" class="meta-item copyright"> 作者保留权利 </a>
+
+
+
+</div>
+</div>
+</div>
+
+<div tabindex="-1" class="zm-item-answer  zm-item-expanded"
+
+itemscope itemtype="http://schema.org/Answer"
+data-aid="27620675"
+data-atoken="80481425"
+data-collapsed="0"
+data-created="1452179490"
+data-deleted="0"
+data-helpful="1"
+data-isowner="0"
+data-copyable="1"
+
+
+>
+<a class="zg-anchor-hidden" name="answer-27620675"></a>
+
+
+<div class="zm-votebar">
+<button class="up ">
+<i class="icon vote-arrow"></i>
+<span class="count">62</span>
+<span class="label sr-only">赞同</span>
+</button>
+<button class="down ">
+<i class="icon vote-arrow"></i>
+<span class="label sr-only">反对</span>
+</button>
+</div>
+
+
+<div class="answer-head">
+<div class="zm-item-answer-author-info">
+
+<a class="zm-item-link-avatar avatar-link" href="/people/kanedu-zuo-qia-ni" data-tip="p$t$kanedu-zuo-qia-ni">
+<img src="https://pic3.zhimg.com/1a48eca023b7bbb8803ee4b1b6f56cfe_s.jpg" class="zm-list-avatar avatar">
+</a>
+
+<a class="author-link" data-tip="p$t$kanedu-zuo-qia-ni" href="/people/kanedu-zuo-qia-ni">Kane读作卡呢</a><span title="毒舌天蝎\高冷模版\傲娇标兵." class="bio">，毒舌天蝎\高冷模版\傲娇标兵.</span>
+</div>
+<div class="zm-item-vote-info " data-votecount="62">
+
+<span class="voters">
+<span class="user-block"><a data-tip="p$t$li-si-yuan-18-72" href="https://www.zhihu.com/people/li-si-yuan-18-72" class="zg-link" title="李思源">李思源</a>、</span><span class="user-block"><a data-tip="p$t$lu-shao-wen-51" href="https://www.zhihu.com/people/lu-shao-wen-51" class="zg-link" title="Frank">Frank</a>、</span><span class="user-block"><a data-tip="p$t$lie-ke-xing-dun-44" href="https://www.zhihu.com/people/lie-ke-xing-dun-44" class="zg-link" title="列克星敦">列克星敦</a></span>
+</span>
+
+
+<a href="javascript:;" class="more"> 等人赞同</a>
+
+
+</div>
+</div>
+<div class="zm-item-rich-text js-collapse-body" data-resourceid="7914520" data-action="/answer/content" data-author-name="Kane读作卡呢" data-entry-url="/question/39268342/answer/80481425">
+
+
+<div class="zh-summary summary clearfix" style="display:none;">
+
+在外面，一堆想说的，回家码长文，看到的先点赞收藏，么么哒. 先预警，一月行情整体不好，熔断只是提前预支了下降速率，并不代表一月就能走牛，现在鼓吹二牛行情的，请拉黑文章见下说是暂停熔断，但其实就是废了这政策，监管层要面子，非要这么说，我们也认…
+
+<a href="/question/39268342/answer/80481425" class="toggle-expand">显示全部</a>
+
+</div>
+
+
+<div class="zm-editable-content clearfix">
+在外面，一堆想说的，回家码长文，看到的先点赞收藏，么么哒. 先预警，一月行情整体不好，熔断只是提前预支了下降速率，并不代表一月就能走牛，现在鼓吹二牛行情的，请拉黑<br>文章见下<br><br>说是暂停熔断，但其实就是废了这政策，监管层要面子，非要这么说，我们也认了.昨天的大阴线基本上就相当于给中线行情判了个死刑，3800点以上中短期是回不去了，在那个区间的大多数筹码要被套一段时间了。2850依然还会是一个坚强的救市底，因为那是上一轮政府救市的底部，如果破了，国家也被死死套牢了，后果也不堪设想.所以这一波调整大概率到9月份的那一波救市的位置，上证指数是已经算是调整到位了，而创业板还有空间，所以创业板后面可能还要继续弱势。至于这一波调整完后怎么走，还是有望向上的，不过幅度不会很大，汇市那边的压力依然非常大，资本外流情况很严重，市场整体估值的问题依然存在，这都决定了16年很难有多少行情。短期则因为两次大暴跌，让市场的信心严重被摧毁，年前基本是没什么多大机会了。不过熔断机制取消，解决了大家最恐慌的流动性恐慌，至少今天不会开盘就暴跌了，刚看了一下新加坡A50期指的走势，对此消息还是报以积极回应的，所以今天的走势应该不会太差.
+
+</div>
+
+</div>
+<a class="zg-anchor-hidden ac" name="27620675-comment"></a>
+<div class="zm-item-meta zm-item-comment-el answer-actions clearfix">
+<div class="zm-meta-panel">
+
+<span class="answer-date-link-wrap">
+<a class="answer-date-link last_updated meta-item" data-tip="s$t$发布于 2016-01-07" target="_blank" href="/question/39268342/answer/80481425">编辑于 2016-01-08</a>
+</span>
+
+<a href="#" name="addcomment" class=" meta-item toggle-comment">
+<i class="z-icon-comment"></i>11 条评论</a>
+
+
+<a href="#" class="meta-item zu-autohide" name="thanks" data-thanked="false"><i class="z-icon-thank"></i>感谢</a>
+
+
+
+<a href="#" class="meta-item zu-autohide" name="share">
+<i class="z-icon-share"></i>分享</a>
+<a href="#" class="meta-item zu-autohide" name="favo">
+<i class="z-icon-collect"></i>收藏</a>
+
+
+
+
+<span class="zg-bull zu-autohide">&bull;</span>
+
+<a href="#" name="nohelp" class="meta-item zu-autohide">没有帮助</a>
+
+<span class="zg-bull zu-autohide">&bull;</span>
+<a href="#" name="report" class="meta-item zu-autohide">举报</a>
+
+
+
+<span class="zg-bull">&bull;</span>
+
+<a href="/terms#sec-licence-1" target="_blank" class="meta-item copyright"> 作者保留权利 </a>
+
+
+
+</div>
+</div>
+</div>
+
+<div tabindex="-1" class="zm-item-answer  zm-item-expanded"
+
+itemscope itemtype="http://schema.org/Answer"
+data-aid="27645120"
+data-atoken="80542185"
+data-collapsed="0"
+data-created="1452224866"
+data-deleted="0"
+data-helpful="1"
+data-isowner="0"
+data-copyable="1"
+
+
+>
+<a class="zg-anchor-hidden" name="answer-27645120"></a>
+
+
+<div class="zm-votebar">
+<button class="up ">
+<i class="icon vote-arrow"></i>
+<span class="count">21</span>
+<span class="label sr-only">赞同</span>
+</button>
+<button class="down ">
+<i class="icon vote-arrow"></i>
+<span class="label sr-only">反对</span>
+</button>
+</div>
+
+
+<div class="answer-head">
+<div class="zm-item-answer-author-info">
+
+<a class="zm-item-link-avatar avatar-link"  href="javascript:void(0);" >
+<img src="https://pic1.zhimg.com/da8e974dc_s.jpg" class="zm-list-avatar avatar">
+</a>
+
+<span class="name">知乎用户</span><span title="去赵国的长安" class="bio">，去赵国的长安</span>
+</div>
+<div class="zm-item-vote-info " data-votecount="21">
+
+<span class="voters">
+<span class="user-block"><a data-tip="p$t$bing-cheng-tie-niao" href="https://www.zhihu.com/people/bing-cheng-tie-niao" class="zg-link" title="冰城铁鸟">冰城铁鸟</a>、</span><span class="user-block"><a data-tip="p$t$miao-miao-miao-27-31" href="https://www.zhihu.com/people/miao-miao-miao-27-31" class="zg-link" title="喵喵喵">喵喵喵</a>、</span><span class="user-block"><a data-tip="p$t$chen-tian-wei-76" href="https://www.zhihu.com/people/chen-tian-wei-76" class="zg-link" title="陈天威">陈天威</a></span>
+</span>
+
+
+<a href="javascript:;" class="more"> 等人赞同</a>
+
+
+</div>
+</div>
+<div class="zm-item-rich-text js-collapse-body" data-resourceid="7914520" data-action="/answer/content" data-author-name="陆坏熊" data-entry-url="/question/39268342/answer/80542185">
+
+
+<div class="zh-summary summary clearfix" style="display:none;">
+<img src="https://pic3.zhimg.com/42fc1ef18a8336f68180e25235e2dbba_200x112.png" data-rawwidth="416" data-rawheight="195" class="origin_image inline-img zh-lightbox-thumb" data-original="https://pic3.zhimg.com/42fc1ef18a8336f68180e25235e2dbba_r.png">
+路上捡了个脑洞。
+
+<a href="/question/39268342/answer/80542185" class="toggle-expand">显示全部</a>
+
+</div>
+
+
+<div class="zm-editable-content clearfix">
+路上捡了个脑洞。<br><noscript><img src="https://pic3.zhimg.com/42fc1ef18a8336f68180e25235e2dbba_b.png" data-rawwidth="416" data-rawheight="195" class="content_image" width="416"></noscript><img src="//zhstatic.zhihu.com/assets/zhihu/ztext/whitedot.jpg" data-rawwidth="416" data-rawheight="195" class="content_image lazy" width="416" data-actualsrc="https://pic3.zhimg.com/42fc1ef18a8336f68180e25235e2dbba_b.png"><br><br><noscript><img src="https://pic1.zhimg.com/87e0176a1e6bef069487608b89bc9b08_b.png" data-rawwidth="488" data-rawheight="110" class="origin_image zh-lightbox-thumb" width="488" data-original="https://pic1.zhimg.com/87e0176a1e6bef069487608b89bc9b08_r.png"></noscript><img src="//zhstatic.zhihu.com/assets/zhihu/ztext/whitedot.jpg" data-rawwidth="488" data-rawheight="110" class="origin_image zh-lightbox-thumb lazy" width="488" data-original="https://pic1.zhimg.com/87e0176a1e6bef069487608b89bc9b08_r.png" data-actualsrc="https://pic1.zhimg.com/87e0176a1e6bef069487608b89bc9b08_b.png">
+
+</div>
+
+</div>
+<a class="zg-anchor-hidden ac" name="27645120-comment"></a>
+<div class="zm-item-meta zm-item-comment-el answer-actions clearfix">
+<div class="zm-meta-panel">
+
+<span class="answer-date-link-wrap">
+<a class="answer-date-link meta-item" target="_blank" href="/question/39268342/answer/80542185">发布于 2016-01-08</a>
+</span>
+
+<a href="#" name="addcomment" class=" meta-item toggle-comment">
+<i class="z-icon-comment"></i>76 条评论</a>
+
+
+<a href="#" class="meta-item zu-autohide" name="thanks" data-thanked="false"><i class="z-icon-thank"></i>感谢</a>
+
+
+
+<a href="#" class="meta-item zu-autohide" name="share">
+<i class="z-icon-share"></i>分享</a>
+<a href="#" class="meta-item zu-autohide" name="favo">
+<i class="z-icon-collect"></i>收藏</a>
+
+
+
+
+<span class="zg-bull zu-autohide">&bull;</span>
+
+<a href="#" name="nohelp" class="meta-item zu-autohide">没有帮助</a>
+
+<span class="zg-bull zu-autohide">&bull;</span>
+<a href="#" name="report" class="meta-item zu-autohide">举报</a>
+
+
+
+<span class="zg-bull">&bull;</span>
+
+<a href="/terms#sec-licence-1" target="_blank" class="meta-item copyright"> 作者保留权利 </a>
+
+
+
+</div>
+</div>
+</div>
+
+<div tabindex="-1" class="zm-item-answer  zm-item-expanded"
+
+itemscope itemtype="http://schema.org/Answer"
+data-aid="27643019"
+data-atoken="80536964"
+data-collapsed="0"
+data-created="1452223007"
+data-deleted="0"
+data-helpful="1"
+data-isowner="0"
+data-copyable="1"
+
+
+>
+<a class="zg-anchor-hidden" name="answer-27643019"></a>
+
+
+<div class="zm-votebar">
+<button class="up ">
+<i class="icon vote-arrow"></i>
+<span class="count">7</span>
+<span class="label sr-only">赞同</span>
+</button>
+<button class="down ">
+<i class="icon vote-arrow"></i>
+<span class="label sr-only">反对</span>
+</button>
+</div>
+
+
+<div class="answer-head">
+<div class="zm-item-answer-author-info">
+
+<a class="zm-item-link-avatar avatar-link"  href="javascript:void(0);" >
+<img src="https://pic1.zhimg.com/da8e974dc_s.jpg" class="zm-list-avatar avatar">
+</a>
+
+<span class="name">知乎用户</span>
+</div>
+<div class="zm-item-vote-info " data-votecount="7">
+
+<span class="voters">
+<span class="user-block">知乎用户、</span><span class="user-block"><a data-tip="p$t$xi-qian-qian-57" href="https://www.zhihu.com/people/xi-qian-qian-57" class="zg-link" title="西茜茜">西茜茜</a>、</span><span class="user-block"><a data-tip="p$t$liu-yu-nong-65" href="https://www.zhihu.com/people/liu-yu-nong-65" class="zg-link" title="刘雨浓">刘雨浓</a></span>
+</span>
+
+
+<a href="javascript:;" class="more"> 等人赞同</a>
+
+
+</div>
+</div>
+<div class="zm-item-rich-text js-collapse-body" data-resourceid="7914520" data-action="/answer/content" data-author-name="蔡其锴" data-entry-url="/question/39268342/answer/80536964">
+
+
+<div class="zh-summary summary clearfix" style="display:none;">
+
+1.事实证明熔断机制论证不充分，所有人都没想清楚，被前期的暴跌吓尿了，匆忙上马。2.推出时机不对，恰逢大股东减持，人民币暴跌，市场有回调需求等多重利空叠加，几乎就是为向下熔断准备的。3.无端增加市场流动性风险，进得去出不来，试错的风险太大。已有…
+
+<a href="/question/39268342/answer/80536964" class="toggle-expand">显示全部</a>
+
+</div>
+
+
+<div class="zm-editable-content clearfix">
+1.事实证明熔断机制论证不充分，所有人都没想清楚，被前期的暴跌吓尿了，匆忙上马。<br>2.推出时机不对，恰逢大股东减持，人民币暴跌，市场有回调需求等多重利空叠加，几乎就是为向下熔断准备的。<br>3.无端增加市场流动性风险，进得去出不来，试错的风险太大。已有涨跌停板，再熔断雪上加霜。<br>其实，第一次熔断就应该果断停掉，估计是面子下不来，还好现在停了。
+
+</div>
+
+</div>
+<a class="zg-anchor-hidden ac" name="27643019-comment"></a>
+<div class="zm-item-meta zm-item-comment-el answer-actions clearfix">
+<div class="zm-meta-panel">
+
+<span class="answer-date-link-wrap">
+<a class="answer-date-link meta-item" target="_blank" href="/question/39268342/answer/80536964">发布于 2016-01-08</a>
+</span>
+
+<a href="#" name="addcomment" class=" meta-item toggle-comment">
+<i class="z-icon-comment"></i>2 条评论</a>
+
+
+<a href="#" class="meta-item zu-autohide" name="thanks" data-thanked="false"><i class="z-icon-thank"></i>感谢</a>
+
+
+
+<a href="#" class="meta-item zu-autohide" name="share">
+<i class="z-icon-share"></i>分享</a>
+<a href="#" class="meta-item zu-autohide" name="favo">
+<i class="z-icon-collect"></i>收藏</a>
+
+
+
+
+<span class="zg-bull zu-autohide">&bull;</span>
+
+<a href="#" name="nohelp" class="meta-item zu-autohide">没有帮助</a>
+
+<span class="zg-bull zu-autohide">&bull;</span>
+<a href="#" name="report" class="meta-item zu-autohide">举报</a>
+
+
+
+<span class="zg-bull">&bull;</span>
+
+<a href="/terms#sec-licence-1" target="_blank" class="meta-item copyright"> 作者保留权利 </a>
+
+
+
+</div>
+</div>
+</div>
+
+
+</div>
+
+
+<div id="zh-question-collapsed-link" class="zu-question-collap-title" style="display:none" >
+<a href="javascript:;" name="expand" class="zg-link-gray" id="zh-question-collapsed-switcher">
+<span id="zh-question-collapsed-num">14</span> 个回答被折叠
+</a>
+（<a target="_blank" href="http://www.zhihu.com/question/20120168" class="zg-link-gray">为什么？</a>）
+</div>
+<div id="zh-question-collapsed-wrap" class="zh-question-answer-wrapper" style="display:none"></div>
+<a name="draft"></a>
+<div id="zh-question-answer-form-wrap" class="zh-question-answer-form-wrap">
+<div class="zm-editable-tip"></div>
+<div class="zm-editable-content"></div>
+</div>
+<!-- 版权演示 -->
+
+<script type="text/x-template" id="copyright-demo-template">
+<article>
+
+<section>
+<p class="copyright-demo-title"> 这是你的回答正文 </p>
+<div class="copyright-demo-region"></div>
+<div class="copyright-demo-region"></div>
+<div class="copyright-demo-region"></div>
+<div class="copyright-demo-region"></div>
+<div class="copyright-demo-region"></div>
+</section>
+
+<section>
+<p class="copyright-demo-title"> 当其他人想复制你的一段回答 </p>
+<div class="copyright-demo-region frame2-region" id="copyright-demo-region1">
+<span class="copyright-ico-indicator" id="copyright-demo-indicator"></span>
+</div>
+<div class="copyright-demo-region frame2-region" id="copyright-demo-region2"></div>
+<div class="copyright-demo-region frame2-region" id="copyright-demo-region3"></div>
+<div class="copyright-demo-region frame2-region" id="copyright-demo-region4"></div>
+<div class="copyright-demo-region"></div>
+</section>
+
+<section id="copyright-demo-frame3">
+<p class="copyright-demo-title"> 复制将受限，同时会弹出提醒 </p>
+<div class="copyright-demo-region copyright-demo-region-selected"></div>
+<div class="copyright-demo-region copyright-demo-region-selected"></div>
+<div class="copyright-demo-region copyright-demo-region-selected"></div>
+<div class="copyright-demo-region copyright-demo-region-selected"></div>
+<div class="copyright-demo-region"></div>
+<span class="copyright-ico-pointer copyright-demo-pointer"></span>
+</section>
+</article>
+</script>
+
+
+
+</div>
+</div>
+
+
+<div class="zu-main-sidebar">
+
+<div class="zm-side-section">
+<div class="zm-side-section-inner">
+<div class="well login-reg-box">
+<span>知乎是一个真实的问答社区，在这里分享知识、经验和见解，发现更大的世界。<br>
+<a id="js-reg-with-mail-in-top" href="#">使用手机或邮箱注册</a>
+<!-- <span>·</span><a id="js-reg-with-qq-in-top" href="#">使用 QQ 登录</a> -->
+</span>
+<div class="clearfix">
+<a id="js-reg-with-wechat-in-top" href="#" class="zg-btn-green"><span class="z-ico-wechat-right-panel"></span>使用微信登录</a>
+<a id="js-reg-with-sina-in-top" href="#" class="zg-btn-red"><span class="icon-big-white-sina"></span>使用微博登录</a>
+<a id="js-reg-with-qq-in-top" href="#" class="zg-btn-blue"><span class="icon-big-white-qq"></span>使用 QQ 登录</a>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<div class="zm-side-section">
+<div class="zm-side-section-inner zg-gray-normal" id="zh-question-side-header-wrap">
+<button data-follow="q:m:button" class="follow-button zg-follow zg-btn-green" data-id="7914520">关注问题</button>
+
+2399
+人关注该问题
+
+</div>
+</div>
+
+<div class="shameimaru-placeholder" data-loc="question_up" data-params='{&quot;question_token&quot;: 39268342}'></div>
+<div class="zm-side-section">
+<div class="zm-side-section-inner">
+<div id="zh-question-related-questions" class="zh-question-related-questions clearfix">
+
+<a class="zg-right next">换一换</a>
+
+<h3>相关问题</h3>
+<ul itemprop="relatedQuestion" itemscope itemtype="http://schema.org/ItemList">
+
+<li itemprop="itemListElement" itemscope itemtype="http://schema.org/Question"><a class="question_link" href="/question/27565262">什么是估值折让？一般什么时候会发生这种情形？</a> <span class="num">5 个回答</span><meta itemprop="followerCount" content="422" /></li>
+
+<li itemprop="itemListElement" itemscope itemtype="http://schema.org/Question"><a class="question_link" href="/question/25496406">在中国实行注册制会不会造成垃圾股遍地的局面？</a> <span class="num">61 个回答</span><meta itemprop="followerCount" content="1281" /></li>
+
+<li itemprop="itemListElement" itemscope itemtype="http://schema.org/Question"><a class="question_link" href="/question/22493694">奥赛康 IPO 被叫停是怎么回事？</a> <span class="num">17 个回答</span><meta itemprop="followerCount" content="538" /></li>
+
+<li itemprop="itemListElement" itemscope itemtype="http://schema.org/Question"><a class="question_link" href="/question/22523726">新股发行制度是否在顶层设计就存在缺陷？</a> <span class="num">13 个回答</span><meta itemprop="followerCount" content="293" /></li>
+
+<li itemprop="itemListElement" itemscope itemtype="http://schema.org/Question"><a class="question_link" href="/question/20719727">普通人不适合买股票吗？</a> <span class="num">61 个回答</span><meta itemprop="followerCount" content="1517" /></li>
+
+<li hidden itemprop="itemListElement" itemscope itemtype="http://schema.org/Question"><a class="question_link" href="/question/19561953">相比国内的股票和港股，美股是更好的投资手段吗？</a> <span class="num">30 个回答</span><meta itemprop="followerCount" content="1034" /></li>
+
+<li hidden itemprop="itemListElement" itemscope itemtype="http://schema.org/Question"><a class="question_link" href="/question/22163741">A股即将推行的注册制，与美、日股市的发行制度有无区别？现今互联网公司赴美、港IPO的情况，会否因此改变？</a> <span class="num">7 个回答</span><meta itemprop="followerCount" content="437" /></li>
+
+<li hidden itemprop="itemListElement" itemscope itemtype="http://schema.org/Question"><a class="question_link" href="/question/21262543">美股中常见的贝塔系数是什么？有什么作用？为何中国股票中很少见到‏？</a> <span class="num">8 个回答</span><meta itemprop="followerCount" content="79" /></li>
+
+<li hidden itemprop="itemListElement" itemscope itemtype="http://schema.org/Question"><a class="question_link" href="/question/25286808">和美股、港股相比，中国上市公司是否很少分红？为什么？</a> <span class="num">7 个回答</span><meta itemprop="followerCount" content="269" /></li>
+
+<li hidden itemprop="itemListElement" itemscope itemtype="http://schema.org/Question"><a class="question_link" href="/question/28778713">你是如何从两千多只股票中选出心仪的股票的？</a> <span class="num">315 个回答</span><meta itemprop="followerCount" content="40291" /></li>
+
+</ul>
+</div>
+</div>
+</div>
+
+<div class="shameimaru-placeholder" data-loc="question_down" data-params='{&quot;question_token&quot;: 39268342}'></div>
+
+</div>
+
+
+</div>
+
+
+<div id="zh-footer" class="zh-footer">
+<div class="content zg-wrap clearfix">
+<ul>
+
+<li><a href="https://liukanshan.zhihu.com" target="_blank">刘看山</a></li>
+
+<li><a href="/app" target="_blank">移动应用</a></li>
+<li><a href="/careers">加入知乎</a></li>
+<li><a href="/terms" target="_blank">知乎协议</a></li>
+<li><a href="mailto:bd@zhihu.com">商务合作</a></li>
+
+</ul>
+
+<span class="copy">&copy; 2016 知乎</span>
+
+</div>
+</div>
+
+<script type="text/json" class="json-inline" data-name="guiders2">{}</script>
+<script type="text/json" class="json-inline" data-name="current_user">["","","","-1","",0,0]</script>
+<script type="text/json" class="json-inline" data-name="user_status">[null,null]</script>
+<script type="text/json" class="json-inline" data-name="env">["zhihu.com","comet.zhihu.com",false,null]</script>
+<script type="text/json" class="json-inline" data-name="permissions">[]</script>
+
+
+<script type="text/json" class="json-inline" data-name="ga_vars">{"user_created":0,"now":1455872360000,"abtest_mask":"------------------------------","user_attr":[0,0,0,"-","-"],"user_hash":0}</script>
+
+<script type="text/json" class="json-inline" data-name="ra-urls">{"CommentApp":"https:\/\/static.zhihu.com\/static\/revved\/-\/apps\/CommentApp.fb23fa39.js"}</script>
+
+<script type="text/json" class="json-inline" data-name="current_question">{"status":"normal","isLocked":0,"detailEditReasonRequired":true,"editPermission":false,"isAnon":0,"qid":7914520,"urlToken":39268342,"showInvitePanel":false,"askAboutMember":0}</script>
+<script type="text/json" class="json-inline" data-name="current_question_owner">false</script>
+<script type="text/json" class="json-inline" data-name="draft">[]</script>
+<script type="text/json" class="json-inline" data-name="my_answer">{}</script>
+<script type="text/json" class="json-inline" data-name="current_question_bio">{"selected_bio":null,"type":null,"value":""}</script>
+
+<script type="text/json" class="json-inline" data-name="redirect_to">""</script>
+
+
+
+<script src="https://static.zhihu.com/static/revved/-/js/vendor.ff76fbae.js"></script>
+<script src="https://static.zhihu.com/static/revved/-/js/closure/common.7a263ff5.js"></script>
+
+
+<script src="https://static.zhihu.com/static/revved/-/js/closure/richtexteditor.4a7a6520.js" async></script>
+<script src="https://static.zhihu.com/static/revved/-/js/closure/page-main.8ff6a179.js"></script>
+<meta name="entry" content="ZH.entrySQ" data-module-id="page-main">
+
+<script type="text/zscript" znonce="1c21573e56194385b16bc4c0fa10c2f7"></script>
+
+<input type="hidden" name="_xsrf" value="83d6bb2fa503cb90691fe4c9c335696e"/>
+</body>
+</html>

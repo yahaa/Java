@@ -49,5 +49,19 @@ public class Zhihu {
 		else return false;
 		return true;
 	}
+	
+	public String writeString() {  
+        String result = "";  
+        result += "问题：" + question + "\r\n";  
+        result += "描述：" + description + "\r\n";  
+        result += "链接：" + link + "\r\n";  
+        for (int i = 0; i < answers.size(); i++) {  
+            result += "回答" + (i+1) + "：" + answers.get(i) + "\r\n";  
+        }  
+        result += "\r\n\r\n\r\n\r\n";  
+        result = result.replaceAll("<br>", "\r\n");  
+        result = result.replaceAll("<.*?>", " ");  
+        return result;  
+}  
 
 }

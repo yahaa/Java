@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dropEffect="none" class="no-js no-auth ">
+<head>
+<meta charset="utf-8" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="renderer" content="webkit" />
+
+<title>对于做实证研究的经济学研究生，R 语言能否完全取代 Stata？ - 扣小米的回答 - 知乎</title>
+
+<meta name="apple-itunes-app" content="app-id=432274380, app-argument=zhihu://answers/84924173">
+<meta property="og:description" content="可以取代。stata主要功能是做经济学计量分析的，所以语言不是很复杂，上手快，直观，比R更容易。对于实证分析来说的缺点是，1）收费软件。2）数据量太大的话可能会慢一些。不过对于经济学学生来说数据量通常都不会太大，所以肯定足够用。3）画图不如R好看。…" />
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta http-equiv="mobile-agent" content="format=html5;url=https://www.zhihu.com/question/23615456/answer/84924173">
+<meta id="znonce" name="znonce" content="fd58c4ab46574213a561c29c943115d2">
+
+
+<link rel="apple-touch-icon" href="https://static.zhihu.com/static/revved/img/ios/touch-icon-152.f361b474.png" sizes="152x152">
+<link rel="apple-touch-icon" href="https://static.zhihu.com/static/revved/img/ios/touch-icon-120.346e7055.png" sizes="120x120">
+<link rel="apple-touch-icon" href="https://static.zhihu.com/static/revved/img/ios/touch-icon-76.3101f5fe.png" sizes="76x76">
+<link rel="apple-touch-icon" href="https://static.zhihu.com/static/revved/img/ios/touch-icon-60.a6575a64.png" sizes="60x60">
+
+
+<link rel="shortcut icon" href="https://static.zhihu.com/static/favicon.ico" type="image/x-icon">
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://static.zhihu.com/static/search.xml" title="知乎" />
+<link rel="stylesheet" href="https://static.zhihu.com/static/revved/-/css/z.295beca3.css">
+
+
+
+<meta name="google-site-verification" content="FTeR0c8arOPKh8c5DYh_9uu98_zJbaWw53J-Sch9MTg" />
+<meta property="qc:admins" content="14414345146201056375" />
+
+
+
+<!--[if lt IE 9]>
+<script src="https://static.zhihu.com/static/components/respond/dest/respond.min.js"></script>
+<link href="https://static.zhihu.com/static/components/respond/cross-domain/respond-proxy.html" id="respond-proxy" rel="respond-proxy" />
+<link href="/static/components/respond/cross-domain/respond.proxy.gif" id="respond-redirect" rel="respond-redirect" />
+<script src="/static/components/respond/cross-domain/respond.proxy.js"></script>
+<![endif]-->
+<script src="https://static.zhihu.com/static/revved/-/js/instant.4b42dd60.js"></script>
+
+<link rel="canonical" href="https://www.zhihu.com/question/23615456" />
+
+</head>
+
+<body class="zhi ">
+
+
+
+<div role="navigation" class="zu-top">
+<div class="zg-wrap modal-shifting clearfix" id="zh-top-inner">
+<a href="/" class="zu-top-link-logo" id="zh-top-link-logo" data-za-c="view_home" data-za-a="visit_home" data-za-l="top_navigation_zhihu_logo">知乎</a>
+
+
+
+<ul class="topnav-noauth clearfix">
+<li>
+<a href="javascript:;" class="js-signup-noauth"><i class="zg-icon zg-icon-dd-home"></i>注册知乎</a>
+</li>
+<li>
+<a href="javascript:;" class="js-signin-noauth">登录</a>
+</li>
+</ul>
+
+
+
+<button class="zu-top-add-question" id="zu-top-add-question">提问</button>
+
+
+<div role="search" id="zh-top-search" class="zu-top-search">
+<form method="GET" action="/search" id="zh-top-search-form" class="zu-top-search-form">
+
+
+
+<input type="hidden" name="type" value="question">
+<label for="q" class="hide-text">知乎搜索</label><input type="text" class="zu-top-search-input" id="q" name="q" autocomplete="off" value="" placeholder="搜索问题、话题或人">
+<button type="submit" class="zu-top-search-button"><span class="hide-text">搜索</span><span class="sprite-global-icon-magnifier-dark"></span></button>
+</form>
+</div>
+
+
+
+<div id="zg-top-nav" class="zu-top-nav">
+<ul class="zu-top-nav-ul zg-clear">
+
+<li class="zu-top-nav-li " id="zh-top-nav-home">
+<a class="zu-top-nav-link" href="/" id="zh-top-link-home" data-za-c="view_home" data-za-a="visit_home" data-za-l="top_navigation_home">首页</a>
+</li>
+<li class="top-nav-topic-selector zu-top-nav-li " id="zh-top-nav-topic">
+<a class="zu-top-nav-link" href="/topic" id="top-nav-dd-topic">话题</a>
+
+</li>
+<li class="zu-top-nav-li " id="zh-top-nav-explore">
+<a class="zu-top-nav-link" href="/explore">发现</a>
+</li>
+
+
+</ul>
+<div class="zu-top-nav-live zu-noti7-popup zg-r5px no-hovercard" id="zh-top-nav-live-new" role="popup" tabindex="0">
+<div class="zu-top-nav-live-inner zg-r5px">
+<div class="zu-top-live-icon">&nbsp;</div>
+<div class="zu-home-noti-inner" id="zh-top-nav-live-new-inner">
+<div class="zm-noti7-popup-tab-container clearfix" tabindex="0">
+<button class="zm-noti7-popup-tab-item message">
+<span class="icon">消息</span>
+</button>
+<button class="zm-noti7-popup-tab-item user">
+<span class="icon">用户</span>
+</button>
+<button class="zm-noti7-popup-tab-item thanks">
+<span class="icon">赞同和感谢</span>
+</button>
+</div>
+</div>
+<div class="zm-noti7-frame-border top"></div>
+<div class="zm-noti7-frame">
+<div class="zm-noti7-content">
+<div class="zm-noti7-content-inner">
+<div class="zm-noti7-content-body">
+<div class="zm-noti7-popup-loading">
+<span class="noti-spinner-loading"></span>
+</div>
+</div>
+</div>
+</div>
+<div class="zm-noti7-content" style="display:none;">
+<div class="zm-noti7-content-inner">
+<div class="zm-noti7-content-body">
+<div class="zm-noti7-popup-loading">
+<span class="noti-spinner-loading"></span>
+</div>
+</div>
+</div>
+</div>
+<div class="zm-noti7-content" style="display:none;">
+<div class="zm-noti7-content-inner">
+<div class="zm-noti7-content-body">
+<div class="zm-noti7-popup-loading">
+<span class="noti-spinner-loading"></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="zm-noti7-frame-border bottom"></div>
+<div class="zm-noti7-popup-footer">
+<a href="/notifications" class="zm-noti7-popup-footer-all zg-right">查看全部 &raquo;</a>
+<a href="/settings/notification" class="zm-noti7-popup-footer-set" title="通知设置" ><i class="zg-icon zg-icon-settings"></i></a>
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<div class="zu-global-notify" id="zh-global-message" style="display:none">
+<div class="zg-wrap">
+<div class="zu-global-nitify-inner">
+<a class="zu-global-notify-close" href="javascript:;" title="关闭" name="close">x</a>
+<span class="zu-global-notify-icon"></span>
+<span class="zu-global-notify-msg"></span>
+</div>
+</div>
+</div>
+
+
+
+
+<div class="zg-wrap zu-main clearfix with-indention-votebar"  role="main">
+<div class="zu-main-content">
+<div class="zu-main-content-inner">
+
+
+
+
+<div class="zm-tag-editor zg-section">
+<div class="zm-tag-editor-labels zg-clear">
+
+<a class="zm-item-tag"
+href="/topic/19560170"
+data-tip="t$b$19560170" data-token="19560170" data-topicid="3324">
+经济学
+</a>
+
+<a class="zm-item-tag"
+href="/topic/19600089"
+data-tip="t$b$19600089" data-token="19600089" data-topicid="16663">
+计量经济学
+</a>
+
+<a class="zm-item-tag"
+href="/topic/19674181"
+data-tip="t$b$19674181" data-token="19674181" data-topicid="41413">
+R（编程语言）
+</a>
+
+<a class="zm-item-tag"
+href="/topic/19789498"
+data-tip="t$b$19789498" data-token="19789498" data-topicid="80255">
+Stata
+</a>
+
+</div>
+</div>
+<div id="zh-question-title" data-editable="false">
+
+<h2 class="zm-item-title zm-editable-content">
+
+<a href="/question/23615456">对于做实证研究的经济学研究生，R 语言能否完全取代 Stata？</a>
+
+</h2>
+</div>
+<div id="zh-question-detail" class="zm-item-rich-text" data-resourceid="1627601" data-action="/question/detail">
+
+<div class="zm-editable-content"></div>
+
+
+</div>
+<div class="zm-item-meta zm-item-comment-el clearfix" id="zh-question-meta-wrap">
+<div class="zm-meta-panel">
+
+<a href="#" name="addcomment" class="toggle-comment meta-item">
+<i class="z-icon-comment"></i>添加评论
+</a>
+<a href="#" name="share" class="share meta-item">
+<i class="z-icon-share"></i>分享
+</a>
+
+</div>
+<div class="panel-container">
+
+</div>
+</div>
+<div class="zh-question-answer-summary-wrap zm-item-rich-text" id="zh-question-answer-summary-wrap" style="display:none;">
+<h3>
+<a href="http://www.zhihu.com/question/20014415" target="_blank" class="zg-right zg-link-litblue" style="font-weight:normal">什么是答案总结？</a>
+答案总结</h3>
+<div id="zh-question-answer-summary" class="zg-section"
+data-resourceid="1627601" data-action="/question/summary">
+
+<div class="zm-editable-content"></div>
+
+</div>
+</div>
+
+<div class="zh-answers-title">
+<h3><a href="/question/23615456" class="zg-link-litblue">查看全部 14 个回答</a></h3>
+</div>
+
+<div id="zh-question-answer-wrap" class="zh-question-answer-wrapper autohide-false"
+data-widget="navigable" data-navigable-options="{&quot;items&quot;:&quot;&gt;.zm-item-answer&quot;}"
+style="border-bottom:none;">
+
+<div tabindex="-1" class="zm-item-answer  zm-item-expanded"
+
+itemscope itemtype="http://schema.org/Answer"
+data-aid="29401257"
+data-atoken="84924173"
+data-collapsed="0"
+data-created="1454604027"
+data-deleted="0"
+data-helpful="1"
+data-isowner="0"
+data-copyable="1"
+
+
+>
+<a class="zg-anchor-hidden" name="answer-29401257"></a>
+
+
+<div class="zm-votebar">
+<button class="up ">
+<i class="icon vote-arrow"></i>
+<span class="count">14</span>
+<span class="label sr-only">赞同</span>
+</button>
+<button class="down ">
+<i class="icon vote-arrow"></i>
+<span class="label sr-only">反对</span>
+</button>
+</div>
+
+
+<div class="answer-head">
+<div class="zm-item-answer-author-info">
+
+<a class="zm-item-link-avatar avatar-link" href="/people/koukou0113" data-tip="p$t$koukou0113">
+<img src="https://pic3.zhimg.com/f3efac740aefd2d4b0ff2372860c74ae_s.jpg" class="zm-list-avatar avatar">
+</a>
+
+<a class="author-link" data-tip="p$t$koukou0113" href="/people/koukou0113">扣小米</a><span title="经济学博士生，在德国" class="bio">，经济学博士生，在德国</span>
+</div>
+<div class="zm-item-vote-info " data-votecount="14">
+
+<span class="voters">
+<span class="user-block"><a data-tip="p$t$hcddanny" href="https://www.zhihu.com/people/hcddanny" class="zg-link" title="虎称帝">虎称帝</a>、</span><span class="user-block"><a data-tip="p$t$echo-duan-79" href="https://www.zhihu.com/people/echo-duan-79" class="zg-link" title="Echo Duan">Echo Duan</a>、</span><span class="user-block"><a data-tip="p$t$mou-mou-98-26" href="https://www.zhihu.com/people/mou-mou-98-26" class="zg-link" title="Savannah L">Savannah L</a></span>
+</span>
+
+
+<a href="javascript:;" class="more"> 等人赞同</a>
+
+
+</div>
+</div>
+<div class="zm-item-rich-text js-collapse-body" data-resourceid="1627601" data-action="/answer/content" data-author-name="扣小米" data-entry-url="/question/23615456/answer/84924173">
+
+
+<div class="zh-summary summary clearfix" style="display:none;">
+
+可以取代。stata主要功能是做经济学计量分析的，所以语言不是很复杂，上手快，直观，比R更容易。对于实证分析来说的缺点是，1）收费软件。2）数据量太大的话可能会慢一些。不过对于经济学学生来说数据量通常都不会太大，所以肯定足够用。3）画图不如R好看。…
+
+<a href="/question/23615456/answer/84924173" class="toggle-expand">显示全部</a>
+
+</div>
+
+
+<div class="zm-editable-content clearfix">
+可以取代。<br><br>stata主要功能是做经济学计量分析的，所以语言不是很复杂，上手快，直观，比R更容易。<br>对于实证分析来说的缺点是，1）收费软件。2）数据量太大的话可能会慢一些。不过对于经济学学生来说数据量通常都不会太大，所以肯定足够用。3）画图不如R好看。<br><br>R主要是统计和数据分析，功能要比stata多，做实证研究自然不成问题。R语言比stata要难一些，而且运作的思路和stata是不一样的。R是开源软件，免费，而且社区比较活跃，经常会有一些新奇的和前沿的用法出现。另外，因为R的功能较多，所以可以实现很多stata无法实现的功能，比如写爬虫抓取网页数据，在RStudio上直接写文档之类的。<br><br>如果是只做经济学的实证研究，两个软件都可以完全满足，经济学教授们用哪个的都有。<br>如果只是为了写论文而短期使用，那么可以考虑stata，因为上手真的很快。（其实也可以考虑SPSS或者EViews，上手更快，不过我没有用过。）<br>如果打算长期搞研究使用，两个软件都可以。不过如果想挖掘更多的可能性和更多的功能，那最好用R。
+
+</div>
+
+</div>
+<a class="zg-anchor-hidden ac" name="29401257-comment"></a>
+<div class="zm-item-meta zm-item-comment-el answer-actions clearfix">
+<div class="zm-meta-panel">
+
+<span class="answer-date-link-wrap">
+<a class="answer-date-link meta-item" target="_blank" href="/question/23615456/answer/84924173">发布于 2016-02-05</a>
+</span>
+
+<a href="#" name="addcomment" class=" meta-item toggle-comment">
+<i class="z-icon-comment"></i>4 条评论</a>
+
+
+<a href="#" class="meta-item zu-autohide" name="thanks" data-thanked="false"><i class="z-icon-thank"></i>感谢</a>
+
+
+
+<a href="#" class="meta-item zu-autohide" name="share">
+<i class="z-icon-share"></i>分享</a>
+<a href="#" class="meta-item zu-autohide" name="favo">
+<i class="z-icon-collect"></i>收藏</a>
+
+
+
+
+<span class="zg-bull zu-autohide">&bull;</span>
+
+<a href="#" name="nohelp" class="meta-item zu-autohide">没有帮助</a>
+
+<span class="zg-bull zu-autohide">&bull;</span>
+<a href="#" name="report" class="meta-item zu-autohide">举报</a>
+
+
+
+<span class="zg-bull">&bull;</span>
+
+<a href="/terms#sec-licence-1" target="_blank" class="meta-item copyright"> 作者保留权利 </a>
+
+
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="more-awesome"><span>更多回答</span></div>
+<div class="awesome-answer-list">
+
+<div class="feed-item">
+<div class="content">
+<div class="entry-body "
+data-aid="10945478"
+data-atoken="38883815"
+data-collapsed="False"
+data-created="1423032455"
+data-deleted="0"
+data-isowner="0"
+data-helpful="1"
+data-score="0"
+data-copyable="1"
+>
+
+<div class="zm-item-vote">
+<a class="zm-item-vote-count js-expand js-vote-count" href="javascript:;" data-votecount="49">49</a>
+</div>
+<div class="zm-votebar">
+<button class="up ">
+<i class="icon vote-arrow"></i>
+<span class="count">49</span>
+<span class="label sr-only">赞同</span>
+</button>
+<button class="down ">
+<i class="icon vote-arrow"></i>
+<span class="label sr-only">反对</span>
+</button>
+</div>
+
+<div class="zm-item-answer-detail">
+<div class="zm-item-answer-author-info">
+
+<span class="name">知乎用户</span><span title="谎言有三种：谎言、该死的谎言、统计数字。" class="bio">，谎言有三种：谎言、该死的谎言、统计数字。</span>
+</div>
+<div class="zm-item-vote-info " data-votecount="49">
+
+<span class="voters">
+<span class="user-block"><a data-tip="p$t$noah-85" href="https://www.zhihu.com/people/noah-85" class="zg-link" title="Noah">Noah</a>、</span><span class="user-block"><a data-tip="p$t$an-da-han" href="https://www.zhihu.com/people/an-da-han" class="zg-link" title="安涵">安涵</a>、</span><span class="user-block"><a data-tip="p$t$iguo-zhang" href="https://www.zhihu.com/people/iguo-zhang" class="zg-link" title="Arlen">Arlen</a></span>
+</span>
+
+
+<a href="javascript:;" class="more"> 等人赞同</a>
+
+
+</div>
+<div class="zm-item-rich-text js-collapse-body" data-resourceid="1627601" data-action="/answer/content" data-author-name="SlowMover" data-entry-url="/question/23615456/answer/38883815">
+
+<textarea class="content hidden">
+可以，而且强烈推荐，当然前提是内存要足够大。&lt;br&gt;&lt;br&gt;Stata, MATLAB, Python 和 R 我都用过，但最喜欢的还是 R。我觉得这样来评价 R 是比较合适的：&lt;br&gt;&lt;br&gt;在上手速度方面，R 稍逊于 Stata；在矩阵运算方面，R 稍逊于 MATLAB；在语法简洁方面，R 稍逊于 Python。但是 R 的强大之处正在于，你只要学会这一门语言，然后通过牺牲一点点用户体验就可以实现上面三门甚至是更多语言加在一起才可以实现的功能。&lt;br&gt;&lt;br&gt;另外，R 虽然是自由软件，文档做得还是不错的。像 ggplot2 这样的神器，根本不需要去学，文档里写得清清楚楚，而且还都附带了实例。&lt;br&gt;&lt;br&gt;最后，请不要忘了 RStudio 这个神器。它可以帮你把前面失去的用户体验都补回来。
+
+
+</textarea>
+
+
+<div class="zh-summary summary clearfix">
+
+可以，而且强烈推荐，当然前提是内存要足够大。Stata, MATLAB, Python 和 R 我都用过，但最喜欢的还是 R。我觉得这样来评价 R 是比较合适的：在上手速度方面，R 稍逊于 Stata；在矩阵运算方面，R 稍逊于 MATLAB；在语法简洁方面，R 稍逊于 Python。但是 R …
+
+<a href="/question/23615456/answer/38883815" class="toggle-expand">显示全部</a>
+
+</div>
+
+
+</div>
+</div>
+</div>
+</div>
+<a class="zg-anchor-hidden ac" name="10945478-comment"></a>
+<div class="zm-item-meta zm-item-comment-el answer-actions clearfix">
+<div class="zm-meta-panel">
+
+<span class="answer-date-link-wrap">
+<a class="answer-date-link last_updated meta-item" data-tip="s$t$发布于 2015-02-04" target="_blank" href="/question/23615456/answer/38883815">编辑于 2015-04-27</a>
+</span>
+
+<a href="#" name="addcomment" class=" meta-item toggle-comment">
+<i class="z-icon-comment"></i>13 条评论</a>
+
+
+<a href="#" class="meta-item zu-autohide" name="thanks" data-thanked="false"><i class="z-icon-thank"></i>感谢</a>
+
+
+
+<a href="#" class="meta-item zu-autohide" name="share">
+<i class="z-icon-share"></i>分享</a>
+<a href="#" class="meta-item zu-autohide" name="favo">
+<i class="z-icon-collect"></i>收藏</a>
+
+
+
+
+<span class="zg-bull zu-autohide">&bull;</span>
+
+<a href="#" name="nohelp" class="meta-item zu-autohide">没有帮助</a>
+
+<span class="zg-bull zu-autohide">&bull;</span>
+<a href="#" name="report" class="meta-item zu-autohide">举报</a>
+
+
+
+<span class="zg-bull">&bull;</span>
+
+<a href="/terms#sec-licence-1" target="_blank" class="meta-item copyright"> 作者保留权利 </a>
+
+
+
+</div>
+</div>
+</div>
+
+<div class="feed-item">
+<div class="content">
+<div class="entry-body "
+data-aid="5671013"
+data-atoken="25920417"
+data-collapsed="False"
+data-created="1400753092"
+data-deleted="0"
+data-isowner="0"
+data-helpful="1"
+data-score="0"
+data-copyable="1"
+>
+
+<div class="zm-item-vote">
+<a class="zm-item-vote-count js-expand js-vote-count" href="javascript:;" data-votecount="10">10</a>
+</div>
+<div class="zm-votebar">
+<button class="up ">
+<i class="icon vote-arrow"></i>
+<span class="count">10</span>
+<span class="label sr-only">赞同</span>
+</button>
+<button class="down ">
+<i class="icon vote-arrow"></i>
+<span class="label sr-only">反对</span>
+</button>
+</div>
+
+<div class="zm-item-answer-detail">
+<div class="zm-item-answer-author-info">
+<span class="name">匿名用户</span>
+</div>
+<div class="zm-item-vote-info " data-votecount="10">
+
+<span class="voters">
+<span class="user-block"><a data-tip="p$t$iguo-zhang" href="https://www.zhihu.com/people/iguo-zhang" class="zg-link" title="Arlen">Arlen</a>、</span><span class="user-block"><a data-tip="p$t$gregory-cai" href="https://www.zhihu.com/people/gregory-cai" class="zg-link" title="Gregory Cai">Gregory Cai</a>、</span><span class="user-block"><a data-tip="p$t$blue-flamingo" href="https://www.zhihu.com/people/blue-flamingo" class="zg-link" title="Blue Flamingo">Blue Flamingo</a></span>
+</span>
+
+
+<a href="javascript:;" class="more"> 等人赞同</a>
+
+
+</div>
+<div class="zm-item-rich-text js-collapse-body" data-resourceid="1627601" data-action="/answer/content" data-author-name="匿名用户" data-entry-url="/question/23615456/answer/25920417">
+
+<textarea class="content hidden">
+吐槽太多，匿了。&lt;br&gt;如果你是做&lt;i&gt;研究&lt;/i&gt;的，而不是写本科毕业论文或者完成计量课课后作业，还是得学R。。。&lt;br&gt;&lt;br&gt;R的优势：&lt;br&gt;是编程语言，有很多人维护，紧随研究前沿，network, quantile regression, lasso, 什么都有，可自定义函数，可编程搞复杂的运算。&lt;br&gt;R的劣势：&lt;br&gt;虽然是编程语言，但是语法丑陋落后。跟python那是没法比啊。每次打一个c(1,2,3)之类的我都要内心吐槽谁tmd设计这么难看的人设（虽然np.array([1,2,3]) 也好不到哪去）。&lt;br&gt;因为语法设计丑陋，所以上手难。同时包很多，这是好事，也是坏事。连describe 一个data set都有无数种办法。你这让我等小白玩蛋啊。很多包质量良莠不齐，有的包作者都不知道哪玩去了 没人更新了，documentation 6年前写的有木有，有的包里面函数根本就运行不了啊。&lt;br&gt;R没办法很方便的像其它语言一样定义class。你可以定义s3/s4之类的，但是，就是用的不爽啊。&lt;br&gt;R的画图也很丑。学完基本画图后，看着那素净的图片，我心里在想这软件是不是中科院开发的。后来我知道要想画的好，还得再学ggplot2时候我就思密达了。&lt;br&gt;&lt;br&gt;Stata优势：&lt;br&gt;好上手。就算什么都不会，点鼠标都能完成工作。没错，我一开始用stata就是点鼠标，想干什么干什么啊。画的图高大上，the economist 的水准啊。&lt;br&gt;然后我就发现问题了，我不能每次都点鼠标，一个research 必然有很多重复性很高，需要自动化完成的工作，只能写程序。然后写程序时候我就吐血了。我突然发现一个让我内心草泥马无数遍的事实：&lt;br&gt;&lt;b&gt;Stata 无法自定义用户函数。&lt;/b&gt;&lt;br&gt;连20年前的QBasic都可以定义用户函数，一个卖的这么贵的软件无法自定义用户函数。&lt;br&gt;其它stata的发指的问题我就不说了（你想用lasso？出门左转找R）。这是一个商用计量工具，比eviews牛逼，但不是计量编程语言。它和R关系，类似于word 和LaTex的关系。&lt;br&gt;&lt;br&gt;总而言之，R不是一个好语言，但是你无其它可选啊（做finance还好有matlab）。我期望赶紧更多人给python开发计量包，让python干翻R吧。
+
+
+</textarea>
+
+
+<div class="zh-summary summary clearfix">
+
+吐槽太多，匿了。如果你是做<i>研究</i>的，而不是写本科毕业论文或者完成计量课课后作业，还是得学R。。。R的优势：是编程语言，有很多人维护，紧随研究前沿，network, quantile regression, lasso, 什么都有，可自定义函数，可编程搞复杂的运算。R的劣势：虽然是…
+
+<a href="/question/23615456/answer/25920417" class="toggle-expand">显示全部</a>
+
+</div>
+
+
+</div>
+</div>
+</div>
+</div>
+<a class="zg-anchor-hidden ac" name="5671013-comment"></a>
+<div class="zm-item-meta zm-item-comment-el answer-actions clearfix">
+<div class="zm-meta-panel">
+
+<span class="answer-date-link-wrap">
+<a class="answer-date-link last_updated meta-item" data-tip="s$t$发布于 2014-05-22" target="_blank" href="/question/23615456/answer/25920417">编辑于 2014-05-22</a>
+</span>
+
+<a href="#" name="addcomment" class=" meta-item toggle-comment">
+<i class="z-icon-comment"></i>9 条评论</a>
+
+
+<a href="#" class="meta-item zu-autohide" name="thanks" data-thanked="false"><i class="z-icon-thank"></i>感谢</a>
+
+
+
+<a href="#" class="meta-item zu-autohide" name="share">
+<i class="z-icon-share"></i>分享</a>
+<a href="#" class="meta-item zu-autohide" name="favo">
+<i class="z-icon-collect"></i>收藏</a>
+
+
+
+
+<span class="zg-bull zu-autohide">&bull;</span>
+
+<a href="#" name="nohelp" class="meta-item zu-autohide">没有帮助</a>
+
+<span class="zg-bull zu-autohide">&bull;</span>
+<a href="#" name="report" class="meta-item zu-autohide">举报</a>
+
+
+
+<span class="zg-bull">&bull;</span>
+
+<a href="/terms#sec-licence-1" target="_blank" class="meta-item copyright"> 作者保留权利 </a>
+
+
+
+</div>
+</div>
+</div>
+
+</div>
+
+<div class="zh-answers-title">
+<h3><a href="/question/23615456" class="zg-link-litblue">查看全部 14 个回答</a></h3>
+</div>
+<div class="zu-answer-form-disabled-wrap" id="zh-single-answer-disable-wrap" style="display:none"></div>
+
+</div>
+</div>
+
+
+<div class="zu-main-sidebar">
+
+
+
+<div class="zm-side-section">
+<div class="zm-side-section-inner">
+<div class="well login-reg-box">
+<span>知乎是一个真实的问答社区，在这里分享知识、经验和见解，发现更大的世界。<br>
+<a id="js-reg-with-mail-in-top" href="#">使用手机或邮箱注册</a>
+<!-- <span>·</span><a id="js-reg-with-qq-in-top" href="#">使用 QQ 登录</a> -->
+</span>
+<div class="clearfix">
+<a id="js-reg-with-wechat-in-top" href="#" class="zg-btn-green"><span class="z-ico-wechat-right-panel"></span>使用微信登录</a>
+<a id="js-reg-with-sina-in-top" href="#" class="zg-btn-red"><span class="icon-big-white-sina"></span>使用微博登录</a>
+<a id="js-reg-with-qq-in-top" href="#" class="zg-btn-blue"><span class="icon-big-white-qq"></span>使用 QQ 登录</a>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<div class="zm-side-section">
+<div class="zm-side-section-inner zg-gray-normal" id="zh-question-side-header-wrap">
+<button data-follow="q:m:button" class="follow-button zg-follow zg-btn-green" data-id="1627601">关注问题</button>
+
+175
+人关注该问题
+
+</div>
+</div>
+
+<div class="zm-side-section sidebar-author-info clearfix">
+<div class="zm-side-section-inner" id="js-sidebar-author-info">
+<h3>关于作者</h3>
+<div class="zm-profile-card zm-profile-section-item zg-clear no-hovercard">
+<div class="zg-right">
+<button data-follow="m:button" data-id="2ba6c271fe1e8cc380fefc2a8b833ab3" class="zg-btn zg-btn-follow zm-rich-follow-btn small nth-0">关注他</button>
+</div>
+<a title="扣小米"
+data-tip="p$t$koukou0113"
+class="zm-item-link-avatar"
+href="/people/koukou0113">
+<img src="https://pic3.zhimg.com/f3efac740aefd2d4b0ff2372860c74ae_m.jpg" class="zm-item-img-avatar">
+</a>
+<div class="zm-list-content-medium">
+<h2 class="zm-list-content-title"><a data-tip="p$t$koukou0113" href="https://www.zhihu.com/people/koukou0113" class="zg-link" title="扣小米">扣小米</a></h2>
+
+<div class="zg-big-gray">经济学博士生，在德国</div>
+<div class="details zg-gray">
+<a target="_blank" href="/people/koukou0113/followers" class="zg-link-gray-normal">8302 关注者</a>
+/
+<a target="_blank" href="/people/koukou0113/asks" class="zg-link-gray-normal">0 提问</a>
+/
+<a target="_blank" href="/people/koukou0113/answers" class="zg-link-gray-normal">140 回答</a>
+/
+<a target="_blank" href="/people/koukou0113" class="zg-link-gray-normal">21744 赞同</a>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+<div class="shameimaru-placeholder" data-loc="answer_up" data-params='{&quot;question_token&quot;: 23615456}'></div>
+
+<div class="zm-side-section">
+<div class="zm-side-section-inner">
+<h3>被收藏 <a href="/question/23615456/answer/84924173/collections" data-za-c="collect" data-za-a="click_answer_collected_count" data-za-l="sidebar_answer_collected_count">4</a> 次</h3>
+<div id="zh-fav-list-side-related">
+
+<div class="zm-item" id="mi-1444221361">
+<h2 class="zm-item-title ">
+<a href="/collection/74359244">专业学习</a>
+</h2>
+<div class="zm-item-meta">
+
+<a href="/people/chen-mo-wei-cheng" data-tip="p$t$chen-mo-wei-cheng" class="zg-link-litblue"> 陈陌唯橙 </a> 创建
+
+
+<span style="color: #dddddd;">&nbsp;|&nbsp;</span>
+<a class="zg-link-gray" href="/collection/74359244/followers" data-za-c="collect" data-za-a="visit_answer_collections" data-za-l="sidebar_answer_collection_followed_count">0 人关注</a>
+
+</div>
+</div>
+
+<div class="zm-item" id="mi-1453871636">
+<h2 class="zm-item-title ">
+<a href="/collection/85983127">数据学习</a>
+</h2>
+<div class="zm-item-meta">
+
+<a href="/people/Cavendish1989" data-tip="p$t$Cavendish1989" class="zg-link-litblue"> 哒哒 </a> 创建
+
+
+<span style="color: #dddddd;">&nbsp;|&nbsp;</span>
+<a class="zg-link-gray" href="/collection/85983127/followers" data-za-c="collect" data-za-a="visit_answer_collections" data-za-l="sidebar_answer_collection_followed_count">0 人关注</a>
+
+</div>
+</div>
+
+<div class="zm-item" id="mi-1450881804">
+<h2 class="zm-item-title ">
+<a href="/collection/82253850">学术</a>
+</h2>
+<div class="zm-item-meta">
+
+<a href="/people/chen-tu-di-tu" data-tip="p$t$chen-tu-di-tu" class="zg-link-litblue"> 迷糊的尘土 </a> 创建
+
+
+<span style="color: #dddddd;">&nbsp;|&nbsp;</span>
+<a class="zg-link-gray" href="/collection/82253850/followers" data-za-c="collect" data-za-a="visit_answer_collections" data-za-l="sidebar_answer_collection_followed_count">0 人关注</a>
+
+</div>
+</div>
+
+<div class="zm-item" id="mi-1453004020">
+<h2 class="zm-item-title ">
+<a href="/collection/84821335">论文</a>
+</h2>
+<div class="zm-item-meta">
+
+<a href="/people/zhang-qiang-12-34" data-tip="p$t$zhang-qiang-12-34" class="zg-link-litblue"> 怦然心动 </a> 创建
+
+
+<span style="color: #dddddd;">&nbsp;|&nbsp;</span>
+<a class="zg-link-gray" href="/collection/84821335/followers" data-za-c="collect" data-za-a="visit_answer_collections" data-za-l="sidebar_answer_collection_followed_count">0 人关注</a>
+
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class="zm-side-section">
+<div class="zm-side-section-inner">
+<div id="zh-question-related-questions" class="zh-question-related-questions clearfix">
+
+<a class="zg-right next">换一换</a>
+
+<h3>相关问题</h3>
+<ul itemprop="relatedQuestion" itemscope itemtype="http://schema.org/ItemList">
+
+<li itemprop="itemListElement" itemscope itemtype="http://schema.org/Question"><a class="question_link" href="/question/31364379">卡方检验用 stata 如何实现？</a> <span class="num">2 个回答</span><meta itemprop="followerCount" content="33" /></li>
+
+<li itemprop="itemListElement" itemscope itemtype="http://schema.org/Question"><a class="question_link" href="/question/21654166">该如何学习 R 语言？</a> <span class="num">33 个回答</span><meta itemprop="followerCount" content="4805" /></li>
+
+<li itemprop="itemListElement" itemscope itemtype="http://schema.org/Question"><a class="question_link" href="/question/22619361">学习经济学需要熟悉哪些编程语言？</a> <span class="num">26 个回答</span><meta itemprop="followerCount" content="2256" /></li>
+
+<li itemprop="itemListElement" itemscope itemtype="http://schema.org/Question"><a class="question_link" href="/question/24622808">统计学和计量经济学有什么区别？</a> <span class="num">25 个回答</span><meta itemprop="followerCount" content="1309" /></li>
+
+<li itemprop="itemListElement" itemscope itemtype="http://schema.org/Question"><a class="question_link" href="/question/29954718">面板数据可以用非线性模型吗？</a> <span class="num">3 个回答</span><meta itemprop="followerCount" content="57" /></li>
+
+<li hidden itemprop="itemListElement" itemscope itemtype="http://schema.org/Question"><a class="question_link" href="/question/23516912">计量经济学最好的教材是什么？</a> <span class="num">25 个回答</span><meta itemprop="followerCount" content="937" /></li>
+
+<li hidden itemprop="itemListElement" itemscope itemtype="http://schema.org/Question"><a class="question_link" href="/question/21030722">学习 R 语言对金融分析人士有何意义？</a> <span class="num">9 个回答</span><meta itemprop="followerCount" content="956" /></li>
+
+<li hidden itemprop="itemListElement" itemscope itemtype="http://schema.org/Question"><a class="question_link" href="/question/26442107">如何获取微观数据？</a> <span class="num">10 个回答</span><meta itemprop="followerCount" content="832" /></li>
+
+<li hidden itemprop="itemListElement" itemscope itemtype="http://schema.org/Question"><a class="question_link" href="/question/30285546">参加 AEA Annual Meeting  (美国经济学会年会) 是怎样的感受？</a> <span class="num">5 个回答</span><meta itemprop="followerCount" content="272" /></li>
+
+</ul>
+</div>
+</div>
+</div>
+<div class="zm-side-section zh-answer-status">
+<div class="zm-side-section-inner">
+<h3>回答状态</h3>
+<p>
+
+发布于
+
+<span class="time">2016-02-05</span>
+</p>
+<p>
+所属问题被浏览 <strong>10540</strong> 次
+</p>
+<p class="copyright">
+
+<a href="/terms#sec-licence"><i class="icon icon-copyable"></i>作者保留所有权利</a>
+
+</p>
+</div>
+</div>
+<div class="shameimaru-placeholder" data-loc="answer_down" data-params='{&quot;question_token&quot;: 23615456}'></div>
+
+</div>
+
+
+</div>
+
+
+<div id="zh-footer" class="zh-footer">
+<div class="content zg-wrap clearfix">
+<ul>
+
+<li><a href="https://liukanshan.zhihu.com" target="_blank">刘看山</a></li>
+
+<li><a href="/app" target="_blank">移动应用</a></li>
+<li><a href="/careers">加入知乎</a></li>
+<li><a href="/terms" target="_blank">知乎协议</a></li>
+<li><a href="mailto:bd@zhihu.com">商务合作</a></li>
+
+</ul>
+
+<span class="copy">&copy; 2016 知乎</span>
+
+</div>
+</div>
+
+<script type="text/json" class="json-inline" data-name="guiders2">{}</script>
+<script type="text/json" class="json-inline" data-name="current_user">["","","","-1","",0,0]</script>
+<script type="text/json" class="json-inline" data-name="user_status">[null,null]</script>
+<script type="text/json" class="json-inline" data-name="env">["zhihu.com","comet.zhihu.com",false,null]</script>
+<script type="text/json" class="json-inline" data-name="permissions">[]</script>
+
+
+<script type="text/json" class="json-inline" data-name="ga_vars">{"user_created":0,"now":1455840066000,"abtest_mask":"------------------------------","user_attr":[0,0,0,"-","-"],"user_hash":0}</script>
+
+<script type="text/json" class="json-inline" data-name="ra-urls">{"CommentApp":"https:\/\/static.zhihu.com\/static\/revved\/-\/apps\/CommentApp.fb23fa39.js"}</script>
+
+<script type="text/json" class="json-inline" data-name="current_question">{"status":"normal","isLocked":0,"detailEditReasonRequired":false,"editPermission":false,"isAnon":0,"qid":1627601,"urlToken":23615456,"askAboutMember":0}</script>
+<script type="text/json" class="json-inline" data-name="current_question_bio">{"selected_bio":null,"type":null,"value":""}</script>
+<script type="text/json" class="json-inline" data-name="current_answer">{"urlToken":84924173}</script>
+<script type="text/json" class="json-inline" data-name="draft">[]</script>
+
+<script src="https://static.zhihu.com/static/revved/-/js/vendor.ff76fbae.js"></script>
+<script src="https://static.zhihu.com/static/revved/-/js/closure/common.7a263ff5.js"></script>
+
+
+<script src="https://static.zhihu.com/static/revved/-/js/closure/richtexteditor.4a7a6520.js" async></script>
+<script src="https://static.zhihu.com/static/revved/-/js/closure/page-main.8ff6a179.js"></script>
+<meta name="entry" content="ZH.entrySA" data-module-id="page-main">
+
+<script type="text/zscript" znonce="fd58c4ab46574213a561c29c943115d2"></script>
+
+<input type="hidden" name="_xsrf" value="f99ee4db0e982eb8c08c1c34db9b99ee"/>
+</body>
+</html>

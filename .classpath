@@ -16,5 +16,22 @@
 	<classpathentry kind="src" path="recursion"/>
 	<classpathentry kind="src" path="Crawlers"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/opt/httpcomponents-client-4.5.1/lib/commons-codec-1.9.jar"/>
+	<classpathentry kind="lib" path="/opt/httpcomponents-client-4.5.1/lib/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="/opt/httpcomponents-client-4.5.1/lib/fluent-hc-4.5.1.jar"/>
+	<classpathentry kind="lib" path="/opt/httpcomponents-client-4.5.1/lib/httpclient-4.5.1.jar"/>
+	<classpathentry kind="lib" path="/opt/httpcomponents-client-4.5.1/lib/httpclient-cache-4.5.1.jar"/>
+	<classpathentry kind="lib" path="/opt/httpcomponents-client-4.5.1/lib/httpclient-win-4.5.1.jar"/>
+	<classpathentry kind="lib" path="/opt/httpcomponents-client-4.5.1/lib/httpcore-4.4.3.jar"/>
+	<classpathentry kind="lib" path="/opt/httpcomponents-client-4.5.1/lib/httpmime-4.5.1.jar"/>
+	<classpathentry kind="lib" path="/opt/httpcomponents-client-4.5.1/lib/jna-4.1.0.jar"/>
+	<classpathentry kind="lib" path="/opt/httpcomponents-client-4.5.1/lib/jna-platform-4.1.0.jar"/>
+	<classpathentry kind="lib" path="/opt/commons-httpclient-3.1.jar"/>
+	<classpathentry kind="lib" path="/opt/filterbuilder.jar"/>
+	<classpathentry kind="lib" path="/opt/htmllexer.jar"/>
+	<classpathentry kind="lib" path="/opt/htmlparser.jar"/>
+	<classpathentry kind="lib" path="/opt/htmlparser-1.6.jar"/>
+	<classpathentry kind="lib" path="/opt/sitecapturer.jar"/>
+	<classpathentry kind="lib" path="/opt/thumbelina.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
