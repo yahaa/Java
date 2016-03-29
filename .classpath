@@ -16,6 +16,7 @@
 	<classpathentry kind="src" path="recursion"/>
 	<classpathentry kind="src" path="Crawlers"/>
 	<classpathentry kind="src" path="Threads"/>
+	<classpathentry kind="src" path="Swing"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="/opt/httpcomponents-client-4.5.1/lib/commons-codec-1.9.jar"/>
 	<classpathentry kind="lib" path="/opt/httpcomponents-client-4.5.1/lib/commons-logging-1.2.jar"/>
