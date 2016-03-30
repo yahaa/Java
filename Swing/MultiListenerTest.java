@@ -1,21 +1,29 @@
 import java.awt.*;
 import java.awt.event.*;
+import javax.swing.*;
 public class MultiListenerTest implements MouseMotionListener,MouseListener{
-	private Frame f=new Frame("多重监听器");
+	private JFrame f=new JFrame("多重监听器");
 	private TextField tf=new TextField(30);
 	public MultiListenerTest(){
 		Label l=new Label("请按下鼠标");
 		f.add(l,"North");
-		f.add(tf,"Soith");
+		f.add(tf,"South");
 		f.setBackground(new Color(180,225,225));
 		f.addMouseMotionListener(this);
 		f.addMouseListener(this);
 		f.setSize(300, 200);
 		f.setVisible(true);
+		
 	}
 	
 	public static void main(String []args){
-		MultiListenerTest t=new MultiListenerTest();
+		try{
+			MultiListenerTest t=new MultiListenerTest();
+		}
+		catch (Exception ex){
+			System.out.println(ex);
+		}
+		
 	}
 	
 	public void mouseDragged(MouseEvent e){
