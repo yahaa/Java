@@ -13,7 +13,7 @@ public class HDUOJ1023_ {
         BigInteger maxn=new BigInteger("101");
         int j=2;
         while(j<101){
-            a[j]=a[j-1].multiply(t4.multiply(i).subtract(t2)).divide(i.add(t1));
+            a[j]=a[j-1].multiply(t4.multiply(i).subtract(t2)).divide(i.add(t1));			
             i=i.add(t1);
             j++;
         }
