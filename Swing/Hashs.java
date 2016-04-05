@@ -123,6 +123,7 @@ public class Hashs extends JApplet {
 				ans+=DigestUtils.md5Hex(total[i]);
 				ans+="\n";
 			}
+			ans=ans.replace("null", "");
 			return ans;
 		}
 	}
