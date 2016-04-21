@@ -17,6 +17,8 @@
 	<classpathentry kind="src" path="Crawlers"/>
 	<classpathentry kind="src" path="Threads"/>
 	<classpathentry kind="src" path="Swing"/>
+	<classpathentry kind="src" path="JavaBeans"/>
+	<classpathentry kind="src" path="wuziqi"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="/opt/thumbelina.jar"/>
 	<classpathentry kind="lib" path="/opt/sitecapturer.jar"/>
