@@ -60,7 +60,7 @@ public class DownTool {
 		   byte[] responseBody = getMethod.getResponseBody();// 读取为字节数组
 		   // 根据网页 url 生成保存时的文件名
 		   System.out.println("正在下载 "+SpiderQueue.getVistedURLCounts()+" "+url);
-		   filePath ="//home//yahaa//Repository//Java//temp//"+ getFileNameByURL(url,getMethod.getResponseHeader("Content-Type").getValue());
+		   filePath ="//home//yahaa//Repository//temp//"+ getFileNameByURL(url,getMethod.getResponseHeader("Content-Type").getValue());
 		   saveToLocal(responseBody, filePath);
 		   SaveAllToLocal.getAll(filePath);
 		  } 
