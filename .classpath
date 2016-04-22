@@ -17,7 +17,10 @@
 	<classpathentry kind="src" path="Crawlers"/>
 	<classpathentry kind="src" path="Threads"/>
 	<classpathentry kind="src" path="Swing"/>
+	<classpathentry kind="src" path="JavaBeans"/>
+	<classpathentry kind="src" path="wuziqi"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+<<<<<<< HEAD
 	<classpathentry kind="lib" path="lib/commons-codec-1.5-javadoc.jar"/>
 	<classpathentry kind="lib" path="lib/commons-codec-1.5-sources.jar"/>
 	<classpathentry kind="lib" path="lib/commons-codec-1.5.jar"/>
@@ -33,5 +36,17 @@
 	<classpathentry kind="lib" path="/home/yahaa/BAO/httpcomponents-client-4.5.2/lib/jna-platform-4.1.0.jar"/>
 	<classpathentry kind="lib" path="/home/yahaa/BAO/commons-httpclient-3.1.jar"/>
 	<classpathentry kind="lib" path="/home/yahaa/BAO/htmlparser-1.6p.jar"/>
+=======
+	<classpathentry kind="lib" path="/opt/thumbelina.jar"/>
+	<classpathentry kind="lib" path="/opt/sitecapturer.jar"/>
+	<classpathentry kind="lib" path="/opt/htmlparser-1.6.jar"/>
+	<classpathentry kind="lib" path="/opt/htmlparser.jar"/>
+	<classpathentry kind="lib" path="/opt/htmllexer.jar"/>
+	<classpathentry kind="lib" path="/opt/filterbuilder.jar"/>
+	<classpathentry kind="lib" path="/opt/commons-httpclient-3.1.jar"/>
+	<classpathentry kind="lib" path="/home/yahaa/BAO/MD5_HASH/commons-codec-1.5-sources.jar"/>
+	<classpathentry kind="lib" path="/home/yahaa/BAO/MD5_HASH/commons-codec-1.5-javadoc.jar"/>
+	<classpathentry kind="lib" path="/home/yahaa/BAO/MD5_HASH/commons-codec-1.5.jar"/>
+>>>>>>> d1fcc3fd94d7cc980bacc72d6210d30bd842a9a9
 	<classpathentry kind="output" path="bin"/>
 </classpath>
