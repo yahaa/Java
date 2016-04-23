@@ -21,5 +21,12 @@
 	<classpathentry kind="lib" path="lib/commons-codec-1.5-javadoc.jar"/>
 	<classpathentry kind="lib" path="lib/commons-codec-1.5-sources.jar"/>
 	<classpathentry kind="lib" path="lib/commons-codec-1.5.jar"/>
+	<classpathentry kind="lib" path="/home/yahaa/javabao/httpclients/commons-httpclient-3.1.jar"/>
+	<classpathentry kind="lib" path="/home/yahaa/javabao/httpclients/filterbuilder.jar"/>
+	<classpathentry kind="lib" path="/home/yahaa/javabao/httpclients/htmllexer.jar"/>
+	<classpathentry kind="lib" path="/home/yahaa/javabao/httpclients/htmlparser.jar"/>
+	<classpathentry kind="lib" path="/home/yahaa/javabao/httpclients/htmlparser-1.6.jar"/>
+	<classpathentry kind="lib" path="/home/yahaa/javabao/httpclients/sitecapturer.jar"/>
+	<classpathentry kind="lib" path="/home/yahaa/javabao/httpclients/thumbelina.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
