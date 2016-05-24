@@ -2,7 +2,9 @@ import java.awt.Color;
 import java.awt.Dimension;  
 import java.awt.Graphics;  
 import javax.swing.JFrame;  
-import javax.swing.JPanel;  
+import javax.swing.JPanel;
+
+import org.jb2011.lnf.beautyeye.BeautyEyeLNFHelper;  
 
 
 public class WZQFrame extends JFrame{
@@ -59,6 +61,12 @@ public class WZQFrame extends JFrame{
 	}
 	
 	public static void main(String[]args){
+		 try {
+	            BeautyEyeLNFHelper.launchBeautyEyeLNF();
+	            //ÄãµÄ´úÂëUIManager.setLookAndFeel(....);
+	        } catch (Exception e) {
+	            e.printStackTrace();
+	        }
 		WZQFrame frame=new WZQFrame();
 	}
 

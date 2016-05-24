@@ -5,31 +5,40 @@ import java.awt.event.*;
 //import java.beans.PropertyChangeEvent;
 import java.awt.Dimension;
 import org.apache.commons.codec.digest.DigestUtils;
-public class Hashs extends JApplet {
+import org.jb2011.lnf.beautyeye.BeautyEyeLNFHelper;
+
+import com.sun.org.apache.xerces.internal.impl.dv.util.Base64;
+public class Hashs extends JFrame {
 	private JButton jbt=new JButton("Éú³É");
-	private JTextArea jtflimit1=new JTextArea();
-	private JTextArea jtfResult1=new JTextArea();
+	private JTextArea inArea=new JTextArea();
+	private JTextArea outArea=new JTextArea();
 	private Font x = new Font("Serif",0,25);
-	private JProgressBar pro=new JProgressBar();
 	
+	public static void main(String[]args){
+		try{
+	        org.jb2011.lnf.beautyeye.BeautyEyeLNFHelper.launchBeautyEyeLNF();
+	    } 
+		catch(Exception e){
+			e.printStackTrace();
+	    }
+		Hashs y=new Hashs();
+	}
 	
 	public Hashs(){
-		pro.setStringPainted(true);
-		pro.setValue(0);
-		pro.setMaximum(100);
 		
-		jtflimit1.setWrapStyleWord(true);
-		jtflimit1.setLineWrap(true);
+		this.setSize(500, 400);
+		inArea.setWrapStyleWord(true);
+		inArea.setLineWrap(true);
 		
 		//panel.add(scroll);
-		jtflimit1.setPreferredSize(new Dimension(8, 5));
-		jtfResult1.setPreferredSize(new Dimension(8, 5));
-		jtflimit1.setFont(x);
-		jtfResult1.setFont(x);
-		jtflimit1.setForeground(Color.red);
-		jtfResult1.setForeground(Color.green);
-		jtflimit1.setBorder(new LineBorder(Color.red));
-		jtfResult1.setBorder(new LineBorder(Color.black));
+		inArea.setPreferredSize(new Dimension(8, 5));
+		outArea.setPreferredSize(new Dimension(8, 5));
+		inArea.setFont(x);
+		outArea.setFont(x);
+		inArea.setForeground(Color.red);
+		outArea.setForeground(Color.green);
+		inArea.setBorder(new LineBorder(Color.red));
+		outArea.setBorder(new LineBorder(Color.black));
 		
 	
 		
@@ -52,13 +61,13 @@ public class Hashs extends JApplet {
 		JPanel gro1=new JPanel();
 		gro1.setLayout(new BorderLayout());
 		gro1.add(paneltishi,BorderLayout.SOUTH);
-		gro1.add(jtflimit1,BorderLayout.CENTER);
+		gro1.add(inArea,BorderLayout.CENTER);
 		
 		
 		JPanel gro2=new JPanel();
 		gro2.setLayout(new BorderLayout());
 		gro2.add(paneljieguo,BorderLayout.SOUTH);
-		gro2.add(jtfResult1,BorderLayout.CENTER);
+		gro2.add(outArea,BorderLayout.CENTER);
 		
 		
 		JPanel panel11=new JPanel();
@@ -74,18 +83,12 @@ public class Hashs extends JApplet {
 		panel1.add(panel12);
 		setLayout(new GridLayout(1,2));
 		add(panel1);
+		this.setVisible(true);
 		
 		jbt.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
-				ANS task=new ANS(jtflimit1.getText(),jtfResult1);
+				ANS task=new ANS(inArea.getText(),outArea);
 				task.execute();
-//				task.addPropertyChangeListener(new PropertyChangeListener(){
-//					public void propertyChange(PropertyChangeEvent e){
-//						if("progress".equals(e.getPropertyName())){
-//							pro.setValue((Integer)e.getNewValue());
-//						}
-//					}
-//				});
 			}
 		});
 	}
@@ -113,9 +116,6 @@ public class Hashs extends JApplet {
 			}
 		}
 		
-//		protected void process(java.util.List<Integer> list){
-//			
-//		}
 		String getANS(String ins){
 			String []total=ins.split("\\n");
 			String ans=null;
