@@ -16,5 +16,9 @@ public class ZhihuMain {
 	
 		System.out.println("end");
 	}
+	
+	public static void main(String[]args){
+		ZhihuMain.start("https://www.zhihu.com");
+	}
 
 }

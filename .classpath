@@ -17,5 +17,6 @@
 	<classpathentry kind="src" path="temp"/>
 	<classpathentry kind="src" path="Threads"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="javabao/jsoup-1.9.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
