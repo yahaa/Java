@@ -16,18 +16,6 @@
 	<classpathentry kind="src" path="Swing"/>
 	<classpathentry kind="src" path="temp"/>
 	<classpathentry kind="src" path="Threads"/>
-	<classpathentry kind="src" path="wuziqi"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="/home/yahaa/javabao/commons-codec-1.5.jar"/>
-	<classpathentry kind="lib" path="/home/yahaa/javabao/commons-codec-1.5-javadoc.jar"/>
-	<classpathentry kind="lib" path="/home/yahaa/javabao/commons-codec-1.5-sources.jar"/>
-	<classpathentry kind="lib" path="/home/yahaa/javabao/httpclients/commons-httpclient-3.1.jar"/>
-	<classpathentry kind="lib" path="/home/yahaa/javabao/httpclients/filterbuilder.jar"/>
-	<classpathentry kind="lib" path="/home/yahaa/javabao/httpclients/htmllexer.jar"/>
-	<classpathentry kind="lib" path="/home/yahaa/javabao/httpclients/htmlparser.jar"/>
-	<classpathentry kind="lib" path="/home/yahaa/javabao/httpclients/htmlparser-1.6.jar"/>
-	<classpathentry kind="lib" path="/home/yahaa/javabao/httpclients/sitecapturer.jar"/>
-	<classpathentry kind="lib" path="/home/yahaa/javabao/httpclients/thumbelina.jar"/>
-	<classpathentry kind="lib" path="/home/yahaa/javabao/beautyeye-3.7/dist/beautyeye_lnf.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
