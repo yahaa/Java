@@ -18,5 +18,8 @@
 	<classpathentry kind="src" path="Threads"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="javabao/jsoup-1.9.2.jar"/>
+	<classpathentry kind="lib" path="/home/yahaa/Repository/Java/javabao/crawler4j-3.5.jar"/>
+	<classpathentry kind="lib" path="/home/yahaa/Repository/Java/javabao/javacsv.jar"/>
+	<classpathentry kind="lib" path="/home/yahaa/Repository/Java/javabao/selenium-server-standalone-2.24.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

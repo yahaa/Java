@@ -11,14 +11,14 @@ public class ZhihuMain {
 		ArrayList<Zhihu>list=Spider.getZhihu(content);
 		
 		for(Zhihu zhihu:list){
-			FileReaderWriter.writeIntoFile(zhihu.writeString(), "question_answers.txt");
+			FileReaderWriter.writeIntoFile(zhihu.writeString(), "q_azhuihu.txt");
 		}
 	
 		System.out.println("end");
 	}
 	
 	public static void main(String[]args){
-		ZhihuMain.start("https://www.zhihu.com");
+		ZhihuMain.start("http://www.zhihu.com/explore/recommendations");
 	}
 
 }
