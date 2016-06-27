@@ -1,5 +1,6 @@
 import java.io.IOException;
 import java.util.List;
+import java.util.Map;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -10,6 +11,8 @@ import com.gargoylesoftware.htmlunit.BrowserVersion;
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.HtmlInput;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
+
+import net.sf.json.JSONObject;
 
 import java.io.*;
 public class jsoup1 {
@@ -27,10 +30,11 @@ public class jsoup1 {
 //		test6();
 //		System.out.println("end");
 //		System.out.println("77777777777777777777777777777777777");
-		//test7();
+		test7();
 		//test8();
 		//test9();
-		test10();
+		//test10();
+		//test11();
 	}
 	
 	//解析一个html 文档
@@ -117,10 +121,31 @@ public class jsoup1 {
 	
 	//从元素抽取属性，文本和HTML
 	public static void test7(){
+		FileWriter t77;
+		String geturl=null;
 		try{
 			
-			Document doc=Jsoup.connect("http://www.zhihu.com").get();
-			System.out.println(doc.title());
+			Document doc=Jsoup.connect("http://www.zhihu.com/explore/recommendations").get();
+			Elements links=doc.select("div[class=zm-item]");
+	
+			System.out.println(links.size()+" 条问题");
+			for(Element link:links){
+				//System.out.println(link.select("h2").select("a").attr("class"));
+				if(link.select("div[data-aid]").attr("data-aid")=="")continue;
+				geturl="http://www.zhihu.com/r/answers/"+link.select("div[data-aid]")
+				.attr("data-aid")+"/comments";
+				System.out.println("主题："+link.select("h2").text());
+				System.out.println("评论数："+link.select("a[href=#][class=meta-item toggle-comment "
+						+ "js-toggleCommentBox]").text());
+				System.out.println("点赞数："+link.select("span[class=count]").text());
+				System.out.println("评论者："+link.select("a[href][class=author-link]").text());
+				System.out.println("回复内容："+link.select("div[class=zh-summary summary clearfix]").text());
+				System.out.println("编号"+link.select("div[data-aid]").attr("data-aid"));
+				
+				System.out.println("\n");
+				
+			}
+			
 		}
 		catch (IOException ex){
 			ex.printStackTrace();
@@ -183,6 +208,30 @@ public class jsoup1 {
 		catch(IOException ex){
 			ex.printStackTrace();
 		}
+	}
+	
+	public static void test11(){
+		try{
+			String body = Jsoup.connect("http://www.zhihu.com/r/posts/751406/comments")
+					.ignoreContentType(true).execute().body();
+		       JSONObject jsonObject = JSONObject.fromObject(body);
+		       Map<String, Object> map = (Map<String, Object>) JSONObject.toBean(jsonObject, Map.class);
+		       System.out.println(map);
+
+		       /**
+		        * 将 Json 形式的字符串转换为 JavaBean
+		        */
+//		       jsonObject = JSONObject.fromObject(body);
+//		       System.out.println(jsonObject);
+//		       Person person = (Person) JSONObject.toBean(jsonObject, Person.class);
+//		       System.out.println(person);
+		}
+		catch(IOException ex){
+			ex.printStackTrace();
+		}
+		
+
+
 	}
 	
 }
