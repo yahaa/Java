@@ -30,11 +30,11 @@ public class jsoup1 {
 //		test6();
 //		System.out.println("end");
 //		System.out.println("77777777777777777777777777777777777");
-		test7();
+		//test7();
 		//test8();
 		//test9();
 		//test10();
-		//test11();
+		test11();
 	}
 	
 	//解析一个html 文档
@@ -130,7 +130,6 @@ public class jsoup1 {
 	
 			System.out.println(links.size()+" 条问题");
 			for(Element link:links){
-				//System.out.println(link.select("h2").select("a").attr("class"));
 				if(link.select("div[data-aid]").attr("data-aid")=="")continue;
 				geturl="http://www.zhihu.com/r/answers/"+link.select("div[data-aid]")
 				.attr("data-aid")+"/comments";
@@ -214,17 +213,8 @@ public class jsoup1 {
 		try{
 			String body = Jsoup.connect("http://www.zhihu.com/r/posts/751406/comments")
 					.ignoreContentType(true).execute().body();
-		       JSONObject jsonObject = JSONObject.fromObject(body);
-		       Map<String, Object> map = (Map<String, Object>) JSONObject.toBean(jsonObject, Map.class);
-		       System.out.println(map);
-
-		       /**
-		        * 将 Json 形式的字符串转换为 JavaBean
-		        */
-//		       jsonObject = JSONObject.fromObject(body);
-//		       System.out.println(jsonObject);
-//		       Person person = (Person) JSONObject.toBean(jsonObject, Person.class);
-//		       System.out.println(person);
+		       
+		      System.out.println(body);
 		}
 		catch(IOException ex){
 			ex.printStackTrace();
