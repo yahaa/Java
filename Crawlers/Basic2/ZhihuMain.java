@@ -13,7 +13,7 @@ public class ZhihuMain {
 		for(Zhihu zhihu:list){
 			FileReaderWriter.writeIntoFile(zhihu.writeString(), "q_azhuihu.txt");
 		}
-	
+	t 
 		System.out.println("end");
 	}
 	
