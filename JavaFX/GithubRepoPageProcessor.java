@@ -18,6 +18,9 @@ public class GithubRepoPageProcessor implements PageProcessor {
     public void process(Page page) {
         page.putField("link",page.getHtml().xpath("//title/text()"));
         page.putField("question", page.getHtml().xpath("//h2/a/text()").all());
+        page.addTargetRequest("http://www.zhihu.com/node/ExploreRecommendListV2");
+       
+       
        
         
     }

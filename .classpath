@@ -47,5 +47,9 @@
 	<classpathentry kind="lib" path="/home/yahaa/Repository/Java/javabao/webmagic/lib/webmagic-core-0.5.2.jar"/>
 	<classpathentry kind="lib" path="/home/yahaa/Repository/Java/javabao/webmagic/lib/webmagic-extension-0.5.2.jar"/>
 	<classpathentry kind="lib" path="/home/yahaa/Repository/Java/javabao/webmagic/lib/xsoup-0.2.4.jar"/>
+	<classpathentry kind="lib" path="/home/yahaa/Repository/Java/javabao/httpcomponents-core-4.4.5/lib/commons-cli-1.2.jar"/>
+	<classpathentry kind="lib" path="/home/yahaa/Repository/Java/javabao/httpcomponents-core-4.4.5/lib/httpcore-4.4.5.jar"/>
+	<classpathentry kind="lib" path="/home/yahaa/Repository/Java/javabao/httpcomponents-core-4.4.5/lib/httpcore-ab-4.4.5.jar"/>
+	<classpathentry kind="lib" path="/home/yahaa/Repository/Java/javabao/httpcomponents-core-4.4.5/lib/httpcore-nio-4.4.5.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
