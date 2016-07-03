@@ -4,6 +4,7 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
 import us.codecraft.webmagic.Page;
+import us.codecraft.webmagic.Request;
 import us.codecraft.webmagic.Site;
 import us.codecraft.webmagic.Spider;
 import us.codecraft.webmagic.pipeline.ConsolePipeline;
@@ -16,10 +17,20 @@ public class GithubRepoPageProcessor implements PageProcessor {
 
     @Override
     public void process(Page page) {
-        page.putField("link",page.getHtml().xpath("//title/text()"));
-        page.putField("question", page.getHtml().xpath("//h2/a/text()").all());
-        page.addTargetRequest("http://www.zhihu.com/node/ExploreRecommendListV2");
-       
+    	System.out.println(page.getUrl());
+//        page.putField("link",page.getHtml().xpath("//title/text()"));
+//        page.putField("question", page.getHtml().xpath("//h2/a/text()").all());
+//        page.addTargetRequest("http://www.zhihu.com/node/ExploreRecommendListV2");
+    	page.putField("author", page.getUrl().regex("https://github\\.com/(\\w+)/.*").toString());
+        page.putField("name", page.getHtml().xpath("//h1[@class='entry-title public']/strong/a/text()").toString());
+        if (page.getResultItems().get("name") == null) {
+            //skip this page
+            page.setSkip(true);
+        }
+        page.putField("readme", page.getHtml().xpath("//div[@id='readme']/tidyText()"));
+
+        // 部分三：从页面发现后续的url地址来抓取
+        page.addTargetRequests(page.getHtml().links().regex("(https://github\\.com/\\w+/\\w+)").all());
        
        
         
@@ -32,10 +43,9 @@ public class GithubRepoPageProcessor implements PageProcessor {
 
     public static void main(String[] args) {
     	//System.out.println("start");
-    	
+    	String url="http://www.zhihu.com/explore/recommendations";
     	Spider.create(new GithubRepoPageProcessor())
         //从"https://github.com/code4craft"开始抓
-        .addUrl("http://www.zhihu.com/explore/recommendations")
         .addPipeline(new ConsolePipeline())
         //开启5个线程抓取
         .thread(5)
