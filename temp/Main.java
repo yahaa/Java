@@ -1,505 +1,260 @@
-import java.math.BigInteger;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 import java.util.*;
-public class Main  {
+import java.util.Map.Entry;
+import java.math.*;
+public class Main{
 	private static Scanner input=new Scanner(System.in);
+	
 	public static void main(String[]args){
-		//test1();
-		//test2();
-		//test3();
-		//test4();
-		//test5();
-		//test6();
-		//test7();
-		//test8();
-		//test9();
-		//test10();
-		//test11();
-		//test12();
-		//test13();
-		//test14();
-		//test15();
-		//test16();
-		//test17();
-		//test18();
-		//test19();
-		//test20();
-		//test21();
-		//test22();
-		//test23();
-		//test24();
-		
-		
-		
+		//Main b=new Main();
+		//b.proL();
+		//System.out.println(GCD(625,10));
+		proE a=new proE();
+		a.solve();
 	}
 	
-	public static void ccc(TTT a){
-		a.setValue(123);
-	}
-	  
 	
-	public static void test1(){
-		int n=input.nextInt();
-		while(n-->0){
-			int h1=input.nextInt();
-			int m1=input.nextInt();
-			int s1=input.nextInt();
-			int h2=input.nextInt();
-			int m2=input.nextInt();
-			int s2=input.nextInt();
-			int s=(s1+s2)%60;
-			int m=(m1+m2+(s1+s2)/60)%60;
-			int h=h1+h2+(m1+m2+(s1+s2)/60)/60;
-			System.out.println(h+" "+m+" "+s);
-		}
+	public static int GCD(int a,int b){
+		if(b==0)return a;
+		else return GCD(b,a%b);
 	}
 	
-	public static void test2(){
-		Integer n;
+	
+	public void proL(){
+		 int x1,y1,x2,y2,x3,y3,x4,y4;
+		    while(input.hasNext()){
+		    	x2=input.nextInt();
+		    	y2=input.nextInt();
+		    	x3=input.nextInt();
+		    	y3=input.nextInt();
+		    	x4=input.nextInt();
+		    	y4=input.nextInt();
+		    	if(!(x2>0||y2>0||x3>0||y3>0||x4>0||y4>0))break;
+		        y1=x3+x4-y2;
+		        x1=y3+y4-x2;
+		        System.out.printf("Anna's won-loss record is %d-%d.\n",x1,y1);
+		    }
+	}
+	
+	
+	public void proH(){
 		while(input.hasNext()){
-			n=input.nextInt();
-			boolean f=true;
-			if(n<0)f=false;
-			System.out.printf("%11d",n);
-			System.out.println("-->"+((f)?(""):("-"))+Integer.toBinaryString(Math.abs(n)));
-		}
-	}
-	
-	
-	public static void test3(){
-		
-		double k;
-		while(input.hasNext()){
-			k=input.nextDouble();
-			double ans=0;
-			int n=0;
-			while(k-ans>=0){
-				n+=1;
-				ans+=1.0/n;
-				
-			}
-			System.out.println(n);
-		}
-	}
-	
-	public static void test4(){
-		int max=100000;
-		int []a=new int[max];
-		Arrays.fill(a, 1);
-		for(int i=2;i<max;i++){
-			if(a[i]==1){
-				for(int j=2*i;j<max;j+=i){
-					a[j]=0;
-				}
-			}
-		}
-		while(input.hasNext()){
-			int n=input.nextInt();
-			for(int i=2;i<=n;i++){
-				if(a[i]==1)System.out.println(i);
-			}
-		}
-		
-	}
-	
-	public static void test5(){
-		while(input.hasNext()){
-			String s=input.nextLine();
-			for(int i=s.length()-1;i>=0;i--){
-				System.out.print(s.charAt(i));
-				
-			}
-			System.out.println();
-		}
-	}
-	
-	public static void test6(){
-		while(input.hasNext()){
-			int n=input.nextInt();	
-			int i=0;
-			input.nextLine();
-			while(input.hasNext()){
-				String s=input.nextLine();
-				if(n-->0){
-					if(i++>0)System.out.println();
-					System.out.println(s);
-				}
-				else {
-					String []ss=s.split("\\s+");
-					for(String sss:ss){
-						if(i++>0)System.out.println();
-						System.out.println(sss);
-					}
-				}
-			}
-		}
-		
-	}
-	
-	public static void test7(){
-		TreeSet<Integer>set=new TreeSet<Integer>();
-		while(input.hasNext()){
-			set.clear();
-			int n=input.nextInt();
-			for(int i=0;i<n;i++){
-				int t=input.nextInt();
-				set.add(t);
-			}
-			Iterator<Integer>its=set.iterator();
-			System.out.println(set.size());
-			System.out.print(its.next());
-			while(its.hasNext()){
-				System.out.print(" "+its.next());
-			}
-		}
-		
-	}
-	
-	public static void test8(){
-		List<Integer>a=new ArrayList<Integer>();
-		while(input.hasNext()){
-			int n=input.nextInt();
-			a.clear();
-			for(int i=0;i<n;i++){
-				a.add(input.nextInt());
-			}
-			Collections.sort(a);
-			Iterator<Integer>it=a.iterator();
-			System.out.print(it.next());
-			while(it.hasNext()){
-				System.out.print(" "+it.next());
-			}
-			System.out.println();
-		}
-	}
-	
-	public static void test9(){
-		ArrayList<Integer>a=new ArrayList<Integer>();
-		while(input.hasNext()){
-			a.clear();
-			for(int i=0;i<10;i++){
-				a.add(input.nextInt());
-			}
-			Collections.sort(a);
-			Collections.reverse(a);
-			for(int i=0;i<a.size();i++){
-				if(i!=a.size()-1)System.out.print(a.get(i)+" ");
-				else System.out.println(a.get(i));
-			}
+			double a=input.nextDouble();
+			double b=input.nextDouble();
+			double c=input.nextDouble();
+			double x1=(-b+Math.sqrt(b*b-4*a*c))/(2*a);
+			double x2=(-b-Math.sqrt(b*b-4*a*c))/(2*a);
+			
+			System.out.printf("%.2f %.2f\n",x1,x2);
 			
 		}
 	}
 	
-	public static void test10(){
-		while(input.hasNext()){
-			String s=input.next();
-			s=s.replaceAll("[^A-Za-z]", "");
-			System.out.println(s.length());
-		}
+	
+	public void proD(){
+	        final double g=9.81;
+	        while(input.hasNext()){
+	            double w,l,s,k;
+	            w=input.nextDouble();
+	            l=input.nextDouble();
+	            s=input.nextDouble();
+	            k=input.nextDouble();
+	            double x2=(2*w*g+Math.sqrt(4*w*w*g*g+8*k*w*g*l))/(2*k);
+	            if(x2+l>=s){
+	                 
+	                if(l>=s)System.out.println("D");
+	                else{
+	                    double v=(2*g*s-(k/w)*(s-l)*(s-l));
+	                    if(v>100)System.out.println("D");
+	                    else System.out.println("Y");
+	                }
+	                 
+	            }
+	            else System.out.println("S");
+	        }
+	        
 	}
 	
-	public static void test11(){
-		int max=100;
-		BigInteger []a=new BigInteger[max];
-		a[0]=BigInteger.valueOf(1);
-		a[1]=BigInteger.valueOf(1);
-		for(int i=2;i<100;i++){
-			a[i]=a[i-1].add(a[i-2]);
-		}
-		while(input.hasNext()){
-			int n=input.nextInt();
-			for(int i=0;i<n;i++){
-				if(i!=n-1)System.out.print(a[i]+" ");
-				else System.out.println(a[i]);
+	
+	public void proC(){
+		
+		TreeMap<Integer,Integer>a1=new TreeMap<Integer,Integer>(new Comparator<Integer>(){
+				public int compare(Integer a,Integer b){
+					return b-a;
+				}
+		});
+		TreeMap<Integer,Integer>a2=new TreeMap<Integer,Integer>(new Comparator<Integer>(){
+				public int compare(Integer a,Integer b){
+					return b-a;
+				}
+		});
+		TreeMap<Integer,Integer>a3=new TreeMap<Integer,Integer>(new Comparator<Integer>(){
+			public int compare(Integer a,Integer b){
+				return b-a;
 			}
-		}
-	}
-	
-	public static void test12(){
-		ArrayList<Integer>a=new ArrayList<Integer>();
-		int t;
-		while((t=input.nextInt())!=-1){
-			a.add(t);
-		}
-		System.out.println(Collections.max(a));
-	}
-	
-	public static void test13(){
-		while(input.hasNext()){
-			long ans=0;
-			int n=input.nextInt();
-			for(int i=1;i<=n;i++)ans+=fan(i);
-			System.out.println(ans);
-		}
-	}
-	
-	public static long fan(int n){	
-		long ans=1;
-		for(int i=1;i<=n;i++){
-			ans*=i;
-		}
-		return ans;
-	}
-	
-	
-	public static void test14(){
+		});
+		int to=1;
+		int t=1;
 		while(input.hasNext()){
 			int a=input.nextInt();
-			int n=input.nextInt();
-			long ans=0;
-			for(int i=1;i<=n;i++){
-				ans+=jaa(a,i);
-			}
-			System.out.println(ans);
-		}
-	}
-	
-	public static long jaa(int a,int n){
-		long ans=0;
-		for(int i=1;i<=n;i++){
-			ans=ans*10+a;
-		}
-		return ans;
-	}
-	
-	
-	
-	public static void test15(){
-		double x1,y1,x2,y2;
-		while(input.hasNext()){
-			x1=input.nextDouble();
-			y1=input.nextDouble();
-			x2=input.nextDouble();
-			y2=input.nextDouble();
-			double ans=Math.sqrt(Math.pow(Math.abs(x2-x1),2)+Math.pow(Math.abs(y2-y1), 2));
-			System.out.printf("%.2f\n", ans);
-		}
-	}
-	
-	public static void test16(){
-		double r;
-		while(input.hasNext()){
-			r=input.nextDouble();
-			System.out.printf("%.3f\n",4.0/3*Math.pow(r, 3)*Math.PI);
-		}
-	}
-	
-	public static void test17(){
-		String s;
-		while(input.hasNext()){
-			s=input.next();
-			boolean ans=true;
-			for(int i=0,j=s.length()-1;i<j;i++,j--){
-				if(s.charAt(i)!=s.charAt(j)){
-					ans=false;
-					break;
+			int x=input.nextInt();
+			if(x!=-1){
+				if(a3.containsKey(x)){
+					int value=a3.get(x).intValue();
+					value+=a;
+					if(value==0)a3.remove(x);
+					else a3.put(x, value);
 				}
-			}
-			if(ans)System.out.println("Y");
-			else System.out.println("N");
-		}
-	}
-	
-	public static void test18(){
-		int n=input.nextInt();
-		
-		while(n-->0){
-			Integer s=input.nextInt();
-			int ans=changes(s);
-			System.out.println(ans);
-		}
-	}
-	
-	public static int changes(Integer s){
-		int step=1;
-		while(step<=8){
-			s=s+revInt(s);
-			if(isabba(s))break;
-			step++;
-		}
-		if(step<=8)return step;
-		else return 0;
-	}
-	
-	public static boolean isabba(Integer n){
-		String s=n.toString();
-		boolean ans=true;
-		for(int i=0,j=s.length()-1;i<j;i++,j--){
-			if(s.charAt(i)!=s.charAt(j)){
-				ans=false;
-				break;
-			}
-		}
-		return ans;
-	}
-	
-	public static Integer revInt(Integer s){
-		String ss=s.toString();
-		int ans=0;
-		for(int i=ss.length()-1;i>=0;i--){
-			ans=ans*10+(int)(ss.charAt(i)-'0');
-		}
-		return ans;
-	}
-	
-	public static void test19(){
-		String s;
-		while(input.hasNext()){
-			s=input.next();
-			System.out.println(s.toUpperCase());
-		}
-	}
-	
-	
-	
-	public static void test20(){
-		TreeMap<Integer,Integer>a=new TreeMap<Integer,Integer>();
-		while(input.hasNext()){
-			a.clear();
-			int n=input.nextInt();
-			input.nextLine();
-			String s=input.next();
-			for(int i=0;i<s.length();i++){
-				if(a.get((int)s.charAt(i))!=null){
-					int value=a.get((int)s.charAt(i)).intValue();
-					value++;
-					a.put((int) s.charAt(i), value);
-				}
-				else {
-					a.put((int)s.charAt(i),1);
-				}
-			}
-			Set<Map.Entry<Integer,Integer>>it=a.entrySet();
-			long t1=1;
-			for(Map.Entry<Integer, Integer>xx:it){
-				t1*=fan(xx.getValue());
-			}
-			System.out.println(fan(n)/t1);
-		
-		}
-	}
-	
-	public static void test21(){
-		while(input.hasNext()){
-			long ans1=0;
-			long ans2=0;
-			int n=input.nextInt();
-			int m=input.nextInt();
-			for(int i=n;i<=m;i++){
-				if(i%2==0){
-					ans1+=i*i;
-				}
-				else ans2+=i*i*i;
-			}
-			System.out.println(ans1+" "+ans2);
-		}
-	}
-	
-	public static void test22(){
-		while(input.hasNext()){
-			int n=input.nextInt();
-			int s=input.nextInt();
-			int []a=new int[n];
-			for(int i=0;i<n;i++){
-				a[i]=input.nextInt();
-			}
-			Arrays.sort(a);
-			//System.out.println(Arrays.binarySearch(a, 5));
-			boolean ans=false;
-			for(int i=0;i<n;i++){
-				for(int j=0;j<n;j++){
-					if(i!=j){
-						int t=s-a[i]-a[j];
-						int tindex=Arrays.binarySearch(a, t);
-						if(tindex>0&&tindex!=i&&tindex!=j){
-							ans=true;
-							break;
-						}
-					}
-				}
-				if(ans)break;
-			}
-			if(ans)System.out.println("YES");
-			else System.out.println("NO");
-		}
-	}
-	
-	public static void test23(){
-		int n=input.nextInt();
-		int []a;
-		while(n-->0){
-			int t=input.nextInt();
-			a=new int[t];
-			for(int i=0;i<t;i++){
-				a[i]=input.nextInt();
-			}
-			boolean ans=false;
-			for(int j=0;j<t;j++){
-				for(int i=t-1;i>=1;i--){
-					if(a[i]>a[i-1]){
-						if(a[i]-a[i-1]<2)continue;
-						else {
-							a[i-1]++;
-							a[i]--;
-							int tt=a[i];
-							a[i]=a[i-1];
-							a[i-1]=tt;
-							
-						}
-					}
-				}
-				if(isOrderr(a)){
-					ans=true;
-					break;
-				}
+				else a3.put(x, a);
 			}
 			
-			if(ans){
-				for(int i=0;i<t;i++){
-					if(i!=t-1)System.out.print(a[i]+" ");
-					else System.out.println(a[i]);
-				}
+			if(to==1){
+				if(x==-1)to=2;
+				else a1.put(x, a);
 			}
-			else System.out.println("Impossible");
+			else if(to==2) {
+				if(x==-1){
+					System.out.println("Case "+t+++":");
+					Set<Entry<Integer, Integer>>toSet1=a1.entrySet();
+					for(Entry<Integer,Integer>e1:toSet1){
+						if(e1.getValue()!=0)System.out.print("("+e1.getValue()+","+e1.getKey()+")");
+					}
+					System.out.println();
+					
+					Set<Entry<Integer, Integer>>toSet2=a2.entrySet();
+					for(Entry<Integer,Integer>e2:toSet2){
+						if(e2.getValue()!=0)System.out.print("("+e2.getValue()+","+e2.getKey()+")");
+					}
+					System.out.println();
+					if(a3.isEmpty())System.out.println(0);
+	
+					else {
+						Set<Entry<Integer, Integer>>toSet3=a3.entrySet();
+						for(Entry<Integer,Integer>e3:toSet3){
+							if(e3.getValue()!=0)System.out.print("("+e3.getValue()+","+e3.getKey()+")");
+						}
+						System.out.println();
+					}
+					to=1;
+					a1.clear();
+					a2.clear();
+					a3.clear();
+				}
+				else a2.put(x, a);
+			}
+		}
+		
+		
+	}
+	
+	
+	
+	
+	public void proB(){
+		BigInteger a,b;
+		while(input.hasNext()){
+			a=input.nextBigInteger();
+			b=input.nextBigInteger();
+			System.out.println(a+"*"+b+"="+a.multiply(b));
 		}
 		
 	}
 	
-	public static boolean isOrderr(int []a){
-		for(int i=0;i<a.length-1;i++){
-			if(a[i]<a[i+1])return false;
-		}
-		return true;
-	}
 	
-	public static void test24(){
-		while(input.hasNext()){
-			String a=input.next();
-			int n;
-			for(n=1;n<10000;n++){
-				int t=(int)(Math.log((double)n)*(double)n/Math.log(10.0));
-				if(t==a.length()-1)break;
-			}
-			Long ans=Long.valueOf(1);
-			for(int i=1;i<=n;i++){
-				ans*=n;
-				ans%=10000000;
-			}
-			String end=ans.toString();
-			if(a.subSequence(a.length()-end.length(), a.length()).equals(end))System.out.println(n);
-			else System.out.println("NO");
-			HashSet<Integer>aa=new HashSet<Integer>();
-			LinkedList<Integer>aaa=new LinkedList<Integer>();
-			PriorityQueue<Integer>aaaa=new PriorityQueue<Integer>();
-			Vector<Integer>aaaaa=new Vector<Integer>();	
-			Stack<Integer>ab=new Stack<Integer>();
-			Character ta=new Character('j');
-		}
-	}
+	
+	public static boolean nextPermutation(int[] num){  
+        if(num.length <= 1)return false; 
+        for(int i = num.length - 2; i >= 0; i--){  
+            if(num[i] < num[i+1]){  
+                int j;  
+                for(j = num.length - 1; j >= i; j--)if(num[i] < num[j])break;  
+                num[i] = num[i] ^ num[j];  
+                num[j] = num[i] ^ num[j];  
+                num[i] = num[i] ^ num[j];    
+                Arrays.sort(num, i+1, num.length);  
+                return true;
+            }  
+        }  
+        for(int i = 0; i < num.length / 2; i++){  
+            int tmp = num[i];  
+            num[i] = num[num.length - i - 1];  
+            num[num.length - i - 1] = tmp;  
+        }  
+        return false;
+    }
 	
 	
 
 }
 
 
+class proE{
+	private final int max=10000;
+	private int[]kind=new int[max];
+	private int[]num=new int[max];
+	private final long mod=1000000000+7;
+	private Scanner input=new Scanner(System.in);
+	private int count=0;
+	
+	public void solve(){
+		int t=input.nextInt();
+		while(t-->0){
+			init();
+			int n=input.nextInt();
+			int m=input.nextInt();
+			gcdAll(n);
+			long ans=getAns(m);
+			System.out.println(ans);
+		}
+	}
+	
+	private void gcdAll(int n){
+		for(int i=1;i<=(int)Math.sqrt(n);i++){
+			if(n%i==0){
+				kind[count++]=i;
+				kind[count++]=n/i;
+				if(n/i==i)count--;
+			}
+		}
+		
+		Arrays.sort(kind, 0, count);
+		for(int i=count-1;i>=0;i--){
+			num[i]=n/kind[i];
+			for(int j=count-1;j>i;j--){
+				if(kind[j]%kind[i]==0){
+					num[i]-=num[j];
+				}
+			}
+		}
+		
+	}
+	
+	
+	private long getAns(int m){
+		long ans=0;
+		for(int i=0;i<count;i++){
+			ans=(ans+num[i]*modexp(m,kind[i]))%mod;
+		}
+		ans=ans%mod;
+		return ans;
+	}
+	
+	private void init(){
+		Arrays.fill(kind, 0);
+		Arrays.fill(num,0);
+		count=0;
+	}
+	
+	public long modexp(int a,int b){   
+	    long ret=1;   
+	    long tmp=a;   
+	    while(b>0){   
+	       if((b&1)>0){
+	        ret=(ret*tmp)%mod;
+	      }
+	       tmp=(tmp*tmp)%mod;
+	       b>>=1;
+	    }
+	    ret=ret%mod;
+	    return ret;   
+	}
+}
