@@ -5,11 +5,17 @@ public class Main{
 	private static Scanner input=new Scanner(System.in);
 	
 	public static void main(String[]args){
+		
+		
 		//Main b=new Main();
 		//b.proL();
 		//System.out.println(GCD(625,10));
-		proE a=new proE();
-		a.solve();
+//		proE a=new proE();
+//		Thread thread=new Thread(a);
+//		thread.run();
+		
+		ProG t=new ProG();
+		t.solve();
 	}
 	
 	
@@ -187,13 +193,16 @@ public class Main{
 }
 
 
-class proE{
+class proE implements Runnable{
 	private final int max=10000;
 	private int[]kind=new int[max];
 	private int[]num=new int[max];
 	private final long mod=1000000000+7;
 	private Scanner input=new Scanner(System.in);
 	private int count=0;
+	public void run(){
+		this.solve();
+	}
 	
 	public void solve(){
 		int t=input.nextInt();
@@ -257,4 +266,138 @@ class proE{
 	    ret=ret%mod;
 	    return ret;   
 	}
+	
+	
 }
+
+
+class ProG{
+	private Matrix m=new Matrix(5,5);
+	private Matrix l0=new Matrix(1,5);
+	private Scanner input=new Scanner(System.in);
+	private long n;
+	private long a0,ax,ay;
+	private long b0,bx,by;
+	private final long mod=1000000007;
+
+	
+	private class Matrix{
+		public int x,y;
+		public long  [][]a;
+		
+		public Matrix(int x,int y){
+			this.x=x;
+			this.y=y;
+			a=new long[x][y];
+		}
+
+		public void init(){
+			for(int i=0;i<x;i++)Arrays.fill(a[i], 0);
+		}
+		
+		public int getX(){
+			return x;
+		}
+		
+		public int getY(){
+			return y;
+		}
+		
+		
+	}
+	
+	
+	public void solve(){
+		while(input.hasNext()){
+			n=input.nextLong();
+			inputInit();
+			if(n==0){
+				System.out.println(0);
+				continue;
+			}
+			m=modExp(m,n-1);
+			l0=mul(l0,m);
+			//l0.print();
+			System.out.println((l0.a[0][0]));
+			
+		}
+	}
+	
+	public Matrix modExp(Matrix m,long b){
+			Matrix ret=new Matrix(m.getX(),m.getY());
+			for(int i=0;i<ret.getX();i++)ret.a[i][i]=1;
+		    Matrix tmp=m;
+		    while(b>0){   
+		       if((b&1)>0){
+		        ret=mul(ret,tmp);
+		      }
+		       tmp=mul(tmp,tmp);
+		       b>>=1;
+		    }
+		    
+		    return ret;   
+	}
+	
+	
+	public Matrix mul(Matrix a,Matrix b){
+		Matrix temp=new Matrix(a.getX(),b.getY());
+		temp.init();
+		for(int i=0;i<a.getX();i++){
+			for(int j=0;j<b.getY();j++){
+				temp.a[i][j]=0;
+				for(int k=0;k<a.getY();k++){
+					long tt=(a.a[i][k]*b.a[k][j])%mod;
+					temp.a[i][j]=(temp.a[i][j]+tt)%mod;
+				}
+			}
+		}
+		return temp;
+	}
+	
+	
+	private void inputInit(){
+		a0=input.nextLong();
+		ax=input.nextLong();
+		ay=input.nextLong();
+		b0=input.nextLong();
+		bx=input.nextLong();
+		by=input.nextLong();
+		initMa();
+		initL0();
+	}
+	
+	private void initMa(){
+		m.init();
+		m.a[0][0]=1;
+		m.a[1][0]=1;
+		m.a[1][1]=(ax*bx)%mod;
+		m.a[2][1]=(ax*by)%mod;
+		m.a[3][1]=(ay*bx)%mod;
+		m.a[4][1]=(ay*by)%mod;
+		m.a[2][2]=ax%mod;
+		m.a[4][2]=ay%mod;
+		m.a[3][3]=bx%mod;
+		m.a[4][3]=by%mod;
+		m.a[4][4]=1;
+	}
+	
+	private void initL0(){
+		l0.init();
+		long a1=(a0*ax+ay)%mod;
+		long b1=(b0*bx+by)%mod;
+		long a2=(a1*ax+ay)%mod;
+		long b2=(b1*bx+by)%mod;
+		l0.a[0][0]=(a1*b1)%mod;
+		l0.a[0][1]=(a2*b2)%mod;
+		l0.a[0][2]=(a2)%mod;
+		l0.a[0][3]=(b2)%mod;
+		l0.a[0][4]=1;
+	}
+	
+}
+
+
+
+
+
+
