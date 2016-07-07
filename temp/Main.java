@@ -14,8 +14,23 @@ public class Main{
 //		Thread thread=new Thread(a);
 //		thread.run();
 		
-		ProG t=new ProG();
-		t.solve();
+//		BC1 t=new BC1();
+//		t.solve();
+
+		
+	}
+	
+	
+	public static boolean isNum(String t){
+		try{
+			Double.parseDouble(t);
+			return true;
+		}
+		catch(NumberFormatException ex){
+			throw ex;
+		}
+		
+		
 	}
 	
 	
@@ -280,33 +295,7 @@ class ProG{
 	private long b0,bx,by;
 	private final long mod=1000000007;
 
-	
-	private class Matrix{
-		public int x,y;
-		public long  [][]a;
-		
-		public Matrix(int x,int y){
-			this.x=x;
-			this.y=y;
-			a=new long[x][y];
-		}
 
-		public void init(){
-			for(int i=0;i<x;i++)Arrays.fill(a[i], 0);
-		}
-		
-		public int getX(){
-			return x;
-		}
-		
-		public int getY(){
-			return y;
-		}
-		
-		
-	}
-	
-	
 	public void solve(){
 		while(input.hasNext()){
 			n=input.nextLong();
@@ -317,7 +306,6 @@ class ProG{
 			}
 			m=modExp(m,n-1);
 			l0=mul(l0,m);
-			//l0.print();
 			System.out.println((l0.a[0][0]));
 			
 		}
@@ -338,7 +326,6 @@ class ProG{
 		    return ret;   
 	}
 	
-	
 	public Matrix mul(Matrix a,Matrix b){
 		Matrix temp=new Matrix(a.getX(),b.getY());
 		temp.init();
@@ -353,7 +340,6 @@ class ProG{
 		}
 		return temp;
 	}
-	
 	
 	private void inputInit(){
 		a0=input.nextLong();
@@ -395,6 +381,130 @@ class ProG{
 	}
 	
 }
+
+
+class Matrix{
+	public int x,y;
+	public long  [][]a;
+	
+	public Matrix(int x,int y){
+		this.x=x;
+		this.y=y;
+		a=new long[x][y];
+	}
+
+	public void init(){
+		for(int i=0;i<x;i++)Arrays.fill(a[i], 0);
+	}
+	
+	public int getX(){
+		return x;
+	}
+	
+	public int getY(){
+		return y;
+	}
+	
+}
+
+class ProM{
+	private Matrix m=new Matrix(5,5);
+	private Matrix l1=new Matrix(1,5);
+	private Scanner input=new Scanner(System.in);
+	private long n;
+	private long x,y;
+	private long mod=10007;
+	
+	public void solve(){
+		int t=input.nextInt();
+		while(t-->0){
+			n=input.nextLong();
+			x=input.nextLong();
+			y=input.nextLong();
+			initML1();
+			m=modExp(m,n-1);
+			l1=mul(l1,m);
+			System.out.println(l1.a[0][0]);
+		}
+	}
+	
+	
+	public Matrix modExp(Matrix m,long b){
+		Matrix ret=new Matrix(m.getX(),m.getY());
+		for(int i=0;i<ret.getX();i++)ret.a[i][i]=1;
+	    Matrix tmp=m;
+	    while(b>0){   
+	       if((b&1)>0){
+	        ret=mul(ret,tmp);
+	      }
+	       tmp=mul(tmp,tmp);
+	       b>>=1;
+	    }
+	    return ret;   
+	}
+
+	public Matrix mul(Matrix a,Matrix b){
+		Matrix temp=new Matrix(a.getX(),b.getY());
+		temp.init();
+		for(int i=0;i<a.getX();i++){
+			for(int j=0;j<b.getY();j++){
+				temp.a[i][j]=0;
+				for(int k=0;k<a.getY();k++){
+					long tt=(a.a[i][k]*b.a[k][j])%mod;
+					temp.a[i][j]=(temp.a[i][j]+tt)%mod;
+				}
+			}
+		}
+		return temp;
+	}
+	
+	private void initML1(){
+		m.init();
+		l1.init();
+		
+		m.a[0][0]=1;
+		m.a[1][0]=1;
+		m.a[1][1]=((x%mod)*(x%mod))%mod;
+		m.a[2][1]=((y%mod)*(y%mod)+2*(x%mod)*(x%mod)*(y%mod))%mod;
+		m.a[4][1]=(2*(x%mod)*(y%mod)*(y%mod))%mod;
+		m.a[1][2]=1;
+		m.a[2][3]=1;
+		m.a[2][4]=x%mod;
+		m.a[4][4]=y%mod;
+		l1.a[0][0]=1;
+		l1.a[0][1]=((x%mod)*(x%mod)+(y%mod)*(y%mod)+2*(x%mod)*(y%mod))%mod;
+		l1.a[0][2]=1;
+		l1.a[0][3]=1;
+		l1.a[0][4]=1;
+	}
+}
+
+class BC1{
+	private Scanner input=new Scanner(System.in);
+	
+	public void solve(){
+		BigInteger a0=BigInteger.valueOf(0);
+		int n=input.nextInt();
+		while(n-->0){
+			
+			BigInteger a1=input.nextBigInteger();
+			BigInteger a2=input.nextBigInteger();
+			BigInteger a3=input.nextBigInteger();
+			BigInteger a4=input.nextBigInteger();
+			if(a1.compareTo(a0)==0||a2.compareTo(a0)==0||a3.compareTo(a0)==0||a4.compareTo(a0)==0){
+				System.out.println("No");
+				continue;
+			}
+			BigInteger sum1=a1.add(a2).add(a3);
+			BigInteger sum2=a1.add(a2).add(a4);
+			BigInteger sum3=a1.add(a3).add(a4);
+			BigInteger sum4=a2.add(a3).add(a4);
+			if(sum1.compareTo(a4)<0||sum2.compareTo(a3)<0||sum3.compareTo(a2)<0||sum4.compareTo(a1)<0)System.out.println("No");
+			else System.out.println("Yes");
+		}
+	}
+}
+
 
 
 
