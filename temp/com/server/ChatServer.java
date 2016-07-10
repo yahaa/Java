@@ -22,6 +22,7 @@ public class ChatServer {
 		boolean started = false;
 		ServerSocket ss = null;
 		DataInputStream dis = null;
+		//开启服务器
 		try{
 			ss = new ServerSocket(8888);
 			started = true;
@@ -31,6 +32,7 @@ public class ChatServer {
 			e.printStackTrace();
 		}
 		
+		//serverSocket开始监听
 		try{
 			while(started){
 				Socket s = ss.accept();
@@ -70,59 +72,53 @@ public class ChatServer {
 				e.printStackTrace();
 			}
 		}
-   
+		
+		//写入流中
 		private void send(String str)throws Exception{
 			dos.writeUTF(str);
 		}
 		
+		//上线
 		private void login(String str) throws Exception{
 			userList.add("X"+str.substring(1));
-			String str1 = "R" + "[系统消息]:" + str.substring(1) + "上线了！";
-			System.out.println(str1.substring(1));
-			for(int i=0;i<clients.size();i++){
-				c = clients.get(i);
-				c.send(str1);
-			}
-			System.out.print("目前在线用户[ ");
-			for(int j=0;j<userList.size();j++){
-				String s = userList.get(j);
-				System.out.print(s.substring(1)+" ");
-				for(int i=0;i<clients.size();i++){
-					c = clients.get(i);
-					c.send(s);
-				}
-			}
-			System.out.println("]");
+			String str1 = "R" + "【系统消息】-----> " + str.substring(1) + " 上线了！";
+			//System.out.println(str1.substring(1));//服务器端显示
+			sendToAll(str1);
+			nowIn();
 		}
 		
+		//下线
 		private void logout(String str) throws Exception{
 			userList.remove("X"+str.substring(1));
-			String str1 = "R" + "[系统消息]:" + str.substring(1) + "下线了！";
+			String str1 = "R" + "【系统消息】-----> " + str.substring(1) + " 下线了！";
 			System.out.println(str1.substring(1));
-			for(int i=0;i<clients.size();i++){
-				c = clients.get(i);
-				c.send(str1);
-			}
-			System.out.print("目前在线用户[ ");
+			sendToAll(str1);
+			nowIn();
+					
+		}
+		
+		//服务器显示当前在线人数
+		private void nowIn()throws Exception{
+			System.out.print("目前在线用户【 ");
 			for(int j=0;j<userList.size();j++){
 				String s = userList.get(j);
 				System.out.print(s.substring(1)+" ");
-				for(int i=0;i<clients.size();i++){
-					c = clients.get(i);
-					c.send(s);
-				}
+				sendToAll(s);
 			}
-			System.out.println("]");
+			System.out.println("】");
 		}
 		
-		private void sendAll(String str)throws Exception{
+		//通知在线的所有人 messge消息
+		private void sendToAll(String messge)throws Exception{
 			for(int i=0;i<clients.size();i++){
 				c = clients.get(i);
-				c.send(str);
+				c.send(messge);
 			}
-			System.out.println(str.substring(1));
+			//System.out.println(messge.substring(1));
 		}
 		
+		
+		//下线注销自己
 		private void closeClient()throws Exception{
 			if(dis !=null) dis.close();
 			if(dos !=null) dos.close();
@@ -136,18 +132,18 @@ public class ChatServer {
 					String str = dis.readUTF();
 					if(str.charAt(0) == 'L')login(str);
 					else if(str.charAt(0) == 'S')logout(str);
-					else sendAll(str);
+					else {
+						sendToAll(str);
+						System.out.println(str);
+					
+					}
 				}
 			}
 			catch(SocketException e) {
 				clients.remove(this);
 			}
-			catch(EOFException e){
-				//e.printStackTrace();
-			}
-			catch(Exception e) {
-				//e.printStackTrace();
-			}
+			catch(EOFException e){}
+			catch(Exception e) {}
 			finally{
 				try {
 					closeClient();

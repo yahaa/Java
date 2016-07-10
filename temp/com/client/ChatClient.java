@@ -24,13 +24,15 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 public class ChatClient {
+	//注册用户参数
 	private JDialog jd = new JDialog();
 	private JPanel buttonsPanel = new JPanel();
 	private JLabel jb = new JLabel("请输入昵称：");
 	private JTextField username = new JTextField(15);
 	private JButton jok = new JButton("确定");
 	private JButton jcancl = new JButton("取消");
- 
+	
+	//聊天界面参数
 	private JFrame jf = new JFrame("");
 	private JPanel jp = new JPanel();
 	private JPanel jp2 = new JPanel();
@@ -43,7 +45,8 @@ public class ChatClient {
 	private JLabel jlabel3 = new JLabel("在线用户列表：");
 	private Box box = Box.createVerticalBox();
 	private JTextArea showMessage = new JTextArea(40,20);
- 
+	
+	//当前用户参数
 	private String workstr;
 	private String systemstr;
 	private Socket s = null;
@@ -61,6 +64,7 @@ public class ChatClient {
 		lunachLogin();
 	}
  
+	//登陆对话框
 	public void lunachLogin(){
 		jd.setTitle("输入");
 		jd.setResizable(false);
@@ -100,7 +104,9 @@ public class ChatClient {
 			}
 		});
 	}
- 
+	
+	
+	//登陆后显示界面
 	public void lunachWork(){
 		jf.setLocation(400, 300);
 		jf.setSize(600,300);
@@ -152,7 +158,7 @@ public class ChatClient {
 			public void actionPerformed(ActionEvent e) {
 				if(sendMessage.getText().equals("")){}
 				else{
-					String str = "W" + username.getText().trim()+":"+sendMessage.getText().trim();
+					String str = "W" + username.getText().trim()+" 说 -----> "+sendMessage.getText().trim();
 					sendMessage.setText("");
 					try {
 						dos.writeUTF(str);
@@ -167,6 +173,7 @@ public class ChatClient {
   		new Thread(new ReceiveThread()).start();
 	}
  
+	//连接服务器
 	public void connect(){
 		try {
 			s= new Socket("127.0.0.1",8888);
@@ -183,7 +190,7 @@ public class ChatClient {
 		}
 	}
 	
-	
+	//与服务器断开
 	public void disconnect(){
 		try {
 			dis.close();
