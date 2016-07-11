@@ -50,8 +50,8 @@ public class ChatClient {
 	private String workstr;
 	private String systemstr;
 	private Socket s = null;
-	private DataOutputStream dos = null;
-	private DataInputStream dis = null;
+	private DataOutputStream dos = null;//发送流
+	private DataInputStream dis = null;//接收流
 	private boolean bConnected = false;
 	
 	
@@ -77,8 +77,7 @@ public class ChatClient {
 		buttonsPanel.add(jcancl);
 		jd.pack();
 		jd.setVisible(true);
-		connect();
-  
+		connect();//点击确定后开始连接
 		jok.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(username.getText().equals("")){
@@ -170,6 +169,8 @@ public class ChatClient {
 				}
 			}
 		});
+		//每一个socket对应一个线程用于接收服务器传回的数据   
+		//不用多线程的话数据会被阻塞
   		new Thread(new ReceiveThread()).start();
 	}
  
