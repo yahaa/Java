@@ -27,6 +27,7 @@ public class ChatServer {
 			ss = new ServerSocket(8888);
 			started = true;
 			System.out.println("服务器上线了!");
+			
 		}
 		catch(Exception e) {
 			e.printStackTrace();

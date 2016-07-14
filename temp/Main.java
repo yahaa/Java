@@ -6,7 +6,17 @@ import java.util.Scanner;
 import java.util.List;
 
 public class Main {
+<<<<<<< HEAD
 	public static void main(String[]args){
+=======
+	private static Scanner input=new Scanner(System.in);
+	public static void main(String []args){
+		//test1();
+		//test2();
+		ProStack a=new ProStack();
+		a.solve();
+		
+>>>>>>> 4abcbb8dc726405399138a4d62f8ce8193c053c6
 		
 	}
 }
@@ -238,3 +248,168 @@ class POJ3669{
 		
 	}
 }
+<<<<<<< HEAD
+=======
+
+class RMQ{
+	public long mark;
+	public long value;
+	public int start,end;
+}
+
+
+class POJ3468{
+	
+	private Scanner input=new Scanner(new BufferedInputStream(System.in));
+	private int n,q;
+	private RMQ []a;
+	
+	public void solve(){
+		while(input.hasNext()){
+			n=input.nextInt();
+			q=input.nextInt();
+			input.nextLine();
+			init();
+			build(1,n,1);
+			operator(q);
+			
+		}
+	}
+	
+	private void init(){
+		int max=n*4+5;
+		a=new RMQ[max];
+		for(int i=0;i<max;i++){
+			a[i]=new RMQ();
+			a[i].mark=0;
+			a[i].value=0;
+			a[i].start=0;
+			a[i].end=0;
+		}
+	}
+	
+	private void build(int start,int end,int index){
+		if(start==end){
+			a[index].value=input.nextInt();
+			a[index].start=a[index].end=start;
+			return;
+		}
+		int mid=(start+end)/2;
+		build(start,mid,index*2);
+		build(mid+1,end,index*2+1);
+		a[index].value=a[index*2].value+a[index*2+1].value;
+		a[index].start=a[index*2].start;
+		a[index].end=a[index*2+1].end;
+	}
+	
+	private void operator(int times){
+		String s=null;
+		int a,b;
+		long v;
+		while(times-->0){
+			s=input.next();
+			if(s.equals("Q")){
+				a=input.nextInt();
+				b=input.nextInt();
+				System.out.println(query(a,b,1,n,1));
+			}
+			else if(s.equals("C")){
+				a=input.nextInt();
+				b=input.nextInt();
+				v=input.nextLong();
+				update(a,b,v,1,n,1);
+			}
+		}
+	}
+	
+	
+	private long query(int qStart,int qEnd,int start,int end,int index){
+		if(qStart==start&&qEnd==end)return a[index].value;
+		putDown(index);
+		int mid=(start+end)/2;
+		if(qEnd<=mid)return query(qStart,qEnd,start,mid,index*2);
+		if(qStart>mid)return query(qStart,qEnd,mid+1,end,index*2+1);
+		return query(qStart,mid,start,mid,index*2)+query(mid+1,qEnd,mid+1,end,index*2+1);
+	}
+	
+	
+	private void update(int uStart,int uEnd,long value,int start,int end,int index){
+		
+		if(uStart==start&&uEnd==end){
+			a[index].value+=(end-start+1)*value;
+			a[index].mark+=value;
+			return;
+		}
+		
+		putDown(index);
+		int mid=(start+end)/2;
+		if(uEnd<=mid){
+			update(uStart,uEnd,value,start,mid,index*2);
+			return;
+		}
+		if(uStart>mid){
+			update(uStart,uEnd,value,mid+1,end,index*2+1);
+			return;
+		}
+		update(uStart,mid,value,start,mid,index*2);
+		update(mid+1,uEnd,value,mid+1,end,index*2+1);
+		a[index].value=a[index*2].value+a[index*2+1].value;
+	}
+	
+	private void putDown(int index){
+		if(a[index].mark>0){
+			a[index*2].mark+=a[index].mark;
+			a[index*2].value+=(a[index*2].end-a[index*2].start+1)*a[index].mark;
+			a[index*2+1].mark+=a[index].mark;
+			a[index*2+1].value+=(a[index*2+1].end-a[index*2+1].start+1)*a[index].mark;
+			a[index].mark=0;
+		}
+	}
+	
+	
+	
+}
+
+
+class ProStack{
+	private Scanner input=new Scanner(System.in);
+	
+	public void solve(){
+		Stack <Character> sta=new Stack <Character>();
+		int n=input.nextInt();
+		String s;
+		input.nextLine();
+		while(n-->0){
+			sta.clear();
+			s=input.nextLine();
+			for(int i=0;i<s.length();i++){
+				if(sta.isEmpty()){
+					sta.push((Character)s.charAt(i));
+				}
+				else{
+					if((s.charAt(i)==']'&&sta.peek()=='[')||(s.charAt(i)==')'&&sta.peek()=='('))sta.pop();
+					else sta.push((Character)s.charAt(i));
+				}
+			}
+			if(sta.isEmpty())System.out.println("Yes");
+			else System.out.println("No");
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 4abcbb8dc726405399138a4d62f8ce8193c053c6
