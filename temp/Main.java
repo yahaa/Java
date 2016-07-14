@@ -1,225 +1,240 @@
-import java.util.*;
-import java.math.*;
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.EOFException;
-import java.io.IOException;
 import java.io.BufferedInputStream;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.Scanner;
+import java.util.List;
+
 public class Main {
-	private static Scanner input=new Scanner(System.in);
-	public static void main(String []args){
-		//test1();
-		//test2();
-		XXTree a=new XXTree();
-		a.solve();
-		
+	public static void main(String[]args){
 		
 	}
+}
+
+class POJ1979{
+	private String []map;
+	private int [][]visit;
+	private Scanner input=new Scanner(new BufferedInputStream(System.in));
+	private int w,h;
+	private int ans;
 	
-	public static void test1(){
+	public void solve(){
+		
 		while(input.hasNext()){
-			int a=input.nextInt();
-			int b=input.nextInt();
-			System.out.println(a+b);
-		}
-	}
-	
-	public static void test2(){
-		int n,nc;
-		while(input.hasNext()){
-			n=input.nextInt();
-			nc=input.nextInt();
+			w=input.nextInt();
+			h=input.nextInt();
 			input.nextLine();
-			String s=input.nextLine();
-			System.out.println(getAns(s,n));
-		}
+			if(w==0&&h==0)break;
+			initMap();
+			getAns();
+			System.out.println(ans);
+		}	
 	}
 	
-	private static int getAns(String s,int n){
-		HashMap<String,Integer>map=new HashMap<String,Integer>();
-		for(int i=0;i<=s.length()-n;i++){
-			String ts=s.substring(i, i+n);
-			if(map.get(ts)==null)map.put(ts, 1);
+	private void initMap(){
+		map=new String[h];
+		visit=new int[h][w];
+		for(int i=0;i<h;i++){
+			map[i]=input.next();
+			Arrays.fill(visit[i],0);
 		}
-		return map.size();
+		ans=0;
 	}
 	
-	public static void test3(){
-		while(input.hasNext()){
-			String s=input.nextLine();
-			s=s.replaceAll("\\B+\\B", " ");
-			System.out.println(s);
-			String []t=s.split(" +");
-			System.out.println(t.length);
+	private void getAns(){
+		int i=0,j=0;
+		boolean ff=false;
+		for(i=0;i<h;i++){
+			for(j=0;j<w;j++){
+				if(map[i].charAt(j)=='@'){
+					ff=true;
+					break;
+				}
+			}
+			if(ff)break;
 		}
+		find(i,j);
 	}
 	
+	private void find(int i,int j){
+		if(i<0||i>=h||j<0||j>=w)return;
+		if(visit[i][j]==1)return;
+		if(map[i].charAt(j)=='#')return;
+		visit[i][j]=1;
+		ans++;
+		find(i-1,j);
+		find(i+1,j);
+		find(i,j-1);
+		find(i,j+1);
+	}
 	
+
 }
 
 
-class Matrixc{
-	private String []mo;
-	private String []mp;
-	private int n,m,t,p,q;
-	private Scanner input=new Scanner(System.in);
+class POJ3009{
+	private int[][]m;
+	private Scanner input=new Scanner(new BufferedInputStream(System.in));
+	private int h,w;
+	private int ans;
+	private int starti,startj,endi,endj;
+	
 	
 	public void solve(){
 		while(input.hasNext()){
-			n=input.nextInt();
-			m=input.nextInt();
-			t=input.nextInt();
-			p=input.nextInt();
-			q=input.nextInt();
-			input.nextLine();
-			if(n==0)break;
-			String []mo=new String[n];
-			for(int i=0;i<n;i++)mo[i]=input.nextLine();
-			int ans=0;
-			while(t-->0){
-				for(int i=0;i<p;i++)mp[i]=input.nextLine();
-				ans+=find(mo,mp);
+			w=input.nextInt();
+			h=input.nextInt();
+			if(w==0&&h==0)break;
+			init();
+			getAns();
+			if(ans>10)ans=-1;
+			System.out.println(ans);
+		}
+	}
+	
+	private void init(){
+		m=new int[h][w];
+		ans=100;
+		for(int i=0;i<h;i++){
+			for(int j=0;j<w;j++){
+				m[i][j]=input.nextInt();
+				if(m[i][j]==2){
+					starti=i;
+					startj=j;
+				}
+				if(m[i][j]==3){
+					endi=i;
+					endj=j;
+				}
 			}
 		}
 	}
 	
-	public int find(String[]mo,String[]mp){
-		int ans=0;
-		
-		return ans;
+	private void getAns(){
+		find(starti,startj,0);
 	}
-}
-
-class XTree{
-	private int []all;
-	private int []a;
-	private int max;
-	private Scanner input=new Scanner(new BufferedInputStream(System.in));
 	
-	public void solve(){
-		int n,m;
-		while(input.hasNext()){
-			n=input.nextInt();
-			m=input.nextInt();
-			a=new int[n+1];
-			for(int i=1;i<=n;i++)a[i]=input.nextInt();
-			max=(int)Math.pow(2,(int)Math.ceil(Math.log(n)/Math.log(2))+1);
-			all=new int[max];
-			build(1,n,1);
-			while(m-->0){
-				String op=input.next();
-				int left=input.nextInt();
-				int right=input.nextInt();
-				if(op.compareTo("Q")==0)System.out.println(query(left,right,1,1,n));
-				else update(left,right,1,1,n);
+	private void find(int i,int j,int step){
+		if(i<0||i>=h||j<0||j>=w)return;
+		if((i==endi&&j==endj)||step>10){
+			ans=Math.min(ans, step);
+			return;
+		}
+		for(int dir=1;dir<=4;dir++){
+			if(dir==1){
+				boolean ok=false;
+				int ti=i;
+				while(ti-1>=0&&m[ti-1][j]!=1){
+					if(ti-1==endi&&j==endj){
+						find(ti-1,j,step+1);
+						ok=false;
+						break;
+					}
+					else{
+						ti--;
+						ok=true;
+					}
+				}
+				if(ok&&ti-1>=0){
+					m[ti-1][j]=0;
+					find(ti,j,step+1);
+					m[ti-1][j]=1;
+				}
+			}
+			if(dir==2){
+				boolean ok=false;
+				int tj=j;
+				while(tj+1<w&&m[i][tj+1]!=1){
+					if(tj+1==endj&&i==endi){
+						find(i,tj+1,step+1);
+						ok=false;
+						break;
+					}
+					else {
+						tj++;
+						ok=true;
+					}
+				}
+				if(ok&&tj+1<w){
+					m[i][tj+1]=0;
+					find(i,tj,step+1);
+					m[i][tj+1]=1;
+				}
+			}
+			
+			if(dir==3){
+				boolean ok=false;
+				int ti=i;
+				while(ti+1<h&&m[ti+1][j]!=1){
+					if(ti+1==endi&&j==endj){
+						find(ti+1,j,step+1);
+						ok=false;
+						break;
+					}
+					else {
+						ok=true;
+						ti++;
+					}
 				
+				}
+				if(ok&&ti+1<h){
+					m[ti+1][j]=0;
+					find(ti,j,step+1);
+					m[ti+1][j]=1;
+				}
+			}
+			
+			if(dir==4){
+				boolean ok=false;
+				int tj=j;
+				while(tj-1>=0&&m[i][tj-1]!=1){
+					if(tj-1==endj&&i==endi){
+						find(i,tj-1,step+1);
+						ok=false;
+						break;
+					}
+					else {
+						tj--;
+						ok=true;
+					}
+				
+				}
+				if(ok&&tj-1>=0){
+					m[i][tj-1]=0;
+					find(i,tj,step+1);
+					m[i][tj-1]=1;
+				}
 			}
 		}
-	}
-	
-	
-	private int query(int left,int right,int start,int l,int r){
-		int mid=(l+r)/2;
-		if(left==l&&right==r)return all[start];
-		if(right<=mid)return query(left,right,start*2,l,mid);
-		if(left>mid)return query(left,right,start*2+1,mid+1,r);
-		return Math.max(query(left,mid,start*2,l,mid), query(mid+1,right,start*2+1,mid+1,r));
 		
 	}
 	
-	private void update(int index,int value,int start,int l,int r){
-		int mid=(l+r)/2;
-		if(l==r){
-			if(l==index)all[start]=value;
-			return;
-		}
-		if(index<=mid)update(index,value,start*2,l,mid);
-		else update(index,value,start*2+1,mid+1,r);
-		all[start]=Math.max(all[start*2], all[start*2+1]);
-	}
 	
-	private void build(int left,int right,int index){
-		int mid=(left+right)/2;
-		if(left==right){
-			all[index]=a[left];
-			return;
-		}
-		build(left,mid,index*2);
-		build(mid+1,right,index*2+1);
-		all[index]=Math.max(all[index*2], all[index*2+1]);
-	}
+	
 }
 
 
-class XXTree{
-	private int []all=new int[200020];
+class POJ3669{
+	private int [][]m=new int[305][305];
+	private int n;
 	private Scanner input=new Scanner(new BufferedInputStream(System.in));
+	private ArrayList<Two>in;
+	private class Two{
+		int x,y;
+	}
 	
 	public void solve(){
-		int t=input.nextInt();
-		int tt=1;
-		while(t-->0){
-			int n=input.nextInt();
-			build(1,n,1);
-			System.out.printf("Case %d:\n",tt++);
-			while(true){
-				String op=input.next();
-				if(op.compareTo("End")==0)break;
-				int a=input.nextInt();
-				int b=input.nextInt();
-				if(op.compareTo("Query")==0)System.out.println(query(a,b,1,1,n));
-				else if(op.compareTo("Add")==0)update(a,b,1,1,n);
-				else if(op.compareTo("Sub")==0)update(a,-b,1,1,n);
-			}
+		while(input.hasNext()){
+			n=input.nextInt();
+			init();
+			bfs(0,0,0);
 		}
 	}
 	
-	private int query(int start,int end,int index,int left,int right){
-		if(left==start&&right==end)return all[index];
-		int mid=(left+right)/2;
-		if(end<=mid)return query(start,end,index*2,left,mid);
-		if(start>mid)return query(start,end,index*2+1,mid+1,right);
-		return (query(start,mid,index*2,left,mid)+query(mid+1,end,index*2+1,mid+1,right));
+	private void init(){
+		
 	}
-	
-	private void update(int aim,int value,int index,int left,int right){
-		if(left==right){
-			if(left==aim)all[index]+=value;
-			return;
-		}
-		int mid=(left+right)/2;
-		if(aim<=mid)update(aim,value,index*2,left,mid);
-		else update(aim,value,index*2+1,mid+1,right);
-		all[index]=all[index*2]+all[index*2+1];
-	}
-	
-	private void build(int left,int right,int index){
-		if(left==right){
-			all[index]=input.nextInt();
-			return ;
-		}
-		int mid=(left+right)/2;
-		build(left,mid,index*2);
-		build(mid+1,right,index*2+1);
-		all[index]=all[index*2]+all[index*2+1];
+	private void bfs(int i,int j,int time){
+		
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
