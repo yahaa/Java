@@ -1,6 +1,7 @@
 import java.io.BufferedInputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Scanner;
 import java.util.Stack;
@@ -12,7 +13,8 @@ public class Main {
 	public static void main(String []args){
 		//test1();
 		//test2();
-		
+		Shu2 a=new Shu2();
+		a.solve();
 		
 	}
 }
@@ -363,6 +365,104 @@ class POJ3468{
 	
 	
 	
+}
+
+class Shu{
+	private Scanner input=new Scanner(new BufferedInputStream(System.in));
+	private int n,q;
+	private String []color;
+	private int []a;
+	public void solve(){
+		while(input.hasNext()){
+			n=input.nextInt();
+			q=input.nextInt();
+			init();
+			while(q-->0){
+				int index=input.nextInt();
+				String tc=input.nextLine();
+				add(index,tc);
+				System.out.println(query(n));
+			}
+		}
+	}
+	
+	private void init(){
+		color=new String[n+1];
+		a=new int [n+1];
+		Arrays.fill(a, 0);
+		Arrays.fill(color, "0 0 0");
+		int i=1;
+		while(i<=n){
+			a[i]+=1;
+			i+=i&-i;
+		}
+	}
+	
+	private void add(int i,String col){
+		while(i<=n){
+			int count=0;
+			if(!col.equals(color[i]))count=1;
+			else count=-1;
+			a[i]+=count;
+			color[i]=col;
+			i+=i&-i;
+		}
+	}
+	
+	private int query(int i){
+		int ans=0;
+		while(i>0){
+			ans+=a[i];
+			i-=i&-i;
+		}
+		return ans;
+	}
+}
+
+
+class Shu2{
+	private Scanner input=new Scanner(new BufferedInputStream(System.in));
+	private int n,q;
+	
+	public void solve(){
+		HashMap<Integer,String>index=new HashMap<Integer,String>();
+		HashMap<String,Integer>colors=new HashMap<String,Integer>();
+		while(input.hasNext()){
+			n=input.nextInt();
+			q=input.nextInt();
+			index.clear();
+			colors.clear();
+			colors.put(" 0 0 0", n);
+			int ans=1;
+			while(q-->0){
+				int tn=input.nextInt();
+				String co=input.nextLine();
+				if(!index.containsKey(tn)){
+					if(!colors.containsKey(co)){
+						ans++;
+						colors.put(co, 1);
+					}
+				}
+				else {
+					if(!colors.containsKey(co)){
+						colors.put(co,1);
+						ans++;
+					}
+					else {
+						int value=colors.get(co);
+						value--;
+						if(value==0){
+							ans--;
+							colors.remove(co);
+						}
+						else colors.put(co, value);
+					}
+				}
+				index.put(tn,co);
+				System.out.println(ans);
+			}
+		}
+	}
 }
 
 
