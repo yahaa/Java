@@ -3,20 +3,16 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Scanner;
+import java.util.Stack;
 import java.util.List;
 
 public class Main {
-<<<<<<< HEAD
-	public static void main(String[]args){
-=======
+
 	private static Scanner input=new Scanner(System.in);
 	public static void main(String []args){
 		//test1();
 		//test2();
-		ProStack a=new ProStack();
-		a.solve();
 		
->>>>>>> 4abcbb8dc726405399138a4d62f8ce8193c053c6
 		
 	}
 }
@@ -248,8 +244,7 @@ class POJ3669{
 		
 	}
 }
-<<<<<<< HEAD
-=======
+
 
 class RMQ{
 	public long mark;
@@ -371,31 +366,6 @@ class POJ3468{
 }
 
 
-class ProStack{
-	private Scanner input=new Scanner(System.in);
-	
-	public void solve(){
-		Stack <Character> sta=new Stack <Character>();
-		int n=input.nextInt();
-		String s;
-		input.nextLine();
-		while(n-->0){
-			sta.clear();
-			s=input.nextLine();
-			for(int i=0;i<s.length();i++){
-				if(sta.isEmpty()){
-					sta.push((Character)s.charAt(i));
-				}
-				else{
-					if((s.charAt(i)==']'&&sta.peek()=='[')||(s.charAt(i)==')'&&sta.peek()=='('))sta.pop();
-					else sta.push((Character)s.charAt(i));
-				}
-			}
-			if(sta.isEmpty())System.out.println("Yes");
-			else System.out.println("No");
-		}
-	}
-}
 
 
 
@@ -403,13 +373,3 @@ class ProStack{
 
 
 
-
-
-
-
-
-
-
-
-
->>>>>>> 4abcbb8dc726405399138a4d62f8ce8193c053c6
