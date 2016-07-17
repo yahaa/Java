@@ -16,10 +16,11 @@ public class NServer {
 	private final int PORT=30000;
 	private Charset charset=Charset.forName("UTF-8");
 	private ServerSocketChannel ssc=null;
+	private static int userCount=0;
 	
 	
 	public void init()throws IOException{
-		System.out.println("服务器开启成功");
+		System.out.println("服务器开启成功......");
 		//selector 配置
 		selector=Selector.open();
 		// ssc 配置
@@ -33,7 +34,7 @@ public class NServer {
 	}
 	
 	private void checkOpt()throws IOException{
-		System.out.println("进入监控状态");
+		System.out.println("进入监控状态......");
 		while(selector.select()>0){
 			for(SelectionKey key:selector.selectedKeys()){
 				selector.selectedKeys().remove(key);
@@ -44,6 +45,8 @@ public class NServer {
 					sc.configureBlocking(false);
 					sc.register(selector,SelectionKey.OP_READ);
 					key.interestOps(SelectionKey.OP_ACCEPT);
+					userCount++;
+					System.out.println("当前在线人数 "+userCount);
 				}
 				
 				//处理读取数据请求
@@ -58,7 +61,11 @@ public class NServer {
 						}
 						System.out.println(word);
 						key.interestOps(SelectionKey.OP_READ);
-						if(word.length()<=0)key.cancel();
+						if(word.length()<=0){
+							key.cancel();
+							userCount--;
+							System.out.println("当前在线人数 "+userCount);
+						}
 						
 					}
 					catch(IOException ex){
@@ -72,7 +79,6 @@ public class NServer {
 						for(SelectionKey tkey:selector.keys()){
 							Channel sendTo=tkey.channel();
 							if(sendTo instanceof SocketChannel){
-								//System.out.println(word);
 								((SocketChannel) sendTo).write(charset.encode(word));
 							}
 						}
