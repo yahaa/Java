@@ -554,7 +554,7 @@ class MPS{
 	}
 	
 	private void add(int i,int v){
-		while(i<n){
+		while(i<=n){
 			a[i]+=v;
 			i+=i&-i;
 		}
