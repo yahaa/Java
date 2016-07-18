@@ -13,7 +13,7 @@ public class Main {
 	public static void main(String []args){
 		//test1();
 		//test2();
-		Shu2 a=new Shu2();
+		MPS a=new MPS();
 		a.solve();
 		
 	}
@@ -465,6 +465,101 @@ class Shu2{
 	}
 }
 
+
+
+class BIT{
+	private Scanner input=new Scanner(new BufferedInputStream(System.in));
+	private final int max=100000+1;
+	private int n,q;
+	private long []bit0=new long[max];
+	private long []bit1=new long[max];
+	
+	public void solve(){
+		while(input.hasNext()){
+			Arrays.fill(bit0, 0);
+			Arrays.fill(bit1, 0);
+			n=input.nextInt();
+			q=input.nextInt();
+			for(int i=1;i<=n;i++){
+				add(bit0,i,input.nextInt());
+			}
+			
+			while(q-->0){
+				String op=input.next();
+				if(op.equals("C")){
+					int a=input.nextInt();
+					int b=input.nextInt();
+					int v=input.nextInt();
+					add(bit0,a,-v*(a-1));
+					add(bit1,a,v);
+					add(bit0,b+1,v*b);
+					add(bit1,b+1,-v);
+				}
+				else{
+					int a=input.nextInt();
+					int b=input.nextInt();
+					long ans=0;
+					ans+=sum(bit0,b)+sum(bit1,b)*b;
+					ans-=sum(bit0,a-1)+sum(bit1,a-1)*(a-1);
+					System.out.println(ans);
+				}
+			}
+		}
+	}
+	
+	private void add(long[]b,int i,int v){
+		while(i<=n){
+			b[i]+=v;
+			i+=i&-i;
+		}
+	}
+	
+	private long sum(long[]b,int i){
+		long ans=0;
+		while(i>0){
+			ans+=b[i];
+			i-=i&-i;
+		}
+		return ans;
+	}
+}
+
+
+class MPS{
+	private int n;
+	private int[]a=new int [100];
+	Scanner input=new Scanner(new BufferedInputStream(System.in));
+	
+	public void solve(){
+		while(input.hasNext()){
+			n=input.nextInt();
+			int ans=0;
+			Arrays.fill(a, 0);
+			for(int i=0;i<n;i++){
+				int t=input.nextInt();
+				ans+=i-sum(t);
+				add(t,1);
+			}
+			System.out.println(ans);
+		}
+	}
+	
+	private int sum(int i){
+		int ans=0;
+		while(i>0){
+			ans+=a[i];
+			i-=i&-i;
+		}
+		return ans;
+	}
+	
+	private void add(int i,int v){
+		while(i<n){
+			a[i]+=v;
+			i+=i&-i;
+		}
+	}
+}
 
 
 
