@@ -73,7 +73,7 @@ class HDU1754{
 
 class POJ346{
 	private Scanner input=new Scanner(new BufferedInputStream(System.in));
-	private final int size=(1<<18)-1;
+	private final int size=4*100000+10;
 	private int n,q;
 	private long []data=new long[size];
 	private long []datb=new long[size];
@@ -83,19 +83,19 @@ class POJ346{
 			n=input.nextInt();
 			q=input.nextInt();
 			init();
-			//input.nextLine();
+			input.nextLine();
 			while(q-->0){
 				String op=input.next();
 				if(op.equals("Q")){
 					int a=input.nextInt();
 					int b=input.nextInt();
-					System.out.println(query(a,b+1,0,0,n));
+					System.out.println(query(a-1,b,0,0,n));
 				}
 				else if(op.equals("C")){
 					int a=input.nextInt();
 					int b=input.nextInt();
 					long c=input.nextLong();
-					update(a,b+1,c,0,0,n);
+					update(a-1,b,c,0,0,n);
 				}
 			}
 		}
@@ -104,14 +104,17 @@ class POJ346{
 	private void init(){
 		Arrays.fill(data, 0);
 		Arrays.fill(datb, 0);
-		for(int i=0;i<n;i++)update(i,i+1,input.nextLong(),0,0,n);
+		for(int i=0;i<n;i++){
+			update(i,i+1,input.nextLong(),0,0,n);
+		}
 	}
-	
 	
 	
 	private void update(int a,int b,long value,int index,int l,int r){
 		if(a<=l&&r<=b)data[index]+=value;
 		else if(l<b&&a<r){
+			System.out.println(a+" "+b);
+			System.out.println(l+" "+r);
 			datb[index]+=(Math.min(b, r)-Math.max(a, l))*value;
 			update(a,b,value,index*2+1,l,(l+r)/2);
 			update(a,b,value,index*2+2,(l+r)/2,r);

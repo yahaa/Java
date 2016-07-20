@@ -1,4 +1,5 @@
 import java.io.BufferedInputStream;
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -13,9 +14,14 @@ public class Main {
 	public static void main(String []args){
 		//test1();
 		//test2();
-		MPS a=new MPS();
-		a.solve();
+//		CF19B a=new CF19B();
+//		a.solve();
 		
+		//BigInteger a=new BigInteger("12344444445555555555555555555555555555555555555555555555555555");
+		//System.out.println(a.longValue());
+		Number[] nn=new Integer[2];
+		nn[0]=new Double(1.4);
+		System.out.println(nn[0]);
 	}
 }
 
@@ -559,6 +565,151 @@ class MPS{
 			i+=i&-i;
 		}
 	}
+}
+
+
+class MS{
+	private int []all;
+	private int []a;
+	private int max;
+	private Scanner input=new Scanner(new BufferedInputStream(System.in));
+	
+	public void solve(){
+		int t=input.nextInt();
+		int n,m;
+		while(t-->0){
+			n=input.nextInt();
+			a=new int[n+1];
+			for(int i=1;i<=n;i++)a[i]=input.nextInt();
+			max=(int)Math.pow(2,(int)Math.ceil(Math.log(n)/Math.log(2))+1);
+			all=new int[max];
+			build(1,n,1);
+			m=input.nextInt();
+			while(m-->0){
+				int left=input.nextInt();
+				int right=input.nextInt();
+				System.out.println(query(left,right,1,1,n));
+				
+			}
+		}
+	}
+	
+	private int gcd(int a,int b){
+		if(b==0)return a;
+		else return gcd(b,a%b);
+	}
+	
+	private int query(int left,int right,int start,int l,int r){
+		int mid=(l+r)/2;
+		if(left==l&&right==r)return all[start];
+		if(right<=mid)return query(left,right,start*2,l,mid);
+		if(left>mid)return query(left,right,start*2+1,mid+1,r);
+		return gcd(query(left,mid,start*2,l,mid), query(mid+1,right,start*2+1,mid+1,r));
+		
+	}
+	
+	private void build(int left,int right,int index){
+		int mid=(left+right)/2;
+		if(left==right){
+			all[index]=a[left];
+			return;
+		}
+		build(left,mid,index*2);
+		build(mid+1,right,index*2+1);
+		all[index]=gcd(all[index*2], all[index*2+1]);
+	}
+}
+
+
+class CF19A{
+	private Scanner input=new Scanner(System.in);
+	public void solve(){
+		int n;
+		while(input.hasNext()){
+			n=input.nextInt();
+			input.nextLine();
+			String s=input.next();
+			int []a=new int[n+1];
+			for(int i=0;i<n;i++){
+				a[i]=input.nextInt();
+			}
+			int t=1000000000;
+			int ans=t;
+			for(int i=0;i<s.length()-1;i++){
+				if(s.charAt(i)=='R'&&s.charAt(i+1)=='L'){
+					ans=Math.min(ans,(a[i+1]-a[i])/2);
+				}
+			}
+			if(ans!=t)System.out.println(ans);
+			else System.out.println(-1);
+			
+			
+		}
+	}
+}
+
+
+class CF19B{
+	private Scanner input=new Scanner(new BufferedInputStream(System.in));
+	private String []mp;
+	private int [][]a;
+	private int n,m;
+	public void solve(){
+	
+		while(input.hasNext()){
+			n=input.nextInt();
+			m=input.nextInt();
+			input.nextLine();
+			mp=new String[n];
+			a=new int[n+1][m+1];
+			for(int i=0;i<n;i++)mp[i]=input.nextLine();
+			for(int i=0;i<n;i++){
+				int count=0;
+				int j=0;
+				for(j=0;j<m;j++){
+					if(mp[i].charAt(j)=='*'){
+						count++;
+						a[i][j]++;
+					}
+					a[i+1][j]=a[i][j];
+				}
+				if(j==m)a[i][m]=count;
+			}
+			int to=0;
+			for(int i=0;i<n;i++){
+				to+=a[i][m];
+			}
+			boolean ans=false;
+			int i=0,j=0;
+			for(i=0;i<n;i++){
+				for(j=0;j<m;j++){
+					if(mp[i].charAt(j)=='*'){
+						int tt=a[i][m]+a[n][j]-1;
+						if(tt==to){
+							ans=true;
+							break;
+						}
+					}
+					else {
+						int tt=a[i][m]+a[n][j];
+						if(tt==to){
+							ans=true;
+							break;
+						}
+					}
+				}
+				if(ans)break;
+			}
+			if(ans){
+				System.out.println("YES");
+				System.out.println((i+1)+" "+(j+1));
+			}
+			else System.out.println("NO");
+			
+		}
+	}
+	
+	
 }
 
 
