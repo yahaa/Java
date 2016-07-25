@@ -4,13 +4,14 @@ import java.math.*;
 public class T2{
 	private static Scanner input=new Scanner(System.in);
 	
-	public static void main(String[]args){
-//		TreeMap<Integer,Integer>a=new TreeMap<Integer,Integer>();
+	public static void main(String[]args){	
+		TreeMap<Integer,Integer>a=new TreeMap<Integer,Integer>();
 //		TreeSet<Character>aa=new TreeSet<Character>();
 //		String s="jklasd";
 //		
-		ProG a=new ProG();
-		a.solve();
+//		ProG a=new ProG();
+//		a.solve();
+		
 		
 		
 		
