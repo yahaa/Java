@@ -11,6 +11,10 @@ public class T2{
 //		
 //		ProG a=new ProG();
 //		a.solve();
+		String s="jkjj";
+		LinkedList<Integer>ans=new LinkedList<Integer>();
+		ans.push(9);
+		
 		
 		
 		
