@@ -2,6 +2,18 @@ import java.util.*;
 public class CFB1_17 {
 	public static void main(String []args){
 		Scanner input=new Scanner(System.in);
+		String s="0000000001111111";
+		s=s.replaceAll("0000000","*");
+		System.out.println(s);
+		StringBuilder bb;
+		System.out.printf("%d%d",1,1);
+		Integer n=10;
+		Map<Integer,Integer>mp=new TreeMap<Integer,Integer>();
+		
+		bb=new StringBuilder(input.nextLine());
+		
+		Character aaa=new Character('a');
+	
 		while(input.hasNext()){
 			long a=input.nextLong();
 			long b=input.nextLong();
