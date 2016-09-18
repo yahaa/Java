@@ -77,6 +77,7 @@ public class ChatClient {
 		buttonsPanel.add(jcancl);
 		jd.pack();
 		jd.setVisible(true);
+	
 		connect();//点击确定后开始连接
 		jok.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
