@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="javabao">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/javabao/jsoup-1.9.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/javabao/selenium-server-standalone-2.24.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/javabao/crawler4j-4.1-jar-with-dependencies.jar!/" />
+      <root url="jar://$PROJECT_DIR$/javabao/mysql-connector-java-5.1.39-bin.jar!/" />
+      <root url="jar://$PROJECT_DIR$/javabao/javacsv.jar!/" />
+      <root url="jar://$PROJECT_DIR$/javabao/json-lib-2.3-jdk13.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

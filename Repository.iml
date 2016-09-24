@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/BigNumber" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CFCode" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Crawlers" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Game" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/HDU" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/JavaBeans" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/JavaFX" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/JavaUpGrade" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MathProblem" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/SHU" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/SpecialNumber" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Swing" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/greedy" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/p1" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/recursion" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/temp" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="SwingSets2(BeautyEyeLNFDemo)" level="project" />
+    <orderEntry type="library" name="lib1" level="project" />
+    <orderEntry type="library" name="beautyeye_lnf" level="project" />
+    <orderEntry type="library" name="beautyeye_lnf1" level="project" />
+    <orderEntry type="library" name="SwingSets3(BeautyEyeLNFDemo)" level="project" />
+    <orderEntry type="module" module-name="beautyeye_v3.7_utf8" />
+  </component>
+</module>

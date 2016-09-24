@@ -1,0 +1,20 @@
+<component name="libraryTable">
+  <library name="lib1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/javabao/beautyeye/src_all/SwingSets3_for_be_lnf/lib/TimingFramework.jar!/" />
+      <root url="jar://$PROJECT_DIR$/javabao/beautyeye/src_all/SwingSets3_for_be_lnf/lib/swingx.jar!/" />
+      <root url="jar://$PROJECT_DIR$/javabao/beautyeye/src_all/SwingSets3_for_be_lnf/lib/jnlp-servlet.jar!/" />
+      <root url="jar://$PROJECT_DIR$/javabao/beautyeye/src_all/SwingSets3_for_be_lnf/lib/jlfgr__V1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/javabao/beautyeye/src_all/SwingSets3_for_be_lnf/lib/jhcore__V1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/javabao/beautyeye/src_all/SwingSets3_for_be_lnf/lib/AnimatedTransitions.jar!/" />
+      <root url="jar://$PROJECT_DIR$/javabao/beautyeye/src_all/SwingSets3_for_be_lnf/lib/AppFramework.jar!/" />
+      <root url="jar://$PROJECT_DIR$/javabao/beautyeye/src_all/SwingSets3_for_be_lnf/lib/beautyeye_lnf.jar!/" />
+      <root url="jar://$PROJECT_DIR$/javabao/beautyeye/src_all/SwingSets3_for_be_lnf/lib/swing-worker.jar!/" />
+      <root url="jar://$PROJECT_DIR$/javabao/beautyeye/src_all/SwingSets3_for_be_lnf/lib/holidays__V1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/javabao/beautyeye/src_all/SwingSets3_for_be_lnf/lib/jardiff.jar!/" />
+      <root url="jar://$PROJECT_DIR$/javabao/beautyeye/src_all/SwingSets3_for_be_lnf/lib/jnlp.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
