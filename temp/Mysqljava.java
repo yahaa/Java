@@ -5,7 +5,7 @@ public class Mysqljava{
     	String pass="123456";
         try{
         	Class.forName("com.mysql.jdbc.Driver") ;
-            System.out.println("³É¹¦¼ÓÔØMySQLÇı¶¯³ÌĞò");
+            System.out.println("Â³Ã‰Â¹Â¦Â¼Ã“Ã”Ã˜MySQLÃ‡Ã½Â¶Â¯Â³ÃŒÃÃ²");
             String u ="jdbc:mysql://115.29.146.79:3306/study";
             Connection conn = DriverManager.getConnection(u,"yahaa","Asd147258") ;
             Statement sta=conn.createStatement();
@@ -21,3 +21,5 @@ public class Mysqljava{
        
     }
 }
+
+

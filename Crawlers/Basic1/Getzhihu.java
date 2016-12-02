@@ -6,7 +6,7 @@ import java.io.*;
 public class Getzhihu {
 	
 	public static void main(String[]args){
-		String url="http://www.zhihu.com/explore/recommendations";
+		String url="http://www.zhihu.com/explore/recommendations?method=next&params=%7B%22limit%22%3A20%2C%22offset%22%4A800%7D";
 		String result=getWebCode(url);
 		
 		List<String>list=getQuetions(result,"question_link.+?>(.+?)<");
